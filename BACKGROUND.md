@@ -42,7 +42,7 @@ On Windows 10 or later, install the ‘en’ version, not the ‘co’ version. 
 This is the keymap you should now have:
 ![image](https://github.com/mhantsch/maxtend/assets/591785/71e4b0b3-5269-4c73-b54a-581b075aa8ec)
 
-The right-hand side symbols show what the key will produce when pressed with AltGr. \\
+The right-hand side symbols show what the key will produce when pressed with AltGr.
 
 Note that this keymap also has several dead keys:
 * AltGr-r is ` – to give letters like à è ò etc.
