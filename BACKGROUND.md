@@ -17,7 +17,7 @@ This repository contains various configurations and tooling that I have used to 
 
 These setups need to be compatible with each other, i.e. a machine already setup (without or with additional tools) should work the same way with and without the external programmable keyboard. The added functionality between keyboard and host setup must not cause conflicts. A machine not setup should also work with the external keyboard, and will gain the extended functionality.
 
-Why this flexibility? Imagine you are used to a specific keyboard layout including extended functionality. You work on several computers, sometimes on Windows, sometimes on Linux, sometimes on an external keyboard, and sometimes on the internal keyboard of a laptop. You will want that layout to be identical across all these setups. On computers where your layout and your extended layers are installed, you can work without an external keyboard, but it will not hurt to also use it. On computers where your setup has not been installed, the external keyboard will give you the full functionality.
+Why this flexibility? Imagine you are used to a specific keyboard layout including extended functionality. You work on several computers, sometimes on Windows, sometimes on Linux, sometimes on an external keyboard, and sometimes on the internal keyboard of a laptop. You will want that layout to be identical across all these setups. On computers where your layout and your extended layers are installed, you can work without an external keyboard, but it will not hurt to also use one. On computers where your setup has not been installed, the external keyboard will give you the full functionality.
 
 ## Staged Setup
 We are addressing the setup in three stages:
