@@ -29,7 +29,7 @@ We are addressing the setup in three stages:
 ### OS setup
 A Colemak layout. With this step, your keyboard will be colemak (including multilingual characters, but no other special layers). This is the base for the subsequent maps in AutoHotKey, xkb, keyd, and the UHK.
 #### Linux
-This is available out of the box in all distributions. Just select it as your layout.
+This is available out of the box in all distributions. Just select US Colemak as your layout.
 
 #### Windows
 This requires installation of an additional [Colemak keyboard layout](https://colemak.com/Windows). I recommend [a version that remaps Caps Lock to Backspace](https://forum.colemak.com/topic/1621-colemak-for-windows-with-capslock-to-backspace/).
