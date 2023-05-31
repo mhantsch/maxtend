@@ -13,4 +13,4 @@ Read more about the [Background](BACKGROUND.md) of this setup.
 Depending on your OS and preferred setup, find the configurations for each of the different tools in the corresponding subdirectories. 
 - For Windows, use [AutoHotKey](ahk/). 
 - For Linux, choose between either [xkb](xkb/) or [keyd](keyd/). 
-- Check out [Ultimate Hacking Keyboard](uhk) for a matching configuration for the [Ultimate Hacking Keyboard](https://ultimatehackingkeyboard.com) (an external programmable keyboard).
+- Check out [Ultimate Hacking Keyboard](uhk/) for a matching configuration for the [Ultimate Hacking Keyboard](https://ultimatehackingkeyboard.com) (an external programmable keyboard).
