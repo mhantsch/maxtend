@@ -2,7 +2,7 @@
   "userConfigMajorVersion": 5,
   "userConfigMinorVersion": 0,
   "userConfigPatchVersion": 0,
-  "deviceName": "My UHK",
+  "deviceName": "123",
   "doubleTapSwitchLayerTimeout": 250,
   "iconsAndLayerTextsBrightness": 255,
   "alphanumericSegmentsBrightness": 255,
@@ -1435,10 +1435,8 @@
                   "scancode": 35
                 },
                 {
-                  "keyActionType": "keystroke",
-                  "type": "basic",
-                  "scancode": 43,
-                  "secondaryRoleAction": "fn5"
+                  "keyActionType": "playMacro",
+                  "macroIndex": 6
                 },
                 {
                   "keyActionType": "keystroke",
@@ -1864,7 +1862,7 @@
                 null,
                 {
                   "keyActionType": "playMacro",
-                  "macroIndex": 7
+                  "macroIndex": 8
                 },
                 null,
                 {
@@ -2081,7 +2079,12 @@
                   "type": "media",
                   "scancode": 181
                 },
-                null,
+                {
+                  "keyActionType": "keystroke",
+                  "type": "basic",
+                  "scancode": 51,
+                  "modifierMask": 4
+                },
                 null,
                 {
                   "keyActionType": "playMacro",
@@ -2213,7 +2216,12 @@
                   "type": "basic",
                   "scancode": 76
                 },
-                null,
+                {
+                  "keyActionType": "keystroke",
+                  "type": "basic",
+                  "scancode": 4,
+                  "modifierMask": 4
+                },
                 null,
                 {
                   "keyActionType": "keystroke",
@@ -2225,7 +2233,7 @@
                 null,
                 {
                   "keyActionType": "playMacro",
-                  "macroIndex": 8
+                  "macroIndex": 9
                 },
                 {
                   "keyActionType": "keystroke",
@@ -2241,7 +2249,7 @@
                 null,
                 {
                   "keyActionType": "playMacro",
-                  "macroIndex": 6
+                  "macroIndex": 7
                 },
                 {
                   "keyActionType": "switchKeymap",
@@ -2389,11 +2397,11 @@
                 null,
                 {
                   "keyActionType": "playMacro",
-                  "macroIndex": 11
+                  "macroIndex": 12
                 },
                 {
                   "keyActionType": "playMacro",
-                  "macroIndex": 12
+                  "macroIndex": 13
                 },
                 null,
                 {
@@ -2577,9 +2585,7 @@
                 },
                 null,
                 null,
-                {
-                  "keyActionType": "none"
-                },
+                null,
                 {
                   "keyActionType": "mouse",
                   "mouseAction": "decelerate"
@@ -2859,11 +2865,11 @@
                 null,
                 {
                   "keyActionType": "playMacro",
-                  "macroIndex": 9
+                  "macroIndex": 10
                 },
                 {
                   "keyActionType": "playMacro",
-                  "macroIndex": 10
+                  "macroIndex": 11
                 },
                 null,
                 null,
@@ -7140,10 +7146,8 @@
                   "scancode": 35
                 },
                 {
-                  "keyActionType": "keystroke",
-                  "type": "basic",
-                  "scancode": 43,
-                  "secondaryRoleAction": "fn5"
+                  "keyActionType": "playMacro",
+                  "macroIndex": 6
                 },
                 {
                   "keyActionType": "keystroke",
@@ -7569,7 +7573,7 @@
                 null,
                 {
                   "keyActionType": "playMacro",
-                  "macroIndex": 7
+                  "macroIndex": 8
                 },
                 null,
                 {
@@ -7786,7 +7790,12 @@
                   "type": "media",
                   "scancode": 181
                 },
-                null,
+                {
+                  "keyActionType": "keystroke",
+                  "type": "basic",
+                  "scancode": 51,
+                  "modifierMask": 4
+                },
                 null,
                 {
                   "keyActionType": "playMacro",
@@ -7918,7 +7927,12 @@
                   "type": "basic",
                   "scancode": 76
                 },
-                null,
+                {
+                  "keyActionType": "keystroke",
+                  "type": "basic",
+                  "scancode": 4,
+                  "modifierMask": 4
+                },
                 null,
                 {
                   "keyActionType": "keystroke",
@@ -7930,7 +7944,7 @@
                 null,
                 {
                   "keyActionType": "playMacro",
-                  "macroIndex": 8
+                  "macroIndex": 9
                 },
                 {
                   "keyActionType": "keystroke",
@@ -7946,7 +7960,7 @@
                 null,
                 {
                   "keyActionType": "playMacro",
-                  "macroIndex": 6
+                  "macroIndex": 7
                 },
                 {
                   "keyActionType": "switchKeymap",
@@ -8094,11 +8108,11 @@
                 null,
                 {
                   "keyActionType": "playMacro",
-                  "macroIndex": 11
+                  "macroIndex": 12
                 },
                 {
                   "keyActionType": "playMacro",
-                  "macroIndex": 12
+                  "macroIndex": 13
                 },
                 null,
                 {
@@ -8282,9 +8296,7 @@
                 },
                 null,
                 null,
-                {
-                  "keyActionType": "none"
-                },
+                null,
                 {
                   "keyActionType": "mouse",
                   "mouseAction": "decelerate"
@@ -8564,11 +8576,11 @@
                 null,
                 {
                   "keyActionType": "playMacro",
-                  "macroIndex": 9
+                  "macroIndex": 10
                 },
                 {
                   "keyActionType": "playMacro",
-                  "macroIndex": 10
+                  "macroIndex": 11
                 },
                 null,
                 null,
@@ -10005,7 +10017,18 @@
       "macroActions": [
         {
           "macroActionType": "command",
-          "command": "ifShift final suppressMods holdKey backspace\r\n//ifAlt final suppressMods holdKey delete\r\nholdLayer mod\r\nifInterrupted break\r\nifPlaytime 300 break\r\ntapKey backspace\r\n"
+          "command": "ifShift final suppressMods holdKey backspace\r\n//ifAlt final suppressMods holdKey delete\r\nsetLedTxt 0 MAX\r\nholdLayer mod\r\nifReleased setLedTxt 1 MAX\r\nifInterrupted break\r\nifPlaytime 300 break\r\ntapKey backspace\r\nsetLedTxt 500 <--\r\n"
+        }
+      ]
+    },
+    {
+      "isLooped": false,
+      "isPrivate": true,
+      "name": "numtab",
+      "macroActions": [
+        {
+          "macroActionType": "command",
+          "command": "ifShift goTo shiftTab\r\n//ifAlt final suppressMods holdKey delete\r\nsetLedTxt 0 NUM\r\nholdLayer fn5\r\nifReleased setLedTxt 1 NUM\r\nifInterrupted break\r\nifPlaytime 300 break\r\ntapKey tab\r\nsetLedTxt 500 ->|\r\nbreak\r\nshiftTab:\r\nsuppressMods holdKey S-tab\r\nsetLedTxt 500 |<-\r\n"
         }
       ]
     },
