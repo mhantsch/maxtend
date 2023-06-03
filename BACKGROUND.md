@@ -75,19 +75,21 @@ After activation of the AutoHotKey script, you have the colemak layout from the 
 ### External Keyboard
 
 #### Ultimate Hacking Keyboard
-The Ultimate Hacking Keyboard (UHK, see https://ultimatehackingkeyboard.com/) offers layers and configurability. I have modified the base keymaps that come with the UHK to resemble the layers from the AutoHotKey script. In addition, the UHK has mouse control. 
+The Ultimate Hacking Keyboard (UHK, see https://ultimatehackingkeyboard.com/) offers layers and configurability. I have modified the base keymaps that come with the UHK to resemble the layers from the AutoHotKey script. In addition, the UHK offers mouse control.
 
-I have mapped the Mod layer of the UHK to the secondary action of the CapsLock (“Mouse”) key of the UHK, and I have mapped the Mouse layer of the UHK to the secondary action of the Left Space (“Mod”) key of the UHK.
+Download the UHK configuration from the [uhk/](uhk) folder, import it into Agent, and save it to your UHK keyboard.
 
-This allows me to use the FUNCTION and NUMPAD layers anywhere where I cannot run AutoHotKey, but have a base Colemak keyboard. For example, on MacOS or Linux or Chromebooks where I cannot install AutoHotKey.
+This maps the Mod layer of the UHK to the secondary action of the CapsLock (“Mouse”) key, and maps the Mouse layer of the UHK to the secondary action of the Left Space (“Mod”) key.
 
-The layers on the UHK are modelled to use the same shortcuts and keys as the AutoHotKey script; so as long as I have either AHK running, or use the UHK, I can use the same key combinations.
+This allows you to use the FUNCTION and NUMPAD layers anywhere where you cannot run AutoHotKey (or keyd/xkb), but have a base Colemak keyboard. For example, on MacOS or Linux or Chromebooks where you cannot install AutoHotKey.
 
-If I have neither AHK nor UHK, then at least I will still have Colemak layout.
+The layers on the UHK are modelled to use the same shortcuts and keys as the AutoHotKey script; so as long as you have either AHK/keyd/xkb running, or use the UHK, you can use the same key combinations.
+
+If you have neither AHK, keyd, xkb nor UHK, then at least you will still have a Colemak layout (from the base OS setup).
 
 MacOS, Linux, ChromeOS and Android all come with Colemak layouts that just need to be switched on. Only Microsoft Windows does not ship with a Colemak keymap, so it will need the installation of the OS base layer (see previous section).
 
-To emulate NUMPAD on the UHK, I use a slightly different approach than with AHK: The Fn-ISO and Fn-/ keys on my UHK keymaps rotate through CMX, NMX, and NM2 keymaps. I can switch between those keymaps with Fn-ISO or Fn-/. The UHK display will show me which map is currently active. So, if I need to type a bunch of numbers, I just switch to NMX or NM2. (I haven’t figured out which one I like more, so for now, I have both.)
+To emulate NUMPAD on the UHK, a slightly different approach than with AHK was chosen: The Fn-ISO and Fn-/ keys on the UHK keymaps rotate through CMX, NMX, and NM2 keymaps. You can switch between those keymaps with Fn-ISO or Fn-/. The UHK display will show me which map is currently active. So, if you need to type a bunch of numbers, I just switch to NMX or NM2. (I haven’t figured out which one I like more, so for now, both are provided.)
 
 Also, the NMX and NM2 layers on the UHK add a “cursor pad” using the / (up), R-Alt (left), R-Win (down) and R-Control (right) keys.
 
@@ -95,7 +97,7 @@ Also, the NMX and NM2 layers on the UHK add a “cursor pad” using the / (up),
 
 ![image](https://github.com/mhantsch/maxtend/assets/591785/dee35957-749c-4c02-81bb-beab7a133817)
 
-Please note that the Mod layer is very similar to DreymaR’s “Extend” layer from https://forum.colemak.com/topic/2014-extend-extra-extreme/
+Please note that the Mod layer is very similar to DreymaR’s “Extend” layer from https://forum.colemak.com/topic/2014-extend-extra-extreme/ with only minor tweaks.
 
 ![image](https://github.com/mhantsch/maxtend/assets/591785/b5138ec6-4ec1-4142-9814-d4d5f9cbccf3)
 
