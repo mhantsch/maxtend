@@ -20,11 +20,11 @@ These setups need to be compatible with each other, i.e. a machine already setup
 Why this flexibility? Imagine you are used to a specific keyboard layout including extended functionality. You work on several computers, sometimes on Windows, sometimes on Linux, sometimes on an external keyboard, and sometimes on the internal keyboard of a laptop. You will want that layout to be identical across all these setups. On computers where your layout and your extended layers are installed, you can work without an external keyboard, but it will not hurt to also use one. On computers where your setup has not been installed, the external keyboard will give you the full functionality.
 
 ## Staged Setup
-We are addressing the setup in three stages:
+The configuration is setup in three stages:
 1. base OS setup - giving a Colemak layout without extended functionality
 2. maxtend layer - giving extended functionality such as navigation, mouse scrolling etc.
 3. external keyboard - giving extended functionality even if your host computer does not have `maxtend` installed
-
+These stages can work independently, but also combine on top of each other for best functionality.
 
 ### OS setup
 A Colemak layout. With this step, your keyboard will be colemak (including multilingual characters, but no other special layers). This is the base for the subsequent maps in AutoHotKey, xkb, keyd, and the UHK.
@@ -59,11 +59,45 @@ Note that this keymap also has several dead keys:
 More information on multilingual support in the Colemak keymap: https://colemak.com/Multilingual
 
 ### AutoHotKey keymap
+Install AutoHotKey from https://autohotkey.com/download/. It’s free.
+
+Load the AutoHotKey script from the [ahk/](ahk) folder; it will add an additional FUNCTION layer and a NUMPAD. Please note that the FUNCTION layer is very similar to DreymaR’s “Extend” layer from https://forum.colemak.com/topic/2014-extend-extra-extreme/ with only a few twists.
+
+The script is designed to work on a colemak base layout (as configured in the previous step).
+
+After activation of the AutoHotKey script, you have the colemak layout from the base keyboard plus the FUNCTION layer and the NUMPAD. This will work independent of your physical (hardware) keyboard; so for example, it works on the built-in keyboard on my Windows laptop, or any external keyboard.
 
 ### xkb
 
 ### keyd
 
 ### Ultimate Hacking Keyboard
+The Ultimate Hacking Keyboard (UHK, see https://ultimatehackingkeyboard.com/) offers layers and configurability. I have modified the base keymaps that come with the UHK to resemble the layers from the AutoHotKey script. In addition, the UHK has mouse control. 
 
+I have mapped the Mod layer of the UHK to the secondary action of the CapsLock (“Mouse”) key of the UHK, and I have mapped the Mouse layer of the UHK to the secondary action of the Left Space (“Mod”) key of the UHK.
 
+This allows me to use the FUNCTION and NUMPAD layers anywhere where I cannot run AutoHotKey, but have a base Colemak keyboard. For example, on MacOS or Linux or Chromebooks where I cannot install AutoHotKey.
+
+The layers on the UHK are modelled to use the same shortcuts and keys as the AutoHotKey script; so as long as I have either AHK running, or use the UHK, I can use the same key combinations.
+
+If I have neither AHK nor UHK, then at least I will still have Colemak layout.
+
+MacOS, Linux, ChromeOS and Android all come with Colemak layouts that just need to be switched on. Only Microsoft Windows does not ship with a Colemak keymap, so it will need the installation of the OS base layer (see previous section).
+
+To emulate NUMPAD on the UHK, I use a slightly different approach than with AHK: The Fn-ISO and Fn-/ keys on my UHK keymaps rotate through CMX, NMX, and NM2 keymaps. I can switch between those keymaps with Fn-ISO or Fn-/. The UHK display will show me which map is currently active. So, if I need to type a bunch of numbers, I just switch to NMX or NM2. (I haven’t figured out which one I like more, so for now, I have both.)
+
+Also, the NMX and NM2 layers on the UHK add a “cursor pad” using the / (up), R-Alt (left), R-Win (down) and R-Control (right) keys.
+
+![image](https://github.com/mhantsch/maxtend/assets/591785/0445a8a2-d7b6-4227-ac7e-af582ac268ec)
+
+![image](https://github.com/mhantsch/maxtend/assets/591785/dee35957-749c-4c02-81bb-beab7a133817)
+
+Please note that the Mod layer is very similar to DreymaR’s “Extend” layer from https://forum.colemak.com/topic/2014-extend-extra-extreme/
+
+![image](https://github.com/mhantsch/maxtend/assets/591785/b5138ec6-4ec1-4142-9814-d4d5f9cbccf3)
+
+![image](https://github.com/mhantsch/maxtend/assets/591785/1bb891c9-3055-4f8a-9fc7-1a084e162141)
+
+![image](https://github.com/mhantsch/maxtend/assets/591785/8dc4dab1-90cb-4f09-b22d-77a01749b15d)
+
+![image](https://github.com/mhantsch/maxtend/assets/591785/54c3e3b5-b4c1-435c-a198-a49bd767bfee)
