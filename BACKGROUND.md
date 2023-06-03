@@ -57,8 +57,9 @@ Note that this keymap also has several dead keys:
 * AltGr-\ is * – to give letters such as ¶ ™ © ® № µ etc.
 
 More information on multilingual support in the Colemak keymap: https://colemak.com/Multilingual
+### Maxtend Layer
 
-### AutoHotKey keymap
+#### AutoHotKey keymap
 Install AutoHotKey from https://autohotkey.com/download/. It’s free.
 
 Load the AutoHotKey script from the [ahk/](ahk) folder; it will add an additional FUNCTION layer and a NUMPAD. Please note that the FUNCTION layer is very similar to DreymaR’s “Extend” layer from https://forum.colemak.com/topic/2014-extend-extra-extreme/ with only a few twists.
@@ -67,11 +68,13 @@ The script is designed to work on a colemak base layout (as configured in the pr
 
 After activation of the AutoHotKey script, you have the colemak layout from the base keyboard plus the FUNCTION layer and the NUMPAD. This will work independent of your physical (hardware) keyboard; so for example, it works on the built-in keyboard on my Windows laptop, or any external keyboard.
 
-### xkb
+#### xkb
 
-### keyd
+#### keyd
 
-### Ultimate Hacking Keyboard
+### External Keyboard
+
+#### Ultimate Hacking Keyboard
 The Ultimate Hacking Keyboard (UHK, see https://ultimatehackingkeyboard.com/) offers layers and configurability. I have modified the base keymaps that come with the UHK to resemble the layers from the AutoHotKey script. In addition, the UHK has mouse control. 
 
 I have mapped the Mod layer of the UHK to the secondary action of the CapsLock (“Mouse”) key of the UHK, and I have mapped the Mouse layer of the UHK to the secondary action of the Left Space (“Mod”) key of the UHK.
