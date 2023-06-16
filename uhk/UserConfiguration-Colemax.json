@@ -2,11 +2,11 @@
   "userConfigMajorVersion": 5,
   "userConfigMinorVersion": 0,
   "userConfigPatchVersion": 0,
-  "deviceName": "123",
+  "deviceName": "UHKv2 Max",
   "doubleTapSwitchLayerTimeout": 250,
-  "iconsAndLayerTextsBrightness": 255,
-  "alphanumericSegmentsBrightness": 255,
-  "keyBacklightBrightness": 13,
+  "iconsAndLayerTextsBrightness": 128,
+  "alphanumericSegmentsBrightness": 64,
+  "keyBacklightBrightness": 64,
   "mouseMoveInitialSpeed": 4,
   "mouseMoveAcceleration": 40,
   "mouseMoveDeceleratedSpeed": 8,
@@ -1436,7 +1436,7 @@
                 },
                 {
                   "keyActionType": "playMacro",
-                  "macroIndex": 6
+                  "macroIndex": 10
                 },
                 {
                   "keyActionType": "keystroke",
@@ -1550,15 +1550,12 @@
                   "switchLayerMode": "holdAndDoubleTapToggle"
                 },
                 {
-                  "keyActionType": "switchLayer",
-                  "layer": "mouse",
-                  "switchLayerMode": "holdAndDoubleTapToggle"
+                  "keyActionType": "mouse",
+                  "mouseAction": "leftClick"
                 },
                 {
-                  "keyActionType": "keystroke",
-                  "type": "basic",
-                  "scancode": 44,
-                  "secondaryRoleAction": "mouse"
+                  "keyActionType": "playMacro",
+                  "macroIndex": 9
                 },
                 null
               ]
@@ -1862,7 +1859,7 @@
                 null,
                 {
                   "keyActionType": "playMacro",
-                  "macroIndex": 8
+                  "macroIndex": 12
                 },
                 null,
                 {
@@ -2233,7 +2230,7 @@
                 null,
                 {
                   "keyActionType": "playMacro",
-                  "macroIndex": 9
+                  "macroIndex": 13
                 },
                 {
                   "keyActionType": "keystroke",
@@ -2249,7 +2246,7 @@
                 null,
                 {
                   "keyActionType": "playMacro",
-                  "macroIndex": 7
+                  "macroIndex": 11
                 },
                 {
                   "keyActionType": "switchKeymap",
@@ -2397,11 +2394,11 @@
                 null,
                 {
                   "keyActionType": "playMacro",
-                  "macroIndex": 12
+                  "macroIndex": 16
                 },
                 {
                   "keyActionType": "playMacro",
-                  "macroIndex": 13
+                  "macroIndex": 17
                 },
                 null,
                 {
@@ -2610,11 +2607,7 @@
                   "modifierMask": 4
                 },
                 null,
-                {
-                  "keyActionType": "switchLayer",
-                  "layer": "mouse",
-                  "switchLayerMode": "holdAndDoubleTapToggle"
-                },
+                null,
                 null,
                 null
               ]
@@ -2865,11 +2858,11 @@
                 null,
                 {
                   "keyActionType": "playMacro",
-                  "macroIndex": 10
+                  "macroIndex": 14
                 },
                 {
                   "keyActionType": "playMacro",
-                  "macroIndex": 11
+                  "macroIndex": 15
                 },
                 null,
                 null,
@@ -4435,7 +4428,7 @@
                 },
                 {
                   "keyActionType": "playMacro",
-                  "macroIndex": 5
+                  "macroIndex": 6
                 },
                 {
                   "keyActionType": "keystroke",
@@ -5810,7 +5803,7 @@
                 },
                 {
                   "keyActionType": "playMacro",
-                  "macroIndex": 5
+                  "macroIndex": 6
                 },
                 {
                   "keyActionType": "keystroke",
@@ -7147,7 +7140,7 @@
                 },
                 {
                   "keyActionType": "playMacro",
-                  "macroIndex": 6
+                  "macroIndex": 10
                 },
                 {
                   "keyActionType": "keystroke",
@@ -7177,7 +7170,7 @@
                 },
                 {
                   "keyActionType": "playMacro",
-                  "macroIndex": 5
+                  "macroIndex": 6
                 },
                 {
                   "keyActionType": "keystroke",
@@ -7261,9 +7254,8 @@
                   "switchLayerMode": "holdAndDoubleTapToggle"
                 },
                 {
-                  "keyActionType": "switchLayer",
-                  "layer": "mouse",
-                  "switchLayerMode": "holdAndDoubleTapToggle"
+                  "keyActionType": "mouse",
+                  "mouseAction": "leftClick"
                 },
                 {
                   "keyActionType": "keystroke",
@@ -7573,7 +7565,7 @@
                 null,
                 {
                   "keyActionType": "playMacro",
-                  "macroIndex": 8
+                  "macroIndex": 12
                 },
                 null,
                 {
@@ -7944,7 +7936,7 @@
                 null,
                 {
                   "keyActionType": "playMacro",
-                  "macroIndex": 9
+                  "macroIndex": 13
                 },
                 {
                   "keyActionType": "keystroke",
@@ -7960,7 +7952,7 @@
                 null,
                 {
                   "keyActionType": "playMacro",
-                  "macroIndex": 7
+                  "macroIndex": 11
                 },
                 {
                   "keyActionType": "switchKeymap",
@@ -8108,11 +8100,11 @@
                 null,
                 {
                   "keyActionType": "playMacro",
-                  "macroIndex": 12
+                  "macroIndex": 16
                 },
                 {
                   "keyActionType": "playMacro",
-                  "macroIndex": 13
+                  "macroIndex": 17
                 },
                 null,
                 {
@@ -8321,11 +8313,7 @@
                   "modifierMask": 4
                 },
                 null,
-                {
-                  "keyActionType": "switchLayer",
-                  "layer": "mouse",
-                  "switchLayerMode": "holdAndDoubleTapToggle"
-                },
+                null,
                 null,
                 null
               ]
@@ -8576,11 +8564,11 @@
                 null,
                 {
                   "keyActionType": "playMacro",
-                  "macroIndex": 10
+                  "macroIndex": 14
                 },
                 {
                   "keyActionType": "playMacro",
-                  "macroIndex": 11
+                  "macroIndex": 15
                 },
                 null,
                 null,
@@ -10017,7 +10005,51 @@
       "macroActions": [
         {
           "macroActionType": "command",
-          "command": "ifShift final suppressMods holdKey backspace\r\n//ifAlt final suppressMods holdKey delete\r\nsetLedTxt 0 MAX\r\nholdLayer mod\r\nifReleased setLedTxt 1 MAX\r\nifInterrupted break\r\nifPlaytime 300 break\r\ntapKey backspace\r\nsetLedTxt 500 <--\r\n"
+          "command": "ifShift goTo shiftMaxtend\r\nifAlt goTo altMaxtend\r\nresolveSecondary 200 0 primaryaction secondaryaction\r\n\r\nsecondaryaction:\r\nsetLedTxt 0 MAX\r\nholdLayer mod\r\nsetLedTxt 1 MAX\r\nbreak\r\n\r\nprimaryaction:\r\ntapKey backspace\r\nsetLedTxt 500 <--\r\nbreak\r\n\r\nshiftMaxtend:\r\nsetLedTxt 0 <--\r\nsuppressMods holdKey backspace\r\nifNotPlaytime 300 final setLedTxt 300 <--\r\nsetLedTxt 1 <--\r\nbreak\r\n\r\naltMaxtend:\r\nsetLedTxt 0 DEL\r\nsuppressMods holdKey delete\r\nifNotPlaytime 300 final setLedTxt 300 DEL\r\nsetLedTxt 1 DEL\r\nbreak\r\n"
+        }
+      ]
+    },
+    {
+      "isLooped": false,
+      "isPrivate": true,
+      "name": "maxtend-simple",
+      "macroActions": [
+        {
+          "macroActionType": "command",
+          "command": "ifShift goTo shiftMaxtend\r\n//ifAlt final suppressMods holdKey delete\r\nsetLedTxt 0 MAX\r\nholdLayer mod\r\nifReleased setLedTxt 1 MAX\r\nifInterrupted break\r\nifPlaytime 300 break\r\ntapKey backspace\r\nsetLedTxt 500 <--\r\nbreak\r\nshiftMaxtend:\r\nsetLedTxt 0 <--\r\nsuppressMods holdKey backspace\r\nifReleased setLedTxt 1 MAX\r\n"
+        }
+      ]
+    },
+    {
+      "isLooped": false,
+      "isPrivate": true,
+      "name": "maxtend-toggle",
+      "macroActions": [
+        {
+          "macroActionType": "command",
+          "command": "holdLayer mod\r\nifInterrupted break\r\nifPlaytime 300 break\r\ntoggleLayer mod\r\n"
+        }
+      ]
+    },
+    {
+      "isLooped": false,
+      "isPrivate": true,
+      "name": "maxtend-untoggle",
+      "macroActions": [
+        {
+          "macroActionType": "command",
+          "command": "holdLayer previous\r\nifInterrupted break\r\nifPlaytime 300 break\r\nunToggleLayer\r\n"
+        }
+      ]
+    },
+    {
+      "isLooped": false,
+      "isPrivate": true,
+      "name": "mousetend",
+      "macroActions": [
+        {
+          "macroActionType": "command",
+          "command": "resolveSecondary 300 150 primaryaction secondaryaction\nprimaryaction: final tapKey space\nsecondaryaction: final holdLayer mouse\n"
         }
       ]
     },
@@ -10028,7 +10060,7 @@
       "macroActions": [
         {
           "macroActionType": "command",
-          "command": "ifShift goTo shiftTab\r\n//ifAlt final suppressMods holdKey delete\r\nsetLedTxt 0 NUM\r\nholdLayer fn5\r\nifReleased setLedTxt 1 NUM\r\nifInterrupted break\r\nifPlaytime 300 break\r\ntapKey tab\r\nsetLedTxt 500 ->|\r\nbreak\r\nshiftTab:\r\nsuppressMods holdKey S-tab\r\nsetLedTxt 500 |<-\r\n"
+          "command": "ifShift goTo shiftTab\r\n//ifAlt final suppressMods holdKey delete\r\nsetLedTxt 0 NUM\r\nholdLayer fn5\r\nifReleased setLedTxt 1 NUM\r\nifInterrupted break\r\nifPlaytime 300 break\r\ntapKey tab\r\nsetLedTxt 500 ->|\r\nbreak\r\nshiftTab:\r\nsetLedTxt 0 |<-\r\nholdKey tab\r\nsetLedTxt 500 |<-\r\n"
         }
       ]
     },
