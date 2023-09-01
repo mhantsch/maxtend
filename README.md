@@ -1,7 +1,7 @@
 # maxtend
-Extended keyboard layers for easy navigation and functionality based on Colemak
+Extended keyboard layers for easy navigation and functionality from a Colemak base layout.
 
-This repository contains various configurations and tooling to create an extended keyboard setup for both Windows and Linux, and a matching configuration for the [Ultimate Hacking Keyboard](https://ultimatehackingkeyboard.com).
+This repository contains various configurations and tooling to create an extended keyboard setup for both Windows and Linux, and a matching configuration for the [Ultimate Hacking Keyboard](https://ultimatehackingkeyboard.com). The configurations start from a Colemak base layout but a lot (or at least some) should also work with other base layouts.
 
 Read more about the [Background](BACKGROUND.md) of this setup.
 
