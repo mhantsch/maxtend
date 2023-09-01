@@ -1,5 +1,5 @@
 ## Intro
-Some years ago, I decided to switch my keyboard layout to [Colemak](https://colemak.org), and re-learn my typing. I was decent at touch-typing qwerty, but I decided my typing experience could be better. Thus, the rabbit hole of keyboard layouts, mechanical keyboards, and keyboard layers.
+Some years ago, I decided to switch my keyboard layout to [Colemak](https://colemak.org), and re-learn my typing. I was decent at touch-typing qwerty, but I decided my typing experience could be better. Thus, the rabbit hole of keyboard layouts, mechanical keyboards, and keyboard layers. I also switched to ten-key-less (TKL) and 60% keyboards, adding the need for layers (navigation, numpad).
 
 This repository contains various configurations and tooling that I have used to create my setup for both Windows and Linux, and also my configuration for the [Ultimate Hacking Keyboard](https://ultimatehackingkeyboard.com).
 
