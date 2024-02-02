@@ -24,6 +24,7 @@ The configuration is setup in three stages:
 1. base OS setup - giving a standard Colemak layout without extended functionality
 2. maxtend layer - giving extended functionality such as navigation, mouse scrolling etc.
 3. external keyboard - giving extended functionality even if your host computer does not have `maxtend` installed
+
 These stages can work independently, but also combine on top of each other for best functionality.
 
 ### OS setup
