@@ -6,6 +6,11 @@ This repository contains various configurations and tooling to create an extende
 
 Read more about the [Background](BACKGROUND.md) of this setup.
 
+**Main features of this layout**
+- a navigation layer (called *maxtend*) for cursor movement, text selection and cut/copy/paste
+- a numpad layer (called *numtab*) for entering numbers in forms, sheets, calculators
+- mouse support (on systems that support it) for clicking and scrolling
+
 ![Overview of the layout of a maxtended keyboard.](https://github.com/mhantsch/maxtend/assets/591785/4665a0d8-d454-4e63-947f-1974c6e34555)
 
 ## Sections
