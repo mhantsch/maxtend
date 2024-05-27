@@ -6,6 +6,8 @@ This repository contains various configurations and tooling to create an extende
 
 Read more about the [Background](BACKGROUND.md) of this setup.
 
+![Overview of the layout of a maxtended keyboard.](https://github.com/mhantsch/maxtend/assets/591785/4665a0d8-d454-4e63-947f-1974c6e34555)
+
 ## Sections
 Depending on your OS and preferred setup, find the configurations for each of the different tools in the corresponding subdirectories. 
 - For Windows, pick the [ahk](ahk/) configuration (and load via [AutoHotKey](https://www.autohotkey.com/)).
