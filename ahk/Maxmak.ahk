@@ -13,7 +13,7 @@
 ; Short summary:
 ; - A short press and release of CapsLock will work as Backspace, as in original Colemak.
 ; - Holding CapsLock together with other keys works as an additional Function layer.
-; - Switching on ScrollLock, or holding CapsLock+Tab will enable a virtual number pad.
+; - Holding Tab, switching on ScrollLock, or toggling with CapsLock+Tab will enable a virtual number pad.
 ; - [not implemented] The Space key together with other keys also works as an additonal layer (like CapsLock).
 ; - [not implemented] Holding both CapsLock & Space together with other keys triggers an additional Meta layer.
 ;
@@ -31,8 +31,9 @@
 ; Backspace will not be triggered.)
 ;
 ; (2) NUMBER pad
-; Active ScrollLock, or holding CapsLock+Tab will turn the keys below 7-8-9 into a number pad.
-; (Think: CapsLock+Tab held down = NUMBERS layer). Useful for keyboards without numpad.
+; Holding down Tab, active ScrollLock, or use CapsLock+Tab to turn the keys below 7-8-9 
+; into a number pad. (Think: hold Tab for NUMPAD, CapsLock+Tab toggles NUMPAD). 
+; Useful for keyboards without numpad.
 ; If you have a TKL keyboard with cursor keys and Print/ScrLock/Pause/Ins/Del/Home/End/PgUp/PgDn
 ; keys, those will emulate a number pad too in this mode.
 ;
@@ -87,6 +88,7 @@
 #NoEnv
 
 global ShiftStates := Object()
+global isSuperLargeScreen := false
 
 Return
 
@@ -100,6 +102,8 @@ Return
 ; that the Backspace has been cancelled. (Alternatively the signal can 
 ; be changed to a high-pitched short beep or a tray tip in the code below.)
 ;
+
+!SC03A::SendInput, {Del}
 
 ;SC03A down::
 SC03A::
@@ -131,6 +135,29 @@ Return
 SC03A up::
 	ForgetShiftStates()
 Return
+
+;
+; NUMPAD (NUMBER layer) handling
+;
+
+global NumSequenceTriggered := 0
+
+Tab::
+	Numlayer := 1
+	NumSequenceTriggered := 0
+Return
+
+Tab up::
+	if( NumSequenceTriggered = 0 ) {
+		Send, {Tab}
+	}
+	Numlayer := 0
+Return
+
+SendNum(key) {
+	NumSequenceTriggered := 1
+	SendInput, %key%
+}
 
 #if 0
 ;
@@ -235,11 +262,19 @@ MetaSend(sendstring) {
 ;~t::RememberShiftState("ctrl")
 ~t up::ForgetShiftState("ctrl")
 
-~SC03A & Tab::SetScrollLockState, On
-~SC03A & Tab up::SetScrollLockState, Off
+; Turn NUMBER layer on/off
+~SC03A & Tab::
+	global CombinedSequenceTriggered = 1
+	if (GetKeyState("Scrolllock","T")) {
+		SetScrollLockState, Off
+	} else {
+		SetScrollLockState, On
+	}
+Return
+
 ~SC03A & ScrollLock::MetaSend("{ScrollLock}")
 
-~!SC03A::MetaSend("{Delete}")
+; ~!SC03A::MetaSend("{Delete}")
 
 ; List of NUMBER layer functions
 ;
@@ -264,7 +299,27 @@ Left::0
 Down::,
 Right::.
 Up::-
+o::+
+`;::-
+h::*
+j::/
 #If
+
+~Tab & m::SendNum("0")
+~Tab & n::SendNum("1")
+~Tab & e::SendNum("2")
+~Tab & i::SendNum("3")
+~Tab & l::SendNum("4")
+~Tab & u::SendNum("5")
+~Tab & y::SendNum("6")
+~Tab & 7::SendNum("7")
+~Tab & 8::SendNum("8")
+~Tab & 9::SendNum("9")
+~Tab & 0::SendNum("0")
+~Tab & o::SendNum("{+}")
+~Tab & `;::SendNum("-")
+~Tab & h::SendNum("*")
+~Tab & j::SendNum("/")
 
 ; List of FUNCTION layer functions
 ;
@@ -272,12 +327,12 @@ Up::-
 ~SC03A & q::MetaSend("{Escape}")
 ~SC03A & f::MetaSend("{Browser_Back}")
 ~SC03A & p::MetaSend("{Browser_Forward}")
-~SC03A & l::MetaSend2("{Home}","4")
-~SC03A & u::MetaSend2("{Up}","5")
-~SC03A & y::MetaSend2("{End}","6")
-~SC03A & n::MetaSend2("{Left}","1")
-~SC03A & e::MetaSend2("{Down}","2")
-~SC03A & i::MetaSend2("{Right}","3")
+~SC03A & l::MetaSend("{Home}")
+~SC03A & u::MetaSend("{Up}")
+~SC03A & y::MetaSend("{End}")
+~SC03A & n::MetaSend("{Left}")
+~SC03A & e::MetaSend("{Down}")
+~SC03A & i::MetaSend("{Right}")
 ~SC03A & j::MetaSend("{PgUp}")
 ~SC03A & h::MetaSend("{PgDn}")
 ~SC03A & `;::MetaSend("{Delete}")
@@ -301,20 +356,6 @@ Up::-
 ~SC03A & ,::MouseMove, IsShift() ? -2 : -30, 0, ,R
 ~SC03A & .::MouseMove, IsShift() ? 2 : 30, 0, ,R
 #If
-
-; Number row -> Function keys
-~SC03A & 1::MetaSend2("{F1}","1")
-~SC03A & 2::MetaSend2("{F2}","2")
-~SC03A & 3::MetaSend2("{F3}","3")
-~SC03A & 4::MetaSend2("{F4}","4")
-~SC03A & 5::MetaSend2("{F5}","5")
-~SC03A & 6::MetaSend2("{F6}","6")
-~SC03A & 7::MetaSend2("{F7}","7")
-~SC03A & 8::MetaSend2("{F8}","8")
-~SC03A & 9::MetaSend2("{F9}","9")
-~SC03A & 0::MetaSend2("{F10}","0")
-~SC03A & -::MetaSend("{F11}")
-~SC03A & =::MetaSend("{F12}")
 
 ;
 ; META layer extensions (CapsLock & Space held down); 
@@ -363,5 +404,35 @@ Up::-
 ~Space & r::MetaSend("{WheelDown}")
 #if
 
+~SC03A & 1::MetaSend2("{F1}","1")
+~SC03A & 2::MetaSend2("{F2}","2")
+~SC03A & 3::MetaSend2("{F3}","3")
+~SC03A & 4::MetaSend2("{F4}","4")
+~SC03A & 5::MetaSend2("{F5}","5")
+~SC03A & 6::MetaSend2("{F6}","6")
+~SC03A & 7::MetaSend2("{F7}","7")
+~SC03A & 8::MetaSend2("{F8}","8")
+~SC03A & 9::MetaSend2("{F9}","9")
+~SC03A & 0::MetaSend2("{F10}","0")
+~SC03A & -::MetaSend("{F11}")
+~SC03A & =::MetaSend("{F12}")
+
 ;
 ; --- end of Colemak meta functions ahk script ---
+
+;
+; Toggle 'mic mute' in the new Microsoft Teams
+; (which does not support universal mic mute functionality of Windows 10/11).
+; Press Ctrl-Shift-M to activate the Teams window (bringing it to foreground)
+; and toggle the mic mute.
+;
+
+^+m::
+{
+   WinActivate, ahk_class TeamsWebView
+   WinWait, ahk_class TeamsWebView
+   if ( ErrorLevel=0 ) {
+      Send ^+m
+   }
+;    ControlSend , ahk_class TeamsWebView, ^+m, 
+}

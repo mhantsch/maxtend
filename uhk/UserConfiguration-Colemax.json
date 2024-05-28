@@ -1,6 +1,6 @@
 {
   "userConfigMajorVersion": 7,
-  "userConfigMinorVersion": 0,
+  "userConfigMinorVersion": 1,
   "userConfigPatchVersion": 0,
   "deviceName": "UHK Max",
   "doubleTapSwitchLayerTimeout": 250,
@@ -92,6 +92,7 @@
       "caretAxisLock": true,
       "axisLockFirstTickSkew": 0.5,
       "axisLockSkew": 0.5,
+      "invertScrollDirectionX": false,
       "invertScrollDirectionY": false,
       "keyClusterSwapAxes": false,
       "keyClusterInvertHorizontalScrolling": false
@@ -115,6 +116,7 @@
       "caretAxisLock": true,
       "axisLockFirstTickSkew": 2,
       "axisLockSkew": 0.5,
+      "invertScrollDirectionX": false,
       "invertScrollDirectionY": false,
       "touchpadPinchZoomDivisor": 4,
       "touchpadHoldContinuationTimeout": 0,
@@ -139,6 +141,7 @@
       "caretAxisLock": true,
       "axisLockFirstTickSkew": 2,
       "axisLockSkew": 0.5,
+      "invertScrollDirectionX": false,
       "invertScrollDirectionY": false
     },
     {
@@ -160,6 +163,7 @@
       "caretAxisLock": true,
       "axisLockFirstTickSkew": 2,
       "axisLockSkew": 0.5,
+      "invertScrollDirectionX": false,
       "invertScrollDirectionY": false
     }
   ],
@@ -993,7 +997,7 @@
                 },
                 {
                   "keyActionType": "playMacro",
-                  "macroIndex": 13
+                  "macroIndex": 14
                 },
                 {
                   "keyActionType": "none"
@@ -1827,7 +1831,7 @@
                 },
                 {
                   "keyActionType": "playMacro",
-                  "macroIndex": 22
+                  "macroIndex": 24
                 },
                 {
                   "keyActionType": "keystroke",
@@ -1859,7 +1863,7 @@
                 },
                 {
                   "keyActionType": "playMacro",
-                  "macroIndex": 14
+                  "macroIndex": 15
                 },
                 {
                   "keyActionType": "keystroke",
@@ -1950,7 +1954,7 @@
                 },
                 {
                   "keyActionType": "playMacro",
-                  "macroIndex": 18
+                  "macroIndex": 20
                 },
                 {
                   "keyActionType": "none"
@@ -1962,12 +1966,11 @@
               "keyActions": [
                 {
                   "keyActionType": "playMacro",
-                  "macroIndex": 19
+                  "macroIndex": 21
                 },
                 {
-                  "keyActionType": "switchLayer",
-                  "layer": "mod",
-                  "switchLayerMode": "hold"
+                  "keyActionType": "playMacro",
+                  "macroIndex": 19
                 },
                 {
                   "keyActionType": "switchLayer",
@@ -2261,7 +2264,7 @@
                 },
                 {
                   "keyActionType": "playMacro",
-                  "macroIndex": 25
+                  "macroIndex": 27
                 },
                 {
                   "keyActionType": "none"
@@ -2289,7 +2292,9 @@
                   "keyActionType": "none"
                 },
                 {
-                  "keyActionType": "none"
+                  "keyActionType": "keystroke",
+                  "type": "basic",
+                  "modifierMask": 8
                 },
                 {
                   "keyActionType": "keystroke",
@@ -2377,9 +2382,7 @@
                   "scancode": 75
                 },
                 {
-                  "keyActionType": "switchLayer",
-                  "layer": "mod",
-                  "switchLayerMode": "hold"
+                  "keyActionType": "none"
                 },
                 {
                   "keyActionType": "keystroke",
@@ -2436,11 +2439,11 @@
                 },
                 {
                   "keyActionType": "playMacro",
-                  "macroIndex": 21
+                  "macroIndex": 23
                 },
                 {
                   "keyActionType": "playMacro",
-                  "macroIndex": 13
+                  "macroIndex": 14
                 },
                 {
                   "keyActionType": "keystroke",
@@ -2515,10 +2518,13 @@
                 },
                 {
                   "keyActionType": "playMacro",
-                  "macroIndex": 11
+                  "macroIndex": 12
                 },
                 {
-                  "keyActionType": "none"
+                  "keyActionType": "keystroke",
+                  "type": "basic",
+                  "scancode": 11,
+                  "modifierMask": 64
                 },
                 {
                   "keyActionType": "none"
@@ -2575,9 +2581,8 @@
                   "modifierMask": 128
                 },
                 {
-                  "keyActionType": "keystroke",
-                  "type": "basic",
-                  "modifierMask": 16
+                  "keyActionType": "playMacro",
+                  "macroIndex": 33
                 }
               ]
             },
@@ -2652,9 +2657,8 @@
                   "macroIndex": 6
                 },
                 {
-                  "keyActionType": "keystroke",
-                  "type": "basic",
-                  "scancode": 76
+                  "keyActionType": "playMacro",
+                  "macroIndex": 15
                 },
                 {
                   "keyActionType": "keystroke",
@@ -2663,7 +2667,10 @@
                   "modifierMask": 4
                 },
                 {
-                  "keyActionType": "none"
+                  "keyActionType": "keystroke",
+                  "type": "basic",
+                  "scancode": 22,
+                  "modifierMask": 64
                 },
                 {
                   "keyActionType": "keystroke",
@@ -2672,14 +2679,17 @@
                   "modifierMask": 64
                 },
                 {
-                  "keyActionType": "none"
+                  "keyActionType": "keystroke",
+                  "type": "basic",
+                  "scancode": 9,
+                  "modifierMask": 64
                 },
                 {
                   "keyActionType": "none"
                 },
                 {
                   "keyActionType": "playMacro",
-                  "macroIndex": 26
+                  "macroIndex": 28
                 },
                 {
                   "keyActionType": "keystroke",
@@ -2702,7 +2712,7 @@
                 },
                 {
                   "keyActionType": "playMacro",
-                  "macroIndex": 24
+                  "macroIndex": 26
                 },
                 {
                   "keyActionType": "switchKeymap",
@@ -2755,9 +2765,8 @@
               "id": 2,
               "keyActions": [
                 {
-                  "keyActionType": "keystroke",
-                  "type": "basic",
-                  "scancode": 76
+                  "keyActionType": "playMacro",
+                  "macroIndex": 22
                 },
                 {
                   "keyActionType": "keystroke",
@@ -2856,11 +2865,11 @@
                 },
                 {
                   "keyActionType": "playMacro",
-                  "macroIndex": 29
+                  "macroIndex": 31
                 },
                 {
                   "keyActionType": "playMacro",
-                  "macroIndex": 30
+                  "macroIndex": 32
                 },
                 {
                   "keyActionType": "none"
@@ -3371,7 +3380,7 @@
                 },
                 {
                   "keyActionType": "playMacro",
-                  "macroIndex": 22
+                  "macroIndex": 24
                 },
                 {
                   "keyActionType": "keystroke",
@@ -3383,11 +3392,11 @@
                 },
                 {
                   "keyActionType": "playMacro",
-                  "macroIndex": 27
+                  "macroIndex": 29
                 },
                 {
                   "keyActionType": "playMacro",
-                  "macroIndex": 28
+                  "macroIndex": 30
                 },
                 {
                   "keyActionType": "none"
@@ -3397,7 +3406,7 @@
                 },
                 {
                   "keyActionType": "playMacro",
-                  "macroIndex": 14
+                  "macroIndex": 15
                 },
                 {
                   "keyActionType": "keystroke",
@@ -3457,7 +3466,9 @@
                   "modifierMask": 1
                 },
                 {
-                  "keyActionType": "none"
+                  "keyActionType": "keystroke",
+                  "type": "basic",
+                  "scancode": 83
                 },
                 {
                   "keyActionType": "keystroke",
@@ -3530,6 +3541,300 @@
                 {
                   "keyActionType": "mouse",
                   "mouseAction": "rightClick"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "fn2",
+          "modules": [
+            {
+              "id": 0,
+              "keyActions": [
+                {
+                  "keyActionType": "none"
+                },
+                {
+                  "keyActionType": "none"
+                },
+                {
+                  "keyActionType": "none"
+                },
+                {
+                  "keyActionType": "none"
+                },
+                {
+                  "keyActionType": "none"
+                },
+                {
+                  "keyActionType": "none"
+                },
+                {
+                  "keyActionType": "none"
+                },
+                {
+                  "keyActionType": "none"
+                },
+                {
+                  "keyActionType": "none"
+                },
+                {
+                  "keyActionType": "none"
+                },
+                {
+                  "keyActionType": "none"
+                },
+                {
+                  "keyActionType": "none"
+                },
+                {
+                  "keyActionType": "none"
+                },
+                {
+                  "keyActionType": "none"
+                },
+                {
+                  "keyActionType": "none"
+                },
+                {
+                  "keyActionType": "none"
+                },
+                {
+                  "keyActionType": "none"
+                },
+                {
+                  "keyActionType": "none"
+                },
+                {
+                  "keyActionType": "none"
+                },
+                {
+                  "keyActionType": "none"
+                },
+                {
+                  "keyActionType": "none"
+                },
+                {
+                  "keyActionType": "none"
+                },
+                {
+                  "keyActionType": "none"
+                },
+                {
+                  "keyActionType": "none"
+                },
+                {
+                  "keyActionType": "none"
+                },
+                {
+                  "keyActionType": "none"
+                },
+                {
+                  "keyActionType": "none"
+                },
+                {
+                  "keyActionType": "none"
+                },
+                {
+                  "keyActionType": "none"
+                },
+                {
+                  "keyActionType": "none"
+                },
+                {
+                  "keyActionType": "none"
+                },
+                {
+                  "keyActionType": "none"
+                },
+                {
+                  "keyActionType": "none"
+                },
+                {
+                  "keyActionType": "none"
+                },
+                {
+                  "keyActionType": "none"
+                }
+              ]
+            },
+            {
+              "id": 1,
+              "keyActions": [
+                {
+                  "keyActionType": "none"
+                },
+                {
+                  "keyActionType": "none"
+                },
+                {
+                  "keyActionType": "none"
+                },
+                {
+                  "keyActionType": "none"
+                },
+                {
+                  "keyActionType": "none"
+                },
+                {
+                  "keyActionType": "none"
+                },
+                {
+                  "keyActionType": "none"
+                },
+                {
+                  "keyActionType": "none"
+                },
+                {
+                  "keyActionType": "keystroke",
+                  "type": "basic",
+                  "scancode": 19
+                },
+                {
+                  "keyActionType": "keystroke",
+                  "type": "basic",
+                  "scancode": 18
+                },
+                {
+                  "keyActionType": "keystroke",
+                  "type": "basic",
+                  "scancode": 12
+                },
+                {
+                  "keyActionType": "keystroke",
+                  "type": "basic",
+                  "scancode": 24
+                },
+                {
+                  "keyActionType": "none"
+                },
+                {
+                  "keyActionType": "keystroke",
+                  "type": "basic",
+                  "scancode": 28
+                },
+                {
+                  "keyActionType": "none"
+                },
+                {
+                  "keyActionType": "keystroke",
+                  "type": "basic",
+                  "scancode": 51
+                },
+                {
+                  "keyActionType": "keystroke",
+                  "type": "basic",
+                  "scancode": 15
+                },
+                {
+                  "keyActionType": "keystroke",
+                  "type": "basic",
+                  "scancode": 14
+                },
+                {
+                  "keyActionType": "keystroke",
+                  "type": "basic",
+                  "scancode": 13
+                },
+                {
+                  "keyActionType": "none"
+                },
+                {
+                  "keyActionType": "keystroke",
+                  "type": "basic",
+                  "scancode": 11
+                },
+                {
+                  "keyActionType": "keystroke",
+                  "type": "basic",
+                  "modifierMask": 2
+                },
+                {
+                  "keyActionType": "keystroke",
+                  "type": "basic",
+                  "modifierMask": 64
+                },
+                {
+                  "keyActionType": "keystroke",
+                  "type": "basic",
+                  "scancode": 56
+                },
+                {
+                  "keyActionType": "keystroke",
+                  "type": "basic",
+                  "scancode": 55
+                },
+                {
+                  "keyActionType": "keystroke",
+                  "type": "basic",
+                  "scancode": 54
+                },
+                {
+                  "keyActionType": "keystroke",
+                  "type": "basic",
+                  "scancode": 16
+                },
+                {
+                  "keyActionType": "keystroke",
+                  "type": "basic",
+                  "scancode": 17
+                },
+                {
+                  "keyActionType": "none"
+                },
+                {
+                  "keyActionType": "none"
+                },
+                {
+                  "keyActionType": "keystroke",
+                  "type": "basic",
+                  "modifierMask": 64
+                },
+                {
+                  "keyActionType": "none"
+                },
+                {
+                  "keyActionType": "none"
+                },
+                {
+                  "keyActionType": "keystroke",
+                  "type": "basic",
+                  "modifierMask": 2
+                },
+                {
+                  "keyActionType": "none"
+                }
+              ]
+            },
+            {
+              "id": 2,
+              "keyActions": [
+                {
+                  "keyActionType": "none"
+                },
+                {
+                  "keyActionType": "none"
+                },
+                {
+                  "keyActionType": "none"
+                },
+                {
+                  "keyActionType": "none"
+                },
+                {
+                  "keyActionType": "none"
+                },
+                {
+                  "keyActionType": "none"
+                }
+              ]
+            },
+            {
+              "id": 5,
+              "keyActions": [
+                {
+                  "keyActionType": "none"
                 }
               ]
             }
@@ -3770,7 +4075,7 @@
                 },
                 {
                   "keyActionType": "playMacro",
-                  "macroIndex": 22
+                  "macroIndex": 24
                 },
                 {
                   "keyActionType": "keystroke",
@@ -3802,7 +4107,7 @@
                 },
                 {
                   "keyActionType": "playMacro",
-                  "macroIndex": 14
+                  "macroIndex": 15
                 },
                 {
                   "keyActionType": "keystroke",
@@ -3897,7 +4202,7 @@
                 },
                 {
                   "keyActionType": "playMacro",
-                  "macroIndex": 18
+                  "macroIndex": 20
                 },
                 {
                   "keyActionType": "none"
@@ -3909,7 +4214,7 @@
               "keyActions": [
                 {
                   "keyActionType": "playMacro",
-                  "macroIndex": 19
+                  "macroIndex": 21
                 },
                 {
                   "keyActionType": "switchLayer",
@@ -4208,7 +4513,7 @@
                 },
                 {
                   "keyActionType": "playMacro",
-                  "macroIndex": 25
+                  "macroIndex": 27
                 },
                 {
                   "keyActionType": "none"
@@ -4383,11 +4688,11 @@
                 },
                 {
                   "keyActionType": "playMacro",
-                  "macroIndex": 21
+                  "macroIndex": 23
                 },
                 {
                   "keyActionType": "playMacro",
-                  "macroIndex": 13
+                  "macroIndex": 14
                 },
                 {
                   "keyActionType": "keystroke",
@@ -4462,7 +4767,7 @@
                 },
                 {
                   "keyActionType": "playMacro",
-                  "macroIndex": 11
+                  "macroIndex": 12
                 },
                 {
                   "keyActionType": "none"
@@ -4626,7 +4931,7 @@
                 },
                 {
                   "keyActionType": "playMacro",
-                  "macroIndex": 26
+                  "macroIndex": 28
                 },
                 {
                   "keyActionType": "keystroke",
@@ -4649,7 +4954,7 @@
                 },
                 {
                   "keyActionType": "playMacro",
-                  "macroIndex": 24
+                  "macroIndex": 26
                 },
                 {
                   "keyActionType": "switchKeymap",
@@ -4803,11 +5108,11 @@
                 },
                 {
                   "keyActionType": "playMacro",
-                  "macroIndex": 29
+                  "macroIndex": 31
                 },
                 {
                   "keyActionType": "playMacro",
-                  "macroIndex": 30
+                  "macroIndex": 32
                 },
                 {
                   "keyActionType": "none"
@@ -5318,7 +5623,7 @@
                 },
                 {
                   "keyActionType": "playMacro",
-                  "macroIndex": 22
+                  "macroIndex": 24
                 },
                 {
                   "keyActionType": "keystroke",
@@ -5330,11 +5635,11 @@
                 },
                 {
                   "keyActionType": "playMacro",
-                  "macroIndex": 27
+                  "macroIndex": 29
                 },
                 {
                   "keyActionType": "playMacro",
-                  "macroIndex": 28
+                  "macroIndex": 30
                 },
                 {
                   "keyActionType": "none"
@@ -5344,7 +5649,7 @@
                 },
                 {
                   "keyActionType": "playMacro",
-                  "macroIndex": 14
+                  "macroIndex": 15
                 },
                 {
                   "keyActionType": "keystroke",
@@ -6313,7 +6618,7 @@
                 },
                 {
                   "keyActionType": "playMacro",
-                  "macroIndex": 13
+                  "macroIndex": 14
                 },
                 {
                   "keyActionType": "none"
@@ -7182,7 +7487,7 @@
                 },
                 {
                   "keyActionType": "playMacro",
-                  "macroIndex": 15
+                  "macroIndex": 16
                 },
                 {
                   "keyActionType": "keystroke",
@@ -7288,7 +7593,7 @@
               "keyActions": [
                 {
                   "keyActionType": "playMacro",
-                  "macroIndex": 19
+                  "macroIndex": 21
                 },
                 {
                   "keyActionType": "keystroke",
@@ -7755,7 +8060,7 @@
                 },
                 {
                   "keyActionType": "playMacro",
-                  "macroIndex": 13
+                  "macroIndex": 14
                 },
                 {
                   "keyActionType": "none"
@@ -8718,7 +9023,7 @@
                 },
                 {
                   "keyActionType": "playMacro",
-                  "macroIndex": 15
+                  "macroIndex": 16
                 },
                 {
                   "keyActionType": "keystroke",
@@ -9292,7 +9597,7 @@
                 },
                 {
                   "keyActionType": "playMacro",
-                  "macroIndex": 13
+                  "macroIndex": 14
                 },
                 {
                   "keyActionType": "none"
@@ -10214,7 +10519,7 @@
                 },
                 {
                   "keyActionType": "playMacro",
-                  "macroIndex": 22
+                  "macroIndex": 24
                 },
                 {
                   "keyActionType": "keystroke",
@@ -10246,7 +10551,7 @@
                 },
                 {
                   "keyActionType": "playMacro",
-                  "macroIndex": 14
+                  "macroIndex": 15
                 },
                 {
                   "keyActionType": "keystroke",
@@ -10351,7 +10656,7 @@
               "keyActions": [
                 {
                   "keyActionType": "playMacro",
-                  "macroIndex": 19
+                  "macroIndex": 21
                 },
                 {
                   "keyActionType": "switchLayer",
@@ -10651,7 +10956,7 @@
                 },
                 {
                   "keyActionType": "playMacro",
-                  "macroIndex": 25
+                  "macroIndex": 27
                 },
                 {
                   "keyActionType": "none"
@@ -10829,7 +11134,7 @@
                 },
                 {
                   "keyActionType": "playMacro",
-                  "macroIndex": 13
+                  "macroIndex": 14
                 },
                 {
                   "keyActionType": "keystroke",
@@ -10904,7 +11209,7 @@
                 },
                 {
                   "keyActionType": "playMacro",
-                  "macroIndex": 11
+                  "macroIndex": 12
                 },
                 {
                   "keyActionType": "none"
@@ -11070,7 +11375,7 @@
                 },
                 {
                   "keyActionType": "playMacro",
-                  "macroIndex": 26
+                  "macroIndex": 28
                 },
                 {
                   "keyActionType": "keystroke",
@@ -11092,7 +11397,7 @@
                 },
                 {
                   "keyActionType": "playMacro",
-                  "macroIndex": 24
+                  "macroIndex": 26
                 },
                 {
                   "keyActionType": "switchKeymap",
@@ -11246,11 +11551,11 @@
                 },
                 {
                   "keyActionType": "playMacro",
-                  "macroIndex": 29
+                  "macroIndex": 31
                 },
                 {
                   "keyActionType": "playMacro",
-                  "macroIndex": 30
+                  "macroIndex": 32
                 },
                 {
                   "keyActionType": "none"
@@ -11761,7 +12066,7 @@
                 },
                 {
                   "keyActionType": "playMacro",
-                  "macroIndex": 22
+                  "macroIndex": 24
                 },
                 {
                   "keyActionType": "keystroke",
@@ -11773,11 +12078,11 @@
                 },
                 {
                   "keyActionType": "playMacro",
-                  "macroIndex": 27
+                  "macroIndex": 29
                 },
                 {
                   "keyActionType": "playMacro",
-                  "macroIndex": 28
+                  "macroIndex": 30
                 },
                 {
                   "keyActionType": "none"
@@ -11787,7 +12092,7 @@
                 },
                 {
                   "keyActionType": "playMacro",
-                  "macroIndex": 14
+                  "macroIndex": 15
                 },
                 {
                   "keyActionType": "keystroke",
@@ -12756,7 +13061,7 @@
                 },
                 {
                   "keyActionType": "playMacro",
-                  "macroIndex": 13
+                  "macroIndex": 14
                 },
                 {
                   "keyActionType": "none"
@@ -13369,7 +13674,7 @@
       "macroActions": [
         {
           "macroActionType": "command",
-          "command": "clearStatus\nset backlight.strategy constantRgb\nset backlight.constantRgb.rgb 64 64 64\nset leds.fadeTimeout 300\nset module.trackpoint.baseSpeed 0\nset module.trackpoint.speed 0.7\nset module.trackpoint.xceleration 0.7\nset module.touchpad.invertScrollDirectionX 1\nset module.touchpad.navigationMode.mouse caret\nset module.touchpad.holdContinuationTimeout 500\nset module.keycluster.navigationMode.mouse caret\nset secondaryRole.defaultStrategy advanced\nset secondaryRole.advanced.timeout 250\nset secondaryRole.advanced.timeoutAction secondary\nset secondaryRole.advanced.triggerByRelease 1\n// positive values for savetyMargin favour primary role, negative favour secondary role\nset secondaryRole.advanced.safetyMargin +5\nsetLedTxt 300 ':::'\n"
+          "command": "clearStatus\nsetVar count 0\nset backlight.strategy constantRgb\nset backlight.constantRgb.rgb 64 64 64\nset leds.fadeTimeout 300\nset module.trackpoint.baseSpeed 0\nset module.trackpoint.speed 0.7\nset module.trackpoint.xceleration 0.7\nset module.touchpad.invertScrollDirectionX 1\nset module.touchpad.navigationMode.mouse caret\nset module.touchpad.holdContinuationTimeout 500\nset module.keycluster.navigationMode.mouse caret\nset secondaryRole.defaultStrategy advanced\nset secondaryRole.advanced.timeout 250\nset secondaryRole.advanced.timeoutAction secondary\nset secondaryRole.advanced.triggerByRelease 1\n// positive values for savetyMargin favour primary role, negative favour secondary role\nset secondaryRole.advanced.safetyMargin +5\nsetLedTxt 300 ':::'\n"
         }
       ]
     },
@@ -13469,6 +13774,17 @@
         {
           "macroActionType": "command",
           "command": "setLedTxt 0 \"NUM\""
+        }
+      ]
+    },
+    {
+      "isLooped": false,
+      "isPrivate": true,
+      "name": "dont fn",
+      "macroActions": [
+        {
+          "macroActionType": "command",
+          "command": "holdLayer fn"
         }
       ]
     },
@@ -13592,7 +13908,7 @@
       "macroActions": [
         {
           "macroActionType": "command",
-          "command": "ifShift goTo shiftMaxtend\r\nifAlt goTo altMaxtend\r\nifSecondary advancedStrategy goTo secondaryaction\r\n//resolveSecondary 200 0 primaryaction secondaryaction\r\n\r\nprimaryaction:\r\ntapKey backspace\r\nsetLedTxt 500 \"<--\"\r\nifLayer fn5 final setLedTxt 0 \"NUM\"\r\nbreak\r\n\r\nsecondaryaction:\r\nsetLedTxt 0 \"MAX\"\r\nholdLayer mod\r\nifLayer fn5 final setLedTxt 0 \"NUM\"\r\nsetLedTxt 1 \"MAX\"\r\nbreak\r\n\r\nshiftMaxtend:\r\nsetLedTxt 0 \"<--\"\r\nsuppressMods holdKey backspace\r\nifNotPlaytime 300 setLedTxt 300 \"<--\"\r\nifLayer fn5 final setLedTxt 0 \"NUM\"\r\nsetLedTxt 1 \"<--\"\r\nbreak\r\n\r\naltMaxtend:\r\nsetLedTxt 0 \"DEL\"\r\nsuppressMods holdKey delete\r\nifNotPlaytime 300 setLedTxt 300 \"DEL\"\r\nifLayer fn5 final setLedTxt 0 \"NUM\"\r\nsetLedTxt 1 \"DEL\"\r\nbreak"
+          "command": "ifLayer fn goTo altMaxtend\r\nifShift goTo shiftMaxtend\r\nifAlt goTo altMaxtend\r\nifSecondary advancedStrategy goTo secondaryaction\r\n\r\nprimaryaction:\r\ntapKey backspace\r\nsetLedTxt 500 \"<--\"\r\nifLayer fn5 final setLedTxt 0 \"NUM\"\r\nbreak\r\n\r\nsecondaryaction:\r\nsetLedTxt 0 \"MAX\"\r\nholdLayer mod\r\nifLayer fn5 final setLedTxt 0 \"NUM\"\r\nsetLedTxt 1 \"MAX\"\r\nbreak\r\n\r\nshiftMaxtend:\r\nsetLedTxt 0 \"<--\"\r\nsuppressMods holdKey backspace\r\nifNotPlaytime 300 setLedTxt 300 \"<--\"\r\nifLayer fn5 final setLedTxt 0 \"NUM\"\r\nsetLedTxt 1 \"<--\"\r\nbreak\r\n\r\naltMaxtend:\r\nsetLedTxt 0 \"DEL\"\r\nsuppressMods holdKey delete\r\nifNotPlaytime 300 setLedTxt 300 \"DEL\"\r\nifLayer fn5 final setLedTxt 0 \"NUM\"\r\nsetLedTxt 1 \"DEL\"\r\nbreak"
         }
       ]
     },
@@ -13632,6 +13948,17 @@
     {
       "isLooped": false,
       "isPrivate": true,
+      "name": "mirror",
+      "macroActions": [
+        {
+          "macroActionType": "command",
+          "command": "setLedTxt 0 XMC\nholdLayer fn2\nsetLedTxt 1 XMC"
+        }
+      ]
+    },
+    {
+      "isLooped": false,
+      "isPrivate": true,
       "name": "mousetend",
       "macroActions": [
         {
@@ -13646,11 +13973,8 @@
       "name": "mute-unmute",
       "macroActions": [
         {
-          "macroActionType": "key",
-          "action": "tap",
-          "type": "basic",
-          "scancode": 16,
-          "modifierMask": 3
+          "macroActionType": "command",
+          "command": "ifSecondary final holdKey LC-space\ntapKey LCLS-m\nifNotShift break\ndelayUntil 300\ntapKey LCLS-semicolonAndColon\n"
         }
       ]
     },
@@ -13706,7 +14030,7 @@
       "macroActions": [
         {
           "macroActionType": "command",
-          "command": "ifAlt final holdKey tab\nifSecondary advancedStrategy goTo secondaryaction\n\nprimaryaction:\nifShift goTo shiftTab\ntapKey tab\nsetLedTxt 500 \"->|\"\nifLayer fn5 final setLedTxt 0 \"NUM\"\nbreak\n\nsecondaryaction:\nifShift goTo shiftTabSecondary\nsetLedTxt 0 \"NUM\"\nholdLayer fn5\nifLayer fn5 final setLedTxt 0 \"NUM\"\nsetLedTxt 1 \"NUM\"\nbreak\n\nshiftTabSecondary:\nsetLedTxt 0 \"NUM\"\nifNotLayer fn5 final toggleLayer fn5\nunToggleLayer\nsetLedTxt 1 \"NUM\"\nbreak\n\nshiftTab:\nsetLedTxt 0 \"|<-\"\nholdKey tab\nsetLedTxt 500 \"|<-\"\nifLayer fn5 final setLedTxt 0 \"NUM\"\nbreak"
+          "command": "ifAlt final holdKey tab\nifSecondary advancedStrategy goTo secondaryaction\n\nprimaryaction:\nifShift goTo shiftTab\ntapKey tab\nsetLedTxt 500 \"->|\"\nifLayer fn5 final setLedTxt 0 \"NUM\"\nbreak\n\nsecondaryaction:\nifShift goTo shiftTabSecondary\nsetLedTxt 0 \"NUM\"\nholdLayer fn5\nsetLedTxt 1 \"NUM\"\nbreak   \n\nshiftTabSecondary:\nsetLedTxt 0 \"NUM\"\nifNotLayer fn5 final toggleLayer fn5\nunToggleLayer\nsetLedTxt 1 \"NUM\"\nbreak\n\nshiftTab:\nsetLedTxt 0 \"|<-\"\nholdKey tab\nsetLedTxt 500 \"|<-\"\nifLayer fn5 final setLedTxt 0 \"NUM\"\nbreak"
         }
       ]
     },
@@ -13921,6 +14245,17 @@
         {
           "macroActionType": "text",
           "text": "»"
+        }
+      ]
+    },
+    {
+      "isLooped": false,
+      "isPrivate": true,
+      "name": "uname/pw",
+      "macroActions": [
+        {
+          "macroActionType": "command",
+          "command": "ifSecondary goTo secondaryAction\nifShift final suppressMods write Ha34Qwazz\nfinal write mhajfdch\nsecondaryAction:\nsuppressMods holdKey oRC-\n"
         }
       ]
     }
