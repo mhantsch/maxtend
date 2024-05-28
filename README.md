@@ -11,7 +11,7 @@ Read more about the [Background](BACKGROUND.md) of this setup.
 - a numpad layer (called *numtab*) for entering numbers in forms, sheets, calculators
 - mouse support (on systems that support it) for clicking and scrolling
 
-![Overview of the layout of a maxtended keyboard.](https://github.com/mhantsch/maxtend/assets/591785/4665a0d8-d454-4e63-947f-1974c6e34555)
+![Overview of the layout of a maxtended keyboard.](https://github.com/mhantsch/maxtend/assets/591785/3c0f464d-ccfe-416c-b293-f93c0e5e9745)
 
 ## Sections
 Depending on your OS and preferred setup, find the configurations for each of the different tools in the corresponding subdirectories. 
