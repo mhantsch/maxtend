@@ -14255,7 +14255,7 @@
       "macroActions": [
         {
           "macroActionType": "command",
-          "command": "ifSecondary goTo secondaryAction\nifShift final suppressMods write Ha34Qwazz\nfinal write mhajfdch\nsecondaryAction:\nsuppressMods holdKey oRC-\n"
+          "command": "ifSecondary goTo secondaryAction\nifShift final suppressMods write abcr\nfinal write mhajfdch\nsecondaryAction:\nsuppressMods holdKey oRC-\n"
         }
       ]
     }
