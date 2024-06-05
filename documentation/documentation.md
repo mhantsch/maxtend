@@ -48,7 +48,7 @@ This layer features useful navigation functions such as:
 
 The number row also turns into a function key row. (`Maxtend`+`1`=`F1`, `Maxtend`+`2`=`F2`, ... 
 `Maxtend`+`-`=`F11`, `Maxtend`+`=`=`F12`), 
-and the key to the left of `1` (usually labelled `\`~`) becomes Escape.
+and the key to the left of `1` (usually labelled `` `~ ``) becomes Escape.
 
 On the top (number) row, you can reach Escape and the function keys F1-F12. 
 Backspace becomes Delete.
