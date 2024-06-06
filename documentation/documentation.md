@@ -2,6 +2,8 @@
 
 ## Overview
 
+![Overview of the layout of a maxtended keyboard.](../images/Maxtend-black.png)
+
 Maxtend is designed to minimise hand movements and enable keyboard operations mostly 
 from the home row hand positions. It is optimised for 60% keyboards (no number pad, 
 no navigation cluster, no function row), but works equally well on TKL or even full
@@ -17,6 +19,14 @@ contains useful navigation functions, e.g. cursor movement.
 
 A maxtended keyboard features a base layer in [Colemak](https://colemak.com/) layout.
 
+```
+Colemak (base layer):
+`~   1!   2@   3#   4$   5%   6^   7&   8*   9(   0)   -_   =+ Bkspc
+Tab   q    w    f    p    g    j    l    u    y    ;:   [{   ]}   \|
+(Mxtnd) a    r    s    t    d    h    n    e    i    o   '"   Return
+Shift    z    x    c    v    b    k    m    ,<   .>   /?       Shift
+```
+
 The base [Colemak](https://colemak.com/) layout has some of the alphabet characters on 
 different keys than the well-known US-QWERTY layout, but all the special characters 
 (symbols, punctuation, brackets, parenthesis etc.) are on the same positions as US-QWERTY. 
@@ -27,17 +37,18 @@ In addition, it features a comprehensive set of
 As in standard Colemak, the `CapsLock` key is used as Backspace. It is labeled `Maxtend`.
 A simple tap on `Maxtend` will produce a backspace, erasing the character to the left of the cursor.
 
-```
-; Colemak (base layer):
-; q    w    f    p    g    j    l    u    y    ;
-;  a    r    s    t    d    h    n    e    i    o
-;   z    x    c    v    b    k    m    ,    .    /
-```
-
 ### Maxtend layer
 
 When the `Maxtend` key is held down, the Maxtend layer is activated. The main purpose of this layer is 
-cursor and document navigation, and edit control.
+cursor and document navigation, and editing.
+
+```
+Maxtend layer:
+Esc  F1   F2   F3   F4   F5   F6   F7   F8   F9   F10  F11  F12  Delete
+Num   Esc  WhUp Back Fwd  -    PgUp Home Up   End  Del  PrSc ScLk Pause
+       Alt  WhDn Shft Ctrl -    PgDn Left Down Rght Bksp Ins     Return
+Shift    C-z  C-x  C-c  C-v  b    k    m    ,<   .>   Menu        Shift
+```
 
 This layer features useful navigation functions such as:
 - cursor navigation (up/down/left/right, home/end, page up/down)
@@ -47,20 +58,12 @@ This layer features useful navigation functions such as:
 - undo/cut/copy/paste
 - scroll up/down
 
-The number row also turns into a function key row. (`Maxtend`+`1`=`F1`, `Maxtend`+`2`=`F2`, ... 
-`Maxtend`+`-`=`F11`, `Maxtend`+`=`=`F12`), 
-and the key to the left of `1` (usually labelled `` `~ ``) becomes Escape.
+On the top (number) row, you can reach Escape (`Maxtend`+`` `~ ``) and the function keys F1-F12 (`Maxtend`+`1` ...  `Maxtend`+`=`). `Maxtend`+`Backspace` becomes Delete.
 
-On the top (number) row, you can reach Escape and the function keys F1-F12. 
-Backspace becomes Delete.
 
-__Escape:__ It is difficult to press `Maxtend` and the top left `` `~ `` key at the same time. 
-Most likely you have to move the left hand out of the home position. Therefore, Escape can also be found 
-on `Maxtend`+`q` (reached using the pinky+ring fingers oft he left hand.
+__Escape:__ It is difficult to press `Maxtend` and the top left `` `~ `` key at the same time. Most likely you have to move the left hand out of the home position. Therefore, Escape can also be found on `Maxtend`+`q` (reached using the pinky+ring fingers of the left hand.
 
-__Navigation:__ Directly in the home row position for your right hand you find cursor up/down/left/right. 
-Other navigation and editing controls (home, end, backspace, delete, insert, page up, page down) 
-are placed closely around this position.
+__Navigation:__ Directly in the home row position for your right hand you find cursor up/down/left/right. Other navigation and editing controls (home, end, backspace, delete, insert, page up, page down) are placed closely around this position.
 
 |   |   |   |   |   |
 | --- | --- | --- | --- | --- |
