@@ -9,11 +9,13 @@ from the home row hand positions. It is optimised for 60% keyboards (no number p
 no navigation cluster, no function row), but works equally well on TKL or even full
 keyboards.
 
-- A short press and release of CapsLock (labelled "Maxtend") will work as Backspace, 
-as in original Colemak.
-- Holding CapsLock ("Maxtend") together with other keys works as an additional function layer, and 
-contains useful navigation functions, e.g. cursor movement.
+- A short press and release of CapsLock (labelled "Maxtend") will work as Backspace, as in original Colemak.
+- Holding CapsLock ("Maxtend") together with other keys works as an additional function layer, and contains useful navigation functions, e.g. cursor movement.
 - Holding Tab ("Numtab") enables a virtual number pad, allowing easy number entry.
+
+On a UHK[^uhk], additional functionality is available, e.g. mouse control, 2-axis scrolling, mouse jitter keep-alive, media and volume control.
+
+[^uhk]: [Ultimate Hacking Keyboard](https://www.ultimatehackingkeyboard.com), an external, split USB keyboard with optional extra modules. The UHK offers advanced key configuration, layers, programming capabilities via a macro programming language, and mouse control.
 
 ### Base layer
 
@@ -133,13 +135,13 @@ __Browser navigation:__ `Maxtend`+`F` and `Maxtend`+`P` (qwerty positions: E, R)
 When the `NumTab` key (tab) is held down, the Number layer is activated. The main purpose of this layer is number entry via a simulated number pad.
 
 ```
-Number layer:¿
-Esc  -    -    -    -    -    -    7    8    9    0    -_   =+     Bkspc
-Num    Esc  -    ¡    ¿    -    /    4    5    6    –    [{   ]}   \|
-(Mxtnd) Alt  -    Shft Ctrl -    *    1    2    3    +    '"       Return
-Shift     C-z  C-x  C-c  C-v  b    k    0    ,<   .    Enter       Shift
+Number layer:
+Esc  ˙    ˙    ˙    ˙    ˙    ˙    7    8    9    0    -_   =+     Bkspc
+Num    Esc  ˙    ¡    ¿    ˙    /    4    5    6    –    [{   ]}   \|
+(Mxtnd) Alt  ˙    Shft Ctrl ˙    *    1    2    3    +    '"      Return
+Shift     C-z  C-x  C-c  C-v  NumLk ˙   0    ,<   .    Enter       Shift
 ```
-(a single '-' indicates an empty key with no function)
+(a single ˙ indicates a key with no function)
 
 Pressing `Maxtend`+`NumTab` or holding `Shift`+`NumTab` for a little while locks the number layer. Use the same combination to unlock. While the number layer is locked, you can use `Maxtend` to activate keys from the Maxtend layer; it will revert back to the (locked) number layer when you release `Maxtend`.
 
@@ -165,3 +167,23 @@ Pressing `Maxtend`+`NumTab` or holding `Shift`+`NumTab` for a little while locks
 ; Left Down Right  =>   0    ,    .
 
 ```
+
+## UHK functionality
+
+The following features are only available with the external Ultimate Hacking Keyboard.
+
+### Mouse layer
+
+Holding left Space activates the Mouse layer. The UHK display will briefly show **`MSE`**, and the _`mouse`_ indicator will turn on.
+
+### Media layer
+
+Holding either Fn key activates the Media layer. This offers features to control media playback, volume control, speaker and mic mute, as well as some compatibility with the Colemak AltGr layer.
+
+### Mirror layer
+
+### Additional features
+
+#### Keepalive
+
+#### Wide Enter
