@@ -20,7 +20,7 @@ contains useful navigation functions, e.g. cursor movement.
 A maxtended keyboard features a base layer in [Colemak](https://colemak.com/) layout.
 
 ```
-Colemak (base layer):
+Colemak base layer:
 `~   1!   2@   3#   4$   5%   6^   7&   8*   9(   0)   -_   =+  Bkspc
 (Tab)  q    w    f    p    g    j    l    u    y    ;:   [{   ]}   \|
 (Mxtnd) a    r    s    t    d    h    n    e    i    o    '"   Return
@@ -30,25 +30,24 @@ Shift     z    x    c    v    b    k    m    ,<   .>   /?       Shift
 The base [Colemak](https://colemak.com/) layout has a number of alphabet characters on different keys than the well-known US-QWERTY layout, but all the special characters (symbols, punctuation, brackets, parenthesis etc.) are on the same positions as US-QWERTY. In addition, it features a comprehensive set of [international multilingual characters](https://colemak.com/Multilingual) 
 (for latin alphabets) through use of the AltGr (right alt) key.
 
-#### Layer switching
+As in standard Colemak, the `CapsLock` key is used as Backspace. It is labeled `Maxtend`. A simple tap on `Maxtend` will produce a backspace, erasing the character to the left of the cursor. See below for layer switching when `Maxtend` is held down.
 
-As in standard Colemak, the `CapsLock` key is used as Backspace. It is labeled `Maxtend`. A simple tap on `Maxtend` will produce a backspace, erasing the character to the left of the cursor.
+#### Layer switching
 
 The base layer has three layer-switching keys. When held down and pressed together with other keys, they will activate other layers:
 - holding `Maxtend` (Mxtnd) will activate the Maxtend layer
 - holding `NumTab` (Tab) will activate the Number layer
 - holding `AltGr` (right Alt) will activate the AltGr layer
 
-`AltGr` comes with the Colemak keymap (configured in the OS keyboard layout).
-`Maxtend` and `NumTab` come with the AHK, keys or 
+_Note:_ `AltGr` comes with the Colemak keymap (configured in the OS keyboard layout). `Maxtend` and `NumTab` are enabled through the AHK, keyd, xkb or UHK configuration.
 
 ### AltGr layer
 
 ```
-Colemak (AltGr layer):
-(~)  1!   2@   3#   4$   5%   6^   7&   8*   9(   0)   -_   =+  Bkspc
-(Tab)  äÄ   åÅ   ãÃ   øØ   (˛)   đĐ   łŁ   úÚ   üÜ   öÖ   «‹   »›   ~~
-(Mxtnd) áÁ   (`)   ßẞ   (´)  (¨)  (ˇ)  ñÑ   éÉ   íÍ   óÓ   '"   Return
+Colemak AltGr layer:
+(~)  ¡¹   º²   ª³   ¢£   €¥   ħĦ   ðÐ   þÞ   ‘“   ’”   – —  ×÷  Bkspc
+(Tab)  äÄ   åÅ   ãÃ   øØ   (˛)  đĐ   łŁ   úÚ   üÜ   öÖ   «‹   »›   ~~
+(Mxtnd) áÁ   (`)  ßẞ   (´)  (¨)  (ˇ)  ñÑ   éÉ   íÍ   óÓ   '"   Return
 Shift     æÆ   (^)  çÇ   œŒ   (˘)  (°)  (¯)  (¸)  (˙)  ¿~       Shift
 ```
 
