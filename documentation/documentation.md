@@ -100,15 +100,6 @@ __Browser navigation:__ `Maxtend`+`F` and `Maxtend`+`P` (qwerty positions: E, R)
 
 *Note:* As soon as a second key has been pressed while `Maxtend` is held down, or when `Maxtend` has been held down for more than half a second, releasing `Maxtend` will not Backspace. In this case, an indication will remind the user that Backspace will not be triggered. On AHK configurations, the screen will flash briefly. On UHK keyboards, the segment display will show **`MAX`** (and the _`mod`_ indicator will turn on), indicating that the Maxtend layer has become active. The user can then safely release `Maxtend` without triggering any action.
 
-```
-; Maxtend layer (CapsLock held):
-; ESC  WlUp Back Fwd  g    PgUp Home Up   End  Del
-;  Ctrl WlDn Shft Alt  d    PgDn Left Down Rght BkSp Ins
-;   C-Z  C-X  C-C  C-V  b    k    m    ,    .    /
-;
-; The Function layer will also map CapsLock + number keys to F1-F12. Useful for 60% keyboards
-; (keyboards without a function key row).
-```
 ### Number layer
 
 
