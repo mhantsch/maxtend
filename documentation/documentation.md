@@ -65,7 +65,7 @@ Note: the AltGr layer contains several dead keys[^deadkey], indicated by parenth
 - `AltGr`+`,` is ¸ – to produce ç ş ţ ģ ļ ŗ ḑ ḩ ņ ȩ ķ etc.
 - `AltGr`+`\` is * – to produce ¶ ™ © ® № µ etc. (_Windows only_)
 
-[^deadkey]: A dead keys does not immediately produce a character (“it’s dead”), but it will modify the next character. (It sort of “combines” with the next character to produce an accented character.) If you want the "dead" symbol on its own, you need to press the dead key first, then type Space.
+[^deadkey]: A dead key does not immediately produce a character (“it’s dead”), but it will modify the next character. The accent symbol on the dead key "combines" with the symbol on the next key to produce an accented character. If you want the "dead" symbol on its own, you need to press the dead key first, then type Space.
 
 ### Maxtend layer
 
