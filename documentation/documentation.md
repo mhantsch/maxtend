@@ -71,56 +71,31 @@ are placed closely around this position.
 
 (keys labelled according to Colemak)
 
-*Note:* Although Backspace is already the primary function of the `Maxtend` key, its function 
-is duplicated on this layer. There are two reasons:
-1. While holding the `Maxtend` key and using cursor navigation, removal of incorrect characters 
-is instantly available without needing to release `Maxtend`. And you can immediately continue to
-navigate.
-2. Backspace through a tap on the `Maxtend` key does not autorepeat (due to secondary function 
-as the Maxtend layer switch). Backspace on the Maxtend layer auto-repeats, and can thus be used 
-to Backspace over larger areas of text.
+*Note:* Although Backspace is already the primary function of the `Maxtend` key, its function is duplicated on this layer. There are two reasons:
 
-__Modifiers:__ During cusor navigation, shift, alt and control modifiers are often used to select 
-larger parts of text, navigate by word, sentence, paragraph etc. It is difficult to reach the 
-standard modifier keys while holding `Maxtend` with your pinky. For this reason, the modifiers 
-are replicated on the home row for your left hand, next to the `Maxtend` key. To aid memorisation, 
-the modifiers correspond to Colemak letters: a=Alt, s=Shift, t=conTrol.
+  1. While holding the `Maxtend` key and using cursor navigation, removal of incorrect characters is instantly available without needing to release `Maxtend`. And you can immediately continue to navigate.
+  2. Backspace through a tap on the `Maxtend` key does not autorepeat (due to secondary function as the Maxtend layer switch). Backspace on the Maxtend layer auto-repeats, and can thus be used to Backspace over larger areas of text.
 
-For example, the user can hold `Maxtend` + home-row-Ctrl `t`, and then use left/right cursor functions 
-of the right hand to navigate by word. Similarily, `Maxtend` + home-row-Shift `s` + home-row-Ctrl `t` + 
-cursor can be used to select by word, etc. The modifiers are all on the left hand, so while you are 
-holding some chords for layer switch and modifiers with your left hand, your right hand is free to 
-tap all the navigation keys. After a short practice, this feels very natural.
+__Modifiers:__ During cusor navigation, shift, alt and control modifiers are often used to select larger parts of text, navigate by word, sentence, paragraph etc. It is difficult to reach the standard modifier keys while holding `Maxtend` with your pinky. For this reason, the modifiers are replicated on the home row for your left hand, next to the `Maxtend` key. To aid memorisation, the modifiers correspond to Colemak letters: `a`=Alt, `s`=Shift, `t`=conTrol.
 
-__Undo/Cut/Copy/Paste:__ these often used text editing functions are available on their usual 
-Z/X/C/V positions. `Maxtend` + Z/X/C/V is the same as `Control` + Z/X/C/V. The idea is that 
-during typical editing, every needed function (movement, selection, cut/copy/paste) can be 
-accessed from the same layer, all while simply holding down `Maxtend`.
+For example, you can hold `Maxtend` + `t` (conTrol), and then use left/right cursor functions of the right hand to navigate by word. Similarily, `Maxtend` + `s` (Shift) + `t` (conTrol) + cursor navigation can be used to select by word, etc. The modifiers are all on the left hand, so while you are holding some chords for layer switch and modifiers with your left hand, your right hand is free to tap all the navigation keys. After a short practice, this feels very natural.
 
-__Scrolling:__ to move the document up/down during editing, mouse wheel up/down (to scroll the page) 
-can be accessed with the left hand. This helps when navigating or reading a document.
+__Undo/Cut/Copy/Paste:__ these often used text editing functions are available on their usual Z/X/C/V positions. `Maxtend` + `z`/`x`/`c`/`v` is the same as `Control` + `z`/`x`/`c`/`v`. The idea is that during typical editing, every needed function (movement, selection, cut/copy/paste, undo) can be accessed from the same layer, all while simply holding down `Maxtend`.
 
-__Enter:__ when the right hand is resting on the mouse, Enter can be obtained with only the 
-left hand using `Maxtend' + Space.
+__Scrolling:__ to move the document up/down during editing, mouse wheel up/down (to scroll the page) can be accessed with the left hand. This helps when navigating or reading a document.
+
+__Enter:__ when the right hand is resting on the mouse, Enter can be obtained with only the left hand using `Maxtend' + Space.
 
 __PrScr/ScrLk/Pause:__ these are available on the `[{`, `]}` and  `\|` keys. 
 Mnemonic: the F-row continues to those buttons.
 
-__Menu:__ on the right side, the `/?` key activates the menu function. With `Maxtend` held down, 
-the user immediately has access to cursor movement to select an entry in the menu.
+__Menu:__ on the right side, the `/?` key activates the menu function. With `Maxtend` held down, the user immediately has access to cursor movement to select an entry in the menu.
 
-__Browser navigation:__ `Maxtend`+`F` and `Maxtend`+`P` (qwerty positions: E, R) move backward 
-and forward through browser history (they send Alt-CursorLeft and Alt-CursorRight keys). 
-Compare this to the Mouse layer where these buttons cycle backward and forward through tabs.
+__Browser navigation:__ `Maxtend`+`F` and `Maxtend`+`P` (qwerty positions: E, R) move backward and forward through browser history (they send Alt-CursorLeft and Alt-CursorRight keys). Compare this to the Mouse layer where these buttons cycle backward and forward through tabs.
 
 **TODO** (continue here)
 
-*Note:* As soon as a second key has been pressed while Maxtend is held down, or when Maxtend
-  has been held down for more than half a second, releasing Maxtend will not Backspace.
-  In this case, an indication will remind the user that Backspace will not be triggered. 
-  On AHK configurations, the screen will flash briefly. On UHK keyboards, the segment 
-  display will show "MAX", indicating that the Maxtend layer has become active. 
-  The user can then also safely release Maxtend without triggering any action.
+*Note:* As soon as a second key has been pressed while `Maxtend` is held down, or when `Maxtend` has been held down for more than half a second, releasing `Maxtend` will not Backspace. In this case, an indication will remind the user that Backspace will not be triggered. On AHK configurations, the screen will flash briefly. On UHK keyboards, the segment display will show **`MAX`** (and the _`mod`_ indicator will turn on), indicating that the Maxtend layer has become active. The user can then safely release `Maxtend` without triggering any action.
 
 ```
 ; Maxtend layer (CapsLock held):
@@ -131,6 +106,8 @@ Compare this to the Mouse layer where these buttons cycle backward and forward t
 ; The Function layer will also map CapsLock + number keys to F1-F12. Useful for 60% keyboards
 ; (keyboards without a function key row).
 ```
+### Number layer
+
 
 ```
 ;
