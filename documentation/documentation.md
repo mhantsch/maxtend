@@ -21,26 +21,55 @@ A maxtended keyboard features a base layer in [Colemak](https://colemak.com/) la
 
 ```
 Colemak (base layer):
-`~   1!   2@   3#   4$   5%   6^   7&   8*   9(   0)   -_   =+ Bkspc
-Tab   q    w    f    p    g    j    l    u    y    ;:   [{   ]}   \|
-(Mxtnd) a    r    s    t    d    h    n    e    i    o   '"   Return
-Shift    z    x    c    v    b    k    m    ,<   .>   /?       Shift
+`~   1!   2@   3#   4$   5%   6^   7&   8*   9(   0)   -_   =+  Bkspc
+(Tab)  q    w    f    p    g    j    l    u    y    ;:   [{   ]}   \|
+(Mxtnd) a    r    s    t    d    h    n    e    i    o    '"   Return
+Shift     z    x    c    v    b    k    m    ,<   .>   /?       Shift
 ```
 
-The base [Colemak](https://colemak.com/) layout has some of the alphabet characters on 
-different keys than the well-known US-QWERTY layout, but all the special characters 
-(symbols, punctuation, brackets, parenthesis etc.) are on the same positions as US-QWERTY. 
-In addition, it features a comprehensive set of 
-[international multilingual characters](https://colemak.com/Multilingual) 
+The base [Colemak](https://colemak.com/) layout has a number of alphabet characters on different keys than the well-known US-QWERTY layout, but all the special characters (symbols, punctuation, brackets, parenthesis etc.) are on the same positions as US-QWERTY. In addition, it features a comprehensive set of [international multilingual characters](https://colemak.com/Multilingual) 
 (for latin alphabets) through use of the AltGr (right alt) key.
 
-As in standard Colemak, the `CapsLock` key is used as Backspace. It is labeled `Maxtend`.
-A simple tap on `Maxtend` will produce a backspace, erasing the character to the left of the cursor.
+#### Layer switching
+
+As in standard Colemak, the `CapsLock` key is used as Backspace. It is labeled `Maxtend`. A simple tap on `Maxtend` will produce a backspace, erasing the character to the left of the cursor.
+
+The base layer has three layer-switching keys. When held down and pressed together with other keys, they will activate other layers:
+- holding `Maxtend` (Mxtnd) will activate the Maxtend layer
+- holding `NumTab` (Tab) will activate the Number layer
+- holding `AltGr` (right Alt) will activate the AltGr layer
+
+`AltGr` comes with the Colemak keymap (configured in the OS keyboard layout).
+`Maxtend` and `NumTab` come with the AHK, keys or 
+
+### AltGr layer
+
+```
+Colemak (AltGr layer):
+(~)  1!   2@   3#   4$   5%   6^   7&   8*   9(   0)   -_   =+  Bkspc
+(Tab)  äÄ   åÅ   ãÃ   øØ   (˛)   đĐ   łŁ   úÚ   üÜ   öÖ   «‹   »›   ~~
+(Mxtnd) áÁ   (`)   ßẞ   (´)  (¨)  (ˇ)  ñÑ   éÉ   íÍ   óÓ   '"   Return
+Shift     æÆ   (^)  çÇ   œŒ   (˘)  (°)  (¯)  (¸)  (˙)  ¿~       Shift
+```
+
+Note: the AltGr layer contains several dead keys[^deadkey], indicated by parentheses, e.g. `(˘)`:
+- `AltGr`+`~` is ~ – to produce ã ẽ õ ñ etc.
+- `AltGr`+`r` is ` – to produce à è ò etc.
+- `AltGr`+`t` is ´ – to produce á é ó etc.
+- `AltGr`+`d` is ¨ – to produce ä ö ü ÿ etc.
+- `AltGr`+`h` is ˇ – to produce ǎ ǔ č ť š ř etc.
+- `AltGr`+`x` is ^ – to produce ĉ â û ŷ etc.
+- `AltGr`+`b` is ˘ – to produce ă ŭ ĕ etc.
+- `AltGr`+`k` is ˚ – to produce å ů ẙ etc.
+- `AltGr`+`m` is ¯ – to produce ā ō ū ȳ ḡ etc.
+- `AltGr`+`,` is ¸ – to produce ç ş ţ ģ ļ ŗ ḑ ḩ ņ ȩ ķ etc.
+- `AltGr`+`\` is * – to produce ¶ ™ © ® № µ etc. (_Windows only_)
+
+[^deadkey]: A dead keys does not immediately produce a character (“it’s dead”), but it will modify the next character. (It sort of “combines” with the next character to produce an accented character.) If you want the "dead" symbol on its own, you need to press the dead key first, then type Space.
 
 ### Maxtend layer
 
-When the `Maxtend` key is held down, the Maxtend layer is activated. The main purpose of this layer is 
-cursor and document navigation, and editing.
+When the `Maxtend` key is held down, the Maxtend layer is activated. The main purpose of this layer is cursor and document navigation, and editing.
 
 ```
 Maxtend layer:
@@ -102,15 +131,21 @@ __Browser navigation:__ `Maxtend`+`F` and `Maxtend`+`P` (qwerty positions: E, R)
 
 ### Number layer
 
+When the `NumTab` key (tab) is held down, the Number layer is activated. The main purpose of this layer is number entry via a simulated number pad.
 
 ```
-;
-; (2) NUMBER pad
-; Holding down Tab, active ScrollLock, or use CapsLock+Tab to turn the keys below 7-8-9 
-; into a number pad. (Think: hold Tab for NUMPAD, CapsLock+Tab toggles NUMPAD). 
-; Useful for keyboards without numpad.
-; If you have a TKL keyboard with cursor keys and Print/ScrLock/Pause/Ins/Del/Home/End/PgUp/PgDn
-; keys, those will emulate a number pad too in this mode.
+Number layer:¿
+Esc  -    -    -    -    -    -    7    8    9    0    -_   =+     Bkspc
+Num    Esc  -    ¡    ¿    -    /    4    5    6    –    [{   ]}   \|
+(Mxtnd) Alt  -    Shft Ctrl -    *    1    2    3    +    '"       Return
+Shift     C-z  C-x  C-c  C-v  b    k    0    ,<   .    Enter       Shift
+```
+(a single '-' indicates an empty key with no function)
+
+Pressing `Maxtend`+`NumTab` or holding `Shift`+`NumTab` for a little while locks the number layer. Use the same combination to unlock. While the number layer is locked, you can use `Maxtend` to activate keys from the Maxtend layer; it will revert back to the (locked) number layer when you release `Maxtend`.
+
+
+```
 ;
 ; Number layer (CapsLock+Tab held):
 ; ESC  WlUp Back Fwd  g    PgUp 4    5    6    Del
