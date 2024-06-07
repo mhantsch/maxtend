@@ -177,12 +177,17 @@ The right Space bar is kept without any secondary function because the secondary
 ### Mouse layer
 Holding left Space activates the Mouse layer. The UHK display will briefly show **`MSE`**, and the _`mouse`_ indicator will turn on.
 
+The left case key functions as a left mouse button. This is useful if you do not have a key cluster module connected (which has mouse buttons), but a mouse module (e.g. trackpad) on the right side. You can use the left case button to click items while steering the mouse pointer with the right module.
+
 ### Media layer
 Holding either Fn key activates the Media layer. This offers features to control media playback, volume control, speaker and mic mute, as well as some compatibility with the Colemak AltGr layer.
 
 ### Mirror layer
 
 ### Additional features
+CapsLock on ISO: On the UHK, the ISO key can be used to send an actual CapsLock. However, with the AHK script in place, this will just trigger the FUNCTION layer on AHK. The net effect is that it is the same as just using Mod (CapsLock). (It can be used to test the AHK script, though, without the UHK layer interfering.)
+
+For cursor control using only the right hand, Mod (the Maxtend layer) is also available on the right case button, and it's a secondary function on the `'"` key. The layer can also be locked on the UHK by double-tapping the right case button.
 
 #### Keepalive
 
