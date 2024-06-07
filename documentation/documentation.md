@@ -175,11 +175,9 @@ I deliberately kept the primary functions of `Maxtend` (Backspace), `Numtab` (Ta
 The right Space bar is kept without any secondary function because the secondary function can conflict with n-key rollover when typing fast, and I noticed that I mostly type space with my right thumb. If that is different for you, and you mainly type Space with your left thumb, you may want to move the secondary Mouse layer switch (*Mousetend* macro) from the left Space to the right Space.
 
 ### Mouse layer
-
 Holding left Space activates the Mouse layer. The UHK display will briefly show **`MSE`**, and the _`mouse`_ indicator will turn on.
 
 ### Media layer
-
 Holding either Fn key activates the Media layer. This offers features to control media playback, volume control, speaker and mic mute, as well as some compatibility with the Colemak AltGr layer.
 
 ### Mirror layer
@@ -188,11 +186,13 @@ Holding either Fn key activates the Media layer. This offers features to control
 
 #### Keepalive
 
-#### Wide Enter
+#### Numpad Enter (wide Enter)
 Numpad Enter is mapped onto the right `Control` key; it still acts as RCtrl as a secondary function. Here is my reasoning:
 - `Control` only makes sense as a modifier and needs to be typed together with another key.
 - If you really need only a tap on `Control`, you can use the left `Control`.
 - the size of the right `Control` key on the UHK is identical to a standard US-keyboard `Return` key. I swapped the keycaps on my UHK, and to populate the right `Control` position, I usually install an `Enter` key there. Because it is labelled “Enter”, it makes only sense that it also functions as Enter when the user taps it.
+
+![image](https://github.com/mhantsch/maxtend/assets/591785/c5bfe3c7-5109-4859-9af7-b06dd78cde6e)
 
 (This is only on the UHK. The AHK script does not modify right Control.)
 
