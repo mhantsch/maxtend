@@ -7,9 +7,17 @@ This repository contains various configurations and tooling that I have used to 
 - [The inventor of Colemak, shai coleman](https://colemak.com).
 - [DreymaR and his Big Bag of Keyboard Tricks](https://dreymar.colemak.org/).
 
+### Notes from my journey
+Re-learning to touch type when switching from QWERTY to Colemak is hard, and takes some time. I used Tarmak layouts (https://forum.colemak.com/topic/1858-learn-colemak-in-steps-with-the-tarmak-layouts/) to take me through the learning process, and practiced a lot at home in the evenings. Through a few weeks, I gained sufficient proficiency to continue to work in Colemak only. I changed all my computers (home and work) as well as my Android phone and tablet to Colemak.
+
+On the positive side, I now type faster than ever before on Qwerty, topping at 110 wpm on a good day, and consistently typing around 80-90 wpm. Plus, typing feels so much easier and more comfortable with Colemak.
+
+### Will this work with Qwerty?
+The layouts are designed with Colemak in mind. However, most of the changes I added in additional layers could be done with other base layouts (such as Qwerty or Dvorak), too. You would have to adapt the keys in the AHK script. The UHK configuration will also be affected for some of the bindings.
+
 ## The Goal
 * Typing on standard Colemak layout including international symbols (via AltGr combinations)
-* An extend layer (called `maxtend`) closely resembling DreymaR's `extend` layer
+* An extend layer (called *`maxtend`*) closely resembling DreymaR's *`extend`* layer
 * Easy installation and as much as possible identical functionality across
   - Windows (without or with installation of additional tools)
   - Linux (without or with installation of additional tools)
@@ -87,7 +95,7 @@ Download the UHK configuration from the [uhk/](uhk) folder, import it into Agent
 
 This maps the Mod layer of the UHK to the secondary action of the CapsLock (“Mouse”) key, and maps the Mouse layer of the UHK to the secondary action of the Left Space (“Mod”) key.
 
-This allows you to use the FUNCTION and NUMPAD layers anywhere where you cannot run AutoHotKey (or keyd/xkb), but have a base Colemak keyboard. For example, on MacOS or Linux or Chromebooks where you cannot install AutoHotKey.
+This allows you to use the FUNCTION and NUMPAD layers[^functionnumpad] anywhere where you cannot run AutoHotKey (or keyd/xkb), but have a base Colemak keyboard. For example, on MacOS or Linux or Chromebooks where you cannot install AutoHotKey.
 
 The layers on the UHK are modelled to use the same shortcuts and keys as the AutoHotKey script; so as long as you have either AHK/keyd/xkb running, or use the UHK, you can use the same key combinations.
 
@@ -112,3 +120,5 @@ Please note that the Mod layer is very similar to DreymaR’s “Extend” layer
 ![image](https://github.com/mhantsch/maxtend/assets/591785/8dc4dab1-90cb-4f09-b22d-77a01749b15d)
 
 ![image](https://github.com/mhantsch/maxtend/assets/591785/54c3e3b5-b4c1-435c-a198-a49bd767bfee)
+
+[^functionnumpad]: I originally called the additional layers *FUNCTION* and *NUMPAD* in my AHK script. They are now known as *maxtend* and *number*.

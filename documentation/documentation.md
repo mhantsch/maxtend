@@ -4,18 +4,13 @@
 
 ![Overview of the layout of a maxtended keyboard.](../images/Maxtend-black.png)
 
-Maxtend is designed to minimise hand movements and enable keyboard operations mostly 
-from the home row hand positions. It is optimised for 60% keyboards (no number pad, 
-no navigation cluster, no function row), but works equally well on TKL or even full
-keyboards.
+Maxtend is designed to minimise hand movements and enable keyboard operations mostly from the home row hand positions. It is optimised for 60% keyboards (no number pad, no navigation cluster, no function row), but works equally well on TKL[^tkl] or full-size keyboards.
 
 - A short press and release of CapsLock (labelled "Maxtend") will work as Backspace, as in original Colemak.
 - Holding CapsLock ("Maxtend") together with other keys works as an additional function layer, and contains useful navigation functions, e.g. cursor movement.
-- Holding Tab ("Numtab") enables a virtual number pad, allowing easy number entry.
+- Holding Tab ("Numtab") enables a virtual nulmber pad, allowing easy number entry.
 
 On a UHK[^uhk], additional functionality is available, e.g. mouse control, 2-axis scrolling, mouse jitter keep-alive, media and volume control.
-
-[^uhk]: [Ultimate Hacking Keyboard](https://www.ultimatehackingkeyboard.com), an external, split USB keyboard with optional extra modules. The UHK offers advanced key configuration, layers, programming capabilities via a macro programming language, and mouse control.
 
 ### Base layer
 
@@ -172,6 +167,13 @@ Pressing `Maxtend`+`NumTab` or holding `Shift`+`NumTab` for a little while locks
 
 The following features are only available with the external Ultimate Hacking Keyboard.
 
+### General
+The base layer contains a normal US keymap (mapped to Colemak by the OS keymap). As standard in Colemak, the CapsLock key functions as Backspace; it carries `Maxtend` as a secondary function. The left space bar switches to the Mouse layer when held down; it still functions as Space when tapped on its own.
+
+I deliberately kept the primary functions of `Maxtend` (Backspace), `Numtab` (Tab) and the left space bar (Space), and switch layers only as a secondary function (when these buttons are held down and combined with other keys). The usual primary function of these keys is unmodified.
+
+The right Space bar is kept without any secondary function because the secondary function can conflict with n-key rollover when typing fast, and I noticed that I mostly type space with my right thumb. If that is different for you, and you mainly type Space with your left thumb, you may want to move the secondary Mouse layer switch (*Mousetend* macro) from the left Space to the right Space.
+
 ### Mouse layer
 
 Holding left Space activates the Mouse layer. The UHK display will briefly show **`MSE`**, and the _`mouse`_ indicator will turn on.
@@ -187,3 +189,14 @@ Holding either Fn key activates the Media layer. This offers features to control
 #### Keepalive
 
 #### Wide Enter
+Numpad Enter is mapped onto the right `Control` key; it still acts as RCtrl as a secondary function. Here is my reasoning:
+- `Control` only makes sense as a modifier and needs to be typed together with another key.
+- If you really need only a tap on `Control`, you can use the left `Control`.
+- the size of the right `Control` key on the UHK is identical to a standard US-keyboard `Return` key. I swapped the keycaps on my UHK, and to populate the right `Control` position, I usually install an `Enter` key there. Because it is labelled “Enter”, it makes only sense that it also functions as Enter when the user taps it.
+
+(This is only on the UHK. The AHK script does not modify right Control.)
+
+-----
+[^tkl]: Ten-Key-Less. A keyboard that does not have a "number pad" key cluster for number entry.
+
+[^uhk]: [Ultimate Hacking Keyboard](https://www.ultimatehackingkeyboard.com), an external, split USB keyboard with optional extra modules. The UHK offers advanced key configuration, layers, programming capabilities via a macro programming language, and mouse control.
