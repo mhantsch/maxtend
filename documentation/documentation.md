@@ -24,10 +24,25 @@ Colemak base layer:
 Shift     z    x    c    v    b    k    m    ,<   .>   /?       Shift
 ```
 
-The base [Colemak](https://colemak.com/) layout has a number of alphabet characters on different keys than the well-known US-QWERTY layout, but all the special characters (symbols, punctuation, brackets, parenthesis etc.) are on the same positions as US-QWERTY. In addition, it features a comprehensive set of [international multilingual characters](https://colemak.com/Multilingual) 
-(for latin alphabets) through use of the AltGr (right alt) key.
+On our sample keyboard images, the base layer alphabetic keys are labelled on the top left of the keys. Here is an image of the 'F' key:
+
+![key FÃ](../images/key-F.png)
+
+An unshifted press of `F` produces a lower-case **f**. A shifted press of `Shift`+`F` produces an upper-case **F**.
+
+On the number row, the base layer is labelled on the bottom left for unshifted symbols (numbers), and on the top left for shifted symbols. Here is an image of the `1!` key:
+
+![key 1](../images/key-1.png)
+
+An unshifted press of `1` produces the number **1**. A shifted press of `Shift`+`1` produces the exclamation mark **!**.
+
+The base [Colemak](https://colemak.com/) layout has a number of alphabet characters on different keys than the well-known US-QWERTY layout, but all the special characters (symbols, punctuation, brackets, parenthesis etc.) are on the same positions as US-QWERTY. In addition, it features a comprehensive set of [international multilingual characters](https://colemak.com/Multilingual) (for latin alphabets) through use of the `AltGr` (right alt) key.
+
+![key AltGr](../images/key-altgr.png)
 
 As in standard Colemak, the `CapsLock` key is used as Backspace. It is labeled `Maxtend`. A simple tap on `Maxtend` will produce a backspace, erasing the character to the left of the cursor. See below for layer switching when `Maxtend` is held down.
+
+![key maxtend](../images/key-maxtend.png)
 
 #### Layer switching
 
@@ -62,6 +77,15 @@ Note: the AltGr layer contains several dead keys[^deadkey], indicated by parenth
 - `AltGr`+`\` is * – to produce ¶ ™ © ® № µ etc. (_Windows only_)
 
 [^deadkey]: A dead key does not immediately produce a character (“it’s dead”), but it will modify the next character. The accent symbol on the dead key "combines" with the symbol on the next key to produce an accented character. If you want the "dead" symbol on its own, you need to press the dead key first, then type Space.
+
+On our sample keyboard images, the AltGr symbols are labelled on the top right of the keys, and in the same yellow colour as the `AltGr` key. Here is an image of the 'FÃ' key:
+
+![key FÃ](../images/key-F.png)
+
+When pressed together with `AltGr`+`FÃ`, it produces a lower-case **ã**. When pressed with `AltGr`+`Shift`+`FÃ`, it produces an upper-case **Ã**.
+
+
+
 
 ### Maxtend layer
 
