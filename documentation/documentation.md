@@ -34,7 +34,13 @@ On the number row, the base layer is labelled on the bottom left for unshifted s
 
 ![key 1](../images/key-1.png)
 
-An unshifted press of `1` produces the number **1**. A shifted press of `Shift`+`1` produces the exclamation mark **!**.
+An unshifted press of `1` produces the number **1**. A shifted press of `Shift`+`1` produces the exclamation mark **!** .
+
+For some symbol keys, the unshifted base layer is also labelled on the bottom left, and the top left shows the shifted base layer symbol. Here is an image of the `;:` key:
+
+![key semicolon/colon](../images/key-semicolon.png)
+
+An unshifted press of `;:` produces the semicolon **;** , and a shifted press of `Shift`+`;:` produces the colon **:** .
 
 The base [Colemak](https://colemak.com/) layout has a number of alphabet characters on different keys than the well-known US-QWERTY layout, but all the special characters (symbols, punctuation, brackets, parenthesis etc.) are on the same positions as US-QWERTY. In addition, it features a comprehensive set of [international multilingual characters](https://colemak.com/Multilingual) (for latin alphabets) through use of the `AltGr` (right alt) key.
 
