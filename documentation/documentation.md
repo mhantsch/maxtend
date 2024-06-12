@@ -4,11 +4,11 @@
 
 ![Overview of the layout of a maxtended keyboard.](../images/Maxtend-black.png)
 
-Maxtend is designed to minimise hand movements and enable keyboard operations mostly from the home row hand positions. It is optimised for 60% keyboards (no number pad, no navigation cluster, no function row), but works equally well on TKL[^tkl] or full-size keyboards.
+*Maxtend* is designed to minimise hand movements and enable keyboard operations mostly from the home row hand positions. It is optimised for 60% keyboards (no number pad, no navigation cluster, no function row), but works equally well on TKL[^tkl] or full-size keyboards. *Maxtend* uses layers for the functionality traditionally bound to specific keys (cursor navigation, editing, number entry, function keys etc.), which are not present on a 60% keyboard.
 
-- A short press and release of CapsLock (labelled "Maxtend") will work as Backspace, as in original Colemak.
-- Holding CapsLock ("Maxtend") together with other keys works as an additional function layer, and contains useful navigation functions, e.g. cursor movement.
-- Holding Tab ("Numtab") enables a virtual nulmber pad, allowing easy number entry.
+- A short press and release of CapsLock (labelled `Maxtend`) will work as Backspace, as in original Colemak.
+- Holding CapsLock (`Maxtend`) together with other keys works as an additional function layer, and contains useful navigation functions, e.g. cursor movement.
+- Holding Tab (`Numtab`) enables a virtual number pad, allowing easy number entry.
 
 On a UHK[^uhk], additional functionality is available, e.g. mouse control, 2-axis scrolling, mouse jitter keep-alive, media and volume control.
 
