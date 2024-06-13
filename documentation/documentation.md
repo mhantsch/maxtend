@@ -16,6 +16,7 @@ On a UHK[^uhk], additional functionality is available, e.g. mouse control, 2-axi
 
 * `a` a key
 * `[{` also a key
+* `Shift`+`a` two keys pressed together (the first key being pressed first)
 * _Maxtend_ an emphasis
 * **Escape** a different emphasis
 * _**`LED`**_ (bold, italics, upper case) something displayed on the UHK LED display
