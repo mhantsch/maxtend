@@ -1,4 +1,4 @@
-# maxtend User Documentation
+# Maxtend User Documentation
 
 ## Overview
 
@@ -28,25 +28,25 @@ On our sample keyboard images, the base layer alphabetic keys are labelled on th
 
 ![key FÃ](../images/key-F.png)
 
-An unshifted press of `F` produces a lower-case **f**. A shifted press of `Shift`+`F` produces an upper-case **F**.
+Typing `F` produces a lower-case **f** , and typing `Shift`+`F` produces an upper-case **F** .
 
 On the number row, the base layer is labelled on the bottom left for unshifted symbols (numbers), and on the top left for shifted symbols. Here is an image of the `1!` key:
 
-![key 1](../images/key-1.png)
+![key 1](../images/key-1.png) 
 
-An unshifted press of `1` produces the number **1**. A shifted press of `Shift`+`1` produces the exclamation mark **!** .
+Typing `1` produces the number **1**, whereas `Shift`+`1` produces the exclamation mark **!** .
 
-For some symbol keys, the unshifted base layer is also labelled on the bottom left, and the top left shows the shifted base layer symbol. Here is an image of the `;:` key:
+Similar to the number row, some symbol keys also show the unshifted base layer on the bottom left, and the top left displays the shifted base layer symbol. Here is an image of the `;:` key:
 
 ![key semicolon/colon](../images/key-semicolon.png)
 
-An unshifted press of `;:` produces the semicolon **;** , and a shifted press of `Shift`+`;:` produces the colon **:** .
+Typing `;:` produces the semicolon **;** , and  `Shift`+`;:` produces the colon **:** .
 
-The base [Colemak](https://colemak.com/) layout has a number of alphabet characters on different keys than the well-known US-QWERTY layout, but all the special characters (symbols, punctuation, brackets, parenthesis etc.) are on the same positions as US-QWERTY. In addition, it features a comprehensive set of [international multilingual characters](https://colemak.com/Multilingual) (for latin alphabets) through use of the `AltGr` (right alt) key.
+The base [Colemak](https://colemak.com/) layout has a number of alphabet characters on different keys than the well-known US-QWERTY layout, but all the special characters (symbols, punctuation, brackets, parenthesis etc.) are on the same positions as US-QWERTY (the only exception being `;:`). In addition, it features a comprehensive set of [international multilingual characters](https://colemak.com/Multilingual) (for latin alphabets) through use of the `AltGr` (right alt) key.
 
-![key AltGr](../images/key-altgr.png)
+![key AltGr](../images/key-altgr.png | height=50)
 
-As in standard Colemak, the `CapsLock` key is used as Backspace. It is labeled `Maxtend`. A simple tap on `Maxtend` will produce a backspace, erasing the character to the left of the cursor. See below for layer switching when `Maxtend` is held down.
+As in standard Colemak, the `CapsLock` key is used as Backspace. On *Maxtend*, it is labeled `Maxtend`. A simple tap on `Maxtend` produces a backspace, erasing the character to the left of the cursor. See below for layer switching when `Maxtend` is held down.
 
 ![key maxtend](../images/key-maxtend.png)
 
