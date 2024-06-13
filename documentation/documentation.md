@@ -18,12 +18,11 @@ A maxtended keyboard features a base layer in [Colemak](https://colemak.com/) la
 
 ```
 Colemak base layer:
-`~   1!   2@   3#   4$   5%   6^   7&   8*   9(   0)   -_   =+  Bkspc
-(Tab)  q    w    f    p    g    j    l    u    y    ;:   [{   ]}   \|
-(Mxtnd) a    r    s    t    d    h    n    e    i    o    '"   Return
-Shift     z    x    c    v    b    k    m    ,<   .>   /?       Shift
+`~    1!   2@   3#   4$   5%   6^   7&   8*   9(   0)   -_   =+  Bkspc
+Numtab  q    w    f    p    g    j    l    u    y    ;:   [{   ]}   \|
+Maxtend  a    r    s    t    d    h    n    e    i    o    '"   Return
+Shift      z    x    c    v    b    k    m    ,<   .>   /?       Shift
 ```
-
 The base [Colemak](https://colemak.com/) layout has a number of alphabet characters on different keys than the well-known US-QWERTY layout, but all the special characters (symbols, punctuation, brackets, parenthesis etc.) are on the same positions as US-QWERTY (the only exception being `;:`). In addition, it features a comprehensive set of [international multilingual characters](https://colemak.com/Multilingual) (for latin alphabets) through use of the `AltGr` (right alt) key.
 
 As in standard Colemak, the `CapsLock` key is used as Backspace. On *Maxtend*, it is labeled `Maxtend`. A simple tap on `Maxtend` produces a backspace, erasing the character to the left of the cursor. See below for layer switching when `Maxtend` is held down.
@@ -41,10 +40,10 @@ _Note:_ `AltGr` comes with the Colemak keymap (configured in the OS keyboard lay
 
 ```
 Colemak AltGr layer:
-(~)  ¡¹   º²   ª³   ¢£   €¥   ħĦ   ðÐ   þÞ   ‘“   ’”   – —  ×÷  Bkspc
-(Tab)  äÄ   åÅ   ãÃ   øØ   (˛)  đĐ   łŁ   úÚ   üÜ   öÖ   «‹   »›   ~~
-(Mxtnd) áÁ   (`)  ßẞ   (´)  (¨)  (ˇ)  ñÑ   éÉ   íÍ   óÓ   '"   Return
-Shift     æÆ   (^)  çÇ   œŒ   (˘)  (°)  (¯)  (¸)  (˙)  ¿~       Shift
+(~)   ¡¹   º²   ª³   ¢£   €¥   ħĦ   ðÐ   þÞ   ‘“   ’”   – —  ×÷  Bkspc
+Numtab  äÄ   åÅ   ãÃ   øØ   (˛)  đĐ   łŁ   úÚ   üÜ   öÖ   «‹   »›   ~~
+Maxtend  áÁ   (`)  ßẞ   (´)  (¨)  (ˇ)  ñÑ   éÉ   íÍ   óÓ   '"   Return
+Shift      æÆ   (^)  çÇ   œŒ   (˘)  (°)  (¯)  (¸)  (˙)  ¿~       Shift
 ```
 
 Note: the AltGr layer contains several dead keys[^deadkey], indicated by parentheses, e.g. `(˘)`. Typing one of these keys will modify the next letter:
@@ -64,14 +63,14 @@ Note: the AltGr layer contains several dead keys[^deadkey], indicated by parenth
 
 ### Maxtend layer
 
-When the `Maxtend` key is held down, the Maxtend layer is activated. The main purpose of this layer is cursor and document navigation, and editing.
+When the `Maxtend` key is held down, the Maxtend layer is activated[^maxtend-release]. The main purpose of this layer is cursor and document navigation, and editing.
 
 ```
 Maxtend layer:
-Esc  F1   F2   F3   F4   F5   F6   F7   F8   F9   F10  F11  F12  Delete
-Num   Esc  WhUp Back Fwd  -    PgUp Home Up   End  Del  PrSc ScLk Pause
-       Alt  WhDn Shft Ctrl -    PgDn Left Down Rght Bksp Ins     Return
-Shift    C-z  C-x  C-c  C-v  b    k    m    ,<   .>   Menu        Shift
+Esc    F1   F2   F3   F4   F5   F6   F7   F8   F9   F10  F11  F12  Delete
+Numtab  Esc  WhUp Back Fwd  -    PgUp Home Up   End  Del  PrSc ScLk Pause
+         Alt  WhDn Shft Ctrl -    PgDn Left Down Rght Bksp Ins     Return
+Shift      C-z  C-x  C-c  C-v  b    k    m    ,<   .>   Menu        Shift
 ```
 
 This layer features useful navigation functions such as:
@@ -118,7 +117,7 @@ __Menu:__ on the right side, the `/?` key activates the menu function. With `Max
 
 __Browser navigation:__ `Maxtend`+`F` and `Maxtend`+`P` move backward and forward through browser history (they send Alt-CursorLeft and Alt-CursorRight keys). _(UHK-only:_ Compare this to the Mouse layer where these buttons cycle backward and forward through tabs, and the Fn layer where they send History-back and History-forward.)
 
-*Note:* As soon as a second key has been pressed while `Maxtend` is held down, or when `Maxtend` has been held down for more than ~300ms, the Maxtend layer will activate. Releasing `Maxtend` will then no longer Backspace. Additionally, an indication will remind the user that Backspace will not be triggered. On AHK configurations, the screen will flash briefly. On UHK keyboards, the LED segment display will show *`MAX`* (and the _`mod`_ indicator will turn on), indicating that the Maxtend layer has become active. The user can then safely release `Maxtend` without triggering any action.
+[^maxtend-release]: *Note:* As soon as a second key has been pressed while `Maxtend` is held down, or when `Maxtend` has been held down for more than ~300ms, the Maxtend layer will activate. Releasing `Maxtend` will then no longer Backspace. Additionally, an indication will remind the user that Backspace will not be triggered. On AHK configurations, the screen will flash briefly. On UHK keyboards, the LED segment display will show *`MAX`* (and the _`mod`_ indicator will turn on), indicating that the Maxtend layer has become active. The user can then safely release `Maxtend` without triggering any action.
 
 ### Number layer
 
