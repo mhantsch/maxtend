@@ -186,6 +186,6 @@ Numpad Enter is mapped onto the right `Control` key; it still acts as RCtrl as a
 (This is only on the UHK. The AHK script does not modify right Control.)
 
 -----
-[^tkl]: Ten-Key-Less. A keyboard that does not have a "number pad" key cluster for number entry.
+[^tkl]: Ten-Key-Less. A keyboard that does not have a "number pad" key cluster for number entry. There is still a navigation cluster with cursor keys, Ins/Del/Home/End/PgUp/PgDn, and PrScr/ScrLk/Break keys. Also often referred to as an "80%" keyboard.
 
 [^uhk]: [Ultimate Hacking Keyboard](https://www.ultimatehackingkeyboard.com), an external, split USB keyboard with optional extra modules. The UHK offers advanced key configuration, layers, programming capabilities via a macro programming language, and mouse control.
