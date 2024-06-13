@@ -175,12 +175,19 @@ I deliberately kept the primary functions of `Maxtend` (Backspace), `Numtab` (Ta
 
 The right Space bar is kept without any secondary function because the secondary function can conflict with n-key rollover when typing fast, and I noticed that I mostly type space with my right thumb. If that is different for you, and you mainly type Space with your left thumb, you may want to move the secondary Mouse layer switch (*Mousetend* macro) from the left Space to the right Space.
 
+UHK layers are used as such:
+- __*mod:*__ *Maxtend* layer
+- __*mouse:*__ *Mouse* layer
+- __*fn:*__ *Media* layer
+- __*fn2:*__ *Mirror* layer
+- __*fn5:*__ *Number* layer
+
 ### `Maxtend` functions
 Activation of the different functions of the `Maxtend` key will be visualised on the LED display:
 
 | Key combination | short tap | hold | LED display |
 | --- | --- | --- | --- |
-| `Maxtend` | Backspace | Maxtend layer | _**`<--`**_ / _**`MAX`**_+_**`mod`**_ |
+| `Maxtend` | Backspace | Maxtend layer | tap: _**`<--`**_ / hold: _**`MAX`**_+_**`mod`**_ |
 | `Shift`+`Maxtend` | Backspace | Backspace (autorepeat) | _**`<--`**_ |
 | `Alt`+`Maxtend`<br/>`AltGr`+`Maxtend`<br/>`Fn`+`Maxtend` | Delete | Delete (autorepeat) | _**`DEL`**_ |
 
@@ -189,9 +196,11 @@ Activation of the different functions of the `Numtab` key will be visualised on 
 
 | Key combination | short tap | hold | LED display |
 | --- | --- | --- | --- |
-| `NumTab`         | Tab           | Number layer             | _**`->\|`**_ / _**`NUM`**_ |
-| `Shift`+`NumTab` | Shift+Tab     | lock/unlock Number layer | _**`\|<-`**_ / _**`NUM`**_ |
+| `NumTab`         | Tab           | Number layer             | tap: _**`->\|`**_ / hold: _**`123`**_ or _**`NUM`**_[^maxtend_version] |
+| `Shift`+`NumTab` | Shift+Tab     | lock/unlock Number layer | tap: _**`\|<-`**_ / hold: _**`123`**_  or _**`NUM`**_[^maxtend_version] |
 | `Alt`+`NumTab`<br/>`Fn`+`NumTab` | Alt+Tab<br/>_(switches windows)_ | Alt+Tab (autorepeat) |  |
+
+[^maxtend_version]: depending on version of _Maxtend_.
 
 ### Mouse layer
 Holding left Space activates the Mouse layer. The UHK display will briefly show _**`MSE`**_, and the _**`mouse`**_ indicator will turn on.
