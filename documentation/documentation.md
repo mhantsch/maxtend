@@ -125,15 +125,16 @@ When the `NumTab` key (tab) is held down, the Number layer is activated. The mai
 
 ```
 Number layer:
-Esc  ˙    ˙    ˙    ˙    ˙    ˙    7    8    9    0    -_   =+     Bkspc
-Num    Esc  ˙    ¡    ¿    ˙    /    4    5    6    –    [{   ]}   \|
-(Mxtnd) Alt  ˙    Shft Ctrl ˙    *    1    2    3    +    '"      Return
-Shift     C-z  C-x  C-c  C-v  NumLk ˙   0    ,<   .    Enter       Shift
+Esc   ˙    ˙    ˙    ˙    ˙    ˙    7    8    9    0    -_   =+  Bkspc
+Numtab  Esc  ˙    ¡    ¿    ˙    /    4    5    6    –    [{   ]}   \|
+Maxtend  Alt  ˙    Shft Ctrl ˙    *    1    2    3    +    '"   Return
+Shift      C-z  C-x  C-c  C-v  NumLk ˙   0    ,<   .    Enter    Shift
 ```
 (a single ˙ indicates a key with no function)
 
-Pressing `Maxtend`+`NumTab` or holding `Shift`+`NumTab` for a little while locks the number layer. Use the same combination to unlock. While the number layer is locked, you can use `Maxtend` to activate keys from the Maxtend layer; it will revert back to the (locked) number layer when you release `Maxtend`.
+Tapping `Maxtend`+`NumTab` or holding `Shift`+`NumTab` for a little while locks the number layer. Use the same combination to unlock. While the number layer is locked, you can use `Maxtend` to activate keys from the Maxtend layer; it will revert back to the (locked) number layer when you release `Maxtend`.
 
+For TKL keyboards[^tkl] (featuring a navigation cluster) another simulated number pad is provided:
 
 ```
 Number layer - additional mappings (for TKL keyboards):
