@@ -44,18 +44,26 @@ Typing `;:` produces the semicolon **;** , and  `Shift`+`;:` produces the colon 
 
 The base [Colemak](https://colemak.com/) layout has a number of alphabet characters on different keys than the well-known US-QWERTY layout, but all the special characters (symbols, punctuation, brackets, parenthesis etc.) are on the same positions as US-QWERTY (the only exception being `;:`). In addition, it features a comprehensive set of [international multilingual characters](https://colemak.com/Multilingual) (for latin alphabets) through use of the `AltGr` (right alt) key.
 
-![key AltGr](../images/key-altgr.png | height=50)
+![key AltGr](../images/key-altgr.png)
+
+<a href="../images/key-altgr.png"><img src="../images/key-altgr.png" height=60px></a>
+
 
 As in standard Colemak, the `CapsLock` key is used as Backspace. On *Maxtend*, it is labeled `Maxtend`. A simple tap on `Maxtend` produces a backspace, erasing the character to the left of the cursor. See below for layer switching when `Maxtend` is held down.
 
 ![key maxtend](../images/key-maxtend.png)
+
+<a href="../images/key-maxtend.png"><img src="../images/key-maxtend.png" height=60px></a>
 
 #### Layer switching
 
 The base layer has three layer-switching keys. When held down and pressed together with other keys, they will activate other layers:
 - holding `Maxtend` (Mxtnd) will activate the Maxtend layer
 - holding `NumTab` (Tab) will activate the Number layer
-- holding `AltGr` (right Alt) will activate the AltGr layer
+- holding `AltGr` (right Alt) will activate the AltGr layer 
+
+<a href="../images/key-maxtend.png"><img src="../images/key-maxtend.png" height=60px></a>
+<a href="../images/key-altgr.png"><img src="../images/key-altgr.png" height=60px></a>
 
 _Note:_ `AltGr` comes with the Colemak keymap (configured in the OS keyboard layout). `Maxtend` and `NumTab` are enabled through the AHK, keyd, xkb or UHK configuration.
 
