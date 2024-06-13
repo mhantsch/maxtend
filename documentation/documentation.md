@@ -24,36 +24,9 @@ Colemak base layer:
 Shift     z    x    c    v    b    k    m    ,<   .>   /?       Shift
 ```
 
-On our sample keyboard images, the base layer alphabetic keys are labelled on the top left of the keys. Here is an image of the 'F' key:
-
-![key FÃ](../images/key-F.png)
-
-Typing `F` produces a lower-case **f** , and typing `Shift`+`F` produces an upper-case **F** .
-
-On the number row, the base layer is labelled on the bottom left for unshifted symbols (numbers), and on the top left for shifted symbols. Here is an image of the `1!` key:
-
-![key 1](../images/key-1.png) 
-
-Typing `1` produces the number **1**, whereas `Shift`+`1` produces the exclamation mark **!** .
-
-Similar to the number row, some symbol keys also show the unshifted base layer on the bottom left, and the top left displays the shifted base layer symbol. Here is an image of the `;:` key:
-
-![key semicolon/colon](../images/key-semicolon.png)
-
-Typing `;:` produces the semicolon **;** , and  `Shift`+`;:` produces the colon **:** .
-
 The base [Colemak](https://colemak.com/) layout has a number of alphabet characters on different keys than the well-known US-QWERTY layout, but all the special characters (symbols, punctuation, brackets, parenthesis etc.) are on the same positions as US-QWERTY (the only exception being `;:`). In addition, it features a comprehensive set of [international multilingual characters](https://colemak.com/Multilingual) (for latin alphabets) through use of the `AltGr` (right alt) key.
 
-![key AltGr](../images/key-altgr.png)
-
-<a href="../images/key-altgr.png"><img src="../images/key-altgr.png" height=60px></a>
-
-
 As in standard Colemak, the `CapsLock` key is used as Backspace. On *Maxtend*, it is labeled `Maxtend`. A simple tap on `Maxtend` produces a backspace, erasing the character to the left of the cursor. See below for layer switching when `Maxtend` is held down.
-
-![key maxtend](../images/key-maxtend.png)
-
-<a href="../images/key-maxtend.png"><img src="../images/key-maxtend.png" height=60px></a>
 
 #### Layer switching
 
@@ -61,9 +34,6 @@ The base layer has three layer-switching keys. When held down and pressed togeth
 - holding `Maxtend` (Mxtnd) will activate the Maxtend layer
 - holding `NumTab` (Tab) will activate the Number layer
 - holding `AltGr` (right Alt) will activate the AltGr layer 
-
-<a href="../images/key-maxtend.png"><img src="../images/key-maxtend.png" height=60px></a>
-<a href="../images/key-altgr.png"><img src="../images/key-altgr.png" height=60px></a>
 
 _Note:_ `AltGr` comes with the Colemak keymap (configured in the OS keyboard layout). `Maxtend` and `NumTab` are enabled through the AHK, keyd, xkb or UHK configuration.
 
@@ -77,7 +47,7 @@ Colemak AltGr layer:
 Shift     æÆ   (^)  çÇ   œŒ   (˘)  (°)  (¯)  (¸)  (˙)  ¿~       Shift
 ```
 
-Note: the AltGr layer contains several dead keys[^deadkey], indicated by parentheses, e.g. `(˘)`:
+Note: the AltGr layer contains several dead keys[^deadkey], indicated by parentheses, e.g. `(˘)`. Typing one of these keys will modify the next letter:
 - `AltGr`+`~` is ~ – to produce ã ẽ õ ñ etc.
 - `AltGr`+`r` is ` – to produce à è ò etc.
 - `AltGr`+`t` is ´ – to produce á é ó etc.
@@ -91,15 +61,6 @@ Note: the AltGr layer contains several dead keys[^deadkey], indicated by parenth
 - `AltGr`+`\` is * – to produce ¶ ™ © ® № µ etc. (_Windows only_)
 
 [^deadkey]: A dead key does not immediately produce a character (“it’s dead”), but it will modify the next character. The accent symbol on the dead key "combines" with the symbol on the next key to produce an accented character. If you want the "dead" symbol on its own, you need to press the dead key first, then type Space.
-
-On our sample keyboard images, the AltGr symbols are labelled on the top right of the keys, and in the same yellow colour as the `AltGr` key. Here is an image of the 'FÃ' key:
-
-![key FÃ](../images/key-F.png)
-
-When pressed together with `AltGr`+`FÃ`, it produces a lower-case **ã**. When pressed with `AltGr`+`Shift`+`FÃ`, it produces an upper-case **Ã**.
-
-
-
 
 ### Maxtend layer
 
@@ -123,21 +84,19 @@ This layer features useful navigation functions such as:
 
 On the top (number) row, you can reach Escape (`Maxtend`+`` `~ ``) and the function keys F1-F12 (`Maxtend`+`1` ...  `Maxtend`+`=`). `Maxtend`+`Backspace` becomes Delete.
 
-
 __Escape:__ It is difficult to press `Maxtend` and the top left `` `~ `` key at the same time. Most likely you have to move the left hand out of the home position. Therefore, Escape can also be found on `Maxtend`+`q` (reached using the pinky+ring fingers of the left hand.
 
 __Navigation:__ Directly in the home row position for your right hand you find cursor up/down/left/right. Other navigation and editing controls (home, end, backspace, delete, insert, page up, page down) are placed closely around this position.
 
-|   |   |   |   |   |
-| --- | --- | --- | --- | --- |
-|  `6`  |  `7`  |  `8`  |  `9`  |  `0` |
-| `j` pageup | `l` home | `u` up | `y` end | `;` delete |
-| `h` pagedn | `n` left | `e` down | `i` right | `o` backspace |
-| `k` | `m` | `,<` | `.>` | `/?` |
+|  `6`  |  `7`  |  `8`  |  `9`  |  `0` | |
+| --- | --- | --- | --- | --- | --- |
+| `j` pageup | `l` home | `u` up | `y` end | `;` delete | |
+| `h` pagedn | `n` left | `e` down | `i` right | `o` backspace | `'"` insert |
+| `k` | `m` | `,<` | `.>` | `/?` menu |
 
 (keys labelled according to Colemak)
 
-*Note:* Although Backspace is already the primary function of the `Maxtend` key, its function is duplicated on this layer. There are two reasons:
+*Note:* Although Backspace is already the primary function of the `Maxtend` key, its function is duplicated on this layer (`Maxtend`+`o`). There are two reasons:
 
   1. While holding the `Maxtend` key and using cursor navigation, removal of incorrect characters is instantly available without needing to release `Maxtend`. And you can immediately continue to navigate.
   2. Backspace through a tap on the `Maxtend` key does not autorepeat (due to secondary function as the Maxtend layer switch). Backspace on the Maxtend layer auto-repeats, and can thus be used to Backspace over larger areas of text.
@@ -157,11 +116,9 @@ Mnemonic: the F-row continues to those buttons.
 
 __Menu:__ on the right side, the `/?` key activates the menu function. With `Maxtend` held down, the user immediately has access to cursor movement to select an entry in the menu.
 
-__Browser navigation:__ `Maxtend`+`F` and `Maxtend`+`P` (qwerty positions: E, R) move backward and forward through browser history (they send Alt-CursorLeft and Alt-CursorRight keys). Compare this to the Mouse layer where these buttons cycle backward and forward through tabs.
+__Browser navigation:__ `Maxtend`+`F` and `Maxtend`+`P` move backward and forward through browser history (they send Alt-CursorLeft and Alt-CursorRight keys). _(UHK-only:_ Compare this to the Mouse layer where these buttons cycle backward and forward through tabs, and the Fn layer where they send History-back and History-forward.)
 
-**TODO** (continue here)
-
-*Note:* As soon as a second key has been pressed while `Maxtend` is held down, or when `Maxtend` has been held down for more than half a second, releasing `Maxtend` will not Backspace. In this case, an indication will remind the user that Backspace will not be triggered. On AHK configurations, the screen will flash briefly. On UHK keyboards, the segment display will show **`MAX`** (and the _`mod`_ indicator will turn on), indicating that the Maxtend layer has become active. The user can then safely release `Maxtend` without triggering any action.
+*Note:* As soon as a second key has been pressed while `Maxtend` is held down, or when `Maxtend` has been held down for more than ~300ms, the Maxtend layer will activate. Releasing `Maxtend` will then no longer Backspace. Additionally, an indication will remind the user that Backspace will not be triggered. On AHK configurations, the screen will flash briefly. On UHK keyboards, the LED segment display will show *`MAX`* (and the _`mod`_ indicator will turn on), indicating that the Maxtend layer has become active. The user can then safely release `Maxtend` without triggering any action.
 
 ### Number layer
 
@@ -180,24 +137,13 @@ Pressing `Maxtend`+`NumTab` or holding `Shift`+`NumTab` for a little while locks
 
 
 ```
-;
-; Number layer (CapsLock+Tab held):
-; ESC  WlUp Back Fwd  g    PgUp 4    5    6    Del
-;  Ctrl WlDn Shft Alt  d    PgDn 1    2    3    BkSp Ins
-;   C-Z  C-X  C-C  C-V  b    k    0    ,    .    /
-;
-; Number layer (ScrollLock on):
-; q    w    f    p    g    j    4    5    6    ;
-;  a    r    s    t    d    h    1    2    3    o
-;   z    x    c    v    b    k    0    ,    .    /
-; 
-;
-; Number layer - additional mappings (for TKL keyboards):
-; PrSc ScLk Paus   =>   7    8    9
-; Ins  Home PgUp   =>   4    5    6
-; Del  End  PgDn   =>   1    2    3
-;      Up          =>        -
-; Left Down Right  =>   0    ,    .
+Number layer - additional mappings (for TKL keyboards):
+PrSc ScLk Paus   =>   7    8    9
+Ins  Home PgUp   =>   4    5    6
+Del  End  PgDn   =>   1    2    3
+
+     Up          =>        -
+Left Down Right  =>   0    ,    .
 
 ```
 

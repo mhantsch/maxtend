@@ -16,6 +16,8 @@ Read more about the [Background](BACKGROUND.md) of this setup.
 ## Documentation
 [Full description of layers and functionality](documentation/documentation.md)
 
+[Keycaps layout visualising layers and functions](documentation/keycaps-layout.md)
+
 The configuration is setup in three stages:
 1. base OS setup - giving a standard Colemak layout without extended functionality
 2. maxtend layer - giving extended functionality such as navigation, mouse scrolling etc.;  
