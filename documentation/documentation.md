@@ -12,6 +12,15 @@
 
 On a UHK[^uhk], additional functionality is available, e.g. mouse control, 2-axis scrolling, mouse jitter keep-alive, media and volume control.
 
+### Notation conventions
+
+* `a` a key
+* `[{` also a key
+* _Maxtend_ an emphasis
+* **Escape** a different emphasis
+* _**`LED`**_ (bold, italics, upper case) something displayed on the UHK LED display
+* _**`mod`**_ (bold, italics, lower case) an indicator on the UHK LED display
+
 ### Base layer
 
 A maxtended keyboard features a base layer in [Colemak](https://colemak.com/) layout.
@@ -30,7 +39,7 @@ As in standard Colemak, the `CapsLock` key is used as Backspace. On *Maxtend*, i
 #### Layer switching
 
 The base layer has three layer-switching keys. When held down and pressed together with other keys, they will activate other layers:
-- holding `Maxtend` (Mxtnd) will activate the Maxtend layer
+- holding `Maxtend` (CapsLock) will activate the Maxtend layer
 - holding `NumTab` (Tab) will activate the Number layer
 - holding `AltGr` (right Alt) will activate the AltGr layer 
 
@@ -117,6 +126,13 @@ __Menu:__ on the right side, the `/?` key activates the menu function. With `Max
 
 __Browser navigation:__ `Maxtend`+`F` and `Maxtend`+`P` move backward and forward through browser history (they send Alt-CursorLeft and Alt-CursorRight keys). _(UHK-only:_ Compare this to the Mouse layer where these buttons cycle backward and forward through tabs, and the Fn layer where they send History-back and History-forward.)
 
+#### `Maxtend`, extended
+
+* A short tap on `Maxtend` produces Backspace.
+* `Shift`+`Maxtend` also produces Backspace, but with autorepeat (same as `Maxtend`+`o`).
+* `Alt`+`Maxtend` (or `AltGr`+`Maxtend`) produces Delete, also with autorepeat (same as `Maxtend`+`;:`).
+* _(UHK-only)_ `Fn`+`Maxtend` also produces Delete, also with autorepeat (same as `Maxtend`+`;:`).
+
 [^maxtend-release]: *Note:* As soon as a second key has been pressed while `Maxtend` is held down, or when `Maxtend` has been held down for more than ~300ms, the Maxtend layer will activate. Releasing `Maxtend` will then no longer Backspace. Additionally, an indication will remind the user that Backspace will not be triggered. On AHK configurations, the screen will flash briefly. On UHK keyboards, the LED segment display will show *`MAX`* (and the _`mod`_ indicator will turn on), indicating that the Maxtend layer has become active. The user can then safely release `Maxtend` without triggering any action.
 
 ### Number layer
@@ -158,20 +174,46 @@ I deliberately kept the primary functions of `Maxtend` (Backspace), `Numtab` (Ta
 
 The right Space bar is kept without any secondary function because the secondary function can conflict with n-key rollover when typing fast, and I noticed that I mostly type space with my right thumb. If that is different for you, and you mainly type Space with your left thumb, you may want to move the secondary Mouse layer switch (*Mousetend* macro) from the left Space to the right Space.
 
+### `Maxtend` functions
+Activation of the different functions of the `Maxtend` key will be visualised on the LED display:
+
+| Key combination | short tap | hold | LED display |
+| --- | --- | --- | --- |
+| `Maxtend` | Backspace | Maxtend layer | _**`<--`**_ / _**`MAX`**_+_**`mod`**_ |
+| `Shift`+`Maxtend` | Backspace | Backspace (autorepeat) | _**`<--`**_ |
+| `Alt`+`Maxtend`<br/>`AltGr`+`Maxtend`<br/>`Fn`+`Maxtend` | Delete | Delete (autorepeat) | _**`DEL`**_ |
+
+### `NumTab` functions
+Activation of the different functions of the `Numtab` key will be visualised on the LED display:
+
+| Key combination | short tap | hold | LED display |
+| --- | --- | --- | --- |
+| `NumTab`         | Tab           | Number layer             | _**`->\|`**_ / _**`NUM`**_ |
+| `Shift`+`NumTab` | Shift+Tab     | lock/unlock Number layer | _**`\|<-`**_ / _**`NUM`**_ |
+| `Alt`+`NumTab`<br/>`Fn`+`NumTab` | Alt+Tab<br/>_(switches windows)_ | Alt+Tab (autorepeat) |  |
+
 ### Mouse layer
-Holding left Space activates the Mouse layer. The UHK display will briefly show **`MSE`**, and the _`mouse`_ indicator will turn on.
+Holding left Space activates the Mouse layer. The UHK display will briefly show _**`MSE`**_, and the _**`mouse`**_ indicator will turn on.
 
 The left case key functions as a left mouse button. This is useful if you do not have a key cluster module connected (which has mouse buttons), but a mouse module (e.g. trackpad) on the right side. You can use the left case button to click items while steering the mouse pointer with the right module.
 
 ### Media layer
-Holding either Fn key activates the Media layer. This offers features to control media playback, volume control, speaker and mic mute, as well as some compatibility with the Colemak AltGr layer.
+Holding either Fn key activates the Media layer (and the _**`fn`**_ indicator will turn on). This layer offers features to control media playback, volume control, speaker and mic mute, as well as some compatibility with the Colemak AltGr layer.
 
 ### Mirror layer
 
 ### Additional features
-CapsLock on ISO: On the UHK, the ISO key can be used to send an actual CapsLock. However, with the AHK script in place, this will just trigger the FUNCTION layer on AHK. The net effect is that it is the same as just using Mod (CapsLock). (It can be used to test the AHK script, though, without the UHK layer interfering.)
+CapsLock on ISO: On the UHK, `Maxtend`+`ISO` (the ISO key sitting between the left `Shift` and `z` keys) can be used to send an actual CapsLock. However, with AHK in place (Windows), or keyd (Linux), this will just trigger the corresponding layer on AHK/keyd. The net effect is that it is the same as just using `Maxtend` (Mod,CapsLock). (It can be used to test the AHK/keyd configuration, though, without the UHK logic interfering.)
 
 For cursor control using only the right hand, Mod (the Maxtend layer) is also available on the right case button, and it's a secondary function on the `'"` key. The layer can also be locked on the UHK by double-tapping the right case button.
+
+#### `Maxtend`, extended, visualised
+
+* A short tap on `Maxtend` produces Backspace, and the LCD display will briefly show *`<--`*.
+* `Shift`+`Maxtend` also produces Backspace, but with autorepeat (same as `Maxtend`+`o`), and the LCD display will show *`<--`* as long as the keys are held down.
+* `Alt`+`Maxtend` (or `AltGr`+`Maxtend`) produces Delete, also with autorepeat (same as `Maxtend`+`;:`), and the LCD display will show *`DEL`*.
+* `Fn`+`Maxtend` also produces Delete, also with autorepeat (same as `Maxtend`+`;:`), and the LCD display will show *`DEL`*.
+* holding `Maxtend` will activet the *Maxtend* layer, and the LCD display will show *`MAX`*
 
 #### Keepalive
 
