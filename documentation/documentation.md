@@ -182,23 +182,56 @@ Left Down Right  =>   0    ,    .
 
 ## UHK functionality
 
-The following features are only available with the external Ultimate Hacking Keyboard.
+The features described here are only available with the external Ultimate Hacking Keyboard.
 
-### General
-The base layer contains a normal US keymap (mapped to Colemak by the OS keymap). As standard in Colemak, the CapsLock key functions as Backspace; it carries `Maxtend` as a secondary function. The left space bar switches to the Mouse layer when held down; it still functions as Space when tapped on its own.
+### General overview
 
-I deliberately kept the primary functions of `Maxtend` (Backspace), `Numtab` (Tab) and the left space bar (Space), and switch layers only as a secondary function (when these buttons are held down and combined with other keys). The usual primary function of these keys is unmodified.
-
-The right Space bar is kept without any secondary function because the secondary function can conflict with n-key rollover when typing fast, and I noticed that I mostly type space with my right thumb. If that is different for you, and you mainly type Space with your left thumb, you may want to move the secondary Mouse layer switch (*Mousetend* macro) from the left Space to the right Space.
+The configuration is built on 3 keymaps: **CMX** ('Colemax'), **CM2** ('Colemax 2), and **'---'** ('Pause'). I also previously experimented with a "Number pad" keymap, **NMX** ('Nummax'), but that has been migrated to the *Number* layer activated through `NumTab`.
 
 UHK layers are used as such:
+- __*base:*__ US keymap (mapped to Colemak by OS) with layer switches
 - __*mod:*__ *Maxtend* layer
 - __*mouse:*__ *Mouse* layer
 - __*fn:*__ *Media* layer
 - __*fn2:*__ *Mirror* layer
 - __*fn5:*__ *Number* layer
 
-### `Maxtend` functions
+The layers are configured in the **CMX** keymap, and re-used in the other keymaps by overlaying them in their _$onKeymapChange_ macros:
+
+```
+replaceLayer mod CMX mod
+replaceLayer mouse CMX mouse
+replaceLayer fn CMX fn
+replaceLayer fn2 CMX fn2
+replaceLayer fn5 CMX fn5
+set keymapAction.fn.isoKey macro initCMX
+set keymapAction.fn5.isoKey macro initCMX
+```
+Some keys are remapped in the freshly imported layers to be able to switch back to the CMX keymap (via the _initCMX_ macro).
+
+### Base layer
+
+![UHK CMX base layer](../images/UHK-CMX-base.png)
+
+The base layer contains a normal US keymap (mapped to Colemak by the OS keymap). As standard in Colemak, the CapsLock key functions as Backspace; it carries `Maxtend` as a secondary function. The left space bar switches to the Mouse layer when held down; it still functions as Space when tapped on its own.
+
+I deliberately kept the primary functions of `Maxtend` (Backspace), `Numtab` (Tab) and the left space bar (Space), and switch layers only as a secondary function (when these buttons are held down and combined with other keys). The usual primary function of these keys is unmodified.
+
+The right Space bar is kept without any secondary function because the secondary function can conflict with n-key rollover when typing fast, and I noticed that I mostly type space with my right thumb. If that is different for you, and you mainly type Space with your left thumb, you may want to move the secondary Mouse layer switch (*Mousetend* macro) from the left Space to the right Space.
+
+### Alternative Base Layer (CM2)
+
+![UHK CM2 base layer](../images/UHK-CM2-base.png)
+
+Use `NumTab`+`ISO` to switch between **CMX** and **CM2**. This alternative base layer is identical to CMX with one exception: it has home-row mods for Alt, Win, Shift, and Control. Alt/Shift/Control are placed on the same positions as _Maxtend_ already has them, and Win sits on the key where _Maxtend_ places mouse wheel down.
+
+I am still experimenting with home-row mods. I still get some spurious inadvertent activations, I am still playing with the timings (set in _$onKeymapChange CM2_) and I am not yet convinced I want to use it generally. That is the main reason why I keep it on the 'alternative' base layer for now.
+
+### Maxtend layer
+(UHK __*mod*__ layer)
+
+![UHK CMX mod layer](../images/UHK-CMX-mod.png)
+
 Activation of the different functions of the `Maxtend` key will be visualised on the LED display:
 
 | Key combination | short tap | hold | LED display |
@@ -207,7 +240,11 @@ Activation of the different functions of the `Maxtend` key will be visualised on
 | `Shift`+`Maxtend` | Backspace | Backspace (autorepeat) | _**`<--`**_ |
 | `Alt`+`Maxtend`<br/>`AltGr`+`Maxtend`<br/>`Fn`+`Maxtend` | Delete | Delete (autorepeat) | _**`DEL`**_ |
 
-### `NumTab` functions
+### Number layer
+(UHK __*fn5*__ layer)
+
+![UHK CMX fn5 layer](../images/UHK-CMX-fn5.png)
+
 Activation of the different functions of the `Numtab` key will be visualised on the LED display:
 
 | Key combination | short tap | hold | LED display |
@@ -219,19 +256,55 @@ Activation of the different functions of the `Numtab` key will be visualised on 
 [^maxtend_version]: depending on the version of _Maxtend_, the Number layer will be indicated as _**NUM**_ or _**123**_ on the LED display.
 
 ### Mouse layer
+(UHK __*mouse*__ layer)
+
+![UHK CMX mouse layer](../images/UHK-CMX-mouse.png)
+
 Holding left Space activates the Mouse layer. The UHK display will briefly show _**`MSE`**_, and the _**`mouse`**_ indicator will turn on.
 
-The left case key functions as a left mouse button. This is useful if you do not have a key cluster module connected (which has mouse buttons), but a mouse module (e.g. trackpad) on the right side. You can use the left case button to click items while steering the mouse pointer with the right module.
+Basic mouse moves are on the same keys as cursor navigation. The keys on the left hand home row and near the key cluster become mouse buttons, speed modifiers, and more mouse wheel options.
+
+To ease some hand movements, and provide options, Escape and function keys F1-F12 are replicated from the _Maxtend_ layer on the number row. Tab triggers Alt-Tab, so you can switch windows easily.
+
+The `W`,`F`,`P` and `G` keys (Colemak positions) become tab control in a Browser and other applications:
+- `Mouse`+`W` sends Control-W, closing the current tab (or window).
+- `Mouse`+`F` sends Control-PgUp, activating the previous tab.
+- `Mouse`+`P` sends Control-PgDn, activating the next tab.
+- `Mouse`+`G` sends Control-T, opening a new tab.
+
+_Memorisation help:_ `Maxtend`+`F`/`P` is back/forward through browser history, `Mouse`+`F`/`P` is back/forward through browser tabs, `Fn`+`F`/`P` is back/forward through whatever the OS or application defines for "history back"/"history forward".
 
 ### Media layer
+(UHK __*fn*__ layer)
+
+![UHK CMX fn layer](../images/UHK-CMX-fn.png)
+
 Holding either Fn key activates the Media layer (and the _**`fn`**_ indicator will turn on). This layer offers features to control media playback, volume control, speaker and mic mute, as well as some compatibility with the Colemak AltGr layer.
 
+#### Media control
+
+Similar to the cursor positions on _Maxtend_ and mouse navigation on _Mouse_ layers, media functions are clustered around the right hand home position:
+- `fn`+`U`/`E`: volume up/down
+- `fn`+`N`/`I`: prev/next song or media back/forward
+- `fn`+`L`: play/pause
+- `fn`+`,<`: mute/unmute speaker
+- `fn`+`M`: mute/unmute microphone (at least in MS Teams, see _mute-unmute_ macro)
+
+#### AltGr compatibility
+
 ### Mirror layer
+(UHK __*fn2*__ layer) _(Experimental)_
+
+![UHK CMX fn2 layer](../images/UHK-CMX-fn2.png)
+
+Holding the left thumb button of the UHK key cluster mirrors the right hand side to the left side. With this you can write text using only your left hand.
 
 ### Additional features
-CapsLock on ISO: On the UHK, `Maxtend`+`ISO` (the ISO key sitting between the left `Shift` and `z` keys) can be used to send an actual CapsLock. However, with AHK in place (Windows), or keyd (Linux), this will just trigger the corresponding layer on AHK/keyd. The net effect is that it is the same as just using `Maxtend` (Mod,CapsLock). (It can be used to test the AHK/keyd configuration, though, without the UHK logic interfering.)
+CapsLock on ISO: On the UHK, `Maxtend`+`ISO` (the ISO key sitting between the left `Shift` and `z` keys) can be used to send an actual CapsLock from the UHK. However, with AHK in place (Windows), or keyd (Linux), this will just trigger the corresponding layer on AHK/keyd. The net effect is that it functions the same as just using `Maxtend` (Mod,CapsLock). (It can be used to test the AHK/keyd configuration, though, without the UHK logic interfering.)
 
 For cursor control using only the right hand, Mod (the Maxtend layer) is also available on the right case button, and it's a secondary function on the `'"` key. The layer can also be locked on the UHK by double-tapping the right case button.
+
+The left case button (in front of left Space) functions as an additional left mouse button. This is useful if you do not have a key cluster module connected (which has mouse buttons), but use a mouse module (e.g. trackpad) on the right side. You can use the left case button to click items while steering the mouse pointer with the right module.
 
 #### `Maxtend`, extended, visualised
 
@@ -243,11 +316,43 @@ For cursor control using only the right hand, Mod (the Maxtend layer) is also av
 
 #### Keepalive
 
+Tap `fn`+`B` to switch to the "Pause" keymap. It will show a little animation on the LED display, while jiggling the mouse pointer a tiny bit. You can still use your keyboard, mouse, and computer while it's on. The mouse movements are quite subtle, so it should not interfere too much with normal activities (clicking reasonably large UI buttons, selecting menu items etc.).
+
+Useful if you are presenting something, talk a longer time about a spreadsheet while not pressing any keys, not moving your mouse, and you don't want your computer to lock up or go to sleep.
+
+To turn it off, tap `fn`+`B` again. An exit animation will be played, and the UHK will switch back to the regular "CMX" keymap.
+
+#### Mute/Unmute and Push-To-Talk
+
+This macro, bound to `fn`+`M` and to the top button on the key cluster, attempts to mute and unmute your microphone in MS Teams. If pressed with `Shift`, it also tries to activate/deactivate your camera. While MS Teams is the active window, this should work.
+
+Unfortunately, when MS Teams is not the active (foreground) window, this no longer works out of the box. Microsoft used to have a "universal mute/unmute" function in Windows and used it in the older version of Teams, but they disimproved (German: "verschlimmbessern") the feature away with what they called _New Teams_.
+
+To compensate, Ctrl-Shift-M (the mute/unmute shortcut for MS Teams) is now caught in the AHK script, and before passing the keystroke on, the AHK script will attempt to find an MS Teams window and bring it to the foreground.
+
+So, next time you are listening in a Teams call (while being on mute), and someone asks you a question, you no longer need to desparately find the Teams window first. Press `fn`+`M` (or even easier, hit the top button on your UHK key cluster), and the AHK script will be triggered, bring Teams to the foreground, and unmute your microphone.
+
+But wait — there's more: if you _hold_ the button, the **push-to-talk** function is activated. Your microphone will be unmuted just as long as you hold the button. As soon as you let go, it is muted again.
+
+As long as MS Teams is already the foreground application, all of this also works without the AHK script.
+
+To summarise:
+
+| key combo | UHK | AHK | Net effect |
+| --- | --- | --- | --- |
+| `fn`+`M`<br/>or `KC_T` | tap Ctrl+Shift+M | finds MS Teams window, brings to foreground, sends Ctrl+Shift+M | Teams call comes to foreground and mic gets muted/unmuted |
+| `fn`+`Shift`+`M`<br/>or `Shift`+`KC_T` | tap Ctrl+Shift+M, wait 300ms, tap Ctrl+Shift+O | finds MS Teams window, brings to foreground, sends Ctrl+Shift+M, then Ctrl+Shift+O | Teams call comes to foreground, mic gets muted/unmuted, camera gets activated/deactivated |
+| `fn`+`M` (hold)<br/>or `KC_T` (hold) | sends and holds Ctrl+Space | (nothing special, key gets passed to active application) | if Teams is already in foreground, mic gets unmuted as long as the key is held; auto-mutes again when key is released (push-to-talk) |
+
+(`KC_T` stands for the **K**ey **C**luster **T**op key.)
+
 #### Numpad Enter (wide Enter)
 Numpad Enter is mapped onto the right `Control` key; it still acts as RCtrl as a secondary function. Here is my reasoning:
 - `Control` only makes sense as a modifier and needs to be typed together with another key.
-- If you really need only a tap on `Control`, you can use the left `Control`.
-- the size of the right `Control` key on the UHK is identical to a standard US-keyboard `Return` key. I swapped the keycaps on my UHK, and to populate the right `Control` position, I usually install an `Enter` key there. Because it is labelled “Enter”, it makes only sense that it also functions as Enter when the user taps it.
+- If you need only a tap on `Control`, you can use the left `Control`.
+- If you really need a tap on *right* `Control`, you can press it slightly longer until the secondary function activates, then let go.
+- If you really really need a *timed tap* on *right* `Control`, hold `Mouse` and tap right `Control`
+- And the main reason: The size of the right `Control` key on the UHK is identical to a standard US-keyboard `Return` key. I swapped the keycaps on my UHK, and to populate the right `Control` position, I usually install an `Enter` key there. Because it is labelled “Enter”, it makes only sense that it also functions as Enter when the user taps it.
 
 ![image](https://github.com/mhantsch/maxtend/assets/591785/c5bfe3c7-5109-4859-9af7-b06dd78cde6e)
 
