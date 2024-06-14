@@ -14,9 +14,9 @@ On a UHK[^uhk], additional functionality is available, e.g. mouse control, 2-axi
 
 ### Notation conventions
 
-* `a` a key
-* `[{` also a key
-* `Shift`+`a` two keys pressed together (the first key being pressed first)
+* `a` a key producing the letter 'a' (unshifted) and 'A' (shifted)
+* `[{` a key producing the symbols '[' (unshifted) and '{' (shifted)
+* `Shift`+`a` two keys pressed together (`Shift` held down first, then `a`)
 * _Maxtend_ an emphasis
 * **Escape** a different emphasis
 * _**`LED`**_ (bold, italics, upper case) something displayed on the UHK LED display
@@ -56,7 +56,9 @@ Maxtend  áÁ   (`)  ßẞ   (´)  (¨)  (ˇ)  ñÑ   éÉ   íÍ   óÓ   '"   
 Shift      æÆ   (^)  çÇ   œŒ   (˘)  (°)  (¯)  (¸)  (˙)  ¿~       Shift
 ```
 
-Note: the AltGr layer contains several dead keys[^deadkey], indicated by parentheses, e.g. `(˘)`. Typing one of these keys will modify the next letter:
+A set of [international multilingual characters](https://colemak.com/Multilingual) (for latin alphabets) is available on the AltGr layer. These include accented letters as well as additional punctuation symbols, e.g. *¡Hola, niña!*.
+
+Additional accented letters can be produced via dead keys[^deadkey], indicated above by parentheses, e.g. `(˘)`. Typing one of these keys will modify the next letter:
 - `AltGr`+`~` is ~ – to produce ã ẽ õ ñ etc.
 - `AltGr`+`r` is ` – to produce à è ò etc.
 - `AltGr`+`t` is ´ – to produce á é ó etc.
@@ -105,14 +107,28 @@ __Navigation:__ Directly in the home row position for your right hand you find c
 
 (keys labelled according to Colemak)
 
-*Note:* Although Backspace is already the primary function of the `Maxtend` key, its function is duplicated on this layer (`Maxtend`+`o`). There are two reasons:
+
+
+__Backspace/Delete:__ Although Backspace is already the primary (tap) function of the `Maxtend` key, its function is duplicated on this layer (`Maxtend`+`o`). There are two reasons:
 
   1. While holding the `Maxtend` key and using cursor navigation, removal of incorrect characters is instantly available without needing to release `Maxtend`. And you can immediately continue to navigate.
   2. Backspace through a tap on the `Maxtend` key does not autorepeat (due to secondary function as the Maxtend layer switch). Backspace on the Maxtend layer auto-repeats, and can thus be used to Backspace over larger areas of text.
 
+As a complimentary function, *Delete* is also available on `Maxtend`+`;:`. This allows erasing to the left (backspace) and to the right (delete) of the cursor.
+
 __Modifiers:__ During cusor navigation, shift, alt and control modifiers are often used to select larger parts of text, navigate by word, sentence, paragraph etc. It is difficult to reach the standard modifier keys while holding `Maxtend` with your pinky. For this reason, the modifiers are replicated on the home row for your left hand, next to the `Maxtend` key. To aid memorisation, the modifiers correspond to Colemak letters: `a`=Alt, `s`=Shift, `t`=conTrol.
 
-For example, you can hold `Maxtend` + `t` (conTrol), and then use left/right cursor functions of the right hand to navigate by word. Similarily, `Maxtend` + `s` (Shift) + `t` (conTrol) + cursor navigation can be used to select by word, etc. The modifiers are all on the left hand, so while you are holding some chords for layer switch and modifiers with your left hand, your right hand is free to tap all the navigation keys. After a short practice, this feels very natural.
+For example, you can hold `Maxtend`+`t` (conTrol), and then use left/right cursor functions of the right hand to navigate by word. Similarily, `Maxtend`+`s` (Shift)+`t` (conTrol) + cursor navigation can be used to select by word, etc. The modifiers are all on the left hand, so while you are holding some chords for layer switch and modifiers with your left hand, your right hand is free to tap all the navigation keys. After a short practice, this feels very natural.
+
+Here are some examples for useful combinations:
+- `Maxtend`+`t`+`n` (= Ctrl-left): move cursor left by word
+- `Maxtend`+`t`+`i` (= Ctrl-right): move cursor right by word
+- `Maxtend`+`s`+`t`+`n` (= Ctrl-Shift-left): select word to left
+- `Maxtend`+`s`+`t`+`i` (= Ctrl-Shift-right): select word to right
+- `Maxtend`+`s`+`l` (= Shift-home): select to start of line
+- `Maxtend`+`s`+`y` (= Shift-end): select to end of line
+- `Maxtend`+`t`+`o` (= Ctrl-backspace): delete word to left
+- `Maxtend`+`t`+`;:` (= Ctrl-delete): delete word to right
 
 __Undo/Cut/Copy/Paste:__ these often used text editing functions are available on their usual Z/X/C/V positions. `Maxtend` + `z`/`x`/`c`/`v` is the same as `Control` + `z`/`x`/`c`/`v`. The idea is that during typical editing, every needed function (movement, selection, cut/copy/paste, undo) can be accessed from the same layer, all while simply holding down `Maxtend`.
 

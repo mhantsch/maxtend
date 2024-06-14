@@ -1,5 +1,5 @@
 ;
-; Copyright (C) 2017-2023 Maximilian Hantsch
+; Copyright (C) 2017-2024 Maximilian Hantsch
 ; Released under CC BY 4.0 Licence. See https://creativecommons.org/licenses/by/4.0/
 ;
 
@@ -323,6 +323,7 @@ j::/
 
 ; List of FUNCTION layer functions
 ;
+~SC03A & SC039::MetaSend("{Return}")
 #if not GetKeyState("Space","p")
 ~SC03A & q::MetaSend("{Escape}")
 ~SC03A & f::MetaSend("{Browser_Back}")
