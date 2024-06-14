@@ -290,7 +290,31 @@ Similar to the cursor positions on _Maxtend_ and mouse navigation on _Mouse_ lay
 - `fn`+`,<`: mute/unmute speaker
 - `fn`+`M`: mute/unmute microphone (at least in MS Teams, see _mute-unmute_ macro)
 
-#### AltGr compatibility
+_**\*\*TODO\*\***_ clearStatus / printStatus, remove "Goto UHK site", "NM2"
+
+#### AltGr and Alt compatibility
+
+The UHK `fn` buttons are in a place where a lot of keyboards, especially Laptop keyboards, have their `Alt` and `AltGr` keys. My thumb is used to slide along the space key until it finds the next key to activate for `AltGr` (or `Alt`) combinations. On the UHK, I often mistype `fn` instead. To help with this, some often used combinations are replicated on the _fn_ layer.
+
+For ease of use, Esc and Alt-Tab can be reached from here:
+- `fn`+`` `~ `` = Escape
+- `fn`+`NumTab` = Alt+Tab (switching windows)
+
+Some common _AltGr_ combinations, have been replicated:
+
+- `fn`+`q` = AltGr+q = äÄ
+- `fn`+`r` = AltGr+r = ` (deadkey)
+- `fn`+`s` = AltGr+s = ßẞ
+- `fn`+`t` = AltGr+t = ´ (deadkey)
+- `fn`+`h` = AltGr+h = ˇ (deadkey)
+- `fn`+`y` = AltGr+y = üÜ
+- `fn`+`;:` = AltGr+;: = öÖ
+- `fn`+`4$` = AltGr+4$ = ¢£
+- `fn`+`5%` = AltGr+5% = €¥
+
+These help and make typing more convenient especially for German texts, and for the more common accents ` and ´.
+
+You can still type the full range of AltGr symbols via the regular `AltGr` key.
 
 ### Mirror layer
 (UHK __*fn2*__ layer) _(Experimental)_
