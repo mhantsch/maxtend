@@ -200,7 +200,7 @@ Activation of the different functions of the `Numtab` key will be visualised on 
 | `Shift`+`NumTab` | Shift+Tab     | lock/unlock Number layer | tap: _**`\|<-`**_ / hold: _**`123`**_  or _**`NUM`**_[^maxtend_version] |
 | `Alt`+`NumTab`<br/>`Fn`+`NumTab` | Alt+Tab<br/>_(switches windows)_ | Alt+Tab (autorepeat) |  |
 
-[^maxtend_version]: depending on version of _Maxtend_.
+[^maxtend_version]: depending on the version of _Maxtend_, the Number layer will be indicated as _**NUM**_ or _**123**_ on the LED display.
 
 ### Mouse layer
 Holding left Space activates the Mouse layer. The UHK display will briefly show _**`MSE`**_, and the _**`mouse`**_ indicator will turn on.
