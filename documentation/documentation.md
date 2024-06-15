@@ -209,6 +209,8 @@ set keymapAction.fn5.isoKey macro initCMX
 ```
 Some keys are remapped in the freshly imported layers to be able to switch back to the CMX keymap (via the _initCMX_ macro).
 
+The current version of the macros is documented [here](../uhk/macros.md).
+
 ### Base layer
 
 ![UHK CMX base layer](../images/UHK-CMX-base.png)
@@ -239,6 +241,10 @@ Activation of the different functions of the `Maxtend` key will be visualised on
 | `Maxtend` | Backspace | Maxtend layer | tap: _**`<--`**_ / hold: _**`MAX`**_+_**`mod`**_ |
 | `Shift`+`Maxtend` | Backspace | Backspace (autorepeat) | _**`<--`**_ |
 | `Alt`+`Maxtend`<br/>`AltGr`+`Maxtend`<br/>`Fn`+`Maxtend` | Delete | Delete (autorepeat) | _**`DEL`**_ |
+
+Additional mappings unique to the split Space bar of the UHK:
+- `Maxtend`+`left Space` = Enter; easy selection or data entry
+- `Maxtend`+`right Space` = Control+Space; select suggestions e.g. in VS Code<br/> (`Maxtend` is so much easier to reach than any `Control` key.)
 
 ### Number layer
 (UHK __*fn5*__ layer)
@@ -296,9 +302,10 @@ _**\*\*TODO\*\***_ clearStatus / printStatus, remove "Goto UHK site", "NM2"
 
 The UHK `fn` buttons are in a place where a lot of keyboards, especially Laptop keyboards, have their `Alt` and `AltGr` keys. My thumb is used to slide along the space key until it finds the next key to activate for `AltGr` (or `Alt`) combinations. On the UHK, I often mistype `fn` instead. To help with this, some often used combinations are replicated on the _fn_ layer.
 
-For ease of use, Esc and Alt-Tab can be reached from here:
+For ease of use, Esc, Alt-Tab, and Alt-Space can be reached from here:
 - `fn`+`` `~ `` = Escape
 - `fn`+`NumTab` = Alt+Tab (switching windows)
+- `fn`+`Space`  = Alt+Space (activating window control menu)
 
 Some common _AltGr_ combinations, have been replicated:
 
