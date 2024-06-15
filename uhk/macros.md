@@ -1,15 +1,15 @@
-$onInit:
+Config is for UHK userConfig v7.1.0
+
+**$onInit:**
 ```
 clearStatus
-unToggleLayer
 setVar count 0
 set backlight.strategy constantRgb
 set backlight.constantRgb.rgb 64 64 64
-set leds.brightness 1
 set leds.fadeTimeout 300
 set module.trackpoint.baseSpeed 0
-set module.trackpoint.speed 0.7
-set module.trackpoint.xceleration 0.7
+set module.trackpoint.speed 0.5
+set module.trackpoint.xceleration 2.0
 set module.touchpad.invertScrollDirectionX 1
 set module.touchpad.navigationMode.mouse caret
 set module.touchpad.holdContinuationTimeout 500
@@ -20,41 +20,27 @@ set secondaryRole.advanced.timeoutAction secondary
 set secondaryRole.advanced.triggerByRelease 1
 // positive values for savetyMargin favour primary role, negative favour secondary role
 set secondaryRole.advanced.safetyMargin +5
-setLedTxt 100 ':::'
-setLedTxt 100 '-::'
-setLedTxt 100 ':-:'
-setLedTxt 100 '::-'
-setLedTxt 100 ':::'
+setLedTxt 300 ':::'
+
 ```
 
-$onKeymapChange ---:
+**$onKeymapChange ---:**
 ```
-replaceLayer mod CMX mod
-replaceLayer mouse CMX mouse
-replaceLayer fn CMX fn
-replaceLayer fn2 CMX fn2
-replaceLayer fn5 CMX fn5
-set keymapAction.fn.b macro initCMX
-fork keepAlive
+call keepAlive
 ```
 
-$onKeymapChange CM2:
+**$onKeymapChange CM2:**
 ```
-replaceLayer mod CMX mod
-replaceLayer mouse CMX mouse
-replaceLayer fn CMX fn
-replaceLayer fn2 CMX fn2
-replaceLayer fn5 CMX fn5
-set keymapAction.fn5.isoKey macro initCMX
+setLedTxt 0 CM2
 set secondaryRole.defaultStrategy advanced
-set secondaryRole.advanced.timeout 250
+set secondaryRole.advanced.timeout 450
 set secondaryRole.advanced.timeoutAction secondary
 set secondaryRole.advanced.triggerByRelease 1
 // positive values for savetyMargin favour primary role, negative favour secondary role
-set secondaryRole.advanced.safetyMargin +10
+set secondaryRole.advanced.safetyMargin +30
 ```
 
-$onKeymapChange CMX:
+**$onKeymapChange CMX:**
 ```
 setLedTxt 5000 CMX
 set secondaryRole.defaultStrategy advanced
@@ -69,15 +55,15 @@ set backlight.keyRgb.base.130 128 128 128
 set backlight.keyRgb.mod.128 0 128 0
 set backlight.keyRgb.mod.129 0 128 0
 set backlight.keyRgb.mod.130 0 128 0
-set backlight.keyRgb.mouse.128 0 128 128
+set backlight.keyRgb.mouse.128 0 0 0
 set backlight.keyRgb.mouse.129 0 128 128
 set backlight.keyRgb.mouse.130 0 128 128
-set backlight.keyRgb.fn.128 128 0 0
-set backlight.keyRgb.fn.129 128 0 0
-set backlight.keyRgb.fn.130 128 0 0
-set backlight.keyRgb.fn5.128 128 128 0
-set backlight.keyRgb.fn5.129 128 128 0
-set backlight.keyRgb.fn5.130 128 128 0
+set backlight.keyRgb.fn.128 255 64 32
+set backlight.keyRgb.fn.129 255 64 32
+set backlight.keyRgb.fn.130 255 64 32
+set backlight.keyRgb.fn5.128 128 128 128
+set backlight.keyRgb.fn5.129 0 0 0
+set backlight.keyRgb.fn5.130 0 0 0
 ifKeymap CMX setLedTxt 200 "::C"
 ifKeymap CMX setLedTxt 200 ":C:"
 ifKeymap CMX setLedTxt 200 "C:M"
@@ -95,70 +81,27 @@ ifKeymap CMX setLedTxt 200 "CMX"
 
 ```
 
-$onLayerChange base:
-```
-setLedTxt 1 ':::'
-```
-
-$onLayerChange fn:
-```
-#setLedTxt 0 FN
-```
-
-$onLayerChange fn2:
-```
-setLedTxt 0 XMC
-```
-
-$onLayerChange fn5:
-```
-setLedTxt 0 '123'
-
-```
-
-$onLayerChange mod:
-```
-setLedTxt 0 MAX
-```
-
-$onLayerChange mouse:
-```
-setLedTxt 0 MSE
-```
-
-clearStatus:
+**clearStatus:**
 ```
 clearStatus
 ```
 
-countdown:
+**countdown:**
 ```
 if ( $count > 0 ) final setVar count 0
 setVar count 30
 loop:
 setLedTxt 1000 $count
 repeatFor count loop
-toggleLayer fn
-unToggleLayer
+ifLayer fn5 final setLedTxt 0 "NUM"
 ```
 
-fn:
+**fn:**
 ```
 holdLayer fn
 ```
 
-Go to UHK site in browser:
-key ...
-text ...
-key ...
-
-initCMX:
-```
-switchKeymap CMX
-
-```
-
-keepAlive:
+**keepAlive:**
 ```
 setVar count 6
 startloop:
@@ -170,7 +113,7 @@ clearStatus
 ```
 keepalive:
 ```
-moveMouse ...
+> moveMouse ...
 ```
 ifNotKeymap --- goTo final
 ifKeymap --- setLedTxt 200 "---"
@@ -185,12 +128,12 @@ ifKeymap --- setLedTxt 200 "-2-"
 ifKeymap --- setLedTxt 200 "--3"
 numLayerPt1End:
 ```
-moveMouse ...
+> moveMouse ...
 ```
 ifNotKeymap --- goTo final
 ```
-delay ...
-moveMouse ...
+> delay ...
+> moveMouse ...
 ```
 ifNotKeymap --- goTo final
 ifKeymap --- setLedTxt 200 "---"
@@ -205,11 +148,11 @@ ifKeymap --- setLedTxt 200 "-2-"
 ifKeymap --- setLedTxt 200 "1--"
 numLayerPt2End:
 ```
-moveMouse ...
+> moveMouse ...
 ```
 ifNotKeymap --- goTo final
 ```
-delay ...
+> delay ...
 ```
 ifKeymap --- goTo keepalive
 
@@ -230,7 +173,7 @@ setLedTxt 200 "|_|"
 
 ```
 
-maxtend:
+**maxtend:**
 ```
 ifLayer fn goTo altMaxtend
 ifShift goTo shiftMaxtend
@@ -240,91 +183,69 @@ ifSecondary advancedStrategy goTo secondaryaction
 primaryaction:
 tapKey backspace
 setLedTxt 500 "<--"
-goTo finish
+ifLayer fn5 final setLedTxt 0 "NUM"
+break
 
 secondaryaction:
+setLedTxt 0 "MAX"
 holdLayer mod
+ifLayer fn5 final setLedTxt 0 "NUM"
+setLedTxt 1 "MAX"
 break
 
 shiftMaxtend:
 setLedTxt 0 "<--"
 suppressMods holdKey backspace
 ifNotPlaytime 300 setLedTxt 300 "<--"
-goTo finish
+ifLayer fn5 final setLedTxt 0 "NUM"
+setLedTxt 1 "<--"
+break
 
 altMaxtend:
 setLedTxt 0 "DEL"
 suppressMods holdKey delete
 ifNotPlaytime 300 setLedTxt 300 "DEL"
-goTo finish
-
-# restore Lcd display for current layer
-finish:
-ifLayer fn final setLedTxt 1 "FN"
-toggleLayer mod
-unToggleLayer
+ifLayer fn5 final setLedTxt 0 "NUM"
+setLedTxt 1 "DEL"
 break
-
 ```
 
-maxtend-simple:
+**mirror:**
 ```
-ifShift goTo shiftMaxtend
-//ifAlt final suppressMods holdKey delete
-setLedTxt 0 MAX
-holdLayer mod
-ifReleased setLedTxt 1 MAX
-ifInterrupted break
-ifPlaytime 300 break
-tapKey backspace
-setLedTxt 500 <--
-break
-shiftMaxtend:
-setLedTxt 0 <--
-suppressMods holdKey backspace
-ifReleased setLedTxt 1 MAX
-
-```
-
-mirror:
-```
-#setLedTxt 0 'XMC'
+setLedTxt 0 XMC
 holdLayer fn2
-#setLedTxt 1 'XMC'
+setLedTxt 1 XMC
 ```
 
-mod:
-```
-ifLayer mod unToggleLayer
-holdLayer mod
-ifDoubletap toggleLayer mod
-
-```
-
-mousetend:
+**mousetend:**
 ```
 ifSecondary goTo secondaryaction
 primaryaction: final tapKey space
-secondaryaction: final holdLayer mouse
-
+secondaryaction: 
+setLedTxt 0 MSE
+holdLayer mouse
+setLedTxt 200 "MSE"
+setLedTxt 200 "---"
+setLedTxt 200 "___"
+setLedTxt 300 ":::"
+ifLayer fn5 final setLedTxt 0 "NUM"
 ```
 
-mute-unmute:
+**mute-unmute:**
 ```
 ifSecondary final holdKey LC-space
 tapKey LCLS-m
 ifNotShift break
 delayUntil 300
 tapKey LCLS-semicolonAndColon
-
 ```
 
-nextKeyID:
+**nextKeyID:**
 ```
 resolveNextKeyId
 ```
 
-numtab:
+**numtab:**
 ```
 ifAlt final holdKey tab
 ifSecondary advancedStrategy goTo secondaryaction
@@ -333,32 +254,35 @@ primaryaction:
 ifShift goTo shiftTab
 tapKey tab
 setLedTxt 500 "->|"
+ifLayer fn5 final setLedTxt 0 "NUM"
 break
 
 secondaryaction:
 ifShift goTo shiftTabSecondary
+setLedTxt 0 "NUM"
 holdLayer fn5
-break   
+delayUntil 100
+ifLayer fn5 final setLedTxt 0 "NUM"
+setLedTxt 1 "NUM"
+break
 
 shiftTabSecondary:
+setLedTxt 0 "NUM"
 ifNotLayer fn5 final toggleLayer fn5
 unToggleLayer
+setLedTxt 1 "NUM"
 break
 
 shiftTab:
 setLedTxt 0 "|<-"
 holdKey tab
 setLedTxt 500 "|<-"
+ifLayer fn5 final setLedTxt 0 "NUM"
 break
 ```
 
-numtab-toggle:
-```
-setLedTxt 0 "NUM"
-toggleLayer fn5
-```
-
-printstatus:
+**printstatus:**
 ```
 printStatus
 ```
+

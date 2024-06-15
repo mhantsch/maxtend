@@ -4,10 +4,25 @@ import json
 import re
 
 def printMacroDetails(m):
-    if m['name'][:5]=='uname' or m['name']=='learn_hostmap':
-        print(m['name']+" -- suppressed\n")
+    # hardcoded exclusion list of macros I don't want exported
+    if m['name'][:5]=='uname' or \
+       m['name']=='learn_hostmap' or \
+       m['name'][:4]=='dont' or \
+       m['name'][:4]=='alt ' or \
+       m['name'][:5]=='alt2 ' or \
+       m['name'][:5]=='type ' or \
+       m['name'][:9]=='Outlook: ' or \
+       m['name'][:5]=='Type ' or \
+       m['name'][:10]=='Go to UHK ' or \
+       m['name']=='Paste & Go' or \
+       m['name'][-7:]=='-simple' or \
+       m['name'][-7:]=='-toggle' or \
+       m['name'][-9:]=='-untoggle' or \
+       m['name'][-4:]==' (2)':
+        if args.debug:
+            print(m['name']+" -- suppressed\n")
         return
-    print(m['name']+":")
+    print("**"+m['name']+":**")
     if args.debug:
         print(m['macroActions'])
     for ma in m['macroActions']:
@@ -16,7 +31,7 @@ def printMacroDetails(m):
             print(ma['command'])
             print('```')
         else:
-            print(ma['macroActionType'], '...')
+            print("> "+ma['macroActionType'], '...')
     print('')
 
 def main():
@@ -42,10 +57,10 @@ def main():
         for i in data:
             print(i)
 
-    print("Config is for userConfig v"+str(data['userConfigMajorVersion'])+'.'+str(data['userConfigMinorVersion'])+'.'+str(data['userConfigPatchVersion']))
+    print(f"Config is for UHK userConfig v{str(data['userConfigMajorVersion'])}.{str(data['userConfigMinorVersion'])}.{str(data['userConfigPatchVersion'])}\n")
 
     if args.match==None:
-        print("\nIncluded keymaps:")
+        print("Included keymaps:")
         for i in data['keymaps']:
             print(i['abbreviation'], i['name'], '(default)' if i['isDefault'] else '')
 
