@@ -39,7 +39,7 @@ def main():
 
     parser= argparse.ArgumentParser(description='extract macros from an exported uhk configuration file (json)')
     parser.add_argument('--debug', dest='debug', action='store_true', default=False, help='show debugging information for developers')
-    parser.add_argument('--match', dest='match', action='store', default=None, help='extract macros with matching names (otherwise, all macro names are displayed, but no details)')
+    parser.add_argument('--match', dest='match', action='store', default=None, help='extract macros with matching names (otherwise, all macro names are displayed, but no details). To extract all macros, use --match "".')
     parser.add_argument('--inputfile', dest='inputfile', action='store', default=None, help='read this input file (otherwise, reads stdin)')
     args= parser.parse_args()
 
