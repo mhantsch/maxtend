@@ -209,7 +209,11 @@ set keymapAction.fn5.isoKey macro initCMX
 ```
 Some keys are remapped in the freshly imported layers to be able to switch back to the CMX keymap (via the _initCMX_ macro).
 
+#### Tips
+
 The current version of the macros is documented [in a readable macros export](../uhk/macros.md). This file is semi-automatically generated from an UHK configuration export (JSON file) by running it through [uhk-extract-macros.py](../tools/uhk-extract-macros.py).
+
+Check out the [UHK Viewer](https://izk666.github.io/UHK-Viewer-v5/) which allows you to merge keymaps and macros between UHK configuration files. You could use this to import all or parts of [my configuration](../uhk/UserConfiguration-Colemax.json) to yours instead of completely replacing your UHK config.
 
 ### Base layer
 
