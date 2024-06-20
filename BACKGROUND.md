@@ -103,9 +103,14 @@ If you have neither AHK, keyd, xkb nor UHK, then at least you will still have a 
 
 MacOS, Linux, ChromeOS and Android all come with Colemak layouts that just need to be switched on. Only Microsoft Windows does not ship with a Colemak keymap, so it will need the installation of the OS base layer (see previous section).
 
-To emulate NUMPAD on the UHK, a slightly different approach than with AHK was chosen: The Fn-ISO and Fn-/ keys on the UHK keymaps rotate through CMX, NMX, and NM2 keymaps. You can switch between those keymaps with Fn-ISO or Fn-/. The UHK display will show me which map is currently active. So, if you need to type a bunch of numbers, I just switch to NMX or NM2. (I haven’t figured out which one I like more, so for now, both are provided.)
+To emulate NUMPAD on the UHK, a slightly different approach than with AHK was chosen: 
+
+The Fn-ISO and Fn-/ keys on the UHK keymaps rotate through CMX, NMX, and NM2 keymaps. You can switch between those keymaps with Fn-ISO or Fn-/. The UHK display will show me which map is currently active. So, if you need to type a bunch of numbers, I just switch to NMX or NM2. (I haven’t figured out which one I like more, so for now, both are provided.)
 
 Also, the NMX and NM2 layers on the UHK add a “cursor pad” using the / (up), R-Alt (left), R-Win (down) and R-Control (right) keys.
+
+_Note:_ In later iterations of the UHK setup, this functionality was augmented by the `NumTab` key: A tap on Tab still functions as Tab, but holding down Tab activates the number pad (through an additional layer). Eventually, `NumTab` became my preference over NMX/NM2.
+
 
 ![image](https://github.com/mhantsch/maxtend/assets/591785/0445a8a2-d7b6-4227-ac7e-af582ac268ec)
 

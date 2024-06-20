@@ -4,6 +4,7 @@ Config is for UHK userConfig v7.1.0
 ```
 clearStatus
 setVar count 0
+setVar unpause 0
 set backlight.strategy constantRgb
 set backlight.constantRgb.rgb 64 64 64
 set leds.fadeTimeout 300
@@ -26,28 +27,83 @@ setLedTxt 300 ':::'
 
 **$onKeymapChange ---:**
 ```
+replaceLayer mod CMX mod
+replaceLayer mouse CMX mouse
+replaceLayer fn CMX fn
+replaceLayer fn2 CMX fn2
+replaceLayer fn3 CMX fn3
+replaceLayer fn4 CMX fn4
+replaceLayer fn5 CMX fn5
+set keymapAction.fn.isoKey macro initCM3
+if ( $unpause == 3 ) { 
+    set keymapAction.fn.b macro initCM3 
+}
+else if ( $unpause == 2 ) {
+    set keymapAction.fn.b macro initCM2
+}
+else { 
+    set keymapAction.fn.b macro initCMX
+}
 call keepAlive
 ```
 
 **$onKeymapChange CM2:**
 ```
-setLedTxt 0 CM2
+setVar unpause 2
+setLedTxt 10 CM2
+replaceLayer mod CMX mod
+replaceLayer mouse CMX mouse
+replaceLayer fn CMX fn
+replaceLayer fn2 CMX fn2
+replaceLayer fn3 CMX fn3
+replaceLayer fn4 CMX fn4
+replaceLayer fn5 CMX fn5
+set keymapAction.fn.isoKey macro initCM3
+set keymapAction.fn3.isoKey macro initCM3
+set keymapAction.fn5.isoKey macro initCM3
 set secondaryRole.defaultStrategy advanced
 set secondaryRole.advanced.timeout 450
 set secondaryRole.advanced.timeoutAction secondary
 set secondaryRole.advanced.triggerByRelease 1
-// positive values for savetyMargin favour primary role, negative favour secondary role
+// positive values for safetyMargin favour primary role, negative favour secondary role
 set secondaryRole.advanced.safetyMargin +30
+```
+
+**$onKeymapChange CM3:**
+```
+setVar unpause 3
+setLedTxt 10 CM3
+replaceLayer mod CMX mod
+replaceLayer mouse CMX mouse
+replaceLayer fn CMX fn
+replaceLayer fn2 CMX fn2
+replaceLayer fn3 CMX fn3
+replaceLayer fn4 CMX fn4
+replaceLayer fn5 CMX fn5
+set keymapAction.fn.isoKey macro initCMX
+set keymapAction.fn3.isoKey macro initCMX
+set keymapAction.fn5.isoKey macro initCMX
+set secondaryRole.defaultStrategy advanced
+set secondaryRole.advanced.timeout 350
+set secondaryRole.advanced.timeoutAction secondary
+set secondaryRole.advanced.triggerByRelease 1
+// positive values for safetyMargin favour primary role, negative favour secondary role
+set secondaryRole.advanced.safetyMargin +10
 ```
 
 **$onKeymapChange CMX:**
 ```
-setLedTxt 5000 CMX
+setVar unpause 1
+setVar c 20
+setLedTxt 1 CMX
+startloop: delayUntil 250
+ifNotKeymap CMX break
+repeatFor c startloop
 set secondaryRole.defaultStrategy advanced
 set secondaryRole.advanced.timeout 250
 set secondaryRole.advanced.timeoutAction secondary
 set secondaryRole.advanced.triggerByRelease 1
-// positive values for savetyMargin favour primary role, negative favour secondary role
+// positive values for safetyMargin favour primary role, negative favour secondary role
 set secondaryRole.advanced.safetyMargin +5
 set backlight.keyRgb.base.128 128 128 128
 set backlight.keyRgb.base.129 128 128 128
@@ -99,6 +155,21 @@ ifLayer fn5 final setLedTxt 0 "NUM"
 **fn:**
 ```
 holdLayer fn
+```
+
+**initCM2:**
+```
+switchKeymap CM2
+```
+
+**initCM3:**
+```
+switchKeymap CM3
+```
+
+**initCMX:**
+```
+switchKeymap CMX
 ```
 
 **keepAlive:**
@@ -245,6 +316,18 @@ tapKey LCLS-semicolonAndColon
 resolveNextKeyId
 ```
 
+**numspace:**
+```
+ifSecondary goTo secondaryaction
+primaryaction: final tapKey space
+secondaryaction: 
+setLedTxt 0 '0-9'
+holdLayer fn4
+ifLayer fn5 final setLedTxt 0 "NUM"
+setLedTxt 1 '0-9'
+
+```
+
 **numtab:**
 ```
 ifAlt final holdKey tab
@@ -279,6 +362,50 @@ holdKey tab
 setLedTxt 500 "|<-"
 ifLayer fn5 final setLedTxt 0 "NUM"
 break
+```
+
+**numtab3:**
+```
+ifAlt final holdKey tab
+ifSecondary advancedStrategy goTo secondaryaction
+
+primaryaction:
+ifShift goTo shiftTab
+tapKey tab
+setLedTxt 500 "->|"
+ifLayer fn3 final setLedTxt 0 "123"
+break
+
+secondaryaction:
+ifShift goTo shiftTabSecondary
+setLedTxt 0 "123"
+holdLayer fn3
+delayUntil 100
+ifLayer fn3 final setLedTxt 0 "123"
+setLedTxt 1 "123"
+break
+
+shiftTabSecondary:
+setLedTxt 0 "123"
+ifNotLayer fn3 final toggleLayer fn3
+unToggleLayer
+setLedTxt 1 "123"
+break
+
+shiftTab:
+setLedTxt 0 "|<-"
+holdKey tab
+setLedTxt 500 "|<-"
+ifLayer fn3 final setLedTxt 0 "123"
+break
+```
+
+**numthumb:**
+```
+ifDoubletap final switchKeymap NM2
+switchKeymap NM2
+delayUntilRelease
+switchKeymap CM2
 ```
 
 **printstatus:**
