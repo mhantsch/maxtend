@@ -159,7 +159,6 @@ SendNum(key) {
 	SendInput, %key%
 }
 
-#if 0
 ;
 ; Space layer:
 ;
@@ -169,6 +168,40 @@ SendNum(key) {
 ; combined sequences. But if we don't register a combined sequences
 ; within a reasonable amount of 0.5 seconds, then we switch to autorepeat.
 ;
+~Space & a::1
+~Space & r::2
+~Space & s::3
+~Space & t::4
+~Space & d::5
+~Space & h::6
+~Space & n::7
+~Space & e::8
+~Space & i::9
+~Space & o::0
+~Space & q::MetaSend("`!")
+~Space & w::MetaSend("@")
+~Space & f::MetaSend("#")
+~Space & p::MetaSend("$")
+~Space & g::MetaSend("`%")
+~Space & j::MetaSend("^")
+~Space & l::MetaSend("&")
+~Space & u::MetaSend("*")
+~Space & y::MetaSend("(")
+~Space & o::MetaSend(")")
+~Space & x::MetaSend("(")
+~Space & c::MetaSend(")")
+~Space & v::MetaSend("[")
+~Space & b::MetaSend("]")
+~Space & k::MetaSend("{")
+~Space & m::MetaSend("}")
+~Space & `'::MetaSend("+")
+~Space & SC02B::MetaSend("-")
+~Space & /::MetaSend("/")
+~Space & z::MetaSend("-")
+
+
+
+#if 0
 Space::
 	HadTimeout := 0
 	CombinedSequenceTriggered := 0
@@ -323,6 +356,10 @@ j::/
 
 ; List of FUNCTION layer functions
 ;
+;SC03A = CapsLock
+;SC039 = Space
+;SC02B = ISO-key
+;
 ~SC03A & SC039::MetaSend("{Return}")
 #if not GetKeyState("Space","p")
 ~SC03A & q::MetaSend("{Escape}")
@@ -405,6 +442,9 @@ j::/
 ~Space & r::MetaSend("{WheelDown}")
 #if
 
+;
+; function keys
+;
 ~SC03A & 1::MetaSend2("{F1}","1")
 ~SC03A & 2::MetaSend2("{F2}","2")
 ~SC03A & 3::MetaSend2("{F3}","3")
