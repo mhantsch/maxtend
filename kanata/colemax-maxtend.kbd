@@ -182,7 +182,7 @@ at the same time will cause kanata to exit:
   @nmt q    w    e    r    t    y    u    i    o    p    [    ]    \
   @mxt @hqa @hqs @hqd @hqf g    h    @hqj @hqk @hql @hq; @mxa      ret
   lsft z    x    c    v    b    n    m    ,    .    @hq/ rsft
-  lctl lmet lalt           spc            ralt rmet rctl
+  lctl lmet lalt         @spacer          ralt rmet rctl
 )
 
 (deflayer colemak
@@ -198,7 +198,7 @@ at the same time will cause kanata to exit:
   @nmt q    w    f    p    g    j    l    u    y    ;    [    ]    \
   @mxt @hca @hcr @hcs @hct d    h    @hcn @hce @hci @hco @mxa      ret
   lsft z    x    c    v    b    k    m    ,    .    @hc/ rsft
-  lctl lmet lalt           spc            ralt rmet rctl
+  lctl lmet lalt         @spacer          ralt rmet rctl
 )
 
 (deflayer colerevmak
@@ -222,6 +222,14 @@ at the same time will cause kanata to exit:
   tab  esc  @mw↑ XX   XX   XX   kp/  kp4  kp5  kp6  kp-  [    ]    \
   _    lalt @mw↓ lsft lctl lmet kp*  kp1  kp2  kp3  kp+  kprt      kprt
   lsft C-z  C-x  C-c  C-v  nlk  n    kp0  ,    kp.  kp=         @kprsft
+  lctl lmet lalt           spc            ralt rmet rctl
+)
+
+(deflayer spacer
+  @grl 1    2    3    4    5    6    7    8    9    0    -    =    bspc
+  @nmt S-1  S-2  S-3  S-4  S-5  S-6  S-7  S-8  S-9  S-0  [    ]    \
+  @mxt 1    2    3    4    5    6    7    8    9    0    S-=       ret
+  lsft -    S-9  S-0  [    ]    S-[  S-]  ,    .    /    rsft
   lctl lmet lalt           spc            ralt rmet rctl
 )
 
@@ -295,6 +303,7 @@ at the same time will cause kanata to exit:
   mxt (tap-hold-press 200 200 bspc @maxtend) ;; tap: backspace, hold: maxtend layer
   mxa (tap-hold 200 200 ' @maxtend) ;; tap: quote, hold: maxtend layer
   nmt (tap-hold-press 200 200 tab @numtab)   ;; tap: tab, hold: numtab layer
+  spacer (tap-hold-release 200 200 spc (layer-toggle spacer)) ;; tap: space, hold: spacer layer
 
   ;; home-row mods (qwerty)
   hqa (tap-hold-release 200 200 a lalt)
