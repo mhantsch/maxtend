@@ -177,11 +177,35 @@ at the same time will cause kanata to exit:
   lctl lmet lalt           spc            ralt rmet rctl
 )
 
+(deflayer qwerty-hr
+  @grl 1    2    3    4    5    6    7    8    9    0    -    =    bspc
+  @nmt q    w    e    r    t    y    u    i    o    p    [    ]    \
+  @mxt @hqa @hqs @hqd @hqf g    h    @hqj @hqk @hql @hq; @mxa      ret
+  lsft z    x    c    v    b    n    m    ,    .    @hq/ rsft
+  lctl lmet lalt           spc            ralt rmet rctl
+)
+
 (deflayer colemak
   @grl 1    2    3    4    5    6    7    8    9    0    -    =    bspc
   @nmt q    w    f    p    g    j    l    u    y    ;    [    ]    \
   @mxt a    r    s    t    d    h    n    e    i    o    @mxa      ret
   lsft z    x    c    v    b    k    m    ,    .    /    rsft
+  lctl lmet lalt           spc            ralt rmet rctl
+)
+
+(deflayer colemak-hr
+  @grl 1    2    3    4    5    6    7    8    9    0    -    =    bspc
+  @nmt q    w    f    p    g    j    l    u    y    ;    [    ]    \
+  @mxt @hca @hcr @hcs @hct d    h    @hcn @hce @hci @hco @mxa      ret
+  lsft z    x    c    v    b    k    m    ,    .    @hc/ rsft
+  lctl lmet lalt           spc            ralt rmet rctl
+)
+
+(deflayer colerevmak
+  @grl 1    2    3    4    5    6    7    8    9    0    -    =    bspc
+  @nmt q    w    k    s    f    o    i    l    ;    r    [    ]    \
+  @mxt a    d    g    e    t    h    y    n    u    p    @mxa      ret
+  lsft z    x    c    v    b    j    m    ,    .    /    rsft
   lctl lmet lalt           spc            ralt rmet rctl
 )
 
@@ -201,8 +225,6 @@ at the same time will cause kanata to exit:
   lctl lmet lalt           spc            ralt rmet rctl
 )
 
-(defalias kprsft (tap-hold $tt $ht kprt rsft))
-
 ;; defvar can be used to declare commonly-used values
 (defvar
   tap-timeout   100
@@ -211,10 +233,7 @@ at the same time will cause kanata to exit:
   ht $hold-timeout
 )
 
-(defalias
-  th1 (tap-hold $tt $ht caps lctl)
-  th2 (tap-hold $tt $ht spc lsft)
-)
+(defalias kprsft (tap-hold $tt $ht kprt rsft))
 
 ;; defalias is used to declare a shortcut for a more complicated action to keep
 ;; the deflayer declarations clean and aligned. The alignment in deflayers is not
@@ -226,12 +245,13 @@ at the same time will cause kanata to exit:
 (defalias
   ;; aliases to change the base layer to qwerty or dvorak
   qwr (layer-switch qwerty)
+  qwh (layer-switch qwerty-hr)
   cmk (layer-switch colemak)
+  crk (layer-switch colerevmak)
+  cmh (layer-switch colemak-hr)
 
-  ;; Aliases for layer "toggling". It's not quite toggling because the layer
-  ;; will be active while the key is held and deactivated when the key is
-  ;; released. An alternate action name you can use is layer-while-held.
-  ;; However, the rest of this document will use The term "toggle" for brevity.
+  ;; Aliases for layer "toggling" - active while the key is held and deactivated 
+  ;; when the key is released. An alternate name is layer-while-held.
   maxtend (layer-toggle maxtend) ;; = 'layer-while-held'
   numtab (layer-toggle numtab)
   lay (layer-toggle layers)
@@ -275,6 +295,37 @@ at the same time will cause kanata to exit:
   mxt (tap-hold-press 200 200 bspc @maxtend) ;; tap: backspace, hold: maxtend layer
   mxa (tap-hold 200 200 ' @maxtend) ;; tap: quote, hold: maxtend layer
   nmt (tap-hold-press 200 200 tab @numtab)   ;; tap: tab, hold: numtab layer
+
+  ;; home-row mods (qwerty)
+  hqa (tap-hold-release 200 200 a lalt)
+  hqs (tap-hold-release 200 200 s lmet)
+  hqd (tap-hold-release 200 200 d lsft)
+  hqf (tap-hold-release 200 200 f lctl)
+  ;; hqg (tap-hold-release 200 200 g lmet)
+  ;; hqh (tap-hold-release 200 200 h rmet)
+  hqj (tap-hold-release 200 200 j rctl)
+  hqk (tap-hold-release 200 200 k rshft)
+  hql (tap-hold-release 200 200 l rmet)
+  hq; (tap-hold-release 200 200 ; lalt)
+
+  hq- (tap-hold-release 200 200 - ralt)
+  hq/ (tap-hold-release 200 200 / ralt)
+
+  ;; home-row mods (colemak)
+  hca (tap-hold-release 200 200 a lalt)
+  hcr (tap-hold-release 200 200 r lmet)
+  hcs (tap-hold-release 200 200 s lsft)
+  hct (tap-hold-release 200 200 t lctl)
+  ;; hcd (tap-hold-release 200 200 d lmet)
+  ;; hch (tap-hold-release 200 200 h rmet)
+  hcn (tap-hold-release 200 200 n rctl)
+  hce (tap-hold-release 200 200 e rshft)
+  hci (tap-hold-release 200 200 i rmet)
+  hco (tap-hold-release 200 200 o lalt)
+
+  hc- (tap-hold-release 200 200 - ralt)
+  hc/ (tap-hold-release 200 200 / ralt)
+
 
   ;; There are additional variants of tap-hold-press and tap-hold-release that
   ;; activate the timeout action (the 5th parameter) when the action times out
@@ -379,11 +430,10 @@ at the same time will cause kanata to exit:
 ;; order passed into the arguments on kanata startup.
 ;;
 ;; Upon a successful reload, the kanata state will begin on the default base layer
-;; in the configuration. E.g. in this example configuration, you would start on
-;; the qwerty layer.
+;; in the configuration. E.g. in this configuration, you would start on qwerty.
 (deflayer layers
-  _    @qwr @cmk lrld lrpv lrnx (lrld-num 1) _ _    _    _    _    _    _
-  _    _    _    _    _    _    _    _    _    _    _    _    _    _
+  _    @qwr @qwh @cmk @cmh @crk lrld lrpv lrnx (lrld-num 1) _ _  _ _
+  _    1    2    3    4    5    6    7    8    9    _    _    _    _
   _    _    _    _    _    _    _    _    _    _    _    _    _
   _    _    _    _    _    _    _    _    _    _    _    _
   _    _    _              _              _    _    _
