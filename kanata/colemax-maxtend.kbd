@@ -182,7 +182,7 @@ at the same time will cause kanata to exit:
   @nmt q    w    e    r    t    y    u    i    o    p    [    ]    \
   @mxt @hqa @hqs @hqd @hqf g    h    @hqj @hqk @hql @hq; @mxa      ret
   lsft z    x    c    v    b    n    m    ,    .    @hq/ rsft
-  lctl lmet lalt         @spacer          ralt rmet rctl
+  lctl lmet lalt         @space           ralt rmet rctl
 )
 
 (deflayer colemak
@@ -198,7 +198,7 @@ at the same time will cause kanata to exit:
   @nmt q    w    f    p    g    j    l    u    y    ;    [    ]    \
   @mxt @hca @hcr @hcs @hct d    h    @hcn @hce @hci @hco @mxa      ret
   lsft z    x    c    v    b    k    m    ,    .    @hc/ rsft
-  lctl lmet lalt         @spacer          ralt rmet rctl
+  lctl lmet lalt         @space           ralt rmet rctl
 )
 
 (deflayer colerevmak
@@ -304,6 +304,7 @@ at the same time will cause kanata to exit:
   mxa (tap-hold 200 200 ' @maxtend) ;; tap: quote, hold: maxtend layer
   nmt (tap-hold-press 200 200 tab @numtab)   ;; tap: tab, hold: numtab layer
   spacer (tap-hold-release 200 200 spc (layer-toggle spacer)) ;; tap: space, hold: spacer layer
+  space (fork @spacer spc (lctl rctl)) ;; ctl-spc does NOT toggle to spacer but sends C-spc
 
   ;; home-row mods (qwerty)
   hqa (tap-hold-release 200 200 a lalt)
