@@ -243,6 +243,25 @@ at the same time will cause kanata to exit:
 
 (defalias kprsft (tap-hold $tt $ht kprt rsft))
 
+(defvar
+  ;; Note: consider using different time values for your different fingers.
+  ;; For example, your pinkies might be slower to release keys and index
+  ;; fingers faster.
+  tap-time 200
+  hold-time 150
+
+  left-hand-keys (
+    q w e r t
+    a s d f g
+    z x c v b
+  )
+  right-hand-keys (
+    y u i o p
+    h j k l ;
+    n m , . /
+  )
+)
+
 ;; defalias is used to declare a shortcut for a more complicated action to keep
 ;; the deflayer declarations clean and aligned. The alignment in deflayers is not
 ;; necessary, but is strongly recommended for ease of understanding visually.
@@ -307,35 +326,34 @@ at the same time will cause kanata to exit:
   space (fork @spacer spc (lctl rctl)) ;; ctl-spc does NOT toggle to spacer but sends C-spc
 
   ;; home-row mods (qwerty)
-  hqa (tap-hold-release 200 200 a lalt)
-  hqs (tap-hold-release 200 200 s lmet)
-  hqd (tap-hold-release 200 200 d lsft)
-  hqf (tap-hold-release 200 200 f lctl)
-  ;; hqg (tap-hold-release 200 200 g lmet)
-  ;; hqh (tap-hold-release 200 200 h rmet)
-  hqj (tap-hold-release 200 200 j rctl)
-  hqk (tap-hold-release 200 200 k rshft)
-  hql (tap-hold-release 200 200 l rmet)
-  hq; (tap-hold-release 200 200 ; lalt)
+  hqa (tap-hold-release-keys 200 200 a lalt $left-hand-keys)
+  hqs (tap-hold-release-keys 200 200 s lmet $left-hand-keys)
+  hqd (tap-hold-release-keys 200 200 d lsft $left-hand-keys)
+  hqf (tap-hold-release-keys 200 200 f lctl $left-hand-keys)
+  ;; hqg (tap-hold-release-keys 200 200 g lmet $left-hand-keys)
+  ;; hqh (tap-hold-release-keys 200 200 h rmet $right-hand-keys)
+  hqj (tap-hold-release-keys 200 200 j rctl $right-hand-keys)
+  hqk (tap-hold-release-keys 200 200 k rshft $right-hand-keys)
+  hql (tap-hold-release-keys 200 200 l rmet $right-hand-keys)
+  hq; (tap-hold-release-keys 200 200 ; lalt $right-hand-keys)
 
-  hq- (tap-hold-release 200 200 - ralt)
-  hq/ (tap-hold-release 200 200 / ralt)
+  hq- (tap-hold-release-keys 200 200 - ralt $left-hand-keys)
+  hq/ (tap-hold-release-keys 200 200 / ralt $right-hand-keys)
 
   ;; home-row mods (colemak)
-  hca (tap-hold-release 200 200 a lalt)
-  hcr (tap-hold-release 200 200 r lmet)
-  hcs (tap-hold-release 200 200 s lsft)
-  hct (tap-hold-release 200 200 t lctl)
-  ;; hcd (tap-hold-release 200 200 d lmet)
-  ;; hch (tap-hold-release 200 200 h rmet)
-  hcn (tap-hold-release 200 200 n rctl)
-  hce (tap-hold-release 200 200 e rshft)
-  hci (tap-hold-release 200 200 i rmet)
-  hco (tap-hold-release 200 200 o lalt)
+  hca (tap-hold-release-keys 200 200 a lalt $left-hand-keys)
+  hcr (tap-hold-release-keys 200 200 r lmet $left-hand-keys)
+  hcs (tap-hold-release-keys 200 200 s lsft $left-hand-keys)
+  hct (tap-hold-release-keys 200 200 t lctl $left-hand-keys)
+  ;; hcd (tap-hold-release-keys 200 200 d lmet $left-hand-keys)
+  ;; hch (tap-hold-release-keys 200 200 h rmet $right-hand-keys)
+  hcn (tap-hold-release-keys 200 200 n rctl $right-hand-keys)
+  hce (tap-hold-release-keys 200 200 e rshft $right-hand-keys)
+  hci (tap-hold-release-keys 200 200 i rmet $right-hand-keys)
+  hco (tap-hold-release-keys 200 200 o lalt $right-hand-keys)
 
-  hc- (tap-hold-release 200 200 - ralt)
-  hc/ (tap-hold-release 200 200 / ralt)
-
+  hc- (tap-hold-release-keys 200 200 - ralt $left-hand-keys)
+  hc/ (tap-hold-release-keys 200 200 / ralt $right-hand-keys)
 
   ;; There are additional variants of tap-hold-press and tap-hold-release that
   ;; activate the timeout action (the 5th parameter) when the action times out
@@ -357,15 +375,6 @@ at the same time will cause kanata to exit:
 
   ;; tap for capslk, hold for lctl
   ;; cap (tap-hold 200 200 caps lctl)
-
-  ;; Below is an alias for the `multi` action which executes multiple actions
-  ;; in order but at the same time.
-  ;;
-  ;; It may result in some incorrect/unexpected behaviour if combining complex
-  ;; actions, so be reasonable with it. One reasonable use case is this alias:
-  ;; press right-alt while also toggling to the `ralted` layer. The utility of
-  ;; this is better revealed if you go see `ralted` and its aliases.
-  ;; ralt (multi ralt (layer-toggle ralted))
 )
 
 (defalias
