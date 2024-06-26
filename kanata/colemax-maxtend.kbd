@@ -235,30 +235,25 @@ at the same time will cause kanata to exit:
 
 ;; defvar can be used to declare commonly-used values
 (defvar
-  tap-timeout   100
-  hold-timeout  200
-  tt $tap-timeout
-  ht $hold-timeout
-)
-
-(defalias kprsft (tap-hold $tt $ht kprt rsft))
-
-(defvar
   ;; Note: consider using different time values for your different fingers.
   ;; For example, your pinkies might be slower to release keys and index
   ;; fingers faster.
-  tap-time 200
-  hold-time 150
+  tap-timeout   200
+  hold-timeout  350
+  tt $tap-timeout
+  ht $hold-timeout
 
   left-hand-keys (
     q w e r t
     a s d f g
     z x c v b
+    spc
   )
   right-hand-keys (
     y u i o p
     h j k l ;
     n m , . /
+    spc
   )
 )
 
@@ -318,42 +313,45 @@ at the same time will cause kanata to exit:
   ;; to tap-hold-next and tap-hold-next-release, respectively. If you know
   ;; the underlying keyberon crate, tap-hold-press is the HoldOnOtherKeyPress
   ;; and tap-hold-release is the PermissiveHold configuration.
-  grl (tap-hold 200 200 grv @lay) ;; tap: grave  hold: layers layer
+  grl (tap-hold 200 200 grv @lay)            ;; tap: grave  hold: layers layer
   mxt (tap-hold-press 200 200 bspc @maxtend) ;; tap: backspace, hold: maxtend layer
-  mxa (tap-hold 200 200 ' @maxtend) ;; tap: quote, hold: maxtend layer
+  mxa (tap-hold 200 200 ' @maxtend)          ;; tap: quote, hold: maxtend layer
   nmt (tap-hold-press 200 200 tab @numtab)   ;; tap: tab, hold: numtab layer
-  spacer (tap-hold-release 200 200 spc (layer-toggle spacer)) ;; tap: space, hold: spacer layer
-  space (fork @spacer spc (lctl rctl)) ;; ctl-spc does NOT toggle to spacer but sends C-spc
+  spacer (tap-hold-release 200 200 spc (layer-toggle spacer))
+                                             ;; tap: space, hold: spacer layer
+  space (fork @spacer spc (lctl rctl))       ;; ctl-spc does NOT toggle to spacer
+                                             ;;         but sends C-spc
+  kprsft (tap-hold-press $tt $ht kprt rsft)  ;; tap: keypad enter, hold: right shift
 
   ;; home-row mods (qwerty)
-  hqa (tap-hold-release-keys 200 200 a lalt $left-hand-keys)
-  hqs (tap-hold-release-keys 200 200 s lmet $left-hand-keys)
-  hqd (tap-hold-release-keys 200 200 d lsft $left-hand-keys)
-  hqf (tap-hold-release-keys 200 200 f lctl $left-hand-keys)
-  ;; hqg (tap-hold-release-keys 200 200 g lmet $left-hand-keys)
-  ;; hqh (tap-hold-release-keys 200 200 h rmet $right-hand-keys)
-  hqj (tap-hold-release-keys 200 200 j rctl $right-hand-keys)
-  hqk (tap-hold-release-keys 200 200 k rshft $right-hand-keys)
-  hql (tap-hold-release-keys 200 200 l rmet $right-hand-keys)
-  hq; (tap-hold-release-keys 200 200 ; lalt $right-hand-keys)
+  hqa (tap-hold-release-keys $tt $ht a lalt $left-hand-keys)
+  hqs (tap-hold-release-keys $tt $ht s lmet $left-hand-keys)
+  hqd (tap-hold-release-keys $tt $ht d lsft $left-hand-keys)
+  hqf (tap-hold-release-keys $tt $ht f lctl $left-hand-keys)
+  ;; hqg (tap-hold-release-keys $tt $ht g lmet $left-hand-keys)
+  ;; hqh (tap-hold-release-keys $tt $ht h rmet $right-hand-keys)
+  hqj (tap-hold-release-keys $tt $ht j rctl $right-hand-keys)
+  hqk (tap-hold-release-keys $tt $ht k rshft $right-hand-keys)
+  hql (tap-hold-release-keys $tt $ht l rmet $right-hand-keys)
+  hq; (tap-hold-release-keys $tt $ht ; lalt $right-hand-keys)
 
-  hq- (tap-hold-release-keys 200 200 - ralt $left-hand-keys)
-  hq/ (tap-hold-release-keys 200 200 / ralt $right-hand-keys)
+  hq- (tap-hold-release-keys $tt $ht - ralt $left-hand-keys)
+  hq/ (tap-hold-release-keys $tt $ht / ralt $right-hand-keys)
 
   ;; home-row mods (colemak)
-  hca (tap-hold-release-keys 200 200 a lalt $left-hand-keys)
-  hcr (tap-hold-release-keys 200 200 r lmet $left-hand-keys)
-  hcs (tap-hold-release-keys 200 200 s lsft $left-hand-keys)
-  hct (tap-hold-release-keys 200 200 t lctl $left-hand-keys)
-  ;; hcd (tap-hold-release-keys 200 200 d lmet $left-hand-keys)
-  ;; hch (tap-hold-release-keys 200 200 h rmet $right-hand-keys)
-  hcn (tap-hold-release-keys 200 200 n rctl $right-hand-keys)
-  hce (tap-hold-release-keys 200 200 e rshft $right-hand-keys)
-  hci (tap-hold-release-keys 200 200 i rmet $right-hand-keys)
-  hco (tap-hold-release-keys 200 200 o lalt $right-hand-keys)
+  hca (tap-hold-release-keys $tt $ht a lalt $left-hand-keys)
+  hcr (tap-hold-release-keys $tt $ht r lmet $left-hand-keys)
+  hcs (tap-hold-release-keys $tt $ht s lsft $left-hand-keys)
+  hct (tap-hold-release-keys $tt $ht t lctl $left-hand-keys)
+  ;; hcd (tap-hold-release-keys $tt $ht d lmet $left-hand-keys)
+  ;; hch (tap-hold-release-keys $tt $ht h rmet $right-hand-keys)
+  hcn (tap-hold-release-keys $tt $ht n rctl $right-hand-keys)
+  hce (tap-hold-release-keys $tt $ht e rshft $right-hand-keys)
+  hci (tap-hold-release-keys $tt $ht i rmet $right-hand-keys)
+  hco (tap-hold-release-keys $tt $ht o lalt $right-hand-keys)
 
-  hc- (tap-hold-release-keys 200 200 - ralt $left-hand-keys)
-  hc/ (tap-hold-release-keys 200 200 / ralt $right-hand-keys)
+  hc- (tap-hold-release-keys $tt $ht - ralt $left-hand-keys)
+  hc/ (tap-hold-release-keys $tt $ht / ralt $right-hand-keys)
 
   ;; There are additional variants of tap-hold-press and tap-hold-release that
   ;; activate the timeout action (the 5th parameter) when the action times out
@@ -424,16 +422,6 @@ at the same time will cause kanata to exit:
   ;; activate by default. The second (right) action will activate if any of
   ;; the keys in the third parameter (right-trigger-keys) are currently active.
   ;; frk (fork @🙃 @🙁 (lsft rsft))
-)
-
-;; The underscore _ means transparent. The key on the base layer will be used
-;; instead. XX means no-op. The key will do nothing.
-(deflayer numbers
-  _    _    _    _    _    _    nlk  kp7  kp8  kp9  _    _    _    _
-  _    _    _    _    _    XX   _    kp4  kp5  kp6  -    _    _    _
-  _    _    C-z  _    _    XX   _    kp1  kp2  kp3  +    _    _
-  _    C-z  C-x  C-c  C-v  XX   _    kp0  kp0  .    /    _
-  _    _    _              _              _    _    _
 )
 
 ;; The `lrld` action stands for "live reload".
