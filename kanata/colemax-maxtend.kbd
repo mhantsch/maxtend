@@ -238,10 +238,13 @@ at the same time will cause kanata to exit:
   ;; Note: consider using different time values for your different fingers.
   ;; For example, your pinkies might be slower to release keys and index
   ;; fingers faster.
-  tap-timeout   200
-  hold-timeout  350
+  tap-timeout   200       ;; double-tap-and-hold within this interval for hold
+  hold-timeout  350       ;; hold for this interval to activate mod
+  hold-timeout-long 450   ;; hold timout for pinky fingers
+  ;; abbreviations
   tt $tap-timeout
   ht $hold-timeout
+  htl $hold-timeout-long
 
   left-hand-keys (
     q w e r t
@@ -324,7 +327,7 @@ at the same time will cause kanata to exit:
   kprsft (tap-hold-press $tt $ht kprt rsft)  ;; tap: keypad enter, hold: right shift
 
   ;; home-row mods (qwerty)
-  hqa (tap-hold-release-keys $tt $ht a lalt $left-hand-keys)
+  hqa (tap-hold-release-keys $tt $htl a lalt $left-hand-keys)
   hqs (tap-hold-release-keys $tt $ht s lmet $left-hand-keys)
   hqd (tap-hold-release-keys $tt $ht d lsft $left-hand-keys)
   hqf (tap-hold-release-keys $tt $ht f lctl $left-hand-keys)
@@ -333,13 +336,13 @@ at the same time will cause kanata to exit:
   hqj (tap-hold-release-keys $tt $ht j rctl $right-hand-keys)
   hqk (tap-hold-release-keys $tt $ht k rshft $right-hand-keys)
   hql (tap-hold-release-keys $tt $ht l rmet $right-hand-keys)
-  hq; (tap-hold-release-keys $tt $ht ; lalt $right-hand-keys)
+  hq; (tap-hold-release-keys $tt $htl ; lalt $right-hand-keys)
 
-  hq- (tap-hold-release-keys $tt $ht - ralt $left-hand-keys)
-  hq/ (tap-hold-release-keys $tt $ht / ralt $right-hand-keys)
+  hq- (tap-hold-release-keys $tt $htl - ralt $left-hand-keys)
+  hq/ (tap-hold-release-keys $tt $htl / ralt $right-hand-keys)
 
   ;; home-row mods (colemak)
-  hca (tap-hold-release-keys $tt $ht a lalt $left-hand-keys)
+  hca (tap-hold-release-keys $tt $htl a lalt $left-hand-keys)
   hcr (tap-hold-release-keys $tt $ht r lmet $left-hand-keys)
   hcs (tap-hold-release-keys $tt $ht s lsft $left-hand-keys)
   hct (tap-hold-release-keys $tt $ht t lctl $left-hand-keys)
@@ -348,10 +351,10 @@ at the same time will cause kanata to exit:
   hcn (tap-hold-release-keys $tt $ht n rctl $right-hand-keys)
   hce (tap-hold-release-keys $tt $ht e rshft $right-hand-keys)
   hci (tap-hold-release-keys $tt $ht i rmet $right-hand-keys)
-  hco (tap-hold-release-keys $tt $ht o lalt $right-hand-keys)
+  hco (tap-hold-release-keys $tt $htl o lalt $right-hand-keys)
 
-  hc- (tap-hold-release-keys $tt $ht - ralt $left-hand-keys)
-  hc/ (tap-hold-release-keys $tt $ht / ralt $right-hand-keys)
+  hc- (tap-hold-release-keys $tt $htl - ralt $left-hand-keys)
+  hc/ (tap-hold-release-keys $tt $htl / ralt $right-hand-keys)
 
   ;; There are additional variants of tap-hold-press and tap-hold-release that
   ;; activate the timeout action (the 5th parameter) when the action times out
