@@ -260,6 +260,10 @@ at the same time will cause kanata to exit:
   )
 )
 
+(defvirtualkeys
+  activate-hrmods (layer-switch qwerty-hr)
+)
+
 ;; defalias is used to declare a shortcut for a more complicated action to keep
 ;; the deflayer declarations clean and aligned. The alignment in deflayers is not
 ;; necessary, but is strongly recommended for ease of understanding visually.
@@ -280,6 +284,14 @@ at the same time will cause kanata to exit:
   maxtend (layer-toggle maxtend) ;; = 'layer-while-held'
   numtab (layer-toggle numtab)
   lay (layer-toggle layers)
+
+  ;; automatically deactivate home-row mods for a short while whenever
+  ;; any one of them resolves as a tap. (The user seems to be typing fast.)
+  hr-tap (
+    multi 
+      (layer-switch qwerty)             ;; disable hr-mods
+      (on-idle 30 tap-vkey activate-hrmods)  ;; reactivate hr-mods after idle timeout
+  )
 
   ;; tap-hold aliases with tap for dvorak key, and hold for toggle layers
   ;; WARNING(Linux only): key repeat with tap-hold can behave unexpectedly.
@@ -327,19 +339,19 @@ at the same time will cause kanata to exit:
   kprsft (tap-hold-press $tt $ht kprt rsft)  ;; tap: keypad enter, hold: right shift
 
   ;; home-row mods (qwerty)
-  hqa (tap-hold-release-keys $tt $htl a lalt $left-hand-keys)
-  hqs (tap-hold-release-keys $tt $ht s lmet $left-hand-keys)
-  hqd (tap-hold-release-keys $tt $ht d lsft $left-hand-keys)
-  hqf (tap-hold-release-keys $tt $ht f lctl $left-hand-keys)
+  hqa (tap-hold-release-keys $tt $htl (multi a @hr-tap) lalt $left-hand-keys)
+  hqs (tap-hold-release-keys $tt $ht (multi s @hr-tap) lmet $left-hand-keys)
+  hqd (tap-hold-release-keys $tt $ht (multi d @hr-tap) lsft $left-hand-keys)
+  hqf (tap-hold-release-keys $tt $ht (multi f @hr-tap) lctl $left-hand-keys)
   ;; hqg (tap-hold-release-keys $tt $ht g lmet $left-hand-keys)
   ;; hqh (tap-hold-release-keys $tt $ht h rmet $right-hand-keys)
-  hqj (tap-hold-release-keys $tt $ht j rctl $right-hand-keys)
-  hqk (tap-hold-release-keys $tt $ht k rshft $right-hand-keys)
-  hql (tap-hold-release-keys $tt $ht l rmet $right-hand-keys)
-  hq; (tap-hold-release-keys $tt $htl ; lalt $right-hand-keys)
+  hqj (tap-hold-release-keys $tt $ht (multi j @hr-tap) rctl $right-hand-keys)
+  hqk (tap-hold-release-keys $tt $ht (multi k @hr-tap) rshft $right-hand-keys)
+  hql (tap-hold-release-keys $tt $ht (multi l @hr-tap) rmet $right-hand-keys)
+  hq; (tap-hold-release-keys $tt $htl (multi ; @hr-tap) lalt $right-hand-keys)
 
-  hq- (tap-hold-release-keys $tt $htl - ralt $left-hand-keys)
-  hq/ (tap-hold-release-keys $tt $htl / ralt $right-hand-keys)
+  hq- (tap-hold-release-keys $tt $htl (multi - @hr-tap) ralt $left-hand-keys)
+  hq/ (tap-hold-release-keys $tt $htl (multi / @hr-tap) ralt $right-hand-keys)
 
   ;; home-row mods (colemak)
   hca (tap-hold-release-keys $tt $htl a lalt $left-hand-keys)
