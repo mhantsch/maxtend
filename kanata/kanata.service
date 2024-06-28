@@ -1,0 +1,11 @@
+[Unit]
+Description=Kanata key remapping daemon
+Requires=local-fs.target
+After=local-fs.target
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/kanata --cfg /etc/kanata/colemax-maxtend.kbd --port 5829
+
+[Install]
+WantedBy=sysinit.target
