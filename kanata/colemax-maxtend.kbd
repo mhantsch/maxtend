@@ -148,6 +148,7 @@ at the same time will cause kanata to exit:
 
   ;; If you don't need to see the layer changes logged, turn it off here.
   ;;log-layer-changes no
+  log-layer-changes no
 )
 
 ;; defsrc defines the keys that will be intercepted by kanata. The order of the
@@ -281,7 +282,7 @@ at the same time will cause kanata to exit:
 
   ;; Aliases for layer "toggling" - active while the key is held and deactivated 
   ;; when the key is released. An alternate name is layer-while-held.
-  maxtend (layer-toggle maxtend) ;; = 'layer-while-held'
+  maxtend (layer-toggle maxtend)
   numtab (layer-toggle numtab)
   lay (layer-toggle layers)
 
@@ -328,15 +329,19 @@ at the same time will cause kanata to exit:
   ;; to tap-hold-next and tap-hold-next-release, respectively. If you know
   ;; the underlying keyberon crate, tap-hold-press is the HoldOnOtherKeyPress
   ;; and tap-hold-release is the PermissiveHold configuration.
-  grl (tap-hold 200 200 grv @lay)            ;; tap: grave  hold: layers layer
-  mxt (tap-hold-press 200 200 bspc @maxtend) ;; tap: backspace, hold: maxtend layer
-  mxa (tap-hold 200 200 ' @maxtend)          ;; tap: quote, hold: maxtend layer
-  nmt (tap-hold-press 200 200 tab @numtab)   ;; tap: tab, hold: numtab layer
+  grl (tap-hold 200 200 grv @lay)             ;; tap: grave  hold: layers layer
+  mxt (switch
+    (lalt) (unmod del) break                  ;; alt-maxtend = delete (without alt)
+    (lsft rsft) bspc break                    ;; shift-maxtend = backspace
+    () (tap-hold-press 200 200 bspc @maxtend) break ;; else it is maxtend tap/hold
+  )                                           ;; tap: backspace, hold: maxtend layer
+  mxa (tap-hold 200 200 ' @maxtend)           ;; tap: quote, hold: maxtend layer
+  nmt (tap-hold-press 200 200 tab @numtab)    ;; tap: tab, hold: numtab layer
   spacer (tap-hold-release 200 200 spc (layer-toggle spacer))
-                                             ;; tap: space, hold: spacer layer
-  space (fork @spacer spc (lctl rctl))       ;; ctl-spc does NOT toggle to spacer
-                                             ;;         but sends C-spc
-  kprsft (tap-hold-press $tt $ht kprt rsft)  ;; tap: keypad enter, hold: right shift
+                                              ;; tap: space, hold: spacer layer
+  space (fork @spacer spc (lctl rctl))        ;; ctl-spc does NOT toggle to spacer
+                                              ;;         but sends C-spc
+  kprsft (tap-hold-press $tt $ht kprt rsft)   ;; tap: keypad enter, hold: right shift
 
   ;; home-row mods (qwerty)
   hqa (tap-hold-release-keys $tt $htl (multi a @hr-tap) lalt $left-hand-keys)
