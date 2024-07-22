@@ -148,7 +148,7 @@ at the same time will cause kanata to exit:
 
   ;; If you don't need to see the layer changes logged, turn it off here.
   ;;log-layer-changes no
-  log-layer-changes no
+  log-layer-changes yes
 )
 
 ;; defsrc defines the keys that will be intercepted by kanata. The order of the
