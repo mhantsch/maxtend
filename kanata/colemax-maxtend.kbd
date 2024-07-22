@@ -165,9 +165,21 @@ at the same time will cause kanata to exit:
 )
 
 ;; The first layer defined is the layer that will be active by default when
-;; kanata starts up. This layer is the standard QWERTY layout except for the
+;; kanata starts up. 
+;; 
+;; This layer is the standard QWERTY layout including home-row mods, and
+;; a backtick/grave key (@grl) which is an alias for a tap-hold key.
+;; Additionally, tab is mapped to numtab, and capslock is maxtend.
+(deflayer qwerty-hr
+  @grl 1    2    3    4    5    6    7    8    9    0    -    =    bspc
+  @nmt q    w    e    r    t    y    u    i    o    p    [    ]    \
+  @mxt @hqa @hqs @hqd @hqf g    h    @hqj @hqk @hql @hq; @mxa      ret
+  lsft z    x    c    v    b    n    m    ,    .    @hq/ rsft
+  lctl lmet lalt         @space           ralt rmet rctl
+)
+
+;; This layer is the standard QWERTY layout except for the
 ;; backtick/grave key (@grl) which is an alias for a tap-hold key.
-;;
 ;; Additionally, tab is mapped to numtab, and capslock is maxtend.
 (deflayer qwerty
   @grl 1    2    3    4    5    6    7    8    9    0    -    =    bspc
@@ -175,14 +187,6 @@ at the same time will cause kanata to exit:
   @mxt a    s    d    f    g    h    j    k    l    ;    @mxa      ret
   lsft z    x    c    v    b    n    m    ,    .    /    rsft
   lctl lmet lalt           spc            ralt rmet rctl
-)
-
-(deflayer qwerty-hr
-  @grl 1    2    3    4    5    6    7    8    9    0    -    =    bspc
-  @nmt q    w    e    r    t    y    u    i    o    p    [    ]    \
-  @mxt @hqa @hqs @hqd @hqf g    h    @hqj @hqk @hql @hq; @mxa      ret
-  lsft z    x    c    v    b    n    m    ,    .    @hq/ rsft
-  lctl lmet lalt         @space           ralt rmet rctl
 )
 
 (deflayer colemak
