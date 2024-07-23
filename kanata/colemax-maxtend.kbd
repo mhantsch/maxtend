@@ -478,8 +478,8 @@ at the same time will cause kanata to exit:
 ;; Using the mouse on other windows seems to be fine though.
 ;;
 ;; The mouse buttons can be clicked using mlft, mrgt, mmid, mfwd and mbck, representing the
-;; left, right, middle, forward and backward mouse buttons respectively. If the key is held, the
-;; button press will also be held.
+;; left, right, middle, forward and backward mouse buttons respectively. If the key is held,
+;; the button press will also be held.
 ;;
 ;; If there are multiple mouse click actions within a single multi action, e.g.
 ;; (multi mrgt mlft), then all the buttons except the last will be clicked then
@@ -543,7 +543,7 @@ at the same time will cause kanata to exit:
   ma← (movemouse-accel-left 1 1000 1 5)
   ma↓ (movemouse-accel-down 1 1000 1 5)
   ma→ (movemouse-accel-right 1 1000 1 5)
-
+r
   ;; setmouse places the cursor at a specific pixel x-y position. This
   ;; example puts it in the middle of the screen. The coordinates go from 0,0
   ;; which is the upper-left corner of the screen to 65535,65535 which is the
