@@ -340,7 +340,11 @@ at the same time will cause kanata to exit:
     () (tap-hold-press 200 200 bspc @maxtend) break ;; else it is maxtend tap/hold
   )                                           ;; tap: backspace, hold: maxtend layer
   mxa (tap-hold 200 200 ' @maxtend)           ;; tap: quote, hold: maxtend layer
-  nmt (tap-hold-press 200 200 tab @numtab)    ;; tap: tab, hold: numtab layer
+  nmt (switch
+    (lalt) tab break                          ;; alt-numtab = alt-tab even when held
+    () (tap-hold-press 200 200 tab @numtab) break   ;; else it is numtab tap/hold
+  )                                           ;; tap: tab, hold: numtab layer
+
   spacer (tap-hold-release 200 200 spc (layer-toggle spacer))
                                               ;; tap: space, hold: spacer layer
   space (fork @spacer spc (lctl rctl))        ;; ctl-spc does NOT toggle to spacer
