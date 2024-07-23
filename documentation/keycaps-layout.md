@@ -46,7 +46,7 @@ Shown in _yellow_, this is the symbol produced on the _AltGr_ layer.
 
 For letter symbols, the upper-case version is produced when the key is typed together with `AltGr`+`Shift`+_key_ and the corresponding lower-case version can be produced with `AltGr`+_key_. For example, `AltGr`+`N` will produce `ñ`, and `AltGr`+`Shift`+`N` will produce `Ñ`.
 
-Dead keys are indicated by a dashed circle (a placeholder for the letter that will be accented) and an accent mark above or below. For these keys, the dead key is activated with `AltGr`+_key_ (do not use `Shift`), and then followed by whatever letter shall be converted into the accented version. For example, `AltGr`+`H` (**ˇ**) followed by `C` will produce **č**.
+Dead keys are indicated by a dashed circle (a symbolic placeholder for the letter that will be accented) and an accent mark above or below. For these keys, the dead key is activated with `AltGr`+_key_ (do not use `Shift`), and then followed by whatever letter shall be converted into the accented version. For example, `AltGr`+`H` (**ˇ**) followed by `C` will produce **č**.
 
 _Note:_ the dashed circle representing the dead key placeholder is also printed on the `AltGr` key as a reminder for this functionality.
 

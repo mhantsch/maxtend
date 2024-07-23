@@ -21,16 +21,18 @@ Read more about the [Background](BACKGROUND.md) of this setup.
 The configuration is setup in three stages:
 1. base OS setup - giving a standard Colemak layout without extended functionality
 2. maxtend layer - giving extended functionality such as navigation, mouse scrolling etc.;  
-   (achieved via AutoHotKey (Windows), Kanata (Windows, experimental), keyd (Linux), or xkb (Linux, deprecated))
+   (achieved via AutoHotKey (Windows), Kanata (Windows & Linux, experimental), keyd (Linux), or xkb (Linux, deprecated))
 4. external keyboard - giving extended functionality even if your host computer does not have `maxtend` installed, and extends it further
 
 These stages can work independently, but also combine on top of each other for best functionality.
 
 ## Installation
 Depending on your OS and preferred setup, find the configuration for each of the different tools in the corresponding subdirectories. 
-- For Windows, pick the [ahk](ahk/) configuration (and load via [AutoHotKey](https://www.autohotkey.com/)), or try [Kanata](https://github.com/jtroo/kanata) with the corresponding [kanata](kanata/) configuration (_experimental!_).
-- For Linux, choose between either [xkb](xkb/) ([how to configure](xkb/HOWTO), deprecated) or [keyd](keyd/) (recommended, using [the keyd service](https://github.com/rvaiya/keyd)).
-- Check out [uhk](uhk/) for a matching configuration for the [Ultimate Hacking Keyboard](https://ultimatehackingkeyboard.com) (an external programmable keyboard).
+- For Windows, install the Colemak keyboard layout from [Windows - Colemak](https://colemak.com/Windows) first. I recommend the [version which maps CapsLock to Backspace](https://colemak.com/File:Colemak-caps.zip). Then, pick between the [ahk configuration](ahk/) (and load via [AutoHotKey](https://www.autohotkey.com/)), or try [Kanata](https://github.com/jtroo/kanata) with the corresponding [kanata configuration](kanata/) (_experimental!_).
+- For Linux, choose between either [xkb](xkb/) ([how to configure](xkb/HOWTO), deprecated) or [keyd](keyd/) (recommended, using [the keyd service](https://github.com/rvaiya/keyd)), or try [Kanata](https://github.com/jtroo/kanata) with the corresponding [kanata configuration](kanata/) (_experimental!_).
+- Check out a matching [uhk configuration](uhk/) for the [Ultimate Hacking Keyboard](https://ultimatehackingkeyboard.com) (an external programmable keyboard).
+
+If you are unsure which to install, try Kanata. It works both in Windows and Linux, and it is what I have been using lately. It also supports home-row mods quite well (in case you are interested in that).
 
 ## Credits & Inspiration
 - [The inventor of Colemak, shai coleman](https://colemak.com).
