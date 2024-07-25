@@ -168,18 +168,18 @@ at the same time will cause kanata to exit:
 ;; The first layer defined is the layer that will be active by default when
 ;; kanata starts up. 
 ;; 
-;; This layer is the standard QWERTY layout including home-row mods, and
-;; a backtick/grave key (@grl) which is an alias for a tap-hold key.
+;; This layer is the standard US-QWERTY layout including home-row mods, 
+;; and a backtick/grave key (@grl) which is an alias for a tap-hold key.
 ;; Additionally, tab is mapped to numtab, and capslock is maxtend.
 (deflayer qwerty-hr
   @grl 1    2    3    4    5    6    7    8    9    0    -    =    bspc
   @nmt q    w    e    r    t    y    u    i    o    p    [    ]    \
   @mxt @hqa @hqs @hqd @hqf g    h    @hqj @hqk @hql @hq; @mxa      ret
   lsft z    x    c    v    b    n    m    ,    .    @hq/ rsft
-  lctl lmet lalt         @space           ralt rmet rctl
+  @lctl lmet lalt         @space           ralt rmet rctl
 )
 
-;; This layer is the standard QWERTY layout except for the
+;; This layer is the standard US-QWERTY layout except for the
 ;; backtick/grave key (@grl) which is an alias for a tap-hold key.
 ;; Additionally, tab is mapped to numtab, and capslock is maxtend.
 (deflayer qwerty
@@ -190,6 +190,7 @@ at the same time will cause kanata to exit:
   lctl lmet lalt           spc            ralt rmet rctl
 )
 
+;; A Colemak layer which maps Colemak typing to a US-QWERTY OS layout.
 (deflayer colemak
   @grl 1    2    3    4    5    6    7    8    9    0    -    =    bspc
   @nmt q    w    f    p    g    j    l    u    y    ;    [    ]    \
@@ -198,6 +199,10 @@ at the same time will cause kanata to exit:
   lctl lmet lalt           spc            ralt rmet rctl
 )
 
+;; A Colemak layer which maps Colemak typing to a US-QWERTY OS layout
+;; including home-row mods. Note that these home-row mods are slightly
+;; simpler than the ones configured for qwerty-hr. Currently, they 
+;; don't auto-disable during rapid typing.
 (deflayer colemak-hr
   @grl 1    2    3    4    5    6    7    8    9    0    -    =    bspc
   @nmt q    w    f    p    g    j    l    u    y    ;    [    ]    \
@@ -206,6 +211,9 @@ at the same time will cause kanata to exit:
   lctl lmet lalt         @space           ralt rmet rctl
 )
 
+;; A "reverse" Colemak layer which maps US-QWERTY typing to a Colemak OS
+;; layout. So, if you have configured your OS for Colemak, and a QWERTY
+;; typist wants to use your computer, switch to this layer.
 (deflayer colerevmak
   @grl 1    2    3    4    5    6    7    8    9    0    -    =    bspc
   @nmt q    w    k    s    f    o    i    l    ;    r    [    ]    \
@@ -350,6 +358,9 @@ at the same time will cause kanata to exit:
   space (fork @spacer spc (lctl rctl))        ;; ctl-spc does NOT toggle to spacer
                                               ;;         but sends C-spc
   kprsft (tap-hold-press $tt $ht kprt rsft)   ;; tap: keypad enter, hold: right shift
+
+  lctl (tap-dance-eager 250 (lctl (setmouse 25000 25000) lctl))
+                                              ;; double-tap on lctl repositions mouse
 
   ;; home-row mods (qwerty)
   hqa (tap-hold-release-keys $tt $htl (multi a @hr-tap) lalt $left-hand-keys)
@@ -543,7 +554,7 @@ at the same time will cause kanata to exit:
   ma← (movemouse-accel-left 1 1000 1 5)
   ma↓ (movemouse-accel-down 1 1000 1 5)
   ma→ (movemouse-accel-right 1 1000 1 5)
-r
+
   ;; setmouse places the cursor at a specific pixel x-y position. This
   ;; example puts it in the middle of the screen. The coordinates go from 0,0
   ;; which is the upper-left corner of the screen to 65535,65535 which is the
