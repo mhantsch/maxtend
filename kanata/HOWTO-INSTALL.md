@@ -19,7 +19,7 @@ sudo systemctl enable kanata
 # HOWTO install to autostart (Windows)
 
 1. Create an installation directory. We use `C:\Utilities`.
-2. Download `kanata_winIOv2.exe` and move it to `C:\Utilities`.
+2. Download `kanata_winIOv2.exe` or `kanata_gui.exe` (for tray icon support) and move it to `C:\Utilities`.
 3. Copy the configuration file to `C:\Utilities\colemax-maxtend.kbd`.
 4. Copy `kanata.bat` to `C:\Utilities`.
 5. Press `Win`+`R`, enter `shell:startup` and click `OK`.
@@ -30,3 +30,7 @@ sudo systemctl enable kanata
 When you login to your user account, Kanata will be run in a small terminal window. You will be able to monitor layer changes in this window.
 
 To test your setup & start Kanata immediately, double-click the shortcut.
+
+If you are running `kanata_gui.exe`, you'll see a tray icon. You can quit Kanata from the tray icon (right-click menu).
+
+You can also end either version of Kanata it by closing the terminal window, or typing `Ctrl`+`C` in the terminal window.
