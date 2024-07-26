@@ -21,9 +21,10 @@ sudo systemctl enable kanata
 1. Create an installation directory. We use `C:\Utilities`.
 2. Download `kanata_winIOv2.exe` or `kanata_gui.exe` (for tray icon support) and move it to `C:\Utilities`.
 3. Copy the configuration file to `C:\Utilities\colemax-maxtend.kbd`.
-4. Copy `kanata.bat` to `C:\Utilities`.
-5. Press `Win`+`R`, enter `shell:startup` and click `OK`.
-6. Create a shortcut to `C:\Utilities\kanata.bat` in this folder.
+4. If you are using `kanata_gui.exe` and you want tray icons per layer, copy the `icons` folder to `C:\Utilities\icons`
+5. Copy `kanata.bat` to `C:\Utilities`.
+6. Press `Win`+`R`, enter `shell:startup` and click `OK`.
+7. Create a shortcut to `C:\Utilities\kanata.bat` in this folder.
 
 ![Properties of Kanata Shortcut](../images/kanata-shortcut.png)
 
