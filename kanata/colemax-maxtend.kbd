@@ -1,9 +1,14 @@
 #|
-This is a kanata keyboard configuration file, run with the 
-"winIOv2" version of kanata:
+This is a kanata keyboard configuration file. Under Windows, run 
+with the "winIOv2" version of kanata:
 
     kanata_winIOv2.exe -c colemax-maxtend.kbd
 
+For tray icon support, run with the "gui" version and at minimum 
+version 1.7.0-prerelease-1:
+
+    kanata_gui.exe -c colemax-maxtend.kbd
+    
 A detailed configuration guide is found here:
 
     https://github.com/jtroo/kanata/blob/main/docs/config.adoc
@@ -149,6 +154,9 @@ at the same time will cause kanata to exit:
   ;; If you don't need to see the layer changes logged, turn it off here.
   ;;log-layer-changes no
   log-layer-changes yes
+
+  tray-icon "./icons"
+  icon-match-layer-name yes
 )
 
 ;; defsrc defines the keys that will be intercepted by kanata. The order of the
