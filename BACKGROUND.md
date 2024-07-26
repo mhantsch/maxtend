@@ -13,7 +13,7 @@ Re-learning to touch type when switching from QWERTY to Colemak is hard, and tak
 On the positive side, I now type faster than ever before on Qwerty, topping at 110 wpm on a good day, and consistently typing around 80-90 wpm. Plus, typing feels so much easier and more comfortable with Colemak.
 
 ### Will this work with Qwerty?
-The layouts are designed with Colemak in mind. However, most of the changes I added in additional layers could be done with other base layouts (such as Qwerty or Dvorak), too. You would have to adapt the keys in the AHK script. The UHK configuration will also be affected for some of the bindings.
+The layouts are designed with Colemak in mind. However, most of the changes I added in additional layers could be done with other base layouts (such as Qwerty or Dvorak), too. You would have to adapt the keys in the AHK script. keyd and Kanata configs should be mostly unaffected. The UHK configuration will be affected for some of the bindings.
 
 ## The Goal
 * Typing on standard Colemak layout including international symbols (via AltGr combinations)
