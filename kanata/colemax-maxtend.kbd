@@ -140,6 +140,10 @@ at the same time will cause kanata to exit:
   ;;
   concurrent-tap-hold yes
 
+  ;; concurrent-tap-hold yes is also needed for chordsv2-experimental, and here
+  ;; we set the minimum time for it, too.
+  chords-v2-min-idle-experimental 50
+
   ;; This configuration makes the release of one-shot-press and of the tap in a tap-hold
   ;; by the defined number of milliseconds (approximate).
   ;; The default value is 5.
@@ -252,6 +256,31 @@ at the same time will cause kanata to exit:
   @mxt 1    2    3    4    5    6    7    8    9    0    S-=       ret
   lsft -    S-9  S-0  [    ]    S-[  S-]  ,    .    /    rsft
   lctl lmet lalt           spc            ralt rmet rctl
+)
+
+#|
+(deflayer plover
+  @grl 1    2    3    4    5    6    7    8    9    0    -    =    bspc
+  @nmt q    w    e    r    t    y    u    i    o    p    [    ]    \
+  @mxt a    s    d    f    g    h    j    k    l    ;    @mxa      ret
+  lsft z    x    c    v    b    n    m    ,    .    /    rsft
+  lctl lmet lalt           spc            ralt rmet rctl
+)
+|#
+
+(defchordsv2-experimental
+  (q w) esc 100 all-released (maxtend)
+  (, .) (macro bspc ,) 100 all-released (maxtend)
+  (. /) (macro bspc .) 100 all-released (maxtend)
+  (grv 1) (macro grv grv grv ret ret grv grv grv ret up up) 100 all-released (maxtend)
+#|
+  (f h) (macro f h k spc) 100 all-released (qwerty qwerty-hr colemak colemak-hr colerevmak maxtend numtab spacer)
+  (f j) (macro f h k j spc) 100 all-released (qwerty qwerty-hr colemak colemak-hr colerevmak maxtend numtab spacer)
+  (f o) (macro f h k o spc) 100 all-released (qwerty qwerty-hr colemak colemak-hr colerevmak maxtend numtab spacer)
+  (o i) (macro o ; i spc) 100 all-released (qwerty qwerty-hr colemak colemak-hr colerevmak maxtend numtab spacer)
+  (w l) (macro w l u u spc) 100 all-released (qwerty qwerty-hr colemak colemak-hr colerevmak maxtend numtab spacer)
+  (d h) (macro d h ; i u g) 100 all-released (qwerty qwerty-hr colemak colemak-hr colerevmak maxtend numtab spacer)
+|#
 )
 
 ;; defvar can be used to declare commonly-used values
