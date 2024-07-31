@@ -190,6 +190,15 @@ at the same time will cause kanata to exit:
   lsft z    x    c    v    b    n    m    ,    .    @hq/ rsft
   @lctl lmet lalt         @space           ralt rmet rctl
 )
+;; This is qwerty with home-row mods temporarily turned off.
+;; It will reactivate home-row mods after a space is typed.
+(deflayer qwerty-hr-off
+  @grl 1    2    3    4    5    6    7    8    9    0    -    =    bspc
+  @nmt q    w    e    r    t    y    u    i    o    p    [    ]    \
+  @mxt a    s    d    f    g    h    j    k    l    ;    @mxa      ret
+  lsft z    x    c    v    b    n    m    ,    .    /    rsft
+  lctl lmet lalt          @spacey            ralt rmet rctl
+)
 
 ;; This layer is the standard US-QWERTY layout except for the
 ;; backtick/grave key (@grl) which is an alias for a tap-hold key.
@@ -311,7 +320,7 @@ at the same time will cause kanata to exit:
 )
 
 (defvirtualkeys
-  activate-hrmods (layer-switch qwerty-hr)
+  activate-hrmods (layer-switch qwerty-hr)   ;; reactivate home-row mods
 )
 
 ;; defalias is used to declare a shortcut for a more complicated action to keep
@@ -339,7 +348,7 @@ at the same time will cause kanata to exit:
   ;; any one of them resolves as a tap. (The user seems to be typing fast.)
   hr-tap (
     multi 
-      (layer-switch qwerty)             ;; disable hr-mods
+      (layer-switch qwerty-hr-off)            ;; disable hr-mods temporarily
       (on-idle 30 tap-vkey activate-hrmods)  ;; reactivate hr-mods after idle timeout
   )
 
@@ -390,8 +399,16 @@ at the same time will cause kanata to exit:
     () (tap-hold-press 200 200 tab @numtab) break   ;; else it is numtab tap/hold
   )                                           ;; tap: tab, hold: numtab layer
 
-  spacer (tap-hold-release 200 200 spc (layer-toggle spacer))
-                                              ;; tap: space, hold: spacer layer
+  spacer (tap-hold-release 200 200 
+            spc
+            (layer-toggle spacer)
+          )                                   ;; tap: space, hold: spacer layer
+
+  spacey (multi
+            (on-press tap-vkey activate-hrmods)
+            spc
+         )                                    ;; re-activate hr-mods & send spc
+
   space (fork @spacer spc (lctl rctl))        ;; ctl-spc does NOT toggle to spacer
                                               ;;         but sends C-spc
   kprsft (tap-hold-press $tt $ht kprt rsft)   ;; tap: keypad enter, hold: right shift
