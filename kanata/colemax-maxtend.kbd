@@ -182,7 +182,8 @@ at the same time will cause kanata to exit:
 ;; 
 ;; This layer is the standard US-QWERTY layout including home-row mods, 
 ;; and a backtick/grave key (@grl) which is an alias for a tap-hold key.
-;; Additionally, tab is mapped to numtab, and capslock is maxtend.
+;; Additionally, tab is mapped to numtab, capslock is maxtend, and space
+;; triggers a special "numbers on the home row" layer.
 (deflayer qwerty-hr
   @grl 1    2    3    4    5    6    7    8    9    0    -    =    bspc
   @nmt q    w    e    r    t    y    u    i    o    p    [    ]    \
@@ -203,6 +204,7 @@ at the same time will cause kanata to exit:
 ;; This layer is the standard US-QWERTY layout except for the
 ;; backtick/grave key (@grl) which is an alias for a tap-hold key.
 ;; Additionally, tab is mapped to numtab, and capslock is maxtend.
+;; There are no home-row mods.
 (deflayer qwerty
   @grl 1    2    3    4    5    6    7    8    9    0    -    =    bspc
   @nmt q    w    e    r    t    y    u    i    o    p    [    ]    \
@@ -250,7 +252,7 @@ at the same time will cause kanata to exit:
   lsft C-z  C-x  C-c  C-v  b    n    m    ,    .    menu          rsft
   lctl lmet lalt           ret            ralt rmet rctl
 )
-
+`7
 (deflayer numtab
   esc  1    2    3    4    5    6    kp7  kp8  kp9  kp0  -    =    bspc
   tab  esc  @mw↑ XX   XX   XX   kp/  kp4  kp5  kp6  kp-  [    ]    \
