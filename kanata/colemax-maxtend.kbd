@@ -252,7 +252,7 @@ at the same time will cause kanata to exit:
   lsft C-z  C-x  C-c  C-v  b    n    m    ,    .    menu          rsft
   lctl lmet lalt           ret            ralt rmet rctl
 )
-`7
+
 (deflayer numtab
   esc  1    2    3    4    5    6    kp7  kp8  kp9  kp0  -    =    bspc
   tab  esc  @mw↑ XX   XX   XX   kp/  kp4  kp5  kp6  kp-  [    ]    \
@@ -402,17 +402,16 @@ at the same time will cause kanata to exit:
   )                                           ;; tap: tab, hold: numtab layer
 
   spacer (tap-hold-release 200 200 
-            spc
-            (layer-toggle spacer)
-          )                                   ;; tap: space, hold: spacer layer
-
-  spacey (multi
-            (on-press tap-vkey activate-hrmods)
-            spc
-         )                                    ;; re-activate hr-mods & send spc
-
+            spc                               ;; tap: space
+            (layer-toggle spacer)             ;; hold: spacer layer
+          )
   space (fork @spacer spc (lctl rctl))        ;; ctl-spc does NOT toggle to spacer
                                               ;;         but sends C-spc
+  spacey (multi
+            (on-press tap-vkey activate-hrmods)  ;; re-activate hr-mods
+            spc                                  ;; send spc
+         )
+
   kprsft (tap-hold-press $tt $ht kprt rsft)   ;; tap: keypad enter, hold: right shift
 
   lctl (tap-dance-eager 250 (lctl (setmouse 25000 25000) lctl))
