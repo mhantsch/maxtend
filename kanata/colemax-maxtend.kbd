@@ -4,7 +4,8 @@ with the "winIOv2" version of kanata:
 
     kanata_winIOv2.exe -c colemax-maxtend.kbd
 
-For tray icon support, run with the "gui" version and at minimum 
+For tray icon support, uncomment the configuration lines below
+(search for "TRAY-GUI"), then run the "gui" version with at least 
 version 1.7.0-prerelease-1:
 
     kanata_gui.exe -c colemax-maxtend.kbd
@@ -159,15 +160,10 @@ at the same time will cause kanata to exit:
   ;;log-layer-changes no
   log-layer-changes yes
 
+  ;; TRAY-GUI: If you want tray icons on Windows, use the kanata_gui.exe
+  ;; and uncomment the next two lines.
   ;;tray-icon "./icons"
   ;;icon-match-layer-name yes
-)
-
-(platform (win winiov2 wintercept)
-  (defcfg
-    tray-icon "./icons"
-    icon-match-layer-name yes
-  )
 )
 
 ;; defsrc defines the keys that will be intercepted by kanata. The order of the

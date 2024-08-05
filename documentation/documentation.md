@@ -44,7 +44,7 @@ The base layer has three layer-switching keys. When held down and pressed togeth
 - holding `NumTab` (Tab) will activate the Number layer
 - holding `AltGr` (right Alt) will activate the AltGr layer 
 
-_Note:_ `AltGr` comes with the Colemak keymap (configured in the OS keyboard layout). `Maxtend` and `NumTab` are enabled through the AHK, keyd, xkb or UHK configuration.
+_Note:_ `AltGr` comes with the Colemak keymap (configured in the OS keyboard layout). `Maxtend` and `NumTab` are enabled through the AHK, kanata, keyd, xkb or UHK configuration.
 
 ### AltGr layer
 
