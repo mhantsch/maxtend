@@ -1,24 +1,32 @@
+# Background
+
 ## Intro
+
 Some years ago, I decided to switch my keyboard layout to [Colemak](https://colemak.org), and re-learn my typing. I was decent at touch-typing qwerty, but I decided my typing experience could be better. Thus, the rabbit hole of keyboard layouts, mechanical keyboards, and keyboard layers. I also switched to ten-key-less (TKL) and 60% keyboards, adding the need for layers (navigation, numpad).
 
 This repository contains various configurations and tooling that I have used to create my setup for both Windows and Linux, and also my configuration for the [Ultimate Hacking Keyboard](https://ultimatehackingkeyboard.com).
 
 ### Credits & Inspiration
+
 - [The inventor of Colemak, shai coleman](https://colemak.com).
 - [DreymaR and his Big Bag of Keyboard Tricks](https://dreymar.colemak.org/).
 
 ### Notes from my journey
-Re-learning to touch type when switching from QWERTY to Colemak is hard, and takes some time. I used Tarmak layouts (https://forum.colemak.com/topic/1858-learn-colemak-in-steps-with-the-tarmak-layouts/) to take me through the learning process, and practiced a lot at home in the evenings. Through a few weeks, I gained sufficient proficiency to continue to work in Colemak only. I changed all my computers (home and work) as well as my Android phone and tablet to Colemak.
+
+Re-learning to touch type when switching from QWERTY to Colemak is hard, and takes some time. I used Tarmak layouts (see [Colemak forum: Learn Colemak in steps with the Tarmak layouts](https://forum.colemak.com/topic/1858-learn-colemak-in-steps-with-the-tarmak-layouts/)) to take me through the learning process, and practiced a lot at home in the evenings. Through a few weeks, I gained sufficient proficiency to continue to work in Colemak only. I changed all my computers (home and work) as well as my Android phone and tablet to Colemak.
 
 On the positive side, I now type faster than ever before on Qwerty, topping at 110 wpm on a good day, and consistently typing around 80-90 wpm. Plus, typing feels so much easier and more comfortable with Colemak.
 
 ### Will this work with Qwerty?
+
 The layouts are designed with Colemak in mind. However, most of the changes I added in additional layers could be done with other base layouts (such as Qwerty or Dvorak), too. You would have to adapt the keys in the AHK script. keyd and Kanata configs should be mostly unaffected. The UHK configuration will be affected for some of the bindings.
 
 ## The Goal
-* Typing on standard Colemak layout including international symbols (via AltGr combinations)
-* An extend layer (called *`maxtend`*) closely resembling DreymaR's *`extend`* layer
-* Easy installation and as much as possible identical functionality across
+
+- Typing on standard Colemak layout including international symbols (via AltGr combinations)
+- An extend layer (called *`maxtend`*) closely resembling DreymaR's *`extend`* layer
+
+- Easy installation and as much as possible identical functionality across
   - Windows (without or with installation of additional tools)
   - Linux (without or with installation of additional tools)
   - Other computers which do not or cannot have additional tools installed (using an external programmable keyboard)
@@ -28,7 +36,9 @@ These setups need to be compatible with each other, i.e. a machine already setup
 Why this flexibility? Imagine you are used to a specific keyboard layout including extended functionality. You work on several computers, sometimes on Windows, sometimes on Linux, sometimes on an external keyboard, and sometimes on the internal keyboard of a laptop. You will want that layout to be identical across all these setups. On computers where your layout and your extended layers are installed, you can work without an external keyboard, but it will not hurt to also use one. On computers where your setup has not been installed, the external keyboard will give you the full functionality.
 
 ## Staged Setup
+
 The configuration is setup in three stages:
+
 1. base OS setup - giving a standard Colemak layout without extended functionality
 2. maxtend layer - giving extended functionality such as navigation, mouse scrolling etc.
 3. external keyboard - giving extended functionality even if your host computer does not have `maxtend` installed
@@ -36,12 +46,15 @@ The configuration is setup in three stages:
 These stages can work independently, but also combine on top of each other for best functionality.
 
 ### OS setup
+
 A Colemak layout. With this step, your keyboard will be colemak (including multilingual characters, but no other special layers). This is the base for the subsequent maps in AutoHotKey, xkb, keyd, and the UHK.
 
 #### Linux
+
 This is available out of the box in all distributions. Just select US Colemak as your layout.
 
 #### Windows
+
 This requires installation of an additional [Colemak keyboard layout](https://colemak.com/Windows). I recommend [a version that remaps Caps Lock to Backspace](https://forum.colemak.com/topic/1621-colemak-for-windows-with-capslock-to-backspace/).
 
 On Windows 10 or later, install the ‘en’ version, not the ‘co’ version. It will remap the CapsLock to backspace, and install a generic Colemak layout (including AltGr layer for multilingual characters). After installation, make sure you configure the Colemak keyboard in the Language options for your language, and then select it in the language toolbar.
@@ -55,41 +68,47 @@ This is the keymap you should now have:
 The right-hand side symbols show what the key will produce when pressed with AltGr.
 
 Note that this keymap also has several dead keys:
-* AltGr-r is ` – to give letters like à è ò etc.
-* AltGr-t is ´ – to give letters like á é ó etc.
-* AltGr-d is ¨ – to give letters such as ä ö ü ÿ etc.
-* AltGr-h is ˇ – to give letters such as ǎ ǔ č ť š ř etc.
-* AltGr-x is ^ – to give letters such as ĉ â û ŷ etc.
-* AltGr-b is ˘ – to give letters such as ă ŭ ĕ etc.
-* AltGr-k is ˚ – to give letters such as å ů ẙ etc.
-* AltGr-m is ¯ – to give letters such as ā ō ū ȳ ḡ etc.
-* AltGr-, is ¸ – to give letters such as ç ş ţ ģ ļ ŗ ḑ ḩ ņ ȩ ķ etc.
-* AltGr-\ is * – to give letters such as ¶ ™ © ® № µ etc.
 
-More information on multilingual support in the Colemak keymap: https://colemak.com/Multilingual
+- AltGr-r is ` – to give letters like à è ò etc.
+- AltGr-t is ´ – to give letters like á é ó etc.
+- AltGr-d is ¨ – to give letters such as ä ö ü ÿ etc.
+- AltGr-h is ˇ – to give letters such as ǎ ǔ č ť š ř etc.
+- AltGr-x is ^ – to give letters such as ĉ â û ŷ etc.
+- AltGr-b is ˘ – to give letters such as ă ŭ ĕ etc.
+- AltGr-k is ˚ – to give letters such as å ů ẙ etc.
+- AltGr-m is ¯ – to give letters such as ā ō ū ȳ ḡ etc.
+- AltGr-, is ¸ – to give letters such as ç ş ţ ģ ļ ŗ ḑ ḩ ņ ȩ ķ etc.
+- AltGr-\ is * – to give letters such as ¶ ™ © ® № µ etc.
+
+More information on multilingual support in the Colemak keymap see [colemak.com/Multilingual](https://colemak.com/Multilingual)
 
 ### Maxtend Layer
 
 #### AutoHotKey keymap (Windows)
-Install AutoHotKey from https://autohotkey.com/download/. It’s free.
 
-Load the AutoHotKey script from the [ahk/](ahk) folder; it will add the `maxtend` layer (called FUNCTION layer) and a NUMPAD. Please note that the FUNCTION layer is very similar to DreymaR’s “Extend” layer from https://forum.colemak.com/topic/2014-extend-extra-extreme/ with only a few twists.
+Install AutoHotKey from <https://autohotkey.com/download/>. It’s free.
+
+Load the AutoHotKey script from the [ahk/](ahk) folder; it will add the `maxtend` layer (called FUNCTION layer) and a NUMPAD. Please note that the FUNCTION layer is very similar to DreymaR’s “Extend” layer from <https://forum.colemak.com/topic/2014-extend-extra-extreme/> with only a few twists.
 
 The script is designed to work on a colemak base layout (as configured in the previous step).
 
 After activation of the AutoHotKey script, you have the colemak layout from the base keyboard plus the FUNCTION layer and the NUMPAD. This will work independent of your physical (hardware) keyboard; so for example, it works on the built-in keyboard on my Windows laptop, or any external keyboard.
 
 #### xkb (Linux)
+
 This is my first variant for Linux, similar to DreymaR's `extend` xkb configuration with some improvements. Unfortunately, xkb is really not good at user-level extensions, so you will have to modify system files. I do not recommend this variant; it has been superceded by keyd.
 
 #### keyd (Linux)
+
 This is the recommended variant for Linux.
 
 ### External Keyboard
+
 Gain the functionality of `maxtend` - and even more - without any of ahk, xkb, or keyd by typing on an external keyboard.
 
 #### Ultimate Hacking Keyboard
-The Ultimate Hacking Keyboard (UHK, see https://ultimatehackingkeyboard.com/) offers layers and configurability. I have modified the base keymaps that come with the UHK to resemble the layers from the AutoHotKey script. In addition, the UHK offers mouse control.
+
+The Ultimate Hacking Keyboard (UHK, see <https://ultimatehackingkeyboard.com/>) offers layers and configurability. I have modified the base keymaps that come with the UHK to resemble the layers from the AutoHotKey script. In addition, the UHK offers mouse control.
 
 Download the UHK configuration from the [uhk/](uhk) folder, import it into Agent, and save it to your UHK keyboard.
 
@@ -103,20 +122,19 @@ If you have neither AHK, keyd, xkb nor UHK, then at least you will still have a 
 
 MacOS, Linux, ChromeOS and Android all come with Colemak layouts that just need to be switched on. Only Microsoft Windows does not ship with a Colemak keymap, so it will need the installation of the OS base layer (see previous section).
 
-To emulate NUMPAD on the UHK, a slightly different approach than with AHK was chosen: 
+To emulate NUMPAD on the UHK, a slightly different approach than with AHK was chosen:
 
 The Fn-ISO and Fn-/ keys on the UHK keymaps rotate through CMX, NMX, and NM2 keymaps. You can switch between those keymaps with Fn-ISO or Fn-/. The UHK display will show me which map is currently active. So, if you need to type a bunch of numbers, I just switch to NMX or NM2. (I haven’t figured out which one I like more, so for now, both are provided.)
 
 Also, the NMX and NM2 layers on the UHK add a “cursor pad” using the / (up), R-Alt (left), R-Win (down) and R-Control (right) keys.
 
-_Note:_ In later iterations of the UHK setup, this functionality was augmented by the `NumTab` key: A tap on Tab still functions as Tab, but holding down Tab activates the number pad (through an additional layer). Eventually, `NumTab` became my preference over NMX/NM2.
-
+*Note:* In later iterations of the UHK setup, this functionality was augmented by the `NumTab` key: A tap on Tab still functions as Tab, but holding down Tab activates the number pad (through an additional layer). Eventually, `NumTab` became my preference over NMX/NM2.
 
 ![image](https://github.com/mhantsch/maxtend/assets/591785/0445a8a2-d7b6-4227-ac7e-af582ac268ec)
 
 ![image](https://github.com/mhantsch/maxtend/assets/591785/dee35957-749c-4c02-81bb-beab7a133817)
 
-Please note that the Mod layer is very similar to DreymaR’s “Extend” layer from https://forum.colemak.com/topic/2014-extend-extra-extreme/ with only minor tweaks.
+Please note that the Mod layer is very similar to DreymaR’s “Extend” layer from <https://forum.colemak.com/topic/2014-extend-extra-extreme/> with only minor tweaks.
 
 ![image](https://github.com/mhantsch/maxtend/assets/591785/b5138ec6-4ec1-4142-9814-d4d5f9cbccf3)
 

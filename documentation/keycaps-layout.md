@@ -1,12 +1,12 @@
 # Maxtend Keycaps Layout
 
-# (Work in Progress)
+_(Work in Progress)_
 
 ## Overview
 
 ![Overview of the layout of a maxtended keyboard.](../images/Maxtend-black.png)
 
-A set of keycaps have been designed to visualise the layers and functions of *Maxtend*.
+A set of keycaps have been designed to visualise the layers and functions of **Maxtend**.
 
 ### Key legends
 
@@ -44,7 +44,7 @@ Alphabet keys with a _purple_ number in this quadrant indicate the number produc
 
 Shown in _yellow_, this is the symbol produced on the _AltGr_ layer.
 
-For letter symbols, the upper-case version is produced when the key is typed together with `AltGr`+`Shift`+_key_ and the corresponding lower-case version can be produced with `AltGr`+_key_. For example, `AltGr`+`N` will produce `ñ`, and `AltGr`+`Shift`+`N` will produce `Ñ`.
+For letter symbols, the upper-case version is produced when the key is typed together with `AltGr`+`Shift`+_key_ and the corresponding lower-case version can be produced with `AltGr`+_key_. For example, `AltGr`+`N` will produce **ñ**, and `AltGr`+`Shift`+`N` will produce **Ñ**.
 
 Dead keys are indicated by a dashed circle (a symbolic placeholder for the letter that will be accented) and an accent mark above or below. For these keys, the dead key is activated with `AltGr`+_key_ (do not use `Shift`), and then followed by whatever letter shall be converted into the accented version. For example, `AltGr`+`H` (**ˇ**) followed by `C` will produce **č**.
 
@@ -57,7 +57,6 @@ Shown in _orange_, this is the _Maxtend_ function for this key. For example, `Ma
 _Note:_ `Maxtend`+`A`/`S`/`T` activate the Alt/Shift/conTrol modifiers, and their _orange_ symbols match the symbols printed on the Alt, Shift, and Control keys in the bottom row.
 
 Shown in _yellow_, this is the unshifted symbol produced on the _AltGr_ layer (only found in the number row).
-
 
 ### Base layer
 
@@ -85,7 +84,9 @@ Typing `;:` produces the semicolon **;** , and  `Shift`+`;:` produces the colon 
 
 On the number row, the bottom left shows the unshifted symbols (numbers), with the shifted symbol on the top left. Here is an image of the `1!` key:
 
-![key 1](../images/key-1.png) 
+| key | base | `AltGr` | `Maxtend` | `NumTab` |
+| --- | --- | --- | --- | --- |
+| ![key 1](../images/key-1.png) | `Shift`:<br/>symbol !<br/><br/>number 1 | `AltGr`+`Shift`:<br/>symbol ¹<br/><br/> `AltGr`:<br/>symbol ¡ | function key F1 | numpad 1 |
 
 Typing `1` produces the number **1**, whereas `Shift`+`1` produces the exclamation mark **!** .
 
@@ -115,4 +116,3 @@ When pressed together with `AltGr`+`FÃ`, it produces a lower-case **ã**. When 
 ### Number layer
 
 ![key NumTab](../images/key-numtab.png)
-
