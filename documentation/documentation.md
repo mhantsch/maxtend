@@ -101,6 +101,8 @@ On the top (number) row, you can reach Escape (`Maxtend`+`` `~ ``) and the funct
 
 **Escape:** It is difficult to press `Maxtend` and the top left `` `~ `` key at the same time. Most likely you have to move the left hand out of the home position. Therefore, Escape can also be found on `Maxtend`+`q` (reached using the pinky+ring fingers of the left hand.
 
+**Chordscape:** Escape can also be produced by pressing `q`+`w` together as a chord.
+
 **Navigation:** Directly in the home row position for your right hand you find cursor up/down/left/right. Other navigation and editing controls (home, end, backspace, delete, insert, page up, page down) are placed closely around this position.
 
 |  `6`  |  `7`  |  `8`  |  `9`  |  `0` | |
@@ -274,6 +276,24 @@ Activation of the different functions of the `Numtab` key will be visualised on 
 
 [^maxtend_version]: depending on the version of *Maxtend*, the Number layer will be indicated as ***`NUM`*** or ***`123`*** on the LED display.
 
+As an alternative to this keypad layout, there are also Home Row Numbers accessible by holding right space.
+
+### Home Row Numbers (0-9)
+
+(UHK ***fn4*** layer)
+
+![UHK CMX fn4 layer](../images/UHK-CMX-fn4-numspace.png)
+
+Holding right Space activates the Home Row Numbers. The UHK display will show ***`0-9`***, and numbers and symbols will be available on easily reachable positions on the home row as well as above and below.
+
+### Home Row Function Keys (F12)
+
+(UHK ***fn2*** layer)
+
+![UHK CMX fn2 layer (fkeys)](../images/UHK-CMX-fn2-fkeys.png)
+
+Similar to the Home Row Numbers, the layer allows easy access to Function Keys F1-F12. This layer is activated by pressing `Fn` and right Space together (almost) simultaneously. While active, the UHK display will show ***`F12`***.
+
 ### Mouse layer (MSE)
 
 (UHK ***mouse*__ layer)
@@ -293,7 +313,11 @@ The `W`,`F`,`P` and `G` keys (Colemak positions) become tab control in a Browser
 - `Mouse`+`P` sends Control-PgDn, activating the next tab.
 - `Mouse`+`G` sends Control-T, opening a new tab.
 
-*Memorisation help:* `Maxtend`+`F`/`P` is back/forward through browser history, `Mouse`+`F`/`P` is back/forward through browser tabs, `Fn`+`F`/`P` is back/forward through whatever the OS or application defines for "history back"/"history forward".
+*Memorisation help:*
+
+- `Maxtend`+`F`/`P` is back/forward through browser history,
+- `Mouse`+`F`/`P` is back/forward through browser tabs,
+- `Fn`+`F`/`P` is back/forward through history <br/>(whatever the OS or application defines for "history back"/"history forward").
 
 ### Media layer
 
@@ -312,8 +336,6 @@ Similar to the cursor positions on *Maxtend* and mouse navigation on *Mouse* lay
 - `fn`+`L`: play/pause
 - `fn`+`,<`: mute/unmute speaker
 - `fn`+`M`: mute/unmute microphone (at least in MS Teams, see *mute-unmute* macro)
-
-***\*\*TODO\*\**** clearStatus / printStatus, remove "Goto UHK site", "NM2"
 
 #### AltGr and Alt compatibility
 
@@ -345,19 +367,39 @@ You can still type the full range of AltGr symbols via the regular `AltGr` key.
 
 (UHK ***fn2*** layer) *(Experimental)*
 
+*Note:* this layer was removed from the sample configuration. It's documentation remains here for now.
+
 ![UHK CMX fn2 layer](../images/UHK-CMX-fn2.png)
 
 Holding the left thumb button of the UHK key cluster mirrors the right hand side to the left side. With this you can write text using only your left hand.
 
+### Home Row Mods (CM2/CM3)
+
+(UHK ***CM2*** and ***CM3*** keymaps) *(Experimental)*
+
+Two experimental keymaps implement home-row mods, where the `Alt`, `Win/GUI`,`Shift` and `Control` modifiers are mapped as secondary function on keys in the home row.S
+
+![UHK CM2 base layer](../images/UHK-CM2-base.png)
+
+![UHK CM3 base layer](../images/UHK-CM3-base.png)
+
+This is highly experimental; using home-row mods can cause spurious incorrect activation or non-activation of the modifiers during typing. A satisfactory use of home-row mods depends a lot on personal typing style, as the behaviour is very sensitive to timing (overlapping keystrokes during finger rolls etc.). Use with caution.
+
 ### Additional features
 
-CapsLock on ISO: On the UHK, `Maxtend`+`ISO` (the ISO key sitting between the left `Shift` and `z` keys) can be used to send an actual CapsLock from the UHK. However, with AHK in place (Windows), or keyd (Linux), this will just trigger the corresponding layer on AHK/keyd. The net effect is that it functions the same as just using `Maxtend` (Mod,CapsLock). (It can be used to test the AHK/keyd configuration, though, without the UHK logic interfering.)
+### CapsLock on ISO
+
+On the UHK, `Maxtend`+`ISO` (the ISO key sitting between the left `Shift` and `z` keys) can be used to send an actual CapsLock from the UHK. However, with AHK in place (Windows), or keyd (Linux), this will just trigger the corresponding layer on AHK/keyd. The net effect is that it functions the same as just using `Maxtend` (Mod,CapsLock). (It can be used to test the AHK/keyd configuration, though, without the UHK logic interfering.)
+
+### One-handed cursor navigation
 
 For cursor control using only the right hand, Mod (the Maxtend layer) is also available on the right case button, and it's a secondary function on the `'"` key. The layer can also be locked on the UHK by double-tapping the right case button.
 
+### Additional mouse button
+
 The left case button (in front of left Space) functions as an additional left mouse button. This is useful if you do not have a key cluster module connected (which has mouse buttons), but use a mouse module (e.g. trackpad) on the right side. You can use the left case button to click items while steering the mouse pointer with the right module.
 
-#### `Maxtend`, extended, visualised
+#### `Maxtend`, extended & visualised
 
 - A short tap on `Maxtend` produces Backspace, and the LCD display will briefly show ***`<--`***.
 - `Shift`+`Maxtend` also produces Backspace, but with autorepeat (same as `Maxtend`+`o`), and the LCD display will show ***`<--`*** as long as the keys are held down.
@@ -365,6 +407,10 @@ The left case button (in front of left Space) functions as an additional left mo
 - `Alt`+`Maxtend` (or `AltGr`+`Maxtend`) produces Delete, also with autorepeat (same as `Maxtend`+`;:`), and the LCD display will show ***`DEL`***.
 - `Fn`+`Maxtend` also produces Delete, also with autorepeat (same as `Maxtend`+`;:`), and the LCD display will show ***`DEL`***.
 - holding `Maxtend` will activet the *Maxtend* layer, and the LCD display will show ***`MAX`***
+
+#### Chordscape
+
+Pressing `Q`+`W` together (as a chord) produces Escape.
 
 #### Keepalive
 
