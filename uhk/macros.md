@@ -5,6 +5,9 @@ Config is for UHK userConfig v7.1.0
 clearStatus
 setVar count 0
 setVar unpause 0
+setVar snap_running 0
+// set emergencyKey $keyId.0
+set keystrokeDelay 10
 set backlight.strategy constantRgb
 set backlight.constantRgb.rgb 64 64 64
 set leds.fadeTimeout 300
@@ -22,7 +25,6 @@ set secondaryRole.advanced.triggerByRelease 1
 // positive values for savetyMargin favour primary role, negative favour secondary role
 set secondaryRole.advanced.safetyMargin +5
 setLedTxt 300 ':::'
-
 ```
 
 **$onKeymapChange ---:**
@@ -51,7 +53,7 @@ call keepAlive
 ```
 setVar unpause 2
 setLedTxt 10 CM2
-replaceLayer mod CMX mod
+// replaceLayer mod CMX mod
 replaceLayer mouse CMX mouse
 replaceLayer fn CMX fn
 replaceLayer fn2 CMX fn2
@@ -88,7 +90,25 @@ set secondaryRole.advanced.timeout 350
 set secondaryRole.advanced.timeoutAction secondary
 set secondaryRole.advanced.triggerByRelease 1
 // positive values for safetyMargin favour primary role, negative favour secondary role
-set secondaryRole.advanced.safetyMargin +10
+set secondaryRole.advanced.safetyMargin 0
+set backlight.keyRgb.base.128 128 128 128
+set backlight.keyRgb.base.129 128 128 128
+set backlight.keyRgb.base.130 128 128 128
+set backlight.keyRgb.mod.128 0 128 0
+set backlight.keyRgb.mod.129 0 128 0
+set backlight.keyRgb.mod.130 0 128 0
+set backlight.keyRgb.mouse.128 0 0 0
+set backlight.keyRgb.mouse.129 0 128 128
+set backlight.keyRgb.mouse.130 0 128 128
+set backlight.keyRgb.fn.128 255 64 32
+set backlight.keyRgb.fn.129 255 64 32
+set backlight.keyRgb.fn.130 255 64 32
+set backlight.keyRgb.fn3.128 128 128 128
+set backlight.keyRgb.fn3.129 0 0 0
+set backlight.keyRgb.fn3.130 0 0 0
+set backlight.keyRgb.fn5.128 128 128 128
+set backlight.keyRgb.fn5.129 0 0 0
+set backlight.keyRgb.fn5.130 0 0 0
 ```
 
 **$onKeymapChange CMX:**
@@ -137,6 +157,36 @@ ifKeymap CMX setLedTxt 200 "CMX"
 
 ```
 
+**atquote:**
+```
+ifGesture timeoutIn 250 $thisKeyId final tapKey S-2
+ifSecondary advancedStrategy final holdLayer mod
+holdKey apostropheAndQuote
+
+```
+
+**chordscape:**
+```
+ifKeyActive $keyId.q {
+    ifShortcut timeoutIn 100 $keyId.w final holdKey escape
+    else final holdKey q
+}
+ifKeyActive $keyId.w {
+    ifShortcut timeoutIn 100 $keyId.q final holdKey escape
+    else final holdKey w
+}
+
+```
+
+**chordscape-2:**
+```
+ifShortcut timeoutIn 100 $keyId.q final holdKey escape
+ifShortcut timeoutIn 100 $keyId.w final holdKey escape
+// activateKeyPostponed atLayer fn2 $thisKeyId
+if ($thisKeyId == $keyId.q) final holdKey q
+if ($thisKeyId == $keyId.w) final holdKey w
+```
+
 **clearStatus:**
 ```
 clearStatus
@@ -152,9 +202,24 @@ repeatFor count loop
 ifLayer fn5 final setLedTxt 0 "NUM"
 ```
 
+**diagnose:**
+```
+diagnose
+stopAllMacros
+```
+
 **fn:**
 ```
+ifShortcut timeoutIn 50 $keyId.rightSpace exec fn2-fkeys
 holdLayer fn
+```
+
+**fn2-fkeys:**
+```
+setLedTxt 0 F12
+holdLayer fn2
+ifLayer fn4 final setLedTxt 0 '0-9'
+setLedTxt 1 F12
 ```
 
 **initCM2:**
@@ -244,8 +309,28 @@ setLedTxt 200 "|_|"
 
 ```
 
+**keytest:**
+```
+setLedTxt 0 'KEY'
+ifGesture timeoutIn 200 $thisKeyId final setLedTxt 999 'GST'
+ifDoubletap final setLedTxt 999 'DBL'
+delayUntilReleaseMax 500
+ifInterrupted final setLedTxt 999 '2ND'
+ifPlaytime 450 final setLedTxt 999 'HLD'
+setLedTxt 999 'TAP'
+#tapKey backslashAndPipe
+#write Sheet #1
+#tapKey enter
+#write Sheet \1
+#tapKey enter
+#write Dhkkf \\1
+#tapKey enter
+
+```
+
 **maxtend:**
 ```
+ifDoubletap goTo doubleMaxtend
 ifLayer fn goTo altMaxtend
 ifShift goTo shiftMaxtend
 ifAlt goTo altMaxtend
@@ -264,6 +349,8 @@ ifLayer fn5 final setLedTxt 0 "NUM"
 setLedTxt 1 "MAX"
 break
 
+doubleMaxtend:
+fork maxtend_showbackspace
 shiftMaxtend:
 setLedTxt 0 "<--"
 suppressMods holdKey backspace
@@ -281,15 +368,16 @@ setLedTxt 1 "DEL"
 break
 ```
 
-**mirror:**
+**maxtend_showbackspace:**
 ```
-setLedTxt 0 XMC
-holdLayer fn2
-setLedTxt 1 XMC
+setLedTxt 450 "<--"
+ifReleased break
+setLedTxt 0 "<<-"
 ```
 
 **mousetend:**
 ```
+ifDoubletap final holdKey space
 ifSecondary goTo secondaryaction
 primaryaction: final tapKey space
 secondaryaction: 
@@ -304,11 +392,11 @@ ifLayer fn5 final setLedTxt 0 "NUM"
 
 **mute-unmute:**
 ```
-ifSecondary final holdKey LC-space
-tapKey LCLS-m
+ifSecondary final suppressMods holdKey LC-space
+suppressMods tapKey LCLS-m
 ifNotShift break
-delayUntil 300
-tapKey LCLS-semicolonAndColon
+delayUntil 600
+suppressMods tapKey LCLS-semicolonAndColon
 ```
 
 **nextKeyID:**
@@ -318,9 +406,10 @@ resolveNextKeyId
 
 **numspace:**
 ```
+#ifDoubletap final holdKey space
 ifSecondary goTo secondaryaction
-primaryaction: final tapKey space
-secondaryaction: 
+primaryaction: final holdKey space
+secondaryaction:
 setLedTxt 0 '0-9'
 holdLayer fn4
 ifLayer fn5 final setLedTxt 0 "NUM"
@@ -330,6 +419,7 @@ setLedTxt 1 '0-9'
 
 **numtab:**
 ```
+ifDoubletap final holdKey tab
 ifAlt final holdKey tab
 ifSecondary advancedStrategy goTo secondaryaction
 
@@ -362,6 +452,7 @@ holdKey tab
 setLedTxt 500 "|<-"
 ifLayer fn5 final setLedTxt 0 "NUM"
 break
+
 ```
 
 **numtab3:**
@@ -411,5 +502,77 @@ switchKeymap CM2
 **printstatus:**
 ```
 printStatus
+```
+
+**snap-leftright:**
+```
+if ($thisKeyId == $keyId.j) setVar snap_mode 1
+else if ($thisKeyId == $keyId.l) setVar snap_mode 2
+else setVar snap_mode 0
+if ($snap_running == 0) fork snap-leftright-worker
+delayUntilRelease
+ifKeyActive $keyId.j final setVar snap_mode 1
+ifKeyActive $keyId.l final setVar snap_mode 2
+setVar snap_mode 0
+```
+
+**snap-leftright-worker:**
+```
+setVar snap_running 1
+setVar snap_state 0
+setLedTxt 0 '<->'
+// snap_state: current state of left/right movement
+// snap_mode: target state of left/right movement
+// The worker will send key press/release actions to move
+// the current state to the target state.
+loop:
+if ($snap_state == 0) {
+    if ($snap_mode == 1) {
+        releaseKey right
+        pressKey left
+    }
+    else if ($snap_mode == 2) {
+        releaseKey left
+        pressKey right
+    }
+}
+else if ($snap_state == 1) {
+    if ($snap_mode == 0) {
+        releaseKey left
+        releaseKey right
+    }
+    else if ($snap_mode == 2) {
+        releaseKey left
+        pressKey right
+    }
+}
+else if ($snap_state == 2) {
+    if ($snap_mode == 0) {
+        releaseKey right
+        releaseKey left
+    }
+    else if ($snap_mode == 1) {
+        releaseKey right
+        pressKey left
+    }
+}
+setVar snap_state $snap_mode
+if ($snap_mode != 0) goTo loop
+ifNotPlaytime 5000 goTo loop
+setVar snap_running 0
+setLedTxt 1 '<->'
+
+```
+
+**spacetapper:**
+```
+setLedTxt 500 'SPC'
+loop:
+delayUntil 4000
+ifInterrupted final setLedTxt 1500 'OFF'
+tapKey space
+setLedTxt 1000 'SPC'
+goTo loop
+
 ```
 

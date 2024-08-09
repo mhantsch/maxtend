@@ -2,7 +2,7 @@
   "userConfigMajorVersion": 7,
   "userConfigMinorVersion": 1,
   "userConfigPatchVersion": 0,
-  "deviceName": "UHK maxtend",
+  "deviceName": "UHK v1 FRQ",
   "doubleTapSwitchLayerTimeout": 250,
   "iconsAndLayerTextsBrightness": 253,
   "alphanumericSegmentsBrightness": 255,
@@ -326,7 +326,7 @@
                 },
                 {
                   "keyActionType": "playMacro",
-                  "macroIndex": 34
+                  "macroIndex": 33
                 },
                 {
                   "keyActionType": "switchLayer",
@@ -395,7 +395,7 @@
                 },
                 {
                   "keyActionType": "playMacro",
-                  "macroIndex": 35
+                  "macroIndex": 34
                 },
                 {
                   "keyActionType": "playMacro",
@@ -826,7 +826,7 @@
                 },
                 {
                   "keyActionType": "playMacro",
-                  "macroIndex": 40
+                  "macroIndex": 39
                 },
                 {
                   "keyActionType": "none"
@@ -1001,7 +1001,7 @@
                 },
                 {
                   "keyActionType": "playMacro",
-                  "macroIndex": 33
+                  "macroIndex": 32
                 },
                 {
                   "keyActionType": "playMacro",
@@ -1036,7 +1036,7 @@
                 },
                 {
                   "keyActionType": "playMacro",
-                  "macroIndex": 41
+                  "macroIndex": 40
                 },
                 {
                   "keyActionType": "playMacro",
@@ -1138,7 +1138,7 @@
                 },
                 {
                   "keyActionType": "playMacro",
-                  "macroIndex": 51
+                  "macroIndex": 48
                 }
               ]
             },
@@ -1266,7 +1266,7 @@
                 },
                 {
                   "keyActionType": "playMacro",
-                  "macroIndex": 39
+                  "macroIndex": 38
                 },
                 {
                   "keyActionType": "switchKeymap",
@@ -1319,8 +1319,7 @@
               "id": 2,
               "keyActions": [
                 {
-                  "keyActionType": "playMacro",
-                  "macroIndex": 32
+                  "keyActionType": "none"
                 },
                 {
                   "keyActionType": "keystroke",
@@ -1329,7 +1328,7 @@
                 },
                 {
                   "keyActionType": "playMacro",
-                  "macroIndex": 46
+                  "macroIndex": 43
                 },
                 {
                   "keyActionType": "mouse",
@@ -1418,11 +1417,11 @@
                 },
                 {
                   "keyActionType": "playMacro",
-                  "macroIndex": 49
+                  "macroIndex": 46
                 },
                 {
                   "keyActionType": "playMacro",
-                  "macroIndex": 50
+                  "macroIndex": 47
                 },
                 {
                   "keyActionType": "none"
@@ -1934,7 +1933,7 @@
                 },
                 {
                   "keyActionType": "playMacro",
-                  "macroIndex": 35
+                  "macroIndex": 34
                 },
                 {
                   "keyActionType": "keystroke",
@@ -1946,11 +1945,11 @@
                 },
                 {
                   "keyActionType": "playMacro",
-                  "macroIndex": 47
+                  "macroIndex": 44
                 },
                 {
                   "keyActionType": "playMacro",
-                  "macroIndex": 48
+                  "macroIndex": 45
                 },
                 {
                   "keyActionType": "none"
@@ -2628,7 +2627,7 @@
                 },
                 {
                   "keyActionType": "playMacro",
-                  "macroIndex": 37
+                  "macroIndex": 36
                 },
                 {
                   "keyActionType": "keystroke",
@@ -2945,7 +2944,7 @@
                 },
                 {
                   "keyActionType": "playMacro",
-                  "macroIndex": 34
+                  "macroIndex": 33
                 },
                 {
                   "keyActionType": "none"
@@ -3420,7 +3419,7 @@
                 },
                 {
                   "keyActionType": "playMacro",
-                  "macroIndex": 35
+                  "macroIndex": 34
                 },
                 {
                   "keyActionType": "keystroke",
@@ -3569,7 +3568,7 @@
                 },
                 {
                   "keyActionType": "playMacro",
-                  "macroIndex": 38
+                  "macroIndex": 37
                 },
                 {
                   "keyActionType": "mouse",
@@ -3692,7 +3691,7 @@
                 },
                 {
                   "keyActionType": "playMacro",
-                  "macroIndex": 43
+                  "macroIndex": 41
                 },
                 {
                   "keyActionType": "keystroke",
@@ -3701,7 +3700,7 @@
                 },
                 {
                   "keyActionType": "playMacro",
-                  "macroIndex": 43
+                  "macroIndex": 41
                 },
                 {
                   "keyActionType": "keystroke",
@@ -3857,7 +3856,7 @@
                 },
                 {
                   "keyActionType": "playMacro",
-                  "macroIndex": 40
+                  "macroIndex": 39
                 },
                 {
                   "keyActionType": "none"
@@ -4175,7 +4174,7 @@
                 },
                 {
                   "keyActionType": "playMacro",
-                  "macroIndex": 34
+                  "macroIndex": 33
                 },
                 {
                   "keyActionType": "switchLayer",
@@ -4244,17 +4243,15 @@
                 },
                 {
                   "keyActionType": "playMacro",
-                  "macroIndex": 37
+                  "macroIndex": 36
                 },
                 {
-                  "keyActionType": "keystroke",
-                  "type": "basic",
-                  "scancode": 20
+                  "keyActionType": "playMacro",
+                  "macroIndex": 7
                 },
                 {
-                  "keyActionType": "keystroke",
-                  "type": "basic",
-                  "scancode": 26
+                  "keyActionType": "playMacro",
+                  "macroIndex": 7
                 },
                 {
                   "keyActionType": "keystroke",
@@ -4393,7 +4390,7 @@
                 },
                 {
                   "keyActionType": "playMacro",
-                  "macroIndex": 38
+                  "macroIndex": 37
                 },
                 {
                   "keyActionType": "mouse",
@@ -4683,7 +4680,7 @@
                 },
                 {
                   "keyActionType": "playMacro",
-                  "macroIndex": 40
+                  "macroIndex": 39
                 },
                 {
                   "keyActionType": "none"
@@ -6752,7 +6749,7 @@
                 },
                 {
                   "keyActionType": "playMacro",
-                  "macroIndex": 38
+                  "macroIndex": 37
                 },
                 {
                   "keyActionType": "mouse",
@@ -8128,7 +8125,7 @@
                 },
                 {
                   "keyActionType": "playMacro",
-                  "macroIndex": 35
+                  "macroIndex": 34
                 },
                 {
                   "keyActionType": "keystroke",
@@ -8565,7 +8562,7 @@
                 },
                 {
                   "keyActionType": "playMacro",
-                  "macroIndex": 40
+                  "macroIndex": 39
                 },
                 {
                   "keyActionType": "none"
@@ -8981,7 +8978,7 @@
                 },
                 {
                   "keyActionType": "playMacro",
-                  "macroIndex": 41
+                  "macroIndex": 40
                 },
                 {
                   "keyActionType": "keystroke",
@@ -9003,7 +9000,7 @@
                 },
                 {
                   "keyActionType": "playMacro",
-                  "macroIndex": 39
+                  "macroIndex": 38
                 },
                 {
                   "keyActionType": "switchKeymap",
@@ -9157,11 +9154,11 @@
                 },
                 {
                   "keyActionType": "playMacro",
-                  "macroIndex": 49
+                  "macroIndex": 46
                 },
                 {
                   "keyActionType": "playMacro",
-                  "macroIndex": 50
+                  "macroIndex": 47
                 },
                 {
                   "keyActionType": "none"
@@ -9476,7 +9473,7 @@
       "macroActions": [
         {
           "macroActionType": "command",
-          "command": "clearStatus\nsetVar count 0\nsetVar unpause 0\nsetVar snap_running 0\nset emergencyKey $keyId.0\nset keystrokeDelay 30\nset backlight.strategy constantRgb\nset backlight.constantRgb.rgb 64 64 64\nset leds.fadeTimeout 300\nset module.trackpoint.baseSpeed 0\nset module.trackpoint.speed 0.5\nset module.trackpoint.xceleration 2.0\nset module.touchpad.invertScrollDirectionX 1\nset module.touchpad.navigationMode.mouse caret\nset module.touchpad.holdContinuationTimeout 500\nset module.keycluster.navigationMode.mouse caret\nset secondaryRole.defaultStrategy advanced\nset secondaryRole.advanced.timeout 250\nset secondaryRole.advanced.timeoutAction secondary\nset secondaryRole.advanced.triggerByRelease 1\n// positive values for savetyMargin favour primary role, negative favour secondary role\nset secondaryRole.advanced.safetyMargin +5\nsetLedTxt 300 ':::'\n"
+          "command": "clearStatus\nsetVar count 0\nsetVar unpause 0\nsetVar snap_running 0\n// set emergencyKey $keyId.0\nset keystrokeDelay 10\nset backlight.strategy constantRgb\nset backlight.constantRgb.rgb 64 64 64\nset leds.fadeTimeout 300\nset module.trackpoint.baseSpeed 0\nset module.trackpoint.speed 0.5\nset module.trackpoint.xceleration 2.0\nset module.touchpad.invertScrollDirectionX 1\nset module.touchpad.navigationMode.mouse caret\nset module.touchpad.holdContinuationTimeout 500\nset module.keycluster.navigationMode.mouse caret\nset secondaryRole.defaultStrategy advanced\nset secondaryRole.advanced.timeout 250\nset secondaryRole.advanced.timeoutAction secondary\nset secondaryRole.advanced.triggerByRelease 1\n// positive values for savetyMargin favour primary role, negative favour secondary role\nset secondaryRole.advanced.safetyMargin +5\nsetLedTxt 300 ':::'"
         }
       ]
     },
@@ -9893,40 +9890,6 @@
     {
       "isLooped": false,
       "isPrivate": true,
-      "name": "mute-unmute (2)",
-      "macroActions": [
-        {
-          "macroActionType": "key",
-          "action": "tap",
-          "type": "basic",
-          "scancode": 16,
-          "modifierMask": 3
-        },
-        {
-          "macroActionType": "key",
-          "action": "press",
-          "modifierMask": 12
-        },
-        {
-          "macroActionType": "delay",
-          "delay": 100
-        },
-        {
-          "macroActionType": "key",
-          "action": "tap",
-          "type": "basic",
-          "scancode": 17
-        },
-        {
-          "macroActionType": "key",
-          "action": "release",
-          "modifierMask": 12
-        }
-      ]
-    },
-    {
-      "isLooped": false,
-      "isPrivate": true,
       "name": "nextKeyID",
       "macroActions": [
         {
@@ -10092,22 +10055,11 @@
     {
       "isLooped": false,
       "isPrivate": true,
-      "name": "snap-left",
-      "macroActions": [
-        {
-          "macroActionType": "command",
-          "command": "ifKeyActive $keyId.l setVar rightpressed 1\nelse setVar rightpressed 0\ndelayUntil 100\nreleaseKey right\ndelayUntil 100\nholdKey left\ndelayUntil 100\nif $rightpressed pressKey right\n"
-        }
-      ]
-    },
-    {
-      "isLooped": false,
-      "isPrivate": true,
       "name": "snap-leftright",
       "macroActions": [
         {
           "macroActionType": "command",
-          "command": "if ( $snap_running == 0 ) {\n    setVar snap_mode 0\n    fork snap-leftright-worker\n}\nif ($thisKeyId == $keyId.j) {\n    setVar snap_mode 1\n}\nelse if ($thisKeyId == $keyId.l) {\n    setVar snap_mode 2\n}\ndelayUntilRelease\nifNotKeyActive $keyId.j ifNotKeyActive $keyId.l final setVar snap_mode 0\nifKeyActive $keyId.j final setVar snap_mode 1\nifKeyActive $keyId.l final setVar snap_mode 2"
+          "command": "if ($thisKeyId == $keyId.j) setVar snap_mode 1\nelse if ($thisKeyId == $keyId.l) setVar snap_mode 2\nelse setVar snap_mode 0\nif ($snap_running == 0) fork snap-leftright-worker\ndelayUntilRelease\nifKeyActive $keyId.j final setVar snap_mode 1\nifKeyActive $keyId.l final setVar snap_mode 2\nsetVar snap_mode 0"
         }
       ]
     },
@@ -10118,18 +10070,7 @@
       "macroActions": [
         {
           "macroActionType": "command",
-          "command": "setVar snap_running 1\nsetVar snap_state 0\n// snap_state: current state of left/right movement\n// snap_mode: target state of left/right movement\n// The worker will send key press/release actions to move\n// the current state to the target state.\nloop:\nif ($snap_state == 0) {\n    if ($snap_mode == 1) {\n        releaseKey right\n        pressKey left\n    }\n    else if ($snap_mode == 2) {\n        releaseKey left\n        pressKey right\n    }\n}\nelse if ($snap_state == 1) {\n    if ($snap_mode == 0) {\n        releaseKey left\n        releaseKey right\n    }\n    else if ($snap_mode == 2) {\n        releaseKey left\n        pressKey right\n    }\n}\nelse if ($snap_state == 2) {\n    if ($snap_mode == 0) {\n        releaseKey right\n        releaseKey left\n    }\n    else if ($snap_mode == 1) {\n        releaseKey right\n        pressKey left\n    }\n}\nsetVar snap_state $snap_mode\ngoTo loop\n// ifNotPlaytime 10000 goTo loop // use this for debugging\n// setVar snap_running 0"
-        }
-      ]
-    },
-    {
-      "isLooped": false,
-      "isPrivate": true,
-      "name": "snap-right",
-      "macroActions": [
-        {
-          "macroActionType": "command",
-          "command": "ifKeyActive $keyId.j setVar leftpressed 1\nelse setVar leftpressed 0\ndelayUntil 100\nreleaseKey left\ndelayUntil 100\nholdKey right\ndelayUntil 100\nif $leftpressed pressKey left\n"
+          "command": "setVar snap_running 1\nsetVar snap_state 0\nsetLedTxt 0 '<->'\n// snap_state: current state of left/right movement\n// snap_mode: target state of left/right movement\n// The worker will send key press/release actions to move\n// the current state to the target state.\nloop:\nif ($snap_state == 0) {\n    if ($snap_mode == 1) {\n        releaseKey right\n        pressKey left\n    }\n    else if ($snap_mode == 2) {\n        releaseKey left\n        pressKey right\n    }\n}\nelse if ($snap_state == 1) {\n    if ($snap_mode == 0) {\n        releaseKey left\n        releaseKey right\n    }\n    else if ($snap_mode == 2) {\n        releaseKey left\n        pressKey right\n    }\n}\nelse if ($snap_state == 2) {\n    if ($snap_mode == 0) {\n        releaseKey right\n        releaseKey left\n    }\n    else if ($snap_mode == 1) {\n        releaseKey right\n        pressKey left\n    }\n}\nsetVar snap_state $snap_mode\nif ($snap_mode != 0) goTo loop\nifNotPlaytime 5000 goTo loop\nsetVar snap_running 0\nsetLedTxt 1 '<->'\n"
         }
       ]
     },
@@ -10255,7 +10196,7 @@
       "macroActions": [
         {
           "macroActionType": "command",
-          "command": "ifSecondary final suppressMods holdKey oRC-\nifShift {\n    suppressMods write ThisWouldBeThePwd\n\n}\nelse {\n    delayUntil 200\n    suppressMods tapKeySeq m y u s e r i d\n}\n"
+          "command": "ifSecondary final suppressMods holdKey oRC-\nifShift {\n    suppressMods write ThisIsMyPassword\n\n}\nelse {\n    delayUntil 200\n    suppressMods tapKeySeq m y u s e r i d\n}\n"
         }
       ]
     }
