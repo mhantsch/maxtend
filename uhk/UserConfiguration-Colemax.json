@@ -2,9 +2,9 @@
   "userConfigMajorVersion": 7,
   "userConfigMinorVersion": 1,
   "userConfigPatchVersion": 0,
-  "deviceName": "-",
+  "deviceName": "UHK maxtend",
   "doubleTapSwitchLayerTimeout": 250,
-  "iconsAndLayerTextsBrightness": 255,
+  "iconsAndLayerTextsBrightness": 253,
   "alphanumericSegmentsBrightness": 255,
   "keyBacklightBrightness": 255,
   "ledsFadeTimeout": 0,
@@ -172,7 +172,7 @@
       "isDefault": true,
       "abbreviation": "CMX",
       "name": "Colemax",
-      "description": "A special layout to be used with a base layer of Colemak configured on the PC.\nThis layout has some unique assignments of Mod, Fn, and Mouse layers to make it compatible with Max' AutoHotKey script Maxmax.ahk. Beware that on this layout, the Mod function is mapped to the Capslock position (Mouse key) as a secondary function. Primary is Backspace (normal for Colemak layouts).",
+      "description": "A special layout to be used with a base layer of Colemak configured on the PC.\nThis layout has some unique assignments of Mod, Fn, and Mouse layers to make it compatible with Max' AutoHotKey script Maxmax.ahk. Beware that on this layout, the Mod function is mapped to the Capslock position (Mouse key) as a secondary function. Primary is Backspace (normal for Colemak layouts).\n\n<div align=left><b>Layers:</b></div><table><tr><td>Base<td/><td>base<td/><td>us-qwerty (mapped to Colemak on the host OS)</td><td width=10%>|</td><td>Fn2<td/><td>fkeys<td/><td>function keys; experimental</td></tr><tr><td>Mod<td/><td>maxtend<td/><td>navigation, editing</td><td>|</td><td>Fn3<td/><td>numtab3<td/><td>low number pad</td></tr><tr><td>Mouse<td/><td>mouse<td/><td>mouse functionality</td><td>|</td><td>Fn4<td/><td>numspace<td/><td>numbers on home row, symbols above, parentheses below</td></tr><tr><td>Fn<td/><td>media<td/><td>media / volume control, AltGr-compatibility</td><td>|</td><td>Fn5<td/><td>numtab<td/><td>high number pad</td></tr></table>",
       "layers": [
         {
           "id": "base",
@@ -325,9 +325,8 @@
                   "keyActionType": "none"
                 },
                 {
-                  "keyActionType": "keystroke",
-                  "type": "basic",
-                  "scancode": 44
+                  "keyActionType": "playMacro",
+                  "macroIndex": 34
                 },
                 {
                   "keyActionType": "switchLayer",
@@ -335,9 +334,8 @@
                   "switchLayerMode": "holdAndDoubleTapToggle"
                 },
                 {
-                  "keyActionType": "switchLayer",
-                  "layer": "fn",
-                  "switchLayerMode": "holdAndDoubleTapToggle"
+                  "keyActionType": "playMacro",
+                  "macroIndex": 16
                 },
                 {
                   "keyActionType": "keystroke",
@@ -397,17 +395,15 @@
                 },
                 {
                   "keyActionType": "playMacro",
-                  "macroIndex": 30
+                  "macroIndex": 35
                 },
                 {
-                  "keyActionType": "keystroke",
-                  "type": "basic",
-                  "scancode": 20
+                  "keyActionType": "playMacro",
+                  "macroIndex": 7
                 },
                 {
-                  "keyActionType": "keystroke",
-                  "type": "basic",
-                  "scancode": 26
+                  "keyActionType": "playMacro",
+                  "macroIndex": 7
                 },
                 {
                   "keyActionType": "keystroke",
@@ -429,7 +425,7 @@
                 },
                 {
                   "keyActionType": "playMacro",
-                  "macroIndex": 19
+                  "macroIndex": 25
                 },
                 {
                   "keyActionType": "keystroke",
@@ -465,9 +461,8 @@
                   "modifierMask": 2
                 },
                 {
-                  "keyActionType": "keystroke",
-                  "type": "basic",
-                  "scancode": 100
+                  "keyActionType": "playMacro",
+                  "macroIndex": 23
                 },
                 {
                   "keyActionType": "keystroke",
@@ -520,7 +515,7 @@
                 },
                 {
                   "keyActionType": "playMacro",
-                  "macroIndex": 24
+                  "macroIndex": 30
                 },
                 {
                   "keyActionType": "none"
@@ -532,11 +527,11 @@
               "keyActions": [
                 {
                   "keyActionType": "playMacro",
-                  "macroIndex": 25
+                  "macroIndex": 31
                 },
                 {
                   "keyActionType": "playMacro",
-                  "macroIndex": 23
+                  "macroIndex": 17
                 },
                 {
                   "keyActionType": "switchLayer",
@@ -715,8 +710,8 @@
                 {
                   "keyActionType": "keystroke",
                   "type": "basic",
-                  "scancode": 87,
-                  "modifierMask": 4
+                  "scancode": 55,
+                  "modifierMask": 1
                 },
                 {
                   "keyActionType": "keystroke",
@@ -831,7 +826,7 @@
                 },
                 {
                   "keyActionType": "playMacro",
-                  "macroIndex": 35
+                  "macroIndex": 40
                 },
                 {
                   "keyActionType": "none"
@@ -1006,11 +1001,11 @@
                 },
                 {
                   "keyActionType": "playMacro",
-                  "macroIndex": 28
+                  "macroIndex": 33
                 },
                 {
                   "keyActionType": "playMacro",
-                  "macroIndex": 18
+                  "macroIndex": 24
                 },
                 {
                   "keyActionType": "keystroke",
@@ -1040,14 +1035,12 @@
                   "modifierMask": 64
                 },
                 {
-                  "keyActionType": "keystroke",
-                  "type": "basic",
-                  "scancode": 70
+                  "keyActionType": "playMacro",
+                  "macroIndex": 41
                 },
                 {
-                  "keyActionType": "keystroke",
-                  "type": "basic",
-                  "scancode": 71
+                  "keyActionType": "playMacro",
+                  "macroIndex": 9
                 },
                 {
                   "keyActionType": "keystroke",
@@ -1085,7 +1078,7 @@
                 },
                 {
                   "keyActionType": "playMacro",
-                  "macroIndex": 13
+                  "macroIndex": 18
                 },
                 {
                   "keyActionType": "keystroke",
@@ -1098,7 +1091,7 @@
                 },
                 {
                   "keyActionType": "playMacro",
-                  "macroIndex": 25
+                  "macroIndex": 31
                 },
                 {
                   "keyActionType": "keystroke",
@@ -1131,9 +1124,7 @@
                   "keyActionType": "none"
                 },
                 {
-                  "keyActionType": "switchLayer",
-                  "layer": "fn",
-                  "switchLayerMode": "holdAndDoubleTapToggle"
+                  "keyActionType": "none"
                 },
                 {
                   "keyActionType": "keystroke",
@@ -1147,7 +1138,7 @@
                 },
                 {
                   "keyActionType": "playMacro",
-                  "macroIndex": 41
+                  "macroIndex": 51
                 }
               ]
             },
@@ -1172,19 +1163,19 @@
                   "keyActionType": "keystroke",
                   "type": "basic",
                   "scancode": 33,
-                  "modifierMask": 65
+                  "modifierMask": 64
                 },
                 {
                   "keyActionType": "keystroke",
                   "type": "basic",
                   "scancode": 34,
-                  "modifierMask": 65
+                  "modifierMask": 64
                 },
                 {
                   "keyActionType": "keystroke",
                   "type": "basic",
                   "scancode": 35,
-                  "modifierMask": 65
+                  "modifierMask": 64
                 },
                 {
                   "keyActionType": "keystroke",
@@ -1215,12 +1206,11 @@
                   "keyActionType": "none"
                 },
                 {
-                  "keyActionType": "playMacro",
-                  "macroIndex": 6
+                  "keyActionType": "none"
                 },
                 {
                   "keyActionType": "playMacro",
-                  "macroIndex": 19
+                  "macroIndex": 25
                 },
                 {
                   "keyActionType": "keystroke",
@@ -1250,8 +1240,10 @@
                   "keyActionType": "none"
                 },
                 {
-                  "keyActionType": "playMacro",
-                  "macroIndex": 36
+                  "keyActionType": "keystroke",
+                  "type": "basic",
+                  "scancode": 10,
+                  "modifierMask": 64
                 },
                 {
                   "keyActionType": "keystroke",
@@ -1270,11 +1262,11 @@
                 },
                 {
                   "keyActionType": "playMacro",
-                  "macroIndex": 7
+                  "macroIndex": 10
                 },
                 {
                   "keyActionType": "playMacro",
-                  "macroIndex": 34
+                  "macroIndex": 39
                 },
                 {
                   "keyActionType": "switchKeymap",
@@ -1328,7 +1320,7 @@
               "keyActions": [
                 {
                   "keyActionType": "playMacro",
-                  "macroIndex": 26
+                  "macroIndex": 32
                 },
                 {
                   "keyActionType": "keystroke",
@@ -1336,9 +1328,8 @@
                   "scancode": 42
                 },
                 {
-                  "keyActionType": "keystroke",
-                  "type": "basic",
-                  "scancode": 40
+                  "keyActionType": "playMacro",
+                  "macroIndex": 46
                 },
                 {
                   "keyActionType": "mouse",
@@ -1427,11 +1418,11 @@
                 },
                 {
                   "keyActionType": "playMacro",
-                  "macroIndex": 39
+                  "macroIndex": 49
                 },
                 {
                   "keyActionType": "playMacro",
-                  "macroIndex": 40
+                  "macroIndex": 50
                 },
                 {
                   "keyActionType": "none"
@@ -1895,7 +1886,7 @@
                 },
                 {
                   "keyActionType": "playMacro",
-                  "macroIndex": 12
+                  "macroIndex": 16
                 },
                 {
                   "keyActionType": "keystroke",
@@ -1943,7 +1934,7 @@
                 },
                 {
                   "keyActionType": "playMacro",
-                  "macroIndex": 30
+                  "macroIndex": 35
                 },
                 {
                   "keyActionType": "keystroke",
@@ -1955,11 +1946,11 @@
                 },
                 {
                   "keyActionType": "playMacro",
-                  "macroIndex": 37
+                  "macroIndex": 47
                 },
                 {
                   "keyActionType": "playMacro",
-                  "macroIndex": 38
+                  "macroIndex": 48
                 },
                 {
                   "keyActionType": "none"
@@ -1969,7 +1960,7 @@
                 },
                 {
                   "keyActionType": "playMacro",
-                  "macroIndex": 19
+                  "macroIndex": 25
                 },
                 {
                   "keyActionType": "keystroke",
@@ -2050,14 +2041,14 @@
                 },
                 {
                   "keyActionType": "playMacro",
-                  "macroIndex": 12
+                  "macroIndex": 16
                 },
                 {
                   "keyActionType": "none"
                 },
                 {
                   "keyActionType": "playMacro",
-                  "macroIndex": 24
+                  "macroIndex": 30
                 }
               ]
             },
@@ -2161,7 +2152,39 @@
                   "keyActionType": "none"
                 },
                 {
+                  "keyActionType": "keystroke",
+                  "type": "basic",
+                  "scancode": 64,
+                  "secondaryRoleAction": "rightCtrl"
+                },
+                {
+                  "keyActionType": "keystroke",
+                  "type": "basic",
+                  "scancode": 65,
+                  "secondaryRoleAction": "rightShift"
+                },
+                {
+                  "keyActionType": "keystroke",
+                  "type": "basic",
+                  "scancode": 66,
+                  "secondaryRoleAction": "rightSuper"
+                },
+                {
+                  "keyActionType": "keystroke",
+                  "type": "basic",
+                  "scancode": 67,
+                  "secondaryRoleAction": "leftAlt"
+                },
+                {
                   "keyActionType": "none"
+                },
+                {
+                  "keyActionType": "none"
+                },
+                {
+                  "keyActionType": "keystroke",
+                  "type": "basic",
+                  "scancode": 63
                 },
                 {
                   "keyActionType": "none"
@@ -2176,7 +2199,15 @@
                   "keyActionType": "none"
                 },
                 {
-                  "keyActionType": "none"
+                  "keyActionType": "keystroke",
+                  "type": "basic",
+                  "scancode": 56,
+                  "secondaryRoleAction": "rightAlt"
+                },
+                {
+                  "keyActionType": "keystroke",
+                  "type": "basic",
+                  "modifierMask": 32
                 },
                 {
                   "keyActionType": "none"
@@ -2191,34 +2222,19 @@
                   "keyActionType": "none"
                 },
                 {
-                  "keyActionType": "none"
+                  "keyActionType": "keystroke",
+                  "type": "basic",
+                  "modifierMask": 64
                 },
                 {
-                  "keyActionType": "none"
+                  "keyActionType": "keystroke",
+                  "type": "basic",
+                  "modifierMask": 128
                 },
                 {
-                  "keyActionType": "none"
-                },
-                {
-                  "keyActionType": "none"
-                },
-                {
-                  "keyActionType": "none"
-                },
-                {
-                  "keyActionType": "none"
-                },
-                {
-                  "keyActionType": "none"
-                },
-                {
-                  "keyActionType": "none"
-                },
-                {
-                  "keyActionType": "none"
-                },
-                {
-                  "keyActionType": "none"
+                  "keyActionType": "keystroke",
+                  "type": "basic",
+                  "modifierMask": 16
                 }
               ]
             },
@@ -2254,22 +2270,24 @@
                 {
                   "keyActionType": "keystroke",
                   "type": "basic",
-                  "scancode": 19
+                  "scancode": 20
                 },
                 {
                   "keyActionType": "keystroke",
                   "type": "basic",
-                  "scancode": 18
+                  "scancode": 26
                 },
                 {
-                  "keyActionType": "keystroke",
-                  "type": "basic",
-                  "scancode": 12
+                  "keyActionType": "none"
                 },
                 {
-                  "keyActionType": "keystroke",
-                  "type": "basic",
-                  "scancode": 24
+                  "keyActionType": "none"
+                },
+                {
+                  "keyActionType": "none"
+                },
+                {
+                  "keyActionType": "none"
                 },
                 {
                   "keyActionType": "none"
@@ -2277,7 +2295,26 @@
                 {
                   "keyActionType": "keystroke",
                   "type": "basic",
-                  "scancode": 28
+                  "scancode": 58,
+                  "secondaryRoleAction": "leftAlt"
+                },
+                {
+                  "keyActionType": "keystroke",
+                  "type": "basic",
+                  "scancode": 59,
+                  "secondaryRoleAction": "leftSuper"
+                },
+                {
+                  "keyActionType": "keystroke",
+                  "type": "basic",
+                  "scancode": 60,
+                  "secondaryRoleAction": "leftShift"
+                },
+                {
+                  "keyActionType": "keystroke",
+                  "type": "basic",
+                  "scancode": 61,
+                  "secondaryRoleAction": "leftCtrl"
                 },
                 {
                   "keyActionType": "none"
@@ -2285,30 +2322,7 @@
                 {
                   "keyActionType": "keystroke",
                   "type": "basic",
-                  "scancode": 51
-                },
-                {
-                  "keyActionType": "keystroke",
-                  "type": "basic",
-                  "scancode": 15
-                },
-                {
-                  "keyActionType": "keystroke",
-                  "type": "basic",
-                  "scancode": 14
-                },
-                {
-                  "keyActionType": "keystroke",
-                  "type": "basic",
-                  "scancode": 13
-                },
-                {
-                  "keyActionType": "none"
-                },
-                {
-                  "keyActionType": "keystroke",
-                  "type": "basic",
-                  "scancode": 11
+                  "scancode": 62
                 },
                 {
                   "keyActionType": "keystroke",
@@ -2318,32 +2332,11 @@
                 {
                   "keyActionType": "keystroke",
                   "type": "basic",
-                  "modifierMask": 64
+                  "scancode": 45,
+                  "secondaryRoleAction": "rightAlt"
                 },
                 {
-                  "keyActionType": "keystroke",
-                  "type": "basic",
-                  "scancode": 56
-                },
-                {
-                  "keyActionType": "keystroke",
-                  "type": "basic",
-                  "scancode": 55
-                },
-                {
-                  "keyActionType": "keystroke",
-                  "type": "basic",
-                  "scancode": 54
-                },
-                {
-                  "keyActionType": "keystroke",
-                  "type": "basic",
-                  "scancode": 16
-                },
-                {
-                  "keyActionType": "keystroke",
-                  "type": "basic",
-                  "scancode": 17
+                  "keyActionType": "none"
                 },
                 {
                   "keyActionType": "none"
@@ -2354,7 +2347,27 @@
                 {
                   "keyActionType": "keystroke",
                   "type": "basic",
-                  "modifierMask": 64
+                  "scancode": 68
+                },
+                {
+                  "keyActionType": "keystroke",
+                  "type": "basic",
+                  "scancode": 69
+                },
+                {
+                  "keyActionType": "keystroke",
+                  "type": "basic",
+                  "modifierMask": 1
+                },
+                {
+                  "keyActionType": "keystroke",
+                  "type": "basic",
+                  "modifierMask": 8
+                },
+                {
+                  "keyActionType": "keystroke",
+                  "type": "basic",
+                  "modifierMask": 4
                 },
                 {
                   "keyActionType": "none"
@@ -2615,7 +2628,7 @@
                 },
                 {
                   "keyActionType": "playMacro",
-                  "macroIndex": 32
+                  "macroIndex": 37
                 },
                 {
                   "keyActionType": "keystroke",
@@ -2639,7 +2652,7 @@
                 },
                 {
                   "keyActionType": "playMacro",
-                  "macroIndex": 19
+                  "macroIndex": 25
                 },
                 {
                   "keyActionType": "keystroke",
@@ -2720,7 +2733,7 @@
                 },
                 {
                   "keyActionType": "playMacro",
-                  "macroIndex": 12
+                  "macroIndex": 16
                 },
                 {
                   "keyActionType": "none"
@@ -2840,18 +2853,18 @@
                 {
                   "keyActionType": "keystroke",
                   "type": "basic",
-                  "scancode": 47
+                  "scancode": 45
                 },
                 {
                   "keyActionType": "keystroke",
                   "type": "basic",
-                  "scancode": 48
-                },
-                {
-                  "keyActionType": "keystroke",
-                  "type": "basic",
-                  "scancode": 49,
+                  "scancode": 37,
                   "modifierMask": 2
+                },
+                {
+                  "keyActionType": "keystroke",
+                  "type": "basic",
+                  "scancode": 56
                 },
                 {
                   "keyActionType": "keystroke",
@@ -2862,26 +2875,22 @@
                 {
                   "keyActionType": "keystroke",
                   "type": "basic",
-                  "scancode": 36,
-                  "secondaryRoleAction": "rightCtrl"
+                  "scancode": 36
                 },
                 {
                   "keyActionType": "keystroke",
                   "type": "basic",
-                  "scancode": 37,
-                  "secondaryRoleAction": "rightShift"
+                  "scancode": 37
                 },
                 {
                   "keyActionType": "keystroke",
                   "type": "basic",
-                  "scancode": 38,
-                  "secondaryRoleAction": "rightSuper"
+                  "scancode": 38
                 },
                 {
                   "keyActionType": "keystroke",
                   "type": "basic",
-                  "scancode": 39,
-                  "secondaryRoleAction": "leftAlt"
+                  "scancode": 39
                 },
                 {
                   "keyActionType": "keystroke",
@@ -2902,14 +2911,13 @@
                 {
                   "keyActionType": "keystroke",
                   "type": "basic",
-                  "scancode": 47,
+                  "scancode": 19,
                   "modifierMask": 2
                 },
                 {
                   "keyActionType": "keystroke",
                   "type": "basic",
-                  "scancode": 48,
-                  "modifierMask": 2
+                  "scancode": 19
                 },
                 {
                   "keyActionType": "keystroke",
@@ -2924,14 +2932,12 @@
                 {
                   "keyActionType": "keystroke",
                   "type": "basic",
-                  "scancode": 56,
-                  "secondaryRoleAction": "rightAlt"
+                  "scancode": 56
                 },
                 {
                   "keyActionType": "keystroke",
                   "type": "basic",
-                  "scancode": 40,
-                  "modifierMask": 32,
+                  "scancode": 46,
                   "secondaryRoleAction": "rightShift"
                 },
                 {
@@ -2939,13 +2945,14 @@
                 },
                 {
                   "keyActionType": "playMacro",
-                  "macroIndex": 29
+                  "macroIndex": 34
                 },
                 {
                   "keyActionType": "none"
                 },
                 {
-                  "keyActionType": "none"
+                  "keyActionType": "playMacro",
+                  "macroIndex": 17
                 },
                 {
                   "keyActionType": "keystroke",
@@ -3031,31 +3038,27 @@
                 },
                 {
                   "keyActionType": "playMacro",
-                  "macroIndex": 19
+                  "macroIndex": 25
                 },
                 {
                   "keyActionType": "keystroke",
                   "type": "basic",
-                  "scancode": 30,
-                  "secondaryRoleAction": "leftAlt"
+                  "scancode": 30
                 },
                 {
                   "keyActionType": "keystroke",
                   "type": "basic",
-                  "scancode": 31,
-                  "secondaryRoleAction": "leftSuper"
+                  "scancode": 31
                 },
                 {
                   "keyActionType": "keystroke",
                   "type": "basic",
-                  "scancode": 32,
-                  "secondaryRoleAction": "leftShift"
+                  "scancode": 32
                 },
                 {
                   "keyActionType": "keystroke",
                   "type": "basic",
-                  "scancode": 33,
-                  "secondaryRoleAction": "leftCtrl"
+                  "scancode": 33
                 },
                 {
                   "keyActionType": "none"
@@ -3073,25 +3076,12 @@
                 {
                   "keyActionType": "keystroke",
                   "type": "basic",
-                  "scancode": 100,
-                  "secondaryRoleAction": "rightAlt"
+                  "scancode": 100
                 },
                 {
                   "keyActionType": "keystroke",
                   "type": "basic",
                   "scancode": 45
-                },
-                {
-                  "keyActionType": "keystroke",
-                  "type": "basic",
-                  "scancode": 38,
-                  "modifierMask": 2
-                },
-                {
-                  "keyActionType": "keystroke",
-                  "type": "basic",
-                  "scancode": 39,
-                  "modifierMask": 2
                 },
                 {
                   "keyActionType": "keystroke",
@@ -3102,6 +3092,18 @@
                   "keyActionType": "keystroke",
                   "type": "basic",
                   "scancode": 48
+                },
+                {
+                  "keyActionType": "keystroke",
+                  "type": "basic",
+                  "scancode": 47,
+                  "modifierMask": 2
+                },
+                {
+                  "keyActionType": "keystroke",
+                  "type": "basic",
+                  "scancode": 48,
+                  "modifierMask": 2
                 },
                 {
                   "keyActionType": "keystroke",
@@ -3119,7 +3121,8 @@
                   "modifierMask": 4
                 },
                 {
-                  "keyActionType": "none"
+                  "keyActionType": "playMacro",
+                  "macroIndex": 17
                 },
                 {
                   "keyActionType": "none"
@@ -3141,7 +3144,9 @@
                   "keyActionType": "none"
                 },
                 {
-                  "keyActionType": "none"
+                  "keyActionType": "keystroke",
+                  "type": "basic",
+                  "modifierMask": 2
                 },
                 {
                   "keyActionType": "none"
@@ -3355,7 +3360,7 @@
                 },
                 {
                   "keyActionType": "playMacro",
-                  "macroIndex": 12
+                  "macroIndex": 16
                 },
                 {
                   "keyActionType": "keystroke",
@@ -3415,7 +3420,7 @@
                 },
                 {
                   "keyActionType": "playMacro",
-                  "macroIndex": 30
+                  "macroIndex": 35
                 },
                 {
                   "keyActionType": "keystroke",
@@ -3447,7 +3452,7 @@
                 },
                 {
                   "keyActionType": "playMacro",
-                  "macroIndex": 19
+                  "macroIndex": 25
                 },
                 {
                   "keyActionType": "keystroke",
@@ -3536,7 +3541,7 @@
                 },
                 {
                   "keyActionType": "playMacro",
-                  "macroIndex": 12
+                  "macroIndex": 16
                 },
                 {
                   "keyActionType": "mouse",
@@ -3544,7 +3549,7 @@
                 },
                 {
                   "keyActionType": "playMacro",
-                  "macroIndex": 24
+                  "macroIndex": 30
                 },
                 {
                   "keyActionType": "none"
@@ -3556,15 +3561,15 @@
               "keyActions": [
                 {
                   "keyActionType": "playMacro",
-                  "macroIndex": 25
+                  "macroIndex": 31
                 },
                 {
                   "keyActionType": "playMacro",
-                  "macroIndex": 23
+                  "macroIndex": 17
                 },
                 {
                   "keyActionType": "playMacro",
-                  "macroIndex": 33
+                  "macroIndex": 38
                 },
                 {
                   "keyActionType": "mouse",
@@ -3686,9 +3691,8 @@
                   "scancode": 75
                 },
                 {
-                  "keyActionType": "keystroke",
-                  "type": "basic",
-                  "scancode": 80
+                  "keyActionType": "playMacro",
+                  "macroIndex": 43
                 },
                 {
                   "keyActionType": "keystroke",
@@ -3696,9 +3700,8 @@
                   "scancode": 81
                 },
                 {
-                  "keyActionType": "keystroke",
-                  "type": "basic",
-                  "scancode": 79
+                  "keyActionType": "playMacro",
+                  "macroIndex": 43
                 },
                 {
                   "keyActionType": "keystroke",
@@ -3854,7 +3857,7 @@
                 },
                 {
                   "keyActionType": "playMacro",
-                  "macroIndex": 35
+                  "macroIndex": 40
                 },
                 {
                   "keyActionType": "none"
@@ -4172,7 +4175,7 @@
                 },
                 {
                   "keyActionType": "playMacro",
-                  "macroIndex": 29
+                  "macroIndex": 34
                 },
                 {
                   "keyActionType": "switchLayer",
@@ -4181,7 +4184,7 @@
                 },
                 {
                   "keyActionType": "playMacro",
-                  "macroIndex": 12
+                  "macroIndex": 16
                 },
                 {
                   "keyActionType": "keystroke",
@@ -4241,7 +4244,7 @@
                 },
                 {
                   "keyActionType": "playMacro",
-                  "macroIndex": 32
+                  "macroIndex": 37
                 },
                 {
                   "keyActionType": "keystroke",
@@ -4273,7 +4276,7 @@
                 },
                 {
                   "keyActionType": "playMacro",
-                  "macroIndex": 19
+                  "macroIndex": 25
                 },
                 {
                   "keyActionType": "keystroke",
@@ -4362,7 +4365,7 @@
                 },
                 {
                   "keyActionType": "playMacro",
-                  "macroIndex": 12
+                  "macroIndex": 16
                 },
                 {
                   "keyActionType": "mouse",
@@ -4370,7 +4373,7 @@
                 },
                 {
                   "keyActionType": "playMacro",
-                  "macroIndex": 24
+                  "macroIndex": 30
                 },
                 {
                   "keyActionType": "none"
@@ -4382,15 +4385,15 @@
               "keyActions": [
                 {
                   "keyActionType": "playMacro",
-                  "macroIndex": 25
+                  "macroIndex": 31
                 },
                 {
                   "keyActionType": "playMacro",
-                  "macroIndex": 23
+                  "macroIndex": 17
                 },
                 {
                   "keyActionType": "playMacro",
-                  "macroIndex": 33
+                  "macroIndex": 38
                 },
                 {
                   "keyActionType": "mouse",
@@ -4680,7 +4683,7 @@
                 },
                 {
                   "keyActionType": "playMacro",
-                  "macroIndex": 35
+                  "macroIndex": 40
                 },
                 {
                   "keyActionType": "none"
@@ -5098,7 +5101,7 @@
                 },
                 {
                   "keyActionType": "playMacro",
-                  "macroIndex": 20
+                  "macroIndex": 27
                 },
                 {
                   "keyActionType": "keystroke",
@@ -5204,7 +5207,7 @@
               "keyActions": [
                 {
                   "keyActionType": "playMacro",
-                  "macroIndex": 25
+                  "macroIndex": 31
                 },
                 {
                   "keyActionType": "keystroke",
@@ -5671,7 +5674,7 @@
                 },
                 {
                   "keyActionType": "playMacro",
-                  "macroIndex": 18
+                  "macroIndex": 24
                 },
                 {
                   "keyActionType": "none"
@@ -6632,7 +6635,7 @@
                 },
                 {
                   "keyActionType": "playMacro",
-                  "macroIndex": 20
+                  "macroIndex": 27
                 },
                 {
                   "keyActionType": "keystroke",
@@ -6749,7 +6752,7 @@
                 },
                 {
                   "keyActionType": "playMacro",
-                  "macroIndex": 33
+                  "macroIndex": 38
                 },
                 {
                   "keyActionType": "mouse",
@@ -7206,7 +7209,7 @@
                 },
                 {
                   "keyActionType": "playMacro",
-                  "macroIndex": 18
+                  "macroIndex": 24
                 },
                 {
                   "keyActionType": "none"
@@ -8125,7 +8128,7 @@
                 },
                 {
                   "keyActionType": "playMacro",
-                  "macroIndex": 30
+                  "macroIndex": 35
                 },
                 {
                   "keyActionType": "keystroke",
@@ -8157,7 +8160,7 @@
                 },
                 {
                   "keyActionType": "playMacro",
-                  "macroIndex": 19
+                  "macroIndex": 25
                 },
                 {
                   "keyActionType": "keystroke",
@@ -8262,7 +8265,7 @@
               "keyActions": [
                 {
                   "keyActionType": "playMacro",
-                  "macroIndex": 25
+                  "macroIndex": 31
                 },
                 {
                   "keyActionType": "switchLayer",
@@ -8562,7 +8565,7 @@
                 },
                 {
                   "keyActionType": "playMacro",
-                  "macroIndex": 35
+                  "macroIndex": 40
                 },
                 {
                   "keyActionType": "none"
@@ -8740,7 +8743,7 @@
                 },
                 {
                   "keyActionType": "playMacro",
-                  "macroIndex": 18
+                  "macroIndex": 24
                 },
                 {
                   "keyActionType": "keystroke",
@@ -8815,7 +8818,7 @@
                 },
                 {
                   "keyActionType": "playMacro",
-                  "macroIndex": 13
+                  "macroIndex": 18
                 },
                 {
                   "keyActionType": "none"
@@ -8948,7 +8951,7 @@
                 },
                 {
                   "keyActionType": "playMacro",
-                  "macroIndex": 6
+                  "macroIndex": 9
                 },
                 {
                   "keyActionType": "keystroke",
@@ -8978,7 +8981,7 @@
                 },
                 {
                   "keyActionType": "playMacro",
-                  "macroIndex": 36
+                  "macroIndex": 41
                 },
                 {
                   "keyActionType": "keystroke",
@@ -9000,7 +9003,7 @@
                 },
                 {
                   "keyActionType": "playMacro",
-                  "macroIndex": 34
+                  "macroIndex": 39
                 },
                 {
                   "keyActionType": "switchKeymap",
@@ -9154,11 +9157,11 @@
                 },
                 {
                   "keyActionType": "playMacro",
-                  "macroIndex": 39
+                  "macroIndex": 49
                 },
                 {
                   "keyActionType": "playMacro",
-                  "macroIndex": 40
+                  "macroIndex": 50
                 },
                 {
                   "keyActionType": "none"
@@ -9473,7 +9476,7 @@
       "macroActions": [
         {
           "macroActionType": "command",
-          "command": "clearStatus\nsetVar count 0\nsetVar unpause 0\nset backlight.strategy constantRgb\nset backlight.constantRgb.rgb 64 64 64\nset leds.fadeTimeout 300\nset module.trackpoint.baseSpeed 0\nset module.trackpoint.speed 0.5\nset module.trackpoint.xceleration 2.0\nset module.touchpad.invertScrollDirectionX 1\nset module.touchpad.navigationMode.mouse caret\nset module.touchpad.holdContinuationTimeout 500\nset module.keycluster.navigationMode.mouse caret\nset secondaryRole.defaultStrategy advanced\nset secondaryRole.advanced.timeout 250\nset secondaryRole.advanced.timeoutAction secondary\nset secondaryRole.advanced.triggerByRelease 1\n// positive values for savetyMargin favour primary role, negative favour secondary role\nset secondaryRole.advanced.safetyMargin +5\nsetLedTxt 300 ':::'\n"
+          "command": "clearStatus\nsetVar count 0\nsetVar unpause 0\nsetVar snap_running 0\nset emergencyKey $keyId.0\nset keystrokeDelay 30\nset backlight.strategy constantRgb\nset backlight.constantRgb.rgb 64 64 64\nset leds.fadeTimeout 300\nset module.trackpoint.baseSpeed 0\nset module.trackpoint.speed 0.5\nset module.trackpoint.xceleration 2.0\nset module.touchpad.invertScrollDirectionX 1\nset module.touchpad.navigationMode.mouse caret\nset module.touchpad.holdContinuationTimeout 500\nset module.keycluster.navigationMode.mouse caret\nset secondaryRole.defaultStrategy advanced\nset secondaryRole.advanced.timeout 250\nset secondaryRole.advanced.timeoutAction secondary\nset secondaryRole.advanced.triggerByRelease 1\n// positive values for savetyMargin favour primary role, negative favour secondary role\nset secondaryRole.advanced.safetyMargin +5\nsetLedTxt 300 ':::'\n"
         }
       ]
     },
@@ -9495,7 +9498,7 @@
       "macroActions": [
         {
           "macroActionType": "command",
-          "command": "setVar unpause 2\nsetLedTxt 10 CM2\nreplaceLayer mod CMX mod\nreplaceLayer mouse CMX mouse\nreplaceLayer fn CMX fn\nreplaceLayer fn2 CMX fn2\nreplaceLayer fn3 CMX fn3\nreplaceLayer fn4 CMX fn4\nreplaceLayer fn5 CMX fn5\nset keymapAction.fn.isoKey macro initCM3\nset keymapAction.fn3.isoKey macro initCM3\nset keymapAction.fn5.isoKey macro initCM3\nset secondaryRole.defaultStrategy advanced\nset secondaryRole.advanced.timeout 450\nset secondaryRole.advanced.timeoutAction secondary\nset secondaryRole.advanced.triggerByRelease 1\n// positive values for safetyMargin favour primary role, negative favour secondary role\nset secondaryRole.advanced.safetyMargin +30"
+          "command": "setVar unpause 2\nsetLedTxt 10 CM2\n// replaceLayer mod CMX mod\nreplaceLayer mouse CMX mouse\nreplaceLayer fn CMX fn\nreplaceLayer fn2 CMX fn2\nreplaceLayer fn3 CMX fn3\nreplaceLayer fn4 CMX fn4\nreplaceLayer fn5 CMX fn5\nset keymapAction.fn.isoKey macro initCM3\nset keymapAction.fn3.isoKey macro initCM3\nset keymapAction.fn5.isoKey macro initCM3\nset secondaryRole.defaultStrategy advanced\nset secondaryRole.advanced.timeout 450\nset secondaryRole.advanced.timeoutAction secondary\nset secondaryRole.advanced.triggerByRelease 1\n// positive values for safetyMargin favour primary role, negative favour secondary role\nset secondaryRole.advanced.safetyMargin +30"
         }
       ]
     },
@@ -9506,7 +9509,7 @@
       "macroActions": [
         {
           "macroActionType": "command",
-          "command": "setVar unpause 3\nsetLedTxt 10 CM3\nreplaceLayer mod CMX mod\nreplaceLayer mouse CMX mouse\nreplaceLayer fn CMX fn\nreplaceLayer fn2 CMX fn2\nreplaceLayer fn3 CMX fn3\nreplaceLayer fn4 CMX fn4\nreplaceLayer fn5 CMX fn5\nset keymapAction.fn.isoKey macro initCMX\nset keymapAction.fn3.isoKey macro initCMX\nset keymapAction.fn5.isoKey macro initCMX\nset secondaryRole.defaultStrategy advanced\nset secondaryRole.advanced.timeout 350\nset secondaryRole.advanced.timeoutAction secondary\nset secondaryRole.advanced.triggerByRelease 1\n// positive values for safetyMargin favour primary role, negative favour secondary role\nset secondaryRole.advanced.safetyMargin +10"
+          "command": "setVar unpause 3\nsetLedTxt 10 CM3\nreplaceLayer mod CMX mod\nreplaceLayer mouse CMX mouse\nreplaceLayer fn CMX fn\nreplaceLayer fn2 CMX fn2\nreplaceLayer fn3 CMX fn3\nreplaceLayer fn4 CMX fn4\nreplaceLayer fn5 CMX fn5\nset keymapAction.fn.isoKey macro initCMX\nset keymapAction.fn3.isoKey macro initCMX\nset keymapAction.fn5.isoKey macro initCMX\nset secondaryRole.defaultStrategy advanced\nset secondaryRole.advanced.timeout 350\nset secondaryRole.advanced.timeoutAction secondary\nset secondaryRole.advanced.triggerByRelease 1\n// positive values for safetyMargin favour primary role, negative favour secondary role\nset secondaryRole.advanced.safetyMargin 0\nset backlight.keyRgb.base.128 128 128 128\nset backlight.keyRgb.base.129 128 128 128\nset backlight.keyRgb.base.130 128 128 128\nset backlight.keyRgb.mod.128 0 128 0\nset backlight.keyRgb.mod.129 0 128 0\nset backlight.keyRgb.mod.130 0 128 0\nset backlight.keyRgb.mouse.128 0 0 0\nset backlight.keyRgb.mouse.129 0 128 128\nset backlight.keyRgb.mouse.130 0 128 128\nset backlight.keyRgb.fn.128 255 64 32\nset backlight.keyRgb.fn.129 255 64 32\nset backlight.keyRgb.fn.130 255 64 32\nset backlight.keyRgb.fn3.128 128 128 128\nset backlight.keyRgb.fn3.129 0 0 0\nset backlight.keyRgb.fn3.130 0 0 0\nset backlight.keyRgb.fn5.128 128 128 128\nset backlight.keyRgb.fn5.129 0 0 0\nset backlight.keyRgb.fn5.130 0 0 0"
         }
       ]
     },
@@ -9518,6 +9521,50 @@
         {
           "macroActionType": "command",
           "command": "setVar unpause 1\nsetVar c 20\nsetLedTxt 1 CMX\nstartloop: delayUntil 250\nifNotKeymap CMX break\nrepeatFor c startloop\nset secondaryRole.defaultStrategy advanced\nset secondaryRole.advanced.timeout 250\nset secondaryRole.advanced.timeoutAction secondary\nset secondaryRole.advanced.triggerByRelease 1\n// positive values for safetyMargin favour primary role, negative favour secondary role\nset secondaryRole.advanced.safetyMargin +5\nset backlight.keyRgb.base.128 128 128 128\nset backlight.keyRgb.base.129 128 128 128\nset backlight.keyRgb.base.130 128 128 128\nset backlight.keyRgb.mod.128 0 128 0\nset backlight.keyRgb.mod.129 0 128 0\nset backlight.keyRgb.mod.130 0 128 0\nset backlight.keyRgb.mouse.128 0 0 0\nset backlight.keyRgb.mouse.129 0 128 128\nset backlight.keyRgb.mouse.130 0 128 128\nset backlight.keyRgb.fn.128 255 64 32\nset backlight.keyRgb.fn.129 255 64 32\nset backlight.keyRgb.fn.130 255 64 32\nset backlight.keyRgb.fn5.128 128 128 128\nset backlight.keyRgb.fn5.129 0 0 0\nset backlight.keyRgb.fn5.130 0 0 0\nifKeymap CMX setLedTxt 200 \"::C\"\nifKeymap CMX setLedTxt 200 \":C:\"\nifKeymap CMX setLedTxt 200 \"C:M\"\nifKeymap CMX setLedTxt 200 \":M:\"\nifKeymap CMX setLedTxt 200 \"M:X\"\nifKeymap CMX setLedTxt 200 \":X:\"\nifKeymap CMX setLedTxt 200 \":::\"\nifKeymap CMX setLedTxt 200 \"::C\"\nifKeymap CMX setLedTxt 200 \":CM\"\nifKeymap CMX setLedTxt 200 \"CMX\"\nifKeymap CMX setLedTxt 300 \":::\"\nifKeymap CMX setLedTxt 300 \"CMX\"\nifKeymap CMX setLedTxt 300 \":::\"\nifKeymap CMX setLedTxt 200 \"CMX\"\n"
+        }
+      ]
+    },
+    {
+      "isLooped": false,
+      "isPrivate": true,
+      "name": "alt2 $onLayerChange mouse",
+      "macroActions": [
+        {
+          "macroActionType": "command",
+          "command": "setLedTxt 900 MSE\r\nsetLedTxt 200 \"---\"\r\nsetLedTxt 200 \"___\"\r\nsetLedTxt 300 \":::\""
+        }
+      ]
+    },
+    {
+      "isLooped": false,
+      "isPrivate": true,
+      "name": "atquote",
+      "macroActions": [
+        {
+          "macroActionType": "command",
+          "command": "ifGesture timeoutIn 250 $thisKeyId final tapKey S-2\nifSecondary advancedStrategy final holdLayer mod\nholdKey apostropheAndQuote\n"
+        }
+      ]
+    },
+    {
+      "isLooped": false,
+      "isPrivate": true,
+      "name": "chordscape",
+      "macroActions": [
+        {
+          "macroActionType": "command",
+          "command": "ifKeyActive $keyId.q {\n    ifShortcut timeoutIn 100 $keyId.w final holdKey escape\n    else final holdKey q\n}\nifKeyActive $keyId.w {\n    ifShortcut timeoutIn 100 $keyId.q final holdKey escape\n    else final holdKey w\n}\n"
+        }
+      ]
+    },
+    {
+      "isLooped": false,
+      "isPrivate": true,
+      "name": "chordscape-2",
+      "macroActions": [
+        {
+          "macroActionType": "command",
+          "command": "ifShortcut timeoutIn 100 $keyId.q final holdKey escape\nifShortcut timeoutIn 100 $keyId.w final holdKey escape\n// activateKeyPostponed atLayer fn2 $thisKeyId\nif ($thisKeyId == $keyId.q) final holdKey q\nif ($thisKeyId == $keyId.w) final holdKey w"
         }
       ]
     },
@@ -9546,11 +9593,77 @@
     {
       "isLooped": false,
       "isPrivate": true,
+      "name": "diagnose",
+      "macroActions": [
+        {
+          "macroActionType": "command",
+          "command": "diagnose\r\nstopAllMacros"
+        }
+      ]
+    },
+    {
+      "isLooped": false,
+      "isPrivate": true,
+      "name": "dont $onLayerChange base",
+      "macroActions": [
+        {
+          "macroActionType": "command",
+          "command": "setLedTxt 1 \"CMX\""
+        }
+      ]
+    },
+    {
+      "isLooped": false,
+      "isPrivate": true,
+      "name": "dont $onLayerChange fn5",
+      "macroActions": [
+        {
+          "macroActionType": "command",
+          "command": "setLedTxt 0 \"NUM\""
+        }
+      ]
+    },
+    {
+      "isLooped": false,
+      "isPrivate": true,
+      "name": "dont $onLayerChange mouse",
+      "macroActions": [
+        {
+          "macroActionType": "command",
+          "command": "setLedTxt 900 MSE\r\nsetLedTxt 150 :SE\r\nsetLedTxt 150 S:E\r\nsetLedTxt 150 ::E\r\nsetLedTxt 150 :E:\r\nsetLedTxt 150 E::\r\nsetLedTxt 300 :::"
+        }
+      ]
+    },
+    {
+      "isLooped": false,
+      "isPrivate": true,
+      "name": "dont2 $onLayerChange base",
+      "macroActions": [
+        {
+          "macroActionType": "command",
+          "command": "delayUntil 5\r\nsetLedTxt 1 \":::\""
+        }
+      ]
+    },
+    {
+      "isLooped": false,
+      "isPrivate": true,
       "name": "fn",
       "macroActions": [
         {
           "macroActionType": "command",
-          "command": "holdLayer fn"
+          "command": "ifShortcut timeoutIn 50 $keyId.rightSpace exec fn2-fkeys\r\nholdLayer fn"
+        }
+      ]
+    },
+    {
+      "isLooped": false,
+      "isPrivate": true,
+      "name": "fn2-fkeys",
+      "macroActions": [
+        {
+          "macroActionType": "command",
+          "command": "setLedTxt 0 F12\nholdLayer fn2\nifLayer fn4 final setLedTxt 0 '0-9'\nsetLedTxt 1 F12"
         }
       ]
     },
@@ -9681,11 +9794,22 @@
     {
       "isLooped": false,
       "isPrivate": true,
+      "name": "keytest",
+      "macroActions": [
+        {
+          "macroActionType": "command",
+          "command": "setLedTxt 0 'KEY'\nifGesture timeoutIn 200 $thisKeyId final setLedTxt 999 'GST'\nifDoubletap final setLedTxt 999 'DBL'\ndelayUntilReleaseMax 500\nifInterrupted final setLedTxt 999 '2ND'\nifPlaytime 450 final setLedTxt 999 'HLD'\nsetLedTxt 999 'TAP'\n#tapKey backslashAndPipe\n#write Sheet #1\n#tapKey enter\n#write Sheet \\1\n#tapKey enter\n#write Dhkkf \\\\1\n#tapKey enter\n"
+        }
+      ]
+    },
+    {
+      "isLooped": false,
+      "isPrivate": true,
       "name": "learn_hostmap",
       "macroActions": [
         {
           "macroActionType": "command",
-          "command": "tapKeySeq keypadPlus keypadPlus keypadPlus keypadPlus keypadPlus space B E G I N space keypadPlus keypadPlus keypadPlus keypadPlus keypadPlus space space enter\ntapKeySeq keypadMinus keypadMinus keypadMinus keypadMinus keypadMinus space E N D space keypadMinus keypadMinus keypadMinus keypadMinus keypadMinus space space enter\n"
+          "command": "tapKeySeq keypadPlus keypadPlus keypadPlus keypadPlus keypadPlus space B E G I N space keypadPlus keypadPlus keypadPlus keypadPlus keypadPlus space space enter\ntapKeySeq keypadMinus keypadMinus np6 np4 keypadMinus graveAccentAndTilde space space enter\ntapKeySeq keypadMinus keypadPlus np6 np4 keypadMinus LS-graveAccentAndTilde space space enter\ntapKeySeq keypadMinus keypadAsterisk np6 np4 keypadMinus RA-graveAccentAndTilde space space enter\ntapKeySeq keypadMinus keypadSlash np6 np4 keypadMinus RAS-graveAccentAndTilde space space enter\ntapKeySeq keypadMinus keypadMinus np6 np5 keypadMinus 1 space space enter\ntapKeySeq keypadMinus keypadPlus np6 np5 keypadMinus LS-1 space space enter\ntapKeySeq keypadMinus keypadAsterisk np6 np5 keypadMinus RA-1 space space enter\ntapKeySeq keypadMinus keypadSlash np6 np5 keypadMinus RAS-1 space space enter\ntapKeySeq keypadMinus keypadMinus np6 np6 keypadMinus 2 space space enter\ntapKeySeq keypadMinus keypadPlus np6 np6 keypadMinus LS-2 space space enter\ntapKeySeq keypadMinus keypadAsterisk np6 np6 keypadMinus RA-2 space space enter\ntapKeySeq keypadMinus keypadSlash np6 np6 keypadMinus RAS-2 space space enter\ntapKeySeq keypadMinus keypadMinus np2 np4 keypadMinus commaAndLessThanSign space space enter\ntapKeySeq keypadMinus keypadPlus np2 np4 keypadMinus LS-commaAndLessThanSign space space enter\ntapKeySeq keypadMinus keypadAsterisk np2 np4 keypadMinus RA-commaAndLessThanSign space space enter\ntapKeySeq keypadMinus keypadSlash np2 np4 keypadMinus RAS-commaAndLessThanSign space space enter\ntapKeySeq keypadMinus keypadMinus np2 np5 keypadMinus dotAndGreaterThanSign space space enter\ntapKeySeq keypadMinus keypadPlus np2 np5 keypadMinus LS-dotAndGreaterThanSign space space enter\ntapKeySeq keypadMinus keypadAsterisk np2 np5 keypadMinus RA-dotAndGreaterThanSign space space enter\ntapKeySeq keypadMinus keypadSlash np2 np5 keypadMinus RAS-dotAndGreaterThanSign space space enter\ntapKeySeq keypadMinus keypadMinus np2 np6 keypadMinus slashAndQuestionMark space space enter\ntapKeySeq keypadMinus keypadPlus np2 np6 keypadMinus LS-slashAndQuestionMark space space enter\ntapKeySeq keypadMinus keypadAsterisk np2 np6 keypadMinus RA-slashAndQuestionMark space space enter\ntapKeySeq keypadMinus keypadSlash np2 np6 keypadMinus RAS-slashAndQuestionMark space space enter\ntapKeySeq keypadMinus keypadMinus keypadMinus keypadMinus keypadMinus space E N D space keypadMinus keypadMinus keypadMinus keypadMinus keypadMinus space space enter\n"
         }
       ]
     },
@@ -9696,7 +9820,18 @@
       "macroActions": [
         {
           "macroActionType": "command",
-          "command": "ifLayer fn goTo altMaxtend\r\nifShift goTo shiftMaxtend\r\nifAlt goTo altMaxtend\r\nifSecondary advancedStrategy goTo secondaryaction\r\n\r\nprimaryaction:\r\ntapKey backspace\r\nsetLedTxt 500 \"<--\"\r\nifLayer fn5 final setLedTxt 0 \"NUM\"\r\nbreak\r\n\r\nsecondaryaction:\r\nsetLedTxt 0 \"MAX\"\r\nholdLayer mod\r\nifLayer fn5 final setLedTxt 0 \"NUM\"\r\nsetLedTxt 1 \"MAX\"\r\nbreak\r\n\r\nshiftMaxtend:\r\nsetLedTxt 0 \"<--\"\r\nsuppressMods holdKey backspace\r\nifNotPlaytime 300 setLedTxt 300 \"<--\"\r\nifLayer fn5 final setLedTxt 0 \"NUM\"\r\nsetLedTxt 1 \"<--\"\r\nbreak\r\n\r\naltMaxtend:\r\nsetLedTxt 0 \"DEL\"\r\nsuppressMods holdKey delete\r\nifNotPlaytime 300 setLedTxt 300 \"DEL\"\r\nifLayer fn5 final setLedTxt 0 \"NUM\"\r\nsetLedTxt 1 \"DEL\"\r\nbreak"
+          "command": "ifDoubletap goTo doubleMaxtend\nifLayer fn goTo altMaxtend\nifShift goTo shiftMaxtend\nifAlt goTo altMaxtend\nifSecondary advancedStrategy goTo secondaryaction\n\nprimaryaction:\ntapKey backspace\nsetLedTxt 500 \"<--\"\nifLayer fn5 final setLedTxt 0 \"NUM\"\nbreak\n\nsecondaryaction:\nsetLedTxt 0 \"MAX\"\nholdLayer mod\nifLayer fn5 final setLedTxt 0 \"NUM\"\nsetLedTxt 1 \"MAX\"\nbreak\n\ndoubleMaxtend:\nfork maxtend_showbackspace\nshiftMaxtend:\nsetLedTxt 0 \"<--\"\nsuppressMods holdKey backspace\nifNotPlaytime 300 setLedTxt 300 \"<--\"\nifLayer fn5 final setLedTxt 0 \"NUM\"\nsetLedTxt 1 \"<--\"\nbreak\n\naltMaxtend:\nsetLedTxt 0 \"DEL\"\nsuppressMods holdKey delete\nifNotPlaytime 300 setLedTxt 300 \"DEL\"\nifLayer fn5 final setLedTxt 0 \"NUM\"\nsetLedTxt 1 \"DEL\"\nbreak"
+        }
+      ]
+    },
+    {
+      "isLooped": false,
+      "isPrivate": true,
+      "name": "maxtend_showbackspace",
+      "macroActions": [
+        {
+          "macroActionType": "command",
+          "command": "setLedTxt 450 \"<--\"\nifReleased break\nsetLedTxt 0 \"<<-\""
         }
       ]
     },
@@ -9736,22 +9871,11 @@
     {
       "isLooped": false,
       "isPrivate": true,
-      "name": "mirror",
-      "macroActions": [
-        {
-          "macroActionType": "command",
-          "command": "setLedTxt 0 XMC\nholdLayer fn2\nsetLedTxt 1 XMC"
-        }
-      ]
-    },
-    {
-      "isLooped": false,
-      "isPrivate": true,
       "name": "mousetend",
       "macroActions": [
         {
           "macroActionType": "command",
-          "command": "ifSecondary goTo secondaryaction\nprimaryaction: final tapKey space\nsecondaryaction: \nsetLedTxt 0 MSE\nholdLayer mouse\nsetLedTxt 200 \"MSE\"\nsetLedTxt 200 \"---\"\nsetLedTxt 200 \"___\"\nsetLedTxt 300 \":::\"\nifLayer fn5 final setLedTxt 0 \"NUM\""
+          "command": "ifDoubletap final holdKey space\nifSecondary goTo secondaryaction\nprimaryaction: final tapKey space\nsecondaryaction: \nsetLedTxt 0 MSE\nholdLayer mouse\nsetLedTxt 200 \"MSE\"\nsetLedTxt 200 \"---\"\nsetLedTxt 200 \"___\"\nsetLedTxt 300 \":::\"\nifLayer fn5 final setLedTxt 0 \"NUM\""
         }
       ]
     },
@@ -9762,7 +9886,41 @@
       "macroActions": [
         {
           "macroActionType": "command",
-          "command": "ifSecondary final holdKey LC-space\ntapKey LCLS-m\nifNotShift break\ndelayUntil 300\ntapKey LCLS-semicolonAndColon"
+          "command": "ifSecondary final suppressMods holdKey LC-space\nsuppressMods tapKey LCLS-m\nifNotShift break\ndelayUntil 600\nsuppressMods tapKey LCLS-semicolonAndColon"
+        }
+      ]
+    },
+    {
+      "isLooped": false,
+      "isPrivate": true,
+      "name": "mute-unmute (2)",
+      "macroActions": [
+        {
+          "macroActionType": "key",
+          "action": "tap",
+          "type": "basic",
+          "scancode": 16,
+          "modifierMask": 3
+        },
+        {
+          "macroActionType": "key",
+          "action": "press",
+          "modifierMask": 12
+        },
+        {
+          "macroActionType": "delay",
+          "delay": 100
+        },
+        {
+          "macroActionType": "key",
+          "action": "tap",
+          "type": "basic",
+          "scancode": 17
+        },
+        {
+          "macroActionType": "key",
+          "action": "release",
+          "modifierMask": 12
         }
       ]
     },
@@ -9784,7 +9942,7 @@
       "macroActions": [
         {
           "macroActionType": "command",
-          "command": "ifSecondary goTo secondaryaction\nprimaryaction: final tapKey space\nsecondaryaction: \nsetLedTxt 0 '0-9'\nholdLayer fn4\nifLayer fn5 final setLedTxt 0 \"NUM\"\nsetLedTxt 1 '0-9'\n"
+          "command": "#ifDoubletap final holdKey space\nifSecondary goTo secondaryaction\nprimaryaction: final holdKey space\nsecondaryaction:\nsetLedTxt 0 '0-9'\nholdLayer fn4\nifLayer fn5 final setLedTxt 0 \"NUM\"\nsetLedTxt 1 '0-9'\n"
         }
       ]
     },
@@ -9795,7 +9953,7 @@
       "macroActions": [
         {
           "macroActionType": "command",
-          "command": "ifAlt final holdKey tab\nifSecondary advancedStrategy goTo secondaryaction\n\nprimaryaction:\nifShift goTo shiftTab\ntapKey tab\nsetLedTxt 500 \"->|\"\nifLayer fn5 final setLedTxt 0 \"NUM\"\nbreak\n\nsecondaryaction:\nifShift goTo shiftTabSecondary\nsetLedTxt 0 \"NUM\"\nholdLayer fn5\ndelayUntil 100\nifLayer fn5 final setLedTxt 0 \"NUM\"\nsetLedTxt 1 \"NUM\"\nbreak\n\nshiftTabSecondary:\nsetLedTxt 0 \"NUM\"\nifNotLayer fn5 final toggleLayer fn5\nunToggleLayer\nsetLedTxt 1 \"NUM\"\nbreak\n\nshiftTab:\nsetLedTxt 0 \"|<-\"\nholdKey tab\nsetLedTxt 500 \"|<-\"\nifLayer fn5 final setLedTxt 0 \"NUM\"\nbreak"
+          "command": "ifDoubletap final holdKey tab\nifAlt final holdKey tab\nifSecondary advancedStrategy goTo secondaryaction\n\nprimaryaction:\nifShift goTo shiftTab\ntapKey tab\nsetLedTxt 500 \"->|\"\nifLayer fn5 final setLedTxt 0 \"NUM\"\nbreak\n\nsecondaryaction:\nifShift goTo shiftTabSecondary\nsetLedTxt 0 \"NUM\"\nholdLayer fn5\ndelayUntil 100\nifLayer fn5 final setLedTxt 0 \"NUM\"\nsetLedTxt 1 \"NUM\"\nbreak\n\nshiftTabSecondary:\nsetLedTxt 0 \"NUM\"\nifNotLayer fn5 final toggleLayer fn5\nunToggleLayer\nsetLedTxt 1 \"NUM\"\nbreak\n\nshiftTab:\nsetLedTxt 0 \"|<-\"\nholdKey tab\nsetLedTxt 500 \"|<-\"\nifLayer fn5 final setLedTxt 0 \"NUM\"\nbreak\n"
         }
       ]
     },
@@ -9934,6 +10092,61 @@
     {
       "isLooped": false,
       "isPrivate": true,
+      "name": "snap-left",
+      "macroActions": [
+        {
+          "macroActionType": "command",
+          "command": "ifKeyActive $keyId.l setVar rightpressed 1\nelse setVar rightpressed 0\ndelayUntil 100\nreleaseKey right\ndelayUntil 100\nholdKey left\ndelayUntil 100\nif $rightpressed pressKey right\n"
+        }
+      ]
+    },
+    {
+      "isLooped": false,
+      "isPrivate": true,
+      "name": "snap-leftright",
+      "macroActions": [
+        {
+          "macroActionType": "command",
+          "command": "if ( $snap_running == 0 ) {\n    setVar snap_mode 0\n    fork snap-leftright-worker\n}\nif ($thisKeyId == $keyId.j) {\n    setVar snap_mode 1\n}\nelse if ($thisKeyId == $keyId.l) {\n    setVar snap_mode 2\n}\ndelayUntilRelease\nifNotKeyActive $keyId.j ifNotKeyActive $keyId.l final setVar snap_mode 0\nifKeyActive $keyId.j final setVar snap_mode 1\nifKeyActive $keyId.l final setVar snap_mode 2"
+        }
+      ]
+    },
+    {
+      "isLooped": false,
+      "isPrivate": true,
+      "name": "snap-leftright-worker",
+      "macroActions": [
+        {
+          "macroActionType": "command",
+          "command": "setVar snap_running 1\nsetVar snap_state 0\n// snap_state: current state of left/right movement\n// snap_mode: target state of left/right movement\n// The worker will send key press/release actions to move\n// the current state to the target state.\nloop:\nif ($snap_state == 0) {\n    if ($snap_mode == 1) {\n        releaseKey right\n        pressKey left\n    }\n    else if ($snap_mode == 2) {\n        releaseKey left\n        pressKey right\n    }\n}\nelse if ($snap_state == 1) {\n    if ($snap_mode == 0) {\n        releaseKey left\n        releaseKey right\n    }\n    else if ($snap_mode == 2) {\n        releaseKey left\n        pressKey right\n    }\n}\nelse if ($snap_state == 2) {\n    if ($snap_mode == 0) {\n        releaseKey right\n        releaseKey left\n    }\n    else if ($snap_mode == 1) {\n        releaseKey right\n        pressKey left\n    }\n}\nsetVar snap_state $snap_mode\ngoTo loop\n// ifNotPlaytime 10000 goTo loop // use this for debugging\n// setVar snap_running 0"
+        }
+      ]
+    },
+    {
+      "isLooped": false,
+      "isPrivate": true,
+      "name": "snap-right",
+      "macroActions": [
+        {
+          "macroActionType": "command",
+          "command": "ifKeyActive $keyId.j setVar leftpressed 1\nelse setVar leftpressed 0\ndelayUntil 100\nreleaseKey left\ndelayUntil 100\nholdKey right\ndelayUntil 100\nif $leftpressed pressKey left\n"
+        }
+      ]
+    },
+    {
+      "isLooped": false,
+      "isPrivate": true,
+      "name": "spacetapper",
+      "macroActions": [
+        {
+          "macroActionType": "command",
+          "command": "setLedTxt 500 'SPC'\nloop:\ndelayUntil 4000\nifInterrupted final setLedTxt 1500 'OFF'\ntapKey space\nsetLedTxt 1000 'SPC'\ngoTo loop\n"
+        }
+      ]
+    },
+    {
+      "isLooped": false,
+      "isPrivate": true,
       "name": "Type ¡",
       "macroActions": [
         {
@@ -10042,7 +10255,7 @@
       "macroActions": [
         {
           "macroActionType": "command",
-          "command": "ifSecondary goTo secondaryAction\nifShift final suppressMods write abcg\nfinal write mhajfdch\nsecondaryAction:\nsuppressMods holdKey oRC-\n"
+          "command": "ifSecondary final suppressMods holdKey oRC-\nifShift {\n    suppressMods write ThisWouldBeThePwd\n\n}\nelse {\n    delayUntil 200\n    suppressMods tapKeySeq m y u s e r i d\n}\n"
         }
       ]
     }
