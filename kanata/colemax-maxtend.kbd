@@ -160,7 +160,7 @@ at the same time will cause kanata to exit:
   ;;log-layer-changes no
   log-layer-changes yes
 
-  ;; TRAY-GUI: If you want tray icons on Windows, use the kanata_gui.exe
+  ;; TRAY-GUI: If you want tray icons on Windows, use the kanata_gui.exe executable
   ;; and uncomment the next two lines.
   ;;tray-icon "./icons"
   ;;icon-match-layer-name yes
