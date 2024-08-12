@@ -70,6 +70,14 @@ Alphabetic keys are labelled on the top left of the keys with the upper-case ver
 
 Typing `F` without modifiers produces a lower-case **f** , and typing `Shift`+`F` produces an upper-case **F** .
 
+##### Alphabet keys with number pad
+
+Some of the alphabetic keys are also part of the numbers layer. On these keys, the lower left shows their respective keypad number in the same colour as the numbers on the number row. Here is an image of the `E` key:
+
+| key | base | `AltGr` | `Maxtend` | `NumTab` |
+| --- | --- | --- | --- | --- |
+| ![key EÉ](../images/key-E.png) | `Shift`:<br/>letter E<br/><br/>letter e | `AltGr`+`Shift`:<br/>letter É<br/><br/> `AltGr`:<br/>letter é | Down (Cursor) | number 2|
+
 #### Symbol keys
 
 The main symbol keys carry two different symbols. The unshifted base layer symbol is shown on the bottom left, and the shifted symbol on the top left. Here is an image of the `;:` key:
@@ -94,20 +102,25 @@ Typing `1` produces the number **1**, whereas `Shift`+`1` produces the exclamati
 
 ![key maxtend](../images/key-maxtend.png)
 
-The functionality of the _Maxtend_ layer is shown in orange colour on the bottom right side of the key. The `Maxtend` key also displays an orange star symbol as a hint for the symbol colour.
+The functionality of the _Maxtend_ layer is shown in orange colour on the bottom right side of the key. The `Maxtend` key also features an orange star symbol to hint at the corresponding symbol colour.
 
-![key T](../images/key-T.png)
-
-For example, the `T` key works as Control when activated as `Maxtend`+`t`
+| key | `Maxtend` function |
+| --- | --- |
+| ![key T](../images/key-T.png) | The `T` key works as Control when activated as `Maxtend`+`t` |
 
 ### AltGr layer
 
 ![key AltGr](../images/key-altgr.png)
 
+The functionality of the _AltGr_ layer is shown in yellow colour on the right side of the key. In the number row, both shifted and unshifted versions are shown on the top and bottom right side. On alphabet keys, only the shifted version (the uppercase symbol) is shown on the top right. The unshifted version is then equivalent to the lowercase symbol.
+
+<!--
+Smaller images, but not really endorsed for proper markdown (lint will complain):
 <a href="../images/key-maxtend.png"><img src="../images/key-maxtend.png" height=60px></a>
 <a href="../images/key-altgr.png"><img src="../images/key-altgr.png" height=60px></a>
+-->
 
-On our sample keyboard images, the AltGr symbols are labelled on the top right of the keys, and in the same yellow colour as the `AltGr` key. Here is an image of the 'FÃ' key:
+The AltGr symbols are labelled on the top right of the keys in the same yellow colour as the `AltGr` key. Here is an image of the 'FÃ' key:
 
 ![key FÃ](../images/key-F.png)
 
@@ -116,3 +129,9 @@ When pressed together with `AltGr`+`FÃ`, it produces a lower-case **ã**. When 
 ### Number layer
 
 ![key NumTab](../images/key-numtab.png)
+
+Holding down *NumTab* activates the number layer. The numbers for this layer are shown on the bottom left side of the key in the same colour as the numbers in the number row. Here is an image of the `EÉ` key:
+
+![key EÉ](../images/key-E.png)
+
+When pressed together with `NumTab`+`EÉ`, it produces the number **1**.
