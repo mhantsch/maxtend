@@ -222,7 +222,7 @@ at the same time will cause kanata to exit:
   @nmt q    w    f    p    g    j    l    u    y    ;    [    ]    \
   @mxt a    r    s    t    d    h    n    e    i    o    @mxa      ret
   lsft z    x    c    v    b    k    m    ,    .    /    rsft
-  lctl lmet lalt           spc            ralt rmet rctl
+  lctl lmet lalt           spc           @ralt rmet rctl
 )
 
 ;; A Colemak layer which maps Colemak typing to a US-QWERTY OS layout
@@ -234,7 +234,15 @@ at the same time will cause kanata to exit:
   @nmt q    w    f    p    g    j    l    u    y    ;    [    ]    \
   @mxt @hca @hcr @hcs @hct d    h    @hcn @hce @hci @hco @mxa      ret
   lsft z    x    c    v    b    k    m    ,    .    @hc/ rsft
-  lctl lmet lalt         @space           ralt rmet rctl
+  lctl lmet lalt         @space          @ralt rmet rctl
+)
+
+(deflayer colemak-altgr
+  @grl 1    2    3    4    5    6    7    8    9    0    -    =    bspc
+  @nmt q    w    f    p    g    j    l    u    y    ;    [    ]    \
+  @mxt a    r    s    t    d    h    n    e    i    o    @mxa      ret
+  lsft z    x    c    v    b    k    m    ,    .    /    rsft
+  lctl lmet lalt           spc            ralt rmet rctl
 )
 
 ;; A "reverse" Colemak layer which maps US-QWERTY typing to a Colemak OS
@@ -260,7 +268,7 @@ at the same time will cause kanata to exit:
   esc  1    2    3    4    5    6    kp7  kp8  kp9  kp0  -    =    bspc
   tab  esc  @mw↑ XX   XX   XX   kp/  kp4  kp5  kp6  kp-  [    ]    \
   _    lalt @mw↓ lsft lctl lmet kp*  kp1  kp2  kp3  kp+  kprt      kprt
-  lsft C-z  C-x  C-c  C-v  nlk  n    kp0  ,    kp.  kp=         @kprsft
+  lsft C-z  C-x  C-c  C-v  nlk  @:   kp0  ,    kp.  kp=         @kprsft
   lctl lmet lalt           spc            ralt rmet rctl
 )
 
@@ -281,6 +289,14 @@ at the same time will cause kanata to exit:
   lctl lmet lalt           spc            ralt rmet rctl
 )
 |#
+
+(defalias
+  ralt (layer-toggle colemak-altgr)
+  winä (macro alt kp0 kp2 kp2 kp8)
+  winö AG-p
+  winü AG-o
+  winß AG-d
+)
 
 (defchordsv2-experimental
   (q w) esc 100 all-released (maxtend)
@@ -476,7 +492,7 @@ at the same time will cause kanata to exit:
   ;; shifted keys
   { S-[
   } S-]
-  : S-;
+  : S-p
 )
 
 (defalias
