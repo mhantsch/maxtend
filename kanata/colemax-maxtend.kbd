@@ -258,8 +258,8 @@ at the same time will cause kanata to exit:
 
 (deflayer maxtend
   esc  f1   f2   f3   f4   f5   f6   f7   f8   f9   f10  f11  f12  del
-  tab  esc  @mw↓ bck  fwd  XX   pgup home up   end  del  prnt slck brk
-  _    lalt @mw↑ lsft lctl lmet pgdn left down rght bspc ins       ret
+  tab  esc  @mw↑ bck  fwd  XX   pgup home up   end  del  prnt slck brk
+  _    lalt @mw↓ lsft lctl lmet pgdn left down rght bspc ins       ret
   lsft C-z  C-x  C-c  C-v  b    n    m    ,    .    menu          rsft
   lctl lmet lalt           ret            ralt rmet rctl
 )
