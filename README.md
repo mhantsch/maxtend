@@ -36,10 +36,10 @@ Depending on your OS and preferred setup, find the configuration for each of the
 
 - For Windows:
   1. Install the Colemak keyboard layout from [Windows - Colemak](https://colemak.com/Windows) first. I recommend the [version which maps CapsLock to Backspace](https://colemak.com/File:Colemak-caps.zip).
-  2. Then, pick between the [ahk configuration](ahk/) (and load via [AutoHotKey](https://www.autohotkey.com/)), or try [Kanata](https://github.com/jtroo/kanata) with the corresponding [kanata configuration](kanata/) (*experimental!*).
+  2. Then, pick between the [ahk configuration](ahk/) (and load via [AutoHotKey](https://www.autohotkey.com/)), or try [Kanata](https://github.com/jtroo/kanata) with the corresponding [kanata configuration](kanata/) (*recommended*).
 - For Linux:
   1. Switch your keyboard layout to Colemak (via keyboard settings of your distribution).
-  2. Then, choose between either [xkb](xkb/) ([how to configure](xkb/HOWTO), deprecated) or [keyd](keyd/) (using [the keyd service](https://github.com/rvaiya/keyd)), or try [Kanata](https://github.com/jtroo/kanata) with the corresponding [kanata configuration](kanata/) (recommended).
+  2. Then, choose between either [xkb](xkb/) ([how to configure](xkb/HOWTO), deprecated) or [keyd](keyd/) (using [the keyd service](https://github.com/rvaiya/keyd)), or try [Kanata](https://github.com/jtroo/kanata) with the corresponding [kanata configuration](kanata/) (*recommended*).
 - For an Ultimate Hacking Keyboard:
   - Check out a matching [uhk configuration](uhk/) for the [Ultimate Hacking Keyboard](https://ultimatehackingkeyboard.com) (an external programmable keyboard).
 
