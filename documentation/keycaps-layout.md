@@ -1,12 +1,27 @@
 # Maxtend Keycaps Layout
 
-_(Work in Progress)_
+_(This page is Work In Progress)_
 
 ## Overview
 
 ![Overview of the layout of a maxtended keyboard.](../images/Maxtend-black.png)
 
-A set of keycaps have been designed to visualise the layers and functions of **Maxtend**.
+### Keycaps
+
+A set of keycaps has been designed to visualise the layers and functions of **Maxtend**. The set fits the Ultimate Hacking Keyboard UHK60 and is available at [Yuzu keycaps - UHK Maxtend v1](https://yuzukeycaps.com/c/3c067355-1303-48a3-8806-77817013d598). You can order the set from Yuzu keycaps.
+
+Photos of an actual production run can be found in [this blog post](https://ultimatehackingkeyboard.com/blog/2024/09/19/custom-uhk-keycaps).
+
+#### Errata
+
+The v1 keycap set as manufactured by Yuzy is absolutely usable and beautiful, but please note that there are a few errors:
+
+- The AltGr symbol on the X key (top right corner) should show a deadkey with the caret `^` mark (dashed circle with caret mark) instead of only the caret.
+- The Maxtend symbol on the T key (bottom right corner) should show a large caret symbol like on the Ctrl key instead of a diamond.
+- The colour of the number layer is too similar to the background colour of the keys and is difficult to see especially under low light conditions.
+- Vertical centering of all legends should be improved. All legends sit slighly low on the printable area of the keycaps and should be positioned a fraction higher.
+
+An updated v2 keycap set is in the works.
 
 ### Key legends
 
