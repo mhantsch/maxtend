@@ -4,10 +4,9 @@ Config is for UHK userConfig v7.1.0
 ```
 clearStatus
 setVar count 0
-setVar unpause 0
 setVar snap_running 0
 // set emergencyKey $keyId.0
-set keystrokeDelay 10
+// set keystrokeDelay 10
 set backlight.strategy constantRgb
 set backlight.constantRgb.rgb 64 64 64
 set leds.fadeTimeout 300
@@ -18,12 +17,13 @@ set module.touchpad.invertScrollDirectionX 1
 set module.touchpad.navigationMode.mouse caret
 set module.touchpad.holdContinuationTimeout 500
 set module.keycluster.navigationMode.mouse caret
-set secondaryRole.defaultStrategy advanced
-set secondaryRole.advanced.timeout 250
-set secondaryRole.advanced.timeoutAction secondary
-set secondaryRole.advanced.triggerByRelease 1
-// positive values for savetyMargin favour primary role, negative favour secondary role
-set secondaryRole.advanced.safetyMargin +5
+// set secondaryRole.defaultStrategy advanced
+// set secondaryRole.advanced.timeout 250
+// set secondaryRole.advanced.timeoutAction secondary
+// set secondaryRole.advanced.triggerByRelease 1
+// positive values for safetyMargin favour primary role, negative favour secondary role
+set secondaryRole.advanced.safetyMargin +1
+//call hrm-init
 setLedTxt 300 ':::'
 ```
 
@@ -36,95 +36,18 @@ replaceLayer fn2 CMX fn2
 replaceLayer fn3 CMX fn3
 replaceLayer fn4 CMX fn4
 replaceLayer fn5 CMX fn5
-set keymapAction.fn.isoKey macro initCM3
-if ( $unpause == 3 ) { 
-    set keymapAction.fn.b macro initCM3 
-}
-else if ( $unpause == 2 ) {
-    set keymapAction.fn.b macro initCM2
-}
-else { 
-    set keymapAction.fn.b macro initCMX
-}
-call keepAlive
-```
-
-**$onKeymapChange CM2:**
-```
-setVar unpause 2
-setLedTxt 10 CM2
-// replaceLayer mod CMX mod
-replaceLayer mouse CMX mouse
-replaceLayer fn CMX fn
-replaceLayer fn2 CMX fn2
-replaceLayer fn3 CMX fn3
-replaceLayer fn4 CMX fn4
-replaceLayer fn5 CMX fn5
-set keymapAction.fn.isoKey macro initCM3
-set keymapAction.fn3.isoKey macro initCM3
-set keymapAction.fn5.isoKey macro initCM3
-set secondaryRole.defaultStrategy advanced
-set secondaryRole.advanced.timeout 450
-set secondaryRole.advanced.timeoutAction secondary
-set secondaryRole.advanced.triggerByRelease 1
-// positive values for safetyMargin favour primary role, negative favour secondary role
-set secondaryRole.advanced.safetyMargin +30
-```
-
-**$onKeymapChange CM3:**
-```
-setVar unpause 3
-setLedTxt 10 CM3
-replaceLayer mod CMX mod
-replaceLayer mouse CMX mouse
-replaceLayer fn CMX fn
-replaceLayer fn2 CMX fn2
-replaceLayer fn3 CMX fn3
-replaceLayer fn4 CMX fn4
-replaceLayer fn5 CMX fn5
 set keymapAction.fn.isoKey macro initCMX
-set keymapAction.fn3.isoKey macro initCMX
-set keymapAction.fn5.isoKey macro initCMX
-set secondaryRole.defaultStrategy advanced
-set secondaryRole.advanced.timeout 350
-set secondaryRole.advanced.timeoutAction secondary
-set secondaryRole.advanced.triggerByRelease 1
-// positive values for safetyMargin favour primary role, negative favour secondary role
-set secondaryRole.advanced.safetyMargin 0
-set backlight.keyRgb.base.128 128 128 128
-set backlight.keyRgb.base.129 128 128 128
-set backlight.keyRgb.base.130 128 128 128
-set backlight.keyRgb.mod.128 0 128 0
-set backlight.keyRgb.mod.129 0 128 0
-set backlight.keyRgb.mod.130 0 128 0
-set backlight.keyRgb.mouse.128 0 0 0
-set backlight.keyRgb.mouse.129 0 128 128
-set backlight.keyRgb.mouse.130 0 128 128
-set backlight.keyRgb.fn.128 255 64 32
-set backlight.keyRgb.fn.129 255 64 32
-set backlight.keyRgb.fn.130 255 64 32
-set backlight.keyRgb.fn3.128 128 128 128
-set backlight.keyRgb.fn3.129 0 0 0
-set backlight.keyRgb.fn3.130 0 0 0
-set backlight.keyRgb.fn5.128 128 128 128
-set backlight.keyRgb.fn5.129 0 0 0
-set backlight.keyRgb.fn5.130 0 0 0
+set keymapAction.fn.b macro Pause-or-b
+fork keepAlive
 ```
 
 **$onKeymapChange CMX:**
 ```
-setVar unpause 1
 setVar c 20
 setLedTxt 1 CMX
 startloop: delayUntil 250
 ifNotKeymap CMX break
 repeatFor c startloop
-set secondaryRole.defaultStrategy advanced
-set secondaryRole.advanced.timeout 250
-set secondaryRole.advanced.timeoutAction secondary
-set secondaryRole.advanced.triggerByRelease 1
-// positive values for safetyMargin favour primary role, negative favour secondary role
-set secondaryRole.advanced.safetyMargin +5
 set backlight.keyRgb.base.128 128 128 128
 set backlight.keyRgb.base.129 128 128 128
 set backlight.keyRgb.base.130 128 128 128
@@ -157,6 +80,20 @@ ifKeymap CMX setLedTxt 200 "CMX"
 
 ```
 
+**$onKeymapChange NMX:**
+```
+replaceLayer mod CMX mod
+replaceLayer mouse CMX mouse
+replaceLayer fn CMX fn
+replaceLayer fn2 CMX fn2
+replaceLayer fn3 CMX fn3
+replaceLayer fn4 CMX fn4
+replaceLayer fn5 CMX fn5
+set keymapAction.fn.isoKey macro initCMX
+set keymapAction.fn.slashAndQuestionMark macro initCMX
+
+```
+
 **atquote:**
 ```
 ifGesture timeoutIn 250 $thisKeyId final tapKey S-2
@@ -167,24 +104,16 @@ holdKey apostropheAndQuote
 
 **chordscape:**
 ```
-ifKeyActive $keyId.q {
-    ifShortcut timeoutIn 100 $keyId.w final holdKey escape
+setVar hrm_tick 0
+ifKeyActive q {
+    ifShortcut timeoutIn 100 w final holdKey escape
     else final holdKey q
 }
-ifKeyActive $keyId.w {
-    ifShortcut timeoutIn 100 $keyId.q final holdKey escape
+ifKeyActive w {
+    ifShortcut timeoutIn 100 q final holdKey escape
     else final holdKey w
 }
 
-```
-
-**chordscape-2:**
-```
-ifShortcut timeoutIn 100 $keyId.q final holdKey escape
-ifShortcut timeoutIn 100 $keyId.w final holdKey escape
-// activateKeyPostponed atLayer fn2 $thisKeyId
-if ($thisKeyId == $keyId.q) final holdKey q
-if ($thisKeyId == $keyId.w) final holdKey w
 ```
 
 **clearStatus:**
@@ -205,6 +134,9 @@ ifLayer fn5 final setLedTxt 0 "NUM"
 **diagnose:**
 ```
 diagnose
+unToggleLayer
+unToggleLayer
+unToggleLayer
 stopAllMacros
 ```
 
@@ -222,14 +154,323 @@ ifLayer fn4 final setLedTxt 0 '0-9'
 setLedTxt 1 F12
 ```
 
-**initCM2:**
+**hrm-auto:**
 ```
-switchKeymap CM2
+setVar hrm_active 1
+setVar hrm_timer_active 0
+setVar hrm_tick 0
+setVar hrm_tick_delay 10
+setVar hrm_tick_active 8
+setVar hrm_avoid_same 100
+overlayLayer base HRM mod
+setLedTxt 666 'H+-'
+if ($hrm_timer_active == 0) fork hrm-timer
+
 ```
 
-**initCM3:**
+**hrm-b:**
 ```
-switchKeymap CM3
+setVar hrm_tick 0
+holdKey b
+
+```
+
+**hrm-c:**
+```
+setVar hrm_tick 0
+holdKey c
+
+```
+
+**hrm-e:**
+```
+setVar hrm_tick 0
+holdKey e
+
+```
+
+**hrm-i:**
+```
+setVar hrm_tick 0
+holdKey i
+
+```
+
+**hrm-init:**
+```
+setLedTxt 666 'H-I'
+exec hrm-auto
+
+```
+
+**hrm-LA-;:**
+```
+ifShortcut timeoutIn $hrm_avoid_same orGate noConsume y u i o p h j k l semicolonAndColon n m commaAndLessThanSign dotAndGreaterThanSign goTo primary
+if ($hrm_active > 0) ifSecondary final holdKey leftAlt
+primary:
+setVar hrm_tick 0
+holdKey semicolonAndColon
+
+```
+
+**hrm-LA-a:**
+```
+ifShortcut timeoutIn $hrm_avoid_same orGate noConsume q w e r t a s d f g z x c v b goTo primary
+if ($hrm_active > 0) ifSecondary final holdKey leftAlt
+primary:
+setVar hrm_tick 0
+holdKey a
+
+```
+
+**hrm-LC-f:**
+```
+ifShortcut timeoutIn $hrm_avoid_same orGate noConsume q w e r t a s d f g z x c v b goTo primary
+if ($hrm_active > 0) ifSecondary final holdKey leftControl
+primary:
+setVar hrm_tick 0
+holdKey f
+
+```
+
+**hrm-LG-g:**
+```
+ifShortcut timeoutIn $hrm_avoid_same orGate noConsume q w e r t a s d f g z x c v b goTo primary
+if ($hrm_active > 0) ifSecondary final holdKey leftGui
+primary:
+setVar hrm_tick 0
+holdKey g
+
+```
+
+**hrm-LG-s:**
+```
+ifShortcut timeoutIn $hrm_avoid_same orGate noConsume q w e r t a s d f g z x c v b goTo primary
+if ($hrm_active > 0) ifSecondary final holdKey leftGui
+primary:
+setVar hrm_tick 0
+holdKey s
+
+```
+
+**hrm-LS-d:**
+```
+ifShortcut timeoutIn $hrm_avoid_same orGate noConsume q w e r t a s d f g z x c v b goTo primary
+if ($hrm_active > 0) ifSecondary final holdKey leftShift
+primary:
+setVar hrm_tick 0
+holdKey d
+
+```
+
+**hrm-m:**
+```
+setVar hrm_tick 0
+holdKey m
+
+```
+
+**hrm-n:**
+```
+setVar hrm_tick 0
+holdKey n
+
+```
+
+**hrm-o:**
+```
+setVar hrm_tick 0
+holdKey o
+
+```
+
+**hrm-off:**
+```
+setVar hrm_timer_active 0
+setVar hrm_active 0
+setVar hrm_avoid_same 50
+overlayLayer base HRM base
+setLedTxt 666 'H--'
+```
+
+**hrm-on:**
+```
+setVar hrm_timer_active 0
+setVar hrm_active 1
+setVar hrm_avoid_same 50
+overlayLayer base HRM mod
+setLedTxt 666 'H++'
+```
+
+**hrm-p:**
+```
+setVar hrm_tick 0
+holdKey p
+
+```
+
+**hrm-q:**
+```
+setVar hrm_tick 0
+holdKey q
+
+```
+
+**hrm-r:**
+```
+setVar hrm_tick 0
+holdKey r
+
+```
+
+**hrm-RA-/:**
+```
+ifShortcut timeoutIn $hrm_avoid_same orGate noConsume y u i o p h j k l semicolonAndColon n m commaAndLessThanSign dotAndGreaterThanSign goTo primary
+if ($hrm_active > 0) ifSecondary final holdKey rightAlt
+primary:
+setVar hrm_tick 0
+holdKey slashAndQuestionMark
+
+```
+
+**hrm-RA-ISO:**
+```
+ifShortcut timeoutIn $hrm_avoid_same orGate noConsume q w e r t a s d f g z x c v b goTo primary
+if ($hrm_active > 0) ifSecondary final holdKey rightAlt
+primary:
+setVar hrm_tick 0
+holdKey backslashAndPipeIso
+
+```
+
+**hrm-RC-j:**
+```
+ifShortcut timeoutIn $hrm_avoid_same orGate noConsume y u i o p h j k l semicolonAndColon n m commaAndLessThanSign dotAndGreaterThanSign goTo primary
+if ($hrm_active > 0) ifSecondary final holdKey rightControl
+primary:
+setVar hrm_tick 0
+holdKey j
+
+```
+
+**hrm-RG-h:**
+```
+ifShortcut timeoutIn $hrm_avoid_same orGate noConsume y u i o p h j k l semicolonAndColon n m commaAndLessThanSign dotAndGreaterThanSign goTo primary
+if ($hrm_active > 0) ifSecondary final holdKey rightGui
+primary:
+setVar hrm_tick 0
+holdKey h
+
+```
+
+**hrm-RG-l:**
+```
+ifShortcut timeoutIn $hrm_avoid_same orGate noConsume y u i o p h j k l semicolonAndColon n m commaAndLessThanSign dotAndGreaterThanSign goTo primary
+if ($hrm_active > 0) ifSecondary final holdKey rightGui
+primary:
+setVar hrm_tick 0
+holdKey l
+
+```
+
+**hrm-RS-k:**
+```
+ifShortcut timeoutIn $hrm_avoid_same orGate noConsume y u i o p h j k l semicolonAndColon n m commaAndLessThanSign dotAndGreaterThanSign goTo primary
+if ($hrm_active > 0) ifSecondary final holdKey rightShift
+primary:
+setVar hrm_tick 0
+holdKey k
+
+```
+
+**hrm-t:**
+```
+setVar hrm_tick 0
+holdKey t
+
+```
+
+**hrm-timer:**
+```
+setVar hrm_timer_active 1
+setVar hrm_active_state $hrm_active
+setLedTxt 800 '+T+'
+// if tick is < tick_active, hrm should be inactive
+// if tick is >= tick_active, hrm should be active
+// primary key activations will reset tick => fast typing streak keeps hrm inactive
+loop:
+    setVar hrm_tick ($hrm_tick + 1)
+    // setLedTxt 0 "T$hrm_tick"
+    if ($hrm_active > 0) { // if hrm are active and we are in the pause interval, deactivate hrm
+        if ($hrm_tick < $hrm_tick_active) setVar hrm_active 0
+    }
+    else {  // if not active and no primary has been activated for more than 30 ms, activate hrm
+        if ($hrm_tick >= $hrm_tick_active) setVar hrm_active 1
+    }
+    // the next section is just about showing state changes on LED display
+    if ($hrm_active_state == 0) {
+        if ($hrm_active > 0) {
+            setLedTxt 0 'H++'
+            setVar hrm_active_state 1
+        }
+    }
+    else {
+        if ($hrm_active == 0) {
+            setLedTxt 0 'H--'
+            setVar hrm_active_state 0
+        }
+    }
+    // --- ^^^ ---
+    if ($hrm_tick == 500) ifLayer base setLedTxt 0 'H+-'
+    if ($hrm_tick == 1000) ifLayer base setLedTxt 1 'H+-'
+    if ($hrm_tick >= 1500) setVar hrm_tick 499
+    else delayUntil $hrm_tick_delay
+    ifKeymap NMX setVar hrm_timer_active 0 // emergency break out
+if ($hrm_timer_active > 0) goTo loop
+delayUntil 777
+setLedTxt 800 '-T-'
+```
+
+**hrm-u:**
+```
+setVar hrm_tick 0
+holdKey u
+
+```
+
+**hrm-v:**
+```
+setVar hrm_tick 0
+holdKey v
+
+```
+
+**hrm-w:**
+```
+setVar hrm_tick 0
+holdKey w
+
+```
+
+**hrm-x:**
+```
+setVar hrm_tick 0
+holdKey x
+
+```
+
+**hrm-y:**
+```
+setVar hrm_tick 0
+holdKey y
+
+```
+
+**hrm-z:**
+```
+setVar hrm_tick 0
+holdKey z
+
 ```
 
 **initCMX:**
@@ -253,6 +494,7 @@ keepalive:
 ```
 ifNotKeymap --- goTo final
 ifKeymap --- setLedTxt 200 "---"
+ifLayer mod goTo modLayerPt1
 ifLayer fn5 goTo numLayerPt1
 ifKeymap --- setLedTxt 200 "}--"
 ifKeymap --- setLedTxt 200 "-}-"
@@ -262,6 +504,11 @@ numLayerPt1:
 ifKeymap --- setLedTxt 200 "1--"
 ifKeymap --- setLedTxt 200 "-2-"
 ifKeymap --- setLedTxt 200 "--3"
+goTo numLayerPt1End
+modLayerPt1:
+ifKeymap --- setLedTxt 200 "M--"
+ifKeymap --- setLedTxt 200 "-A-"
+ifKeymap --- setLedTxt 200 "--X"
 numLayerPt1End:
 ```
 > moveMouse ...
@@ -273,16 +520,22 @@ ifNotKeymap --- goTo final
 ```
 ifNotKeymap --- goTo final
 ifKeymap --- setLedTxt 200 "---"
+ifLayer mod goTo modLayerPt2
 ifLayer fn5 goTo numLayerPt2
 ifKeymap --- setLedTxt 200 "--{"
 ifKeymap --- setLedTxt 200 "-{-"
 ifKeymap --- setLedTxt 200 "{--"
-goTo numLayerPt2End
+goTo endPt2
 numLayerPt2:
 ifKeymap --- setLedTxt 200 "--3"
 ifKeymap --- setLedTxt 200 "-2-"
 ifKeymap --- setLedTxt 200 "1--"
-numLayerPt2End:
+goTo endPt2
+modLayerPt2:
+ifKeymap --- setLedTxt 200 "--X"
+ifKeymap --- setLedTxt 200 "-A-"
+ifKeymap --- setLedTxt 200 "M--"
+endPt2:
 ```
 > moveMouse ...
 ```
@@ -396,7 +649,7 @@ ifSecondary final suppressMods holdKey LC-space
 suppressMods tapKey LCLS-m
 ifNotShift break
 delayUntil 600
-suppressMods tapKey LCLS-semicolonAndColon
+suppressMods tapKey LCLS-semicolonAndColon // CS-o on Colemak host
 ```
 
 **nextKeyID:**
@@ -493,15 +746,52 @@ break
 
 **numthumb:**
 ```
-ifDoubletap final switchKeymap NM2
-switchKeymap NM2
-delayUntilRelease
-switchKeymap CM2
+setLedTxt 0 '123'
+holdLayer fn3
+setLedTxt 1 '123'
+```
+
+**Pause-or-b:**
+```
+ifKeyActive $keyId.leftFn final {
+    ifKeymap --- switchKeymap CMX
+    else switchKeymap ---
+}
+holdKey b
+
 ```
 
 **printstatus:**
 ```
 printStatus
+```
+
+**run_once:**
+```
+if ($has_run == 0) {
+    setVar has_run 1
+    setLedTxt 999 '1ST'
+}
+else {
+    setLedTxt 999 '2+'
+}
+
+```
+
+**safetyMargin-down:**
+```
+setVar safetyMargin ($safetyMargin - 5)
+set secondaryRole.advanced.safetyMargin $safetyMargin
+if ( $safetyMargin < 0 ) final setLedTxt 500 "$safetyMargin"
+setLedTxt 500 "+$safetyMargin"
+```
+
+**safetyMargin-up:**
+```
+setVar safetyMargin ($safetyMargin + 5)
+set secondaryRole.advanced.safetyMargin $safetyMargin
+if ( $safetyMargin < 0 ) final setLedTxt 500 "$safetyMargin"
+setLedTxt 500 "+$safetyMargin"
 ```
 
 **snap-leftright:**
@@ -564,6 +854,14 @@ setLedTxt 1 '<->'
 
 ```
 
+**spaceback:**
+```
+setLedTxt 1 'CMX'
+// switchKeymap CMX
+untoggleLayer
+holdKey space
+```
+
 **spacetapper:**
 ```
 setLedTxt 500 'SPC'
@@ -573,6 +871,25 @@ ifInterrupted final setLedTxt 1500 'OFF'
 tapKey space
 setLedTxt 1000 'SPC'
 goTo loop
+
+```
+
+**xtend-xecute:**
+```
+ifGesture timeoutIn 1500 a final setLedTxt 666 'X-A'
+ifGesture timeoutIn 1500 b final setLedTxt 666 'X-B'
+ifGesture timeoutIn 1500 c 1 final setLedTxt 666 'XC1'
+ifGesture timeoutIn 1500 c 2 final setLedTxt 666 'XC2'
+ifGesture timeoutIn 1500 noConsume orGate j k l u i o 7 8 9 m final {
+    //switchKeymap NMX
+    toggleLayer fn5
+    set keymapAction.fn5.leftSpace macro spaceback
+    set keymapAction.fn5.rightSpace macro spaceback
+    setLedTxt 0 '1NM'
+}
+ifGesture timeoutIn 1500 k final tapKey x
+ifGesture timeoutIn 1500 orGate l final tapKey y
+setLedTxt 666 'NON'
 
 ```
 
