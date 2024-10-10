@@ -174,9 +174,9 @@ at the same time will cause kanata to exit:
 ;; provide some insight.
 (defsrc
   grv  1    2    3    4    5    6    7    8    9    0    -    =    bspc
-  tab  q    w    e    r    t    y    u    i    o    p    [    ]    \
-  caps a    s    d    f    g    h    j    k    l    ;    '    ret
-  lsft z    x    c    v    b    n    m    ,    .    /    rsft
+  tab    q    w    e    r    t    y    u    i    o    p    [    ]    \
+  caps    a    s    d    f    g    h    j    k    l    ;    '      ret
+  lsft lsgt z    x    c    v    b    n    m    ,    .    /    rsft
   lctl lmet lalt           spc            ralt rmet rctl
 )
 
@@ -191,16 +191,16 @@ at the same time will cause kanata to exit:
   @grl 1    2    3    4    5    6    7    8    9    0    -    =    bspc
   @nmt @hqq @hqw @hqe @hqr @hqt @hqy @hqu @hqi @hqo @hqp [    ]    \
   @mxt @hqa @hqs @hqd @hqf @hqg @hqh @hqj @hqk @hql @hq; @mxa      ret
-  lsft @hqz @hqx @hqc @hqv @hqb @hqn @hqm ,    .    @hq/ rsft
+  lsft @hq- @hqz @hqx @hqc @hqv @hqb @hqn @hqm ,    .    @hq/ rsft
   @lctl lmet lalt         @space           ralt rmet rctl
 )
 ;; This is qwerty with home-row mods temporarily turned off.
 ;; It will reactivate home-row mods after a space is typed.
 (deflayer qwerty-hr-off
   @grl 1    2    3    4    5    6    7    8    9    0    -    =    bspc
-  @nmt q    w    e    r    t    y    u    i    o    p    [    ]    \
-  @mxt a    s    d    f    g    h    j    k    l    ;    @mxa      ret
-  lsft z    x    c    v    b    n    m    ,    .    /    rsft
+  @nmt   q    w    e    r    t    y    u    i    o    p    [    ]    \
+  @mxt    a    s    d    f    g    h    j    k    l    ;    @mxa   ret
+  lsft lsgt z    x    c    v    b    n    m    ,    .    /    rsft
   lctl lmet lalt          @spacey            ralt rmet rctl
 )
 
@@ -210,18 +210,18 @@ at the same time will cause kanata to exit:
 ;; There are no home-row mods.
 (deflayer qwerty
   @grl 1    2    3    4    5    6    7    8    9    0    -    =    bspc
-  @nmt q    w    e    r    t    y    u    i    o    p    [    ]    \
-  @mxt a    s    d    f    g    h    j    k    l    ;    @mxa      ret
-  lsft z    x    c    v    b    n    m    ,    .    /    rsft
+  @nmt   q    w    e    r    t    y    u    i    o    p    [    ]    \
+  @mxt    a    s    d    f    g    h    j    k    l    ;    @mxa   ret
+  lsft lsgt z    x    c    v    b    n    m    ,    .    /    rsft
   lctl lmet lalt           spc            ralt rmet rctl
 )
 
 ;; A Colemak layer which maps Colemak typing to a US-QWERTY OS layout.
 (deflayer colemak
   @grl 1    2    3    4    5    6    7    8    9    0    -    =    bspc
-  @nmt q    w    f    p    g    j    l    u    y    ;    [    ]    \
-  @mxt a    r    s    t    d    h    n    e    i    o    @mxa      ret
-  lsft z    x    c    v    b    k    m    ,    .    /    rsft
+  @nmt   q    w    f    p    g    j    l    u    y    ;    [    ]    \
+  @mxt    a    r    s    t    d    h    n    e    i    o    @mxa   ret
+  lsft lsgt z    x    c    v    b    k    m    ,    .    /    rsft
   lctl lmet lalt           spc           @ralt rmet rctl
 )
 
@@ -233,15 +233,15 @@ at the same time will cause kanata to exit:
   @grl 1    2    3    4    5    6    7    8    9    0    -    =    bspc
   @nmt q    w    f    p    g    j    l    u    y    ;    [    ]    \
   @mxt @hca @hcr @hcs @hct d    h    @hcn @hce @hci @hco @mxa      ret
-  lsft z    x    c    v    b    k    m    ,    .    @hc/ rsft
+  lsft @hc- z    x    c    v    b    k    m    ,    .    @hc/ rsft
   lctl lmet lalt         @space          @ralt rmet rctl
 )
 
 (deflayer colemak-altgr
   @grl 1    2    3    4    5    6    7    8    9    0    -    =    bspc
-  @nmt q    w    f    p    g    j    l    u    y    ;    [    ]    \
-  @mxt a    r    s    t    d    h    n    e    i    o    @mxa      ret
-  lsft z    x    c    v    b    k    m    ,    .    /    rsft
+  @nmt   q    w    f    p    g    j    l    u    y    ;    [    ]    \
+  @mxt    a    r    s    t    d    h    n    e    i    o    @mxa   ret
+  lsft lsgt z    x    c    v    b    k    m    ,    .    /    rsft
   lctl lmet lalt           spc            ralt rmet rctl
 )
 
@@ -250,9 +250,9 @@ at the same time will cause kanata to exit:
 ;; typist wants to use your computer, switch to this layer.
 (deflayer colerevmak
   @grl 1    2    3    4    5    6    7    8    9    0    -    =    bspc
-  @nmt q    w    k    s    f    o    i    l    ;    r    [    ]    \
-  @mxt a    d    g    e    t    h    y    n    u    p    @mxa      ret
-  lsft z    x    c    v    b    j    m    ,    .    /    rsft
+  @nmt   q    w    k    s    f    o    i    l    ;    r    [    ]    \
+  @mxt    a    d    g    e    t    h    y    n    u    p    @mxa   ret
+  lsft lsgt z    x    c    v    b    j    m    ,    .    /    rsft
   lctl lmet lalt           spc            ralt rmet rctl
 )
 
@@ -260,7 +260,7 @@ at the same time will cause kanata to exit:
   esc  f1   f2   f3   f4   f5   f6   f7   f8   f9   f10  f11  f12  del
   tab  esc  @mw↑ bck  fwd  XX   pgup home up   end  del  prnt slck brk
   _    lalt @mw↓ lsft lctl lmet pgdn left down rght bspc ins       ret
-  lsft C-z  C-x  C-c  C-v  b    n    m    ,    .    menu          rsft
+  lsft lsgt C-z  C-x  C-c  C-v  b    n    m    ,    .    menu      rsft
   lctl lmet lalt           ret            ralt rmet rctl
 )
 
@@ -268,24 +268,24 @@ at the same time will cause kanata to exit:
   esc  1    2    3    4    5    6    kp7  kp8  kp9  kp0  -    =    bspc
   tab  esc  @mw↑ XX   XX   XX   kp/  kp4  kp5  kp6  kp-  [    ]    \
   _    lalt @mw↓ lsft lctl lmet kp*  kp1  kp2  kp3  kp+  kprt      kprt
-  lsft C-z  C-x  C-c  C-v  nlk  @:   kp0  ,    kp.  kp=         @kprsft
+  lsft lsgt C-z  C-x  C-c  C-v  nlk  @:   kp0  ,    kp.  kp=    @kprsft
   lctl lmet lalt           spc            ralt rmet rctl
 )
 
 (deflayer spacer
   @grl 1    2    3    4    5    6    7    8    9    0    -    =    bspc
-  @nmt S-1  S-2  S-3  S-4  S-5  S-6  S-7  S-8  S-9  S-0  -    S-8  /
-  @mxt 1    2    3    4    5    6    7    8    9    0    S-=       ret
-  lsft -    [    ]    S-[  S-]  S-p  p    ,    .    /    rsft
+  @nmt   S-1  S-2  S-3  S-4  S-5  S-6  S-7  S-8  S-9  S-0  -    S-8  /
+  @mxt    1    2    3    4    5    6    7    8    9    0    S-=    ret
+  lsft -    -    [    ]    S-[  S-]  S-p  p    ,    .    /    rsft
   lctl lmet lalt           spc            ralt rmet rctl
 )
 
 #|
 (deflayer plover
   @grl 1    2    3    4    5    6    7    8    9    0    -    =    bspc
-  @nmt q    w    e    r    t    y    u    i    o    p    [    ]    \
-  @mxt a    s    d    f    g    h    j    k    l    ;    @mxa      ret
-  lsft z    x    c    v    b    n    m    ,    .    /    rsft
+  @nmt   q    w    e    r    t    y    u    i    o    p    [    ]    \
+  @mxt    a    s    d    f    g    h    j    k    l    ;    @mxa   ret
+  lsft lsgt z    x    c    v    b    n    m    ,    .    /    rsft
   lctl lmet lalt           spc            ralt rmet rctl
 )
 |#
@@ -578,7 +578,7 @@ at the same time will cause kanata to exit:
   _    @qwr @qwh @cmk @cmh @crk lrld lrpv lrnx (lrld-num 1) _ _  _ _
   _    1    2    3    4    5    6    7    8    9    _    _    _    _
   _    _    _    _    _    _    _    _    _    _    _    _    _
-  _    _    _    _    _    _    _    _    _    _    _    _
+  _    _    _    _    _    _    _    _    _    _    _    _    _
   _    _    _              _              _    _    _
 )
 
@@ -609,7 +609,7 @@ at the same time will cause kanata to exit:
   _    @mw↑ @mw↓ @mw← @mw→ _    _    _    _    _    @ma↑ _    _    _
   _    pgup bck  _    fwd  _    _    _    _    @ma← @ma↓ @ma→ _    _
   _    pgdn mlft _    mrgt mmid _    mbck mfwd _    @ms↑ _    _
-  @fms _    mltp _    mrtp mmtp _    mbtp mftp @ms← @ms↓ @ms→
+  @fms _ _  mltp _    mrtp mmtp _    mbtp mftp @ms← @ms↓ @ms→
   _    _    _              _              _    _    _
 )
 |#
