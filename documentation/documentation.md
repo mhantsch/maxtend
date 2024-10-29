@@ -12,6 +12,8 @@
 
 On a UHK[^uhk], additional functionality is available, e.g. mouse control, 2-axis scrolling, mouse jitter keep-alive, media and volume control.
 
+On UHK and Kanata configurations, homerow-mods are also (optionally) available.
+
 ### Notation conventions
 
 - `a` a key producing the letter 'a' (unshifted) and 'A' (shifted)
@@ -457,6 +459,58 @@ Numpad Enter is mapped onto the right `Control` key; it still acts as RCtrl as a
 ![image](https://github.com/mhantsch/maxtend/assets/591785/c5bfe3c7-5109-4859-9af7-b06dd78cde6e)
 
 (This is only on the UHK. The AHK script does not modify right Control.)
+
+## Home-row Mods (HRM)
+
+On UHK and Kanata configurations, home-row mods are also (optionally) available.
+
+### What are Home-row Mods?
+
+Some keys in the home-row position can be held down and used as modifier keys (Control, Shift, Alt, AltGr, Gui).
+
+Specifically these are:
+
+| key | modifier | finger assignment |
+| --- | -------- | ----------------- |
+| a | left alt | (left) pinky finger |
+| r | left gui | (left) ring finger |
+| s | left shift | (left) middle finger |
+| t | left control | (left) index finger |
+| n | right control | (right) index finger |
+| e | right shift | (right) middle finger |
+| i | right gui | (right) ring finger |
+| o | left alt | (right) pinky finger |
+
+The AltGr modifier can be activated in the row below the home row:
+
+| key | modifier | finger assignment |
+| --- | -------- | ----------------- |
+| ISO key | right alt (altgr) | (left) pinky finger |
+| /? | right alt (altgr) | (right) pinky finger |
+
+When such a key is tapped briefly, it produces the normal character symbol, but when it is held down and another key is typed concurrently, the modifier function is activated.
+
+Example:
+- tap `e` to produce an **e**.
+- press `e` and hold the key down, then tap 'f' to produce an uppercase **F**. (`e` will work as `shift`. After tapping `f` your can release `e` again.)
+
+### Special features
+
+Home-row mods have a tendency to be finicky, and can sometimes inadvertantly and spontaneously activate during fast typing, especially when you type using finger rolls. To help with this, two additional features help keep them under control.
+
+#### Cross-hand detection and same-hand avoidance
+
+Usually, modifiers pressed on one hand are combined with keys from the other hand. So, a left shift activated by holding down `s` should be combined with characters from the right hand, such as `h`, `n`, `l`, `y`, `m` etc. and vice versa.
+
+Pressing one of the hrm keys together (within a short interval) with keys from the same hand will automatically activate the primary letter of the hrm key. This prevents the inadertant activation of mods during fast finger rolls on neighbouring keys.
+
+It is still possible to type mods with keys from the same hand, but you will have to intentionally hold down the mod for a little while before tapping the next key.
+
+That same-hand avoidance interval defaults to somewhere in the range of 100-350ms.
+
+#### Fast typing auto-deactivation
+
+The hrm keys will examine the interval since the previous key was typed. The modifier will only activate if a brief moment has elapsed since the previous keypress. This means that during fast typing, the hrms cannot activate. This fast typing auto-deactivation interval defaults to about 30-80ms.
 
 -----
 [^tkl]: Ten-Key-Less. A keyboard that does not have a "number pad" key cluster for number entry. There is still a navigation cluster with cursor keys, Ins/Del/Home/End/PgUp/PgDn, and PrScr/ScrLk/Break keys. Also often referred to as an "80%" keyboard.

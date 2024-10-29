@@ -174,9 +174,9 @@ at the same time will cause kanata to exit:
 ;; provide some insight.
 (defsrc
   grv  1    2    3    4    5    6    7    8    9    0    -    =    bspc
-  tab  q    w    e    r    t    y    u    i    o    p    [    ]    \
-  caps a    s    d    f    g    h    j    k    l    ;    '    ret
-  lsft z    x    c    v    b    n    m    ,    .    /    rsft
+  tab    q    w    e    r    t    y    u    i    o    p    [    ]    \
+  caps    a    s    d    f    g    h    j    k    l    ;    '      ret
+  lsft lsgt z    x    c    v    b    n    m    ,    .    /    rsft
   lctl lmet lalt           spc            ralt rmet rctl
 )
 
@@ -191,16 +191,16 @@ at the same time will cause kanata to exit:
   @grl 1    2    3    4    5    6    7    8    9    0    -    =    bspc
   @nmt @hqq @hqw @hqe @hqr @hqt @hqy @hqu @hqi @hqo @hqp [    ]    \
   @mxt @hqa @hqs @hqd @hqf @hqg @hqh @hqj @hqk @hql @hq; @mxa      ret
-  lsft @hqz @hqx @hqc @hqv @hqb @hqn @hqm ,    .    @hq/ rsft
+  lsft @hq- @hqz @hqx @hqc @hqv @hqb @hqn @hqm ,    .    @hq/ rsft
   @lctl lmet lalt         @space           ralt rmet rctl
 )
 ;; This is qwerty with home-row mods temporarily turned off.
 ;; It will reactivate home-row mods after a space is typed.
 (deflayer qwerty-hr-off
   @grl 1    2    3    4    5    6    7    8    9    0    -    =    bspc
-  @nmt q    w    e    r    t    y    u    i    o    p    [    ]    \
-  @mxt a    s    d    f    g    h    j    k    l    ;    @mxa      ret
-  lsft z    x    c    v    b    n    m    ,    .    /    rsft
+  @nmt   q    w    e    r    t    y    u    i    o    p    [    ]    \
+  @mxt    a    s    d    f    g    h    j    k    l    ;    @mxa   ret
+  lsft lsgt z    x    c    v    b    n    m    ,    .    /    rsft
   lctl lmet lalt          @spacey            ralt rmet rctl
 )
 
@@ -210,38 +210,36 @@ at the same time will cause kanata to exit:
 ;; There are no home-row mods.
 (deflayer qwerty
   @grl 1    2    3    4    5    6    7    8    9    0    -    =    bspc
-  @nmt q    w    e    r    t    y    u    i    o    p    [    ]    \
-  @mxt a    s    d    f    g    h    j    k    l    ;    @mxa      ret
-  lsft z    x    c    v    b    n    m    ,    .    /    rsft
+  @nmt   q    w    e    r    t    y    u    i    o    p    [    ]    \
+  @mxt    a    s    d    f    g    h    j    k    l    ;    @mxa   ret
+  lsft lsgt z    x    c    v    b    n    m    ,    .    /    rsft
   lctl lmet lalt           spc            ralt rmet rctl
 )
 
 ;; A Colemak layer which maps Colemak typing to a US-QWERTY OS layout.
 (deflayer colemak
   @grl 1    2    3    4    5    6    7    8    9    0    -    =    bspc
-  @nmt q    w    f    p    g    j    l    u    y    ;    [    ]    \
-  @mxt a    r    s    t    d    h    n    e    i    o    @mxa      ret
-  lsft z    x    c    v    b    k    m    ,    .    /    rsft
+  @nmt   q    w    f    p    g    j    l    u    y    ;    [    ]    \
+  @mxt    a    r    s    t    d    h    n    e    i    o    @mxa   ret
+  lsft lsgt z    x    c    v    b    k    m    ,    .    /    rsft
   lctl lmet lalt           spc           @ralt rmet rctl
 )
 
 ;; A Colemak layer which maps Colemak typing to a US-QWERTY OS layout
-;; including home-row mods. Note that these home-row mods are slightly
-;; simpler than the ones configured for qwerty-hr. Currently, they 
-;; don't auto-disable during rapid typing.
+;; including home-row mods.
 (deflayer colemak-hr
   @grl 1    2    3    4    5    6    7    8    9    0    -    =    bspc
-  @nmt q    w    f    p    g    j    l    u    y    ;    [    ]    \
-  @mxt @hca @hcr @hcs @hct d    h    @hcn @hce @hci @hco @mxa      ret
-  lsft z    x    c    v    b    k    m    ,    .    @hc/ rsft
+  @nmt @hcq @hcw @hcf @hcp @hcg @hcj @hcl @hcu @hcy ;    [    ]    \
+  @mxt @hca @hcr @hcs @hct @hcd @hch @hcn @hce @hci @hco @mxa      ret
+  lsft @hc- @hcz @hcx @hcc @hcv @hcb @hck @hcm ,    .    @hc/ rsft
   lctl lmet lalt         @space          @ralt rmet rctl
 )
 
 (deflayer colemak-altgr
   @grl 1    2    3    4    5    6    7    8    9    0    -    =    bspc
-  @nmt q    w    f    p    g    j    l    u    y    ;    [    ]    \
-  @mxt a    r    s    t    d    h    n    e    i    o    @mxa      ret
-  lsft z    x    c    v    b    k    m    ,    .    /    rsft
+  @nmt   q    w    f    p    g    j    l    u    y    ;    [    ]    \
+  @mxt    a    r    s    t    d    h    n    e    i    o    @mxa   ret
+  lsft lsgt z    x    c    v    b    k    m    ,    .    /    rsft
   lctl lmet lalt           spc            ralt rmet rctl
 )
 
@@ -250,9 +248,9 @@ at the same time will cause kanata to exit:
 ;; typist wants to use your computer, switch to this layer.
 (deflayer colerevmak
   @grl 1    2    3    4    5    6    7    8    9    0    -    =    bspc
-  @nmt q    w    k    s    f    o    i    l    ;    r    [    ]    \
-  @mxt a    d    g    e    t    h    y    n    u    p    @mxa      ret
-  lsft z    x    c    v    b    j    m    ,    .    /    rsft
+  @nmt   q    w    k    s    f    o    i    l    ;    r    [    ]    \
+  @mxt    a    d    g    e    t    h    y    n    u    p    @mxa   ret
+  lsft lsgt z    x    c    v    b    j    m    ,    .    /    rsft
   lctl lmet lalt           spc            ralt rmet rctl
 )
 
@@ -260,7 +258,7 @@ at the same time will cause kanata to exit:
   esc  f1   f2   f3   f4   f5   f6   f7   f8   f9   f10  f11  f12  del
   tab  esc  @mw↑ bck  fwd  XX   pgup home up   end  del  prnt slck brk
   _    lalt @mw↓ lsft lctl lmet pgdn left down rght bspc ins       ret
-  lsft C-z  C-x  C-c  C-v  b    n    m    ,    .    menu          rsft
+  lsft lsgt C-z  C-x  C-c  C-v  b    n    m    ,    .    menu      rsft
   lctl lmet lalt           ret            ralt rmet rctl
 )
 
@@ -268,24 +266,24 @@ at the same time will cause kanata to exit:
   esc  1    2    3    4    5    6    kp7  kp8  kp9  kp0  -    =    bspc
   tab  esc  @mw↑ XX   XX   XX   kp/  kp4  kp5  kp6  kp-  [    ]    \
   _    lalt @mw↓ lsft lctl lmet kp*  kp1  kp2  kp3  kp+  kprt      kprt
-  lsft C-z  C-x  C-c  C-v  nlk  @:   kp0  ,    kp.  kp=         @kprsft
+  lsft lsgt C-z  C-x  C-c  C-v  nlk  @:   kp0  ,    kp.  kp=    @kprsft
   lctl lmet lalt           spc            ralt rmet rctl
 )
 
 (deflayer spacer
   @grl 1    2    3    4    5    6    7    8    9    0    -    =    bspc
-  @nmt S-1  S-2  S-3  S-4  S-5  S-6  S-7  S-8  S-9  S-0  -    S-8  /
-  @mxt 1    2    3    4    5    6    7    8    9    0    S-=       ret
-  lsft -    [    ]    S-[  S-]  S-p  p    ,    .    /    rsft
+  @nmt   S-1  S-2  S-3  S-4  S-5  S-6  S-7  S-8  S-9  S-0  -    S-8  /
+  @mxt    1    2    3    4    5    6    7    8    9    0    S-=    ret
+  lsft -    -    [    ]    S-[  S-]  S-p  p    ,    .    /    rsft
   lctl lmet lalt           spc            ralt rmet rctl
 )
 
 #|
 (deflayer plover
   @grl 1    2    3    4    5    6    7    8    9    0    -    =    bspc
-  @nmt q    w    e    r    t    y    u    i    o    p    [    ]    \
-  @mxt a    s    d    f    g    h    j    k    l    ;    @mxa      ret
-  lsft z    x    c    v    b    n    m    ,    .    /    rsft
+  @nmt   q    w    e    r    t    y    u    i    o    p    [    ]    \
+  @mxt    a    s    d    f    g    h    j    k    l    ;    @mxa   ret
+  lsft lsgt z    x    c    v    b    n    m    ,    .    /    rsft
   lctl lmet lalt           spc            ralt rmet rctl
 )
 |#
@@ -341,7 +339,8 @@ at the same time will cause kanata to exit:
 )
 
 (defvirtualkeys
-  activate-hrmods (layer-switch qwerty-hr)   ;; reactivate home-row mods
+  activate-hrmods-q (layer-switch qwerty-hr)   ;; reactivate home-row mods (qwerty)
+  activate-hrmods-c (layer-switch colemak-hr)  ;; reactivate home-row mods (colemak)
 )
 
 ;; defalias is used to declare a shortcut for a more complicated action to keep
@@ -367,10 +366,16 @@ at the same time will cause kanata to exit:
 
   ;; automatically deactivate home-row mods for a short while whenever
   ;; any one of them resolves as a tap. (The user seems to be typing fast.)
-  hr-tap (
+  hr-tap-q (
     multi 
       (layer-switch qwerty-hr-off)            ;; disable hr-mods temporarily
-      (on-idle 30 tap-vkey activate-hrmods)  ;; reactivate hr-mods after idle timeout
+      (on-idle 30 tap-vkey activate-hrmods-q) ;; reactivate hr-mods when idle
+  )
+
+  hr-tap-c (
+    multi 
+      (layer-switch colemak)                  ;; disable hr-mods temporarily
+      (on-idle 30 tap-vkey activate-hrmods-c) ;; reactivate hr-mods when idle
   )
 
   ;; tap-hold aliases with tap for normal key, and hold for toggle layers
@@ -408,6 +413,17 @@ at the same time will cause kanata to exit:
   ;; to tap-hold-next and tap-hold-next-release, respectively. If you know
   ;; the underlying keyberon crate, tap-hold-press is the HoldOnOtherKeyPress
   ;; and tap-hold-release is the PermissiveHold configuration.
+  ;;
+  ;; `tap-hold-release-keys` is another variant of `tap-hold-release`
+  ;; which takes a 5th parameter that is a list of keys that will trigger
+  ;; an early tap.
+  ;;
+  ;; Examples:
+  ;; tap: u    hold: misc layer      early tap if any of: (a o e) are pressed
+  ;; umk (tap-hold-release-keys 200 200 u @msc (a o e))
+  ;; tap: u    hold: misc layer      always tap if any of: (a o e) are pressed
+  ;; uek (tap-hold-except-keys 200 200 u @msc (a o e))
+
   grl (tap-hold 200 200 grv @lay)             ;; tap: grave  hold: layers layer
   mxt (switch
     (lalt) (unmod del) break                  ;; alt-maxtend = delete (without alt)
@@ -427,8 +443,8 @@ at the same time will cause kanata to exit:
   space (fork @spacer spc (lctl rctl))        ;; ctl-spc does NOT toggle to spacer
                                               ;;         but sends C-spc
   spacey (multi
-            (on-press tap-vkey activate-hrmods)  ;; re-activate hr-mods
-            spc                                  ;; send spc
+            (on-press tap-vkey activate-hrmods-q) ;; re-activate hr-mods
+            spc                                   ;; send spc
          )
 
   kprsft (tap-hold-press $tt $ht kprt rsft)   ;; tap: keypad enter, hold: right shift
@@ -437,78 +453,75 @@ at the same time will cause kanata to exit:
                                               ;; double-tap on lctl repositions mouse
 
   ;; home-row mods (qwerty), typing-streak-auto-disable
-  hqa (tap-hold-release-keys $tt $htl (multi a @hr-tap) lalt $left-hand-keys)
-  hqs (tap-hold-release-keys $tt $ht (multi s @hr-tap) lmet $left-hand-keys)
-  hqd (tap-hold-release-keys $tt $ht (multi d @hr-tap) lsft $left-hand-keys)
-  hqf (tap-hold-release-keys $tt $ht (multi f @hr-tap) lctl $left-hand-keys)
-  ;; hqg (tap-hold-release-keys $tt $ht g lmet $left-hand-keys)
-  hqg (tap-hold-release-keys $tt $ht (multi g @hr-tap) lmet $left-hand-keys)
-  ;; hqh (tap-hold-release-keys $tt $ht h rmet $right-hand-keys)
-  hqh (tap-hold-release-keys $tt $ht (multi h @hr-tap) rmet $right-hand-keys)
-  hqj (tap-hold-release-keys $tt $ht (multi j @hr-tap) rctl $right-hand-keys)
-  hqk (tap-hold-release-keys $tt $ht (multi k @hr-tap) rshft $right-hand-keys)
-  hql (tap-hold-release-keys $tt $ht (multi l @hr-tap) rmet $right-hand-keys)
-  hq; (tap-hold-release-keys $tt $htl (multi ; @hr-tap) lalt $right-hand-keys)
+  hqa (tap-hold-release-keys $tt $htl (multi a @hr-tap-q) lalt $left-hand-keys)
+  hqs (tap-hold-release-keys $tt $ht (multi s @hr-tap-q) lmet $left-hand-keys)
+  hqd (tap-hold-release-keys $tt $ht (multi d @hr-tap-q) lsft $left-hand-keys)
+  hqf (tap-hold-release-keys $tt $ht (multi f @hr-tap-q) lctl $left-hand-keys)
+  hqg (tap-hold-release-keys $tt $ht (multi g @hr-tap-q) lmet $left-hand-keys)
+  hqh (tap-hold-release-keys $tt $ht (multi h @hr-tap-q) rmet $right-hand-keys)
+  hqj (tap-hold-release-keys $tt $ht (multi j @hr-tap-q) rctl $right-hand-keys)
+  hqk (tap-hold-release-keys $tt $ht (multi k @hr-tap-q) rshft $right-hand-keys)
+  hql (tap-hold-release-keys $tt $ht (multi l @hr-tap-q) rmet $right-hand-keys)
+  hq; (tap-hold-release-keys $tt $htl (multi ; @hr-tap-q) lalt $right-hand-keys)
 
-  hq- (tap-hold-release-keys $tt $htl (multi - @hr-tap) ralt $left-hand-keys)
-  hq/ (tap-hold-release-keys $tt $htl (multi / @hr-tap) ralt $right-hand-keys)
+  hq- (tap-hold-release-keys $tt $htl (multi - @hr-tap-q) ralt $left-hand-keys)
+  hq/ (tap-hold-release-keys $tt $htl (multi / @hr-tap-q) ralt $right-hand-keys)
 
   ;; normal alpha keys, top row (qwerty), typing-streak-auto-disable
-  hqq (multi q @hr-tap)
-  hqw (multi w @hr-tap)
-  hqe (multi e @hr-tap)
-  hqr (multi r @hr-tap)
-  hqt (multi t @hr-tap)
-  hqy (multi y @hr-tap)
-  hqu (multi u @hr-tap)
-  hqi (multi i @hr-tap)
-  hqo (multi o @hr-tap)
-  hqp (multi p @hr-tap)
+  hqq (multi q @hr-tap-q)
+  hqw (multi w @hr-tap-q)
+  hqe (multi e @hr-tap-q)
+  hqr (multi r @hr-tap-q)
+  hqt (multi t @hr-tap-q)
+  hqy (multi y @hr-tap-q)
+  hqu (multi u @hr-tap-q)
+  hqi (multi i @hr-tap-q)
+  hqo (multi o @hr-tap-q)
+  hqp (multi p @hr-tap-q)
 
   ;; normal alpha keys, bottom row (qwerty), typing-streak-auto-disable
-  hqz (multi z @hr-tap)
-  hqx (multi x @hr-tap)
-  hqc (multi c @hr-tap)
-  hqv (multi v @hr-tap)
-  hqb (multi b @hr-tap)
-  hqn (multi n @hr-tap)
-  hqm (multi m @hr-tap)
+  hqz (multi z @hr-tap-q)
+  hqx (multi x @hr-tap-q)
+  hqc (multi c @hr-tap-q)
+  hqv (multi v @hr-tap-q)
+  hqb (multi b @hr-tap-q)
+  hqn (multi n @hr-tap-q)
+  hqm (multi m @hr-tap-q)
 
   ;; home-row mods (colemak)
-  hca (tap-hold-release-keys $tt $htl a lalt $left-hand-keys)
-  hcr (tap-hold-release-keys $tt $ht r lmet $left-hand-keys)
-  hcs (tap-hold-release-keys $tt $ht s lsft $left-hand-keys)
-  hct (tap-hold-release-keys $tt $ht t lctl $left-hand-keys)
-  ;; hcd (tap-hold-release-keys $tt $ht d lmet $left-hand-keys)
-  ;; hch (tap-hold-release-keys $tt $ht h rmet $right-hand-keys)
-  hcn (tap-hold-release-keys $tt $ht n rctl $right-hand-keys)
-  hce (tap-hold-release-keys $tt $ht e rshft $right-hand-keys)
-  hci (tap-hold-release-keys $tt $ht i rmet $right-hand-keys)
-  hco (tap-hold-release-keys $tt $htl o lalt $right-hand-keys)
+  hca (tap-hold-release-keys $tt $htl (multi a @hr-tap-c) lalt $left-hand-keys)
+  hcr (tap-hold-release-keys $tt $ht (multi r @hr-tap-c) lmet $left-hand-keys)
+  hcs (tap-hold-release-keys $tt $ht (multi s @hr-tap-c) lsft $left-hand-keys)
+  hct (tap-hold-release-keys $tt $ht (multi t @hr-tap-c) lctl $left-hand-keys)
+  hcd (tap-hold-release-keys $tt $ht (multi d @hr-tap-c) lmet $left-hand-keys)
+  hch (tap-hold-release-keys $tt $ht (multi h @hr-tap-c) rmet $right-hand-keys)
+  hcn (tap-hold-release-keys $tt $ht (multi n @hr-tap-c) rctl $right-hand-keys)
+  hce (tap-hold-release-keys $tt $ht (multi e @hr-tap-c) rshft $right-hand-keys)
+  hci (tap-hold-release-keys $tt $ht (multi i @hr-tap-c) rmet $right-hand-keys)
+  hco (tap-hold-release-keys $tt $htl (multi o @hr-tap-c) lalt $right-hand-keys)
 
-  hc- (tap-hold-release-keys $tt $htl - ralt $left-hand-keys)
-  hc/ (tap-hold-release-keys $tt $htl / ralt $right-hand-keys)
+  hc- (tap-hold-release-keys $tt $htl (multi - @hr-tap-c) ralt $left-hand-keys)
+  hc/ (tap-hold-release-keys $tt $htl (multi / @hr-tap-c) ralt $right-hand-keys)
 
-  ;; There are additional variants of tap-hold-press and tap-hold-release that
-  ;; activate the timeout action (the 5th parameter) when the action times out
-  ;; as opposed to the hold action being activated by other keys.
+  ;; normal alpha keys, bottom row (qwerty), typing-streak-auto-disable
+  hcq (multi q @hr-tap-c)
+  hcw (multi w @hr-tap-c)
+  hcf (multi f @hr-tap-c)
+  hcp (multi p @hr-tap-c)
+  hcg (multi g @hr-tap-c)
+  hcj (multi j @hr-tap-c)
+  hcl (multi l @hr-tap-c)
+  hcu (multi u @hr-tap-c)
+  hcy (multi y @hr-tap-c)
 
-  ;; tap: o    hold: arrows layer    timeout: backspace
-  ;; oat (tap-hold-press-timeout   200 200 o @arr bspc)
-  ;; tap: e    hold: chords layer    timeout: esc
-  ;; ect (tap-hold-release-timeout 200 200 e @chr esc)
-
-  ;; There is another variant of `tap-hold-release` that takes a 5th parameter
-  ;; that is a list of keys that will trigger an early tap.
-
-  ;; tap: u    hold: misc layer      early tap if any of: (a o e) are pressed
-  ;; umk (tap-hold-release-keys 200 200 u @msc (a o e))
-
-  ;; tap: u    hold: misc layer      always tap if any of: (a o e) are pressed
-  ;; uek (tap-hold-except-keys 200 200 u @msc (a o e))
-
-  ;; tap for capslk, hold for lctl
-  ;; cap (tap-hold 200 200 caps lctl)
+  ;; normal alpha keys, bottom row (qwerty), typing-streak-auto-disable
+  hcz (multi z @hr-tap-c)
+  hcx (multi x @hr-tap-c)
+  hcc (multi c @hr-tap-c)
+  hcv (multi v @hr-tap-c)
+  hcb (multi b @hr-tap-c)
+  hck (multi k @hr-tap-c)
+  hcm (multi m @hr-tap-c)
 )
 
 (defalias
@@ -578,7 +591,7 @@ at the same time will cause kanata to exit:
   _    @qwr @qwh @cmk @cmh @crk lrld lrpv lrnx (lrld-num 1) _ _  _ _
   _    1    2    3    4    5    6    7    8    9    _    _    _    _
   _    _    _    _    _    _    _    _    _    _    _    _    _
-  _    _    _    _    _    _    _    _    _    _    _    _
+  _    _    _    _    _    _    _    _    _    _    _    _    _
   _    _    _              _              _    _    _
 )
 
@@ -609,7 +622,7 @@ at the same time will cause kanata to exit:
   _    @mw↑ @mw↓ @mw← @mw→ _    _    _    _    _    @ma↑ _    _    _
   _    pgup bck  _    fwd  _    _    _    _    @ma← @ma↓ @ma→ _    _
   _    pgdn mlft _    mrgt mmid _    mbck mfwd _    @ms↑ _    _
-  @fms _    mltp _    mrtp mmtp _    mbtp mftp @ms← @ms↓ @ms→
+  @fms _ _  mltp _    mrtp mmtp _    mbtp mftp @ms← @ms↓ @ms→
   _    _    _              _              _    _    _
 )
 |#
