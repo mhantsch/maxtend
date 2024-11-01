@@ -473,15 +473,17 @@ Specifically these are:
 | key | modifier | finger assignment |
 | --- | -------- | ----------------- |
 | a | left alt | (left) pinky finger |
-| r | left gui | (left) ring finger |
+| r | right alt (altgr) | (left) ring finger |
 | s | left shift | (left) middle finger |
 | t | left control | (left) index finger |
+| d | left gui (win, meta) | (left) index finger |
+| h | right gui (win, meta) | (right) index finger |
 | n | right control | (right) index finger |
 | e | right shift | (right) middle finger |
-| i | right gui | (right) ring finger |
+| i | right alt (altgr) | (right) ring finger |
 | o | left alt | (right) pinky finger |
 
-The AltGr modifier can be activated in the row below the home row:
+The AltGr modifier (right alt) can also be activated in the row below the home row:
 
 | key | modifier | finger assignment |
 | --- | -------- | ----------------- |
@@ -490,9 +492,13 @@ The AltGr modifier can be activated in the row below the home row:
 
 When such a key is tapped briefly, it produces the normal character symbol, but when it is held down and another key is typed concurrently, the modifier function is activated.
 
-Example:
+To combine multiple modifiers, hold the first one down for a moment before pressing more modifiers. Then, with all modifiers held down, tap the key you want all the modifiers to be applied to.
+
+Examples:
+
 - tap `e` to produce an **e**.
-- press `e` and hold the key down, then tap 'f' to produce an uppercase **F**. (`e` will work as `shift`. After tapping `f` your can release `e` again.)
+- press `e` and hold the key down, then tap `f` to produce an uppercase **F**. (`e` will work as `shift`. After tapping `f` your can release `e` again.)
+- press and hold `e` (for more than about 400ms), then also hold down `n`, then tap `v` to produce **control+shift+V**. (`e` and `n` will work as `shift` and `control`. After tapping `v` you can release all keys.)
 
 ### Special features
 
@@ -511,6 +517,50 @@ That same-hand avoidance interval defaults to somewhere in the range of 100-350m
 #### Fast typing auto-deactivation
 
 The hrm keys will examine the interval since the previous key was typed. The modifier will only activate if a brief moment has elapsed since the previous keypress. This means that during fast typing, the hrms cannot activate. This fast typing auto-deactivation interval defaults to about 30-80ms.
+
+### Activating Home-row Mods
+
+#### UHK
+
+When using the UHK, three modes are available for HRM:
+
+| key combination | mode | description |
+| --- | --- | --- |
+| `fn`+`3` | hrm-off | HRMs are turned off. This is the default. |
+| `fn`+`2` | hrm-on | HRMs are on, with active cross-hand detection. |
+| `fn`+`1` | hrm-auto | HRMs are on, and both cross-hand detection and fast typing auto-deactivation are active. |
+
+The UHK will show brief messages on the LED display:
+
+| LED display | meaning |
+| --- | --- |
+| **`H--`** | HRMs are off |
+| **`H++`** | HRMs are on |
+| **`H+-`** | HRMs are in auto mode |
+
+The display may also flash two other informational messages briefly. These are mostly useful for debugging issues with HRM auto mode. (The auto mode requires a background timer task to run.)
+
+| LED display | meaning |
+| --- | --- |
+| **`T++`** | background timer task started |
+| **`T--`** | background timer task stopped |
+
+***Note:*** Due to a bug in the current UHK firmware (as of Oct 2024), always make sure you turn HRM off (= ensure you are not in *hrm-auto* mode) before reloading the UHK config from Agent. With the timer task actively running while the configuration is reloaded, some memory corruption in the UHK may cause it to throw error messages and become unresponsive. If that happens, you need to unplug/replug your UHK. The easiest way to avoid this is to hit `fn`+`3` (to turn off HRMs) before saving the configuration in Agent.
+
+#### Kanata
+
+Use the following key combinations to turn various modes on/off (hold `` ` `` for a moment and keep holding it while tapping the next key):
+
+| key combination | meaning | use for |
+| --- | --- | --- |
+| `` ` ``+`1` | switch to qwerty without hrms | if your OS base layout is already set to colemak, use this to type in colemak |
+| `` ` ``+`2` | switch to qwerty with hrms enabled | if your OS base layout is already set to colemak, use this to type in colemak with HRMs |
+| `` ` ``+`3` | switch to colemak without hrms | use this with a standard US-QWERTY OS layout to type in colemak |
+| `` ` ``+`4` | switch to colemak with hrms enabled | use this with a standard US-QWERTY OS layout to type in colemak with HRMs |
+| `` ` ``+`5` | switch to 'reverse colemak' without hrms | use this with a colemak OS layout to type in QWERTY |
+| `` ` ``+`6` | reload the kanata configuration |
+| `` ` ``+`7` | load the next kanata configuration (if you have specified multiple configuration files) |
+| `` ` ``+`8` | load the previous kanata configuration (if you have specified multiple configuration files) |
 
 -----
 [^tkl]: Ten-Key-Less. A keyboard that does not have a "number pad" key cluster for number entry. There is still a navigation cluster with cursor keys, Ins/Del/Home/End/PgUp/PgDn, and PrScr/ScrLk/Break keys. Also often referred to as an "80%" keyboard.
