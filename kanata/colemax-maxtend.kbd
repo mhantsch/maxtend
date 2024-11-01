@@ -454,14 +454,14 @@ at the same time will cause kanata to exit:
 
   ;; home-row mods (qwerty), typing-streak-auto-disable
   hqa (tap-hold-release-keys $tt $htl (multi a @hr-tap-q) lalt $left-hand-keys)
-  hqs (tap-hold-release-keys $tt $ht (multi s @hr-tap-q) lmet $left-hand-keys)
+  hqs (tap-hold-release-keys $tt $ht (multi s @hr-tap-q) ralt $left-hand-keys)
   hqd (tap-hold-release-keys $tt $ht (multi d @hr-tap-q) lsft $left-hand-keys)
   hqf (tap-hold-release-keys $tt $ht (multi f @hr-tap-q) lctl $left-hand-keys)
   hqg (tap-hold-release-keys $tt $ht (multi g @hr-tap-q) lmet $left-hand-keys)
   hqh (tap-hold-release-keys $tt $ht (multi h @hr-tap-q) rmet $right-hand-keys)
   hqj (tap-hold-release-keys $tt $ht (multi j @hr-tap-q) rctl $right-hand-keys)
   hqk (tap-hold-release-keys $tt $ht (multi k @hr-tap-q) rshft $right-hand-keys)
-  hql (tap-hold-release-keys $tt $ht (multi l @hr-tap-q) rmet $right-hand-keys)
+  hql (tap-hold-release-keys $tt $ht (multi l @hr-tap-q) ralt $right-hand-keys)
   hq; (tap-hold-release-keys $tt $htl (multi ; @hr-tap-q) lalt $right-hand-keys)
 
   hq- (tap-hold-release-keys $tt $htl (multi - @hr-tap-q) ralt $left-hand-keys)
@@ -490,14 +490,14 @@ at the same time will cause kanata to exit:
 
   ;; home-row mods (colemak)
   hca (tap-hold-release-keys $tt $htl (multi a @hr-tap-c) lalt $left-hand-keys)
-  hcr (tap-hold-release-keys $tt $ht (multi r @hr-tap-c) lmet $left-hand-keys)
+  hcr (tap-hold-release-keys $tt $ht (multi r @hr-tap-c) ralt $left-hand-keys)
   hcs (tap-hold-release-keys $tt $ht (multi s @hr-tap-c) lsft $left-hand-keys)
   hct (tap-hold-release-keys $tt $ht (multi t @hr-tap-c) lctl $left-hand-keys)
   hcd (tap-hold-release-keys $tt $ht (multi d @hr-tap-c) lmet $left-hand-keys)
   hch (tap-hold-release-keys $tt $ht (multi h @hr-tap-c) rmet $right-hand-keys)
   hcn (tap-hold-release-keys $tt $ht (multi n @hr-tap-c) rctl $right-hand-keys)
   hce (tap-hold-release-keys $tt $ht (multi e @hr-tap-c) rshft $right-hand-keys)
-  hci (tap-hold-release-keys $tt $ht (multi i @hr-tap-c) rmet $right-hand-keys)
+  hci (tap-hold-release-keys $tt $ht (multi i @hr-tap-c) ralt $right-hand-keys)
   hco (tap-hold-release-keys $tt $htl (multi o @hr-tap-c) lalt $right-hand-keys)
 
   hc- (tap-hold-release-keys $tt $htl (multi - @hr-tap-c) ralt $left-hand-keys)
