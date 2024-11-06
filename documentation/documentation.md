@@ -472,23 +472,23 @@ Specifically these are:
 
 | key | modifier | finger assignment |
 | --- | -------- | ----------------- |
-| a | left alt | (left) pinky finger |
-| r | right alt (altgr) | (left) ring finger |
-| s | left shift | (left) middle finger |
-| t | left control | (left) index finger |
-| d | left gui (win, meta) | (left) index finger |
-| h | right gui (win, meta) | (right) index finger |
-| n | right control | (right) index finger |
-| e | right shift | (right) middle finger |
-| i | right alt (altgr) | (right) ring finger |
-| o | left alt | (right) pinky finger |
+| `a` | left alt | (left) pinky finger |
+| `r` | right alt (altgr) | (left) ring finger |
+| `s` | left shift | (left) middle finger |
+| `t` | left control | (left) index finger |
+| `d` | left gui (win, meta) | (left) index finger |
+| `h` | right gui (win, meta) | (right) index finger |
+| `n` | right control | (right) index finger |
+| `e` | right shift | (right) middle finger |
+| `i` | right alt (altgr) | (right) ring finger |
+| `o` | left alt | (right) pinky finger |
 
 The AltGr modifier (right alt) can also be activated in the row below the home row:
 
 | key | modifier | finger assignment |
 | --- | -------- | ----------------- |
-| ISO key | right alt (altgr) | (left) pinky finger |
-| /? | right alt (altgr) | (right) pinky finger |
+| `\\|` (ISO key) | right alt (altgr) | (left) pinky finger |
+| `/?` | right alt (altgr) | (right) pinky finger |
 
 When such a key is tapped briefly, it produces the normal character symbol, but when it is held down and another key is typed concurrently, the modifier function is activated.
 
@@ -542,8 +542,8 @@ The display may also flash two other informational messages briefly. These are m
 
 | LED display | meaning |
 | --- | --- |
-| **`T++`** | background timer task started |
-| **`T--`** | background timer task stopped |
+| **`+T+`** | background timer task started |
+| **`-T-`** | background timer task stopped |
 
 ***Note:*** Due to a bug in the current UHK firmware (as of Oct 2024), always make sure you turn HRM off (= ensure you are not in *hrm-auto* mode) before reloading the UHK config from Agent. With the timer task actively running while the configuration is reloaded, some memory corruption in the UHK may cause it to throw error messages and become unresponsive. If that happens, you need to unplug/replug your UHK. The easiest way to avoid this is to hit `fn`+`3` (to turn off HRMs) before saving the configuration in Agent.
 
