@@ -26,7 +26,8 @@ The configuration is setup in three stages:
 1. base OS setup - giving a standard Colemak layout without extended functionality
 2. maxtend layer - giving extended functionality such as navigation, mouse scrolling etc.;  
    (achieved via AutoHotKey (Windows), Kanata (Windows & Linux, experimental), keyd (Linux), or xkb (Linux, deprecated))
-3. external keyboard - giving extended functionality even if your host computer does not have `maxtend` installed, and extends it further
+3. external keyboard - giving extended functionality even if your host computer does not have `maxtend` installed, and extends it further  
+  (implemented for UHK, QMK, and ZMK)
 
 These stages can work independently, but also combine on top of each other for best functionality.
 
@@ -40,8 +41,10 @@ Depending on your OS and preferred setup, find the configuration for each of the
 - For Linux:
   1. Switch your keyboard layout to Colemak (via keyboard settings of your distribution).
   2. Then, choose between either [xkb](xkb/) ([how to configure](xkb/HOWTO), deprecated) or [keyd](keyd/) (using [the keyd service](https://github.com/rvaiya/keyd)), or try [Kanata](https://github.com/jtroo/kanata) with the corresponding [kanata configuration](kanata/) (*recommended*).
-- For an Ultimate Hacking Keyboard:
-  - Check out a matching [uhk configuration](uhk/) for the [Ultimate Hacking Keyboard](https://ultimatehackingkeyboard.com) (an external programmable keyboard).
+- For an external keyboard:
+  - Ultimate Hacking Keyboard: Check out a matching [uhk configuration](uhk/) for the [Ultimate Hacking Keyboard](https://ultimatehackingkeyboard.com) (an external programmable keyboard).
+  - QMK: Check out a configuration for a wired ErgoTravel keyboard using QMK on ProMicro controllers in the [qmk](qmk/) folder.
+  - ZMK: Configuration for a wireless ErgoTravel keyboard (BLE) using ZMK on nice!nano controllers in the [zmk](zmk/) folder. Check out the [README-ZMK](zmk/README-ZMK.md) for more information.
 
 If you are unsure which option to install in step 2, try Kanata. Check out the [Quick install instructions](kanata/HOWTO-INSTALL.md). It works both in Windows and Linux, is super powerful, and it is what I am now using. It also supports home-row mods quite well (in case you are interested in that).
 
