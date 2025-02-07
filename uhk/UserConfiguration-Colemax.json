@@ -2,7 +2,7 @@
   "userConfigMajorVersion": 7,
   "userConfigMinorVersion": 1,
   "userConfigPatchVersion": 0,
-  "deviceName": "UHK v1 maexxx",
+  "deviceName": "UHK v1 FRQ",
   "doubleTapSwitchLayerTimeout": 250,
   "iconsAndLayerTextsBrightness": 255,
   "alphanumericSegmentsBrightness": 255,
@@ -319,7 +319,8 @@
                 {
                   "keyActionType": "keystroke",
                   "type": "basic",
-                  "modifierMask": 32
+                  "scancode": 40,
+                  "secondaryRoleAction": "rightShift"
                 },
                 {
                   "keyActionType": "none"
@@ -507,7 +508,7 @@
                 },
                 {
                   "keyActionType": "playMacro",
-                  "macroIndex": 10
+                  "macroIndex": 58
                 },
                 {
                   "keyActionType": "mouse",
@@ -1138,7 +1139,7 @@
                 },
                 {
                   "keyActionType": "playMacro",
-                  "macroIndex": 75
+                  "macroIndex": 76
                 }
               ]
             },
@@ -1156,11 +1157,11 @@
                 },
                 {
                   "keyActionType": "playMacro",
-                  "macroIndex": 28
+                  "macroIndex": 27
                 },
                 {
                   "keyActionType": "playMacro",
-                  "macroIndex": 27
+                  "macroIndex": 26
                 },
                 {
                   "keyActionType": "keystroke",
@@ -1209,7 +1210,8 @@
                   "keyActionType": "none"
                 },
                 {
-                  "keyActionType": "none"
+                  "keyActionType": "playMacro",
+                  "macroIndex": 71
                 },
                 {
                   "keyActionType": "playMacro",
@@ -1263,7 +1265,7 @@
                 },
                 {
                   "keyActionType": "playMacro",
-                  "macroIndex": 76
+                  "macroIndex": 77
                 },
                 {
                   "keyActionType": "playMacro",
@@ -1420,11 +1422,11 @@
                 },
                 {
                   "keyActionType": "playMacro",
-                  "macroIndex": 73
+                  "macroIndex": 74
                 },
                 {
                   "keyActionType": "playMacro",
-                  "macroIndex": 74
+                  "macroIndex": 75
                 },
                 {
                   "keyActionType": "none"
@@ -1854,7 +1856,7 @@
                 {
                   "keyActionType": "keystroke",
                   "type": "basic",
-                  "scancode": 51,
+                  "scancode": 19,
                   "modifierMask": 2
                 },
                 {
@@ -1956,17 +1958,19 @@
                 },
                 {
                   "keyActionType": "playMacro",
-                  "macroIndex": 71
-                },
-                {
-                  "keyActionType": "playMacro",
                   "macroIndex": 72
                 },
                 {
-                  "keyActionType": "none"
+                  "keyActionType": "playMacro",
+                  "macroIndex": 73
                 },
                 {
                   "keyActionType": "none"
+                },
+                {
+                  "keyActionType": "keystroke",
+                  "type": "basic",
+                  "scancode": 83
                 },
                 {
                   "keyActionType": "playMacro",
@@ -2549,7 +2553,8 @@
                 {
                   "keyActionType": "keystroke",
                   "type": "basic",
-                  "scancode": 19
+                  "scancode": 19,
+                  "modifierMask": 2
                 },
                 {
                   "keyActionType": "keystroke",
@@ -2615,29 +2620,36 @@
               "id": 1,
               "keyActions": [
                 {
-                  "keyActionType": "none"
-                },
-                {
-                  "keyActionType": "none"
-                },
-                {
-                  "keyActionType": "none"
-                },
-                {
-                  "keyActionType": "none"
-                },
-                {
-                  "keyActionType": "none"
-                },
-                {
-                  "keyActionType": "none"
-                },
-                {
-                  "keyActionType": "none"
+                  "keyActionType": "keystroke",
+                  "type": "basic",
+                  "scancode": 41
                 },
                 {
                   "keyActionType": "playMacro",
-                  "macroIndex": 58
+                  "macroIndex": 12
+                },
+                {
+                  "keyActionType": "playMacro",
+                  "macroIndex": 27
+                },
+                {
+                  "keyActionType": "playMacro",
+                  "macroIndex": 26
+                },
+                {
+                  "keyActionType": "none"
+                },
+                {
+                  "keyActionType": "none"
+                },
+                {
+                  "keyActionType": "none"
+                },
+                {
+                  "keyActionType": "keystroke",
+                  "type": "basic",
+                  "scancode": 43,
+                  "modifierMask": 4
                 },
                 {
                   "keyActionType": "keystroke",
@@ -2648,16 +2660,22 @@
                   "keyActionType": "none"
                 },
                 {
-                  "keyActionType": "none"
+                  "keyActionType": "keystroke",
+                  "type": "media",
+                  "scancode": 548
+                },
+                {
+                  "keyActionType": "keystroke",
+                  "type": "media",
+                  "scancode": 549
                 },
                 {
                   "keyActionType": "none"
                 },
                 {
-                  "keyActionType": "none"
-                },
-                {
-                  "keyActionType": "none"
+                  "keyActionType": "keystroke",
+                  "type": "basic",
+                  "scancode": 83
                 },
                 {
                   "keyActionType": "playMacro",
@@ -2693,7 +2711,8 @@
                   "modifierMask": 2
                 },
                 {
-                  "keyActionType": "none"
+                  "keyActionType": "switchKeymap",
+                  "keymapAbbreviation": "NMX"
                 },
                 {
                   "keyActionType": "keystroke",
@@ -2720,9 +2739,8 @@
                   "modifierMask": 1
                 },
                 {
-                  "keyActionType": "keystroke",
-                  "type": "basic",
-                  "scancode": 83
+                  "keyActionType": "playMacro",
+                  "macroIndex": 62
                 },
                 {
                   "keyActionType": "keystroke",
@@ -2740,8 +2758,7 @@
                   "modifierMask": 4
                 },
                 {
-                  "keyActionType": "playMacro",
-                  "macroIndex": 10
+                  "keyActionType": "none"
                 },
                 {
                   "keyActionType": "none"
@@ -3138,7 +3155,7 @@
                 {
                   "keyActionType": "keystroke",
                   "type": "basic",
-                  "scancode": 44
+                  "scancode": 40
                 },
                 {
                   "keyActionType": "none"
@@ -3198,7 +3215,7 @@
       "isDefault": false,
       "abbreviation": "HRM",
       "name": "HomeRowMods",
-      "description": "This keymap defines the keys for 'Homerow Mods'. The base layer has those keys defined WITHOUT mods, and the Mod layer has the keys defined WITH mods. This keymap cannot be used standalone. Its layers are used in macros as overlays to a regular full keymap (CMX) to turn homerow mods on and off.",
+      "description": "This keymap defines the keys for 'Homerow Mods'. The base layer has those keys defined WITHOUT mods, and the Mod layer has the keys defined WITH mods. This keymap cannot be used standalone. Its layers are used in macros as overlays to a regular full keymap (CMX) to turn homerow mods on and off.\n\nNaming of the hrm macros: hrm-letter or hrm-MODIFIER-letter\nMODIFIER is one of: LA - left alt; LG - left gui; LS - left shift; LC - left control; RC - right control; RS - right shift; RG - right gui; RA - right alt (altgr)",
       "layers": [
         {
           "id": "base",
@@ -3551,11 +3568,11 @@
                 },
                 {
                   "keyActionType": "playMacro",
-                  "macroIndex": 26
+                  "macroIndex": 25
                 },
                 {
                   "keyActionType": "playMacro",
-                  "macroIndex": 29
+                  "macroIndex": 28
                 },
                 {
                   "keyActionType": "none"
@@ -3572,7 +3589,7 @@
                 },
                 {
                   "keyActionType": "playMacro",
-                  "macroIndex": 34
+                  "macroIndex": 35
                 },
                 {
                   "keyActionType": "playMacro",
@@ -3580,7 +3597,7 @@
                 },
                 {
                   "keyActionType": "playMacro",
-                  "macroIndex": 36
+                  "macroIndex": 33
                 },
                 {
                   "keyActionType": "playMacro",
@@ -3594,17 +3611,17 @@
                 },
                 {
                   "keyActionType": "playMacro",
-                  "macroIndex": 35
-                },
-                {
-                  "keyActionType": "playMacro",
-                  "macroIndex": 25
+                  "macroIndex": 36
                 },
                 {
                   "keyActionType": "playMacro",
                   "macroIndex": 24
                 },
                 {
+                  "keyActionType": "playMacro",
+                  "macroIndex": 23
+                },
+                {
                   "keyActionType": "none"
                 },
                 {
@@ -3612,7 +3629,7 @@
                 },
                 {
                   "keyActionType": "playMacro",
-                  "macroIndex": 32
+                  "macroIndex": 31
                 },
                 {
                   "keyActionType": "none"
@@ -3669,7 +3686,7 @@
                 },
                 {
                   "keyActionType": "playMacro",
-                  "macroIndex": 30
+                  "macroIndex": 29
                 },
                 {
                   "keyActionType": "playMacro",
@@ -3681,7 +3698,7 @@
                 },
                 {
                   "keyActionType": "playMacro",
-                  "macroIndex": 31
+                  "macroIndex": 30
                 },
                 {
                   "keyActionType": "none"
@@ -3699,11 +3716,11 @@
                 },
                 {
                   "keyActionType": "playMacro",
-                  "macroIndex": 22
+                  "macroIndex": 34
                 },
                 {
                   "keyActionType": "playMacro",
-                  "macroIndex": 23
+                  "macroIndex": 22
                 },
                 {
                   "keyActionType": "playMacro",
@@ -3721,7 +3738,7 @@
                 },
                 {
                   "keyActionType": "playMacro",
-                  "macroIndex": 33
+                  "macroIndex": 32
                 },
                 {
                   "keyActionType": "playMacro",
@@ -4366,15 +4383,15 @@
                 {
                   "keyActionType": "keystroke",
                   "type": "basic",
-                  "modifierMask": 32
+                  "scancode": 40,
+                  "secondaryRoleAction": "rightShift"
                 },
                 {
                   "keyActionType": "none"
                 },
                 {
-                  "keyActionType": "keystroke",
-                  "type": "basic",
-                  "scancode": 44
+                  "keyActionType": "playMacro",
+                  "macroIndex": 56
                 },
                 {
                   "keyActionType": "none"
@@ -4396,7 +4413,7 @@
                 {
                   "keyActionType": "keystroke",
                   "type": "basic",
-                  "scancode": 88,
+                  "scancode": 40,
                   "secondaryRoleAction": "rightCtrl"
                 }
               ]
@@ -4444,14 +4461,12 @@
                   "macroIndex": 57
                 },
                 {
-                  "keyActionType": "keystroke",
-                  "type": "basic",
-                  "scancode": 20
+                  "keyActionType": "playMacro",
+                  "macroIndex": 5
                 },
                 {
-                  "keyActionType": "keystroke",
-                  "type": "basic",
-                  "scancode": 26
+                  "keyActionType": "playMacro",
+                  "macroIndex": 5
                 },
                 {
                   "keyActionType": "keystroke",
@@ -4555,16 +4570,15 @@
                 },
                 {
                   "keyActionType": "playMacro",
-                  "macroIndex": 10
+                  "macroIndex": 58
                 },
                 {
                   "keyActionType": "mouse",
                   "mouseAction": "leftClick"
                 },
                 {
-                  "keyActionType": "keystroke",
-                  "type": "basic",
-                  "scancode": 44
+                  "keyActionType": "playMacro",
+                  "macroIndex": 53
                 },
                 {
                   "keyActionType": "none"
@@ -4579,10 +4593,12 @@
                   "macroIndex": 54
                 },
                 {
-                  "keyActionType": "none"
+                  "keyActionType": "playMacro",
+                  "macroIndex": 11
                 },
                 {
-                  "keyActionType": "none"
+                  "keyActionType": "playMacro",
+                  "macroIndex": 59
                 },
                 {
                   "keyActionType": "mouse",
@@ -4633,7 +4649,7 @@
       "macroActions": [
         {
           "macroActionType": "command",
-          "command": "clearStatus\nsetVar count 0\nsetVar snap_running 0\n// set emergencyKey $keyId.0\n// set keystrokeDelay 10\nset backlight.strategy constantRgb\nset backlight.constantRgb.rgb 64 64 64\nset leds.fadeTimeout 300\nset module.trackpoint.baseSpeed 0\nset module.trackpoint.speed 0.5\nset module.trackpoint.xceleration 2.0\nset module.touchpad.invertScrollDirectionX 1\nset module.touchpad.navigationMode.mouse caret\nset module.touchpad.holdContinuationTimeout 500\nset module.keycluster.navigationMode.mouse caret\n// set secondaryRole.defaultStrategy advanced\n// set secondaryRole.advanced.timeout 250\n// set secondaryRole.advanced.timeoutAction secondary\n// set secondaryRole.advanced.triggerByRelease 1\n// positive values for safetyMargin favour primary role, negative favour secondary role\nset secondaryRole.advanced.safetyMargin +1\n//call hrm-init\nsetLedTxt 300 ':::'"
+          "command": "clearStatus\nsetVar count 0\nsetVar snap_running 0\n// set emergencyKey $keyId.0\n// set keystrokeDelay 10\nset backlight.strategy constantRgb\nset backlight.constantRgb.rgb 64 64 64\nset leds.fadeTimeout 300\nset module.trackpoint.baseSpeed 0\nset module.trackpoint.speed 0.5\nset module.trackpoint.xceleration 2.0\nset module.touchpad.invertScrollDirectionX 1\nset module.touchpad.navigationMode.mouse caret\nset module.touchpad.holdContinuationTimeout 500\nset module.keycluster.navigationMode.mouse caret\n// set secondaryRole.defaultStrategy advanced\n// set secondaryRole.advanced.timeout 250\n// set secondaryRole.advanced.timeoutAction secondary\n// set secondaryRole.advanced.triggerByRelease 1\n// positive values for savetyMargin favour primary role, negative favour secondary role\nset secondaryRole.advanced.safetyMargin +1\ncall hrm-init\nsetLedTxt 300 ':::'"
         }
       ]
     },
@@ -4666,7 +4682,7 @@
       "macroActions": [
         {
           "macroActionType": "command",
-          "command": "replaceLayer mod CMX mod\nreplaceLayer mouse CMX mouse\nreplaceLayer fn CMX fn\nreplaceLayer fn2 CMX fn2\nreplaceLayer fn3 CMX fn3\nreplaceLayer fn4 CMX fn4\nreplaceLayer fn5 CMX fn5\nset keymapAction.fn.isoKey macro initCMX\nset keymapAction.fn.slashAndQuestionMark macro initCMX\n"
+          "command": "replaceLayer mod CMX mod\nreplaceLayer mouse CMX mouse\nreplaceLayer fn CMX fn\nreplaceLayer fn2 CMX fn2\nreplaceLayer fn3 CMX fn3\nreplaceLayer fn4 CMX fn4\nreplaceLayer fn5 CMX fn5\nset keymapAction.fn.isoKey macro initCMX\nset keymapAction.fn.slashAndQuestionMark macro initCMX\nset keymapAction.fn3.isoKey macro initCMX\n"
         }
       ]
     },
@@ -4743,7 +4759,7 @@
       "macroActions": [
         {
           "macroActionType": "command",
-          "command": "ifShortcut timeoutIn 50 $keyId.rightSpace exec fn2-fkeys\r\nholdLayer fn"
+          "command": "ifShortcut timeoutIn 50 $keyId.rightSpace exec fn2-fkeys\nholdLayer fn"
         }
       ]
     },
@@ -4765,7 +4781,7 @@
       "macroActions": [
         {
           "macroActionType": "command",
-          "command": "setVar hrm_active 1\nsetVar hrm_timer_active 0\nsetVar hrm_tick 0\nsetVar hrm_tick_delay 10\nsetVar hrm_tick_active 8\nsetVar hrm_avoid_same 100\noverlayLayer base HRM mod\nsetLedTxt 666 'H+-'\nif ($hrm_timer_active == 0) fork hrm-timer\n"
+          "command": "setVar hrm_active 1\nsetVar hrm_timer_active 0\nsetVar hrm_tick 0\nsetVar hrm_tick_delay 10\nsetVar hrm_tick_active 10\nsetVar hrm_avoid_same 100\noverlayLayer base HRM mod\nsetLedTxt 666 'H+-'\nif ($hrm_timer_active == 0) fork hrm-timer\n"
         }
       ]
     },
@@ -4865,17 +4881,6 @@
         {
           "macroActionType": "command",
           "command": "ifShortcut timeoutIn $hrm_avoid_same orGate noConsume q w e r t a s d f g z x c v b goTo primary\nif ($hrm_active > 0) ifSecondary final holdKey leftGui\nprimary:\nsetVar hrm_tick 0\nholdKey g\n"
-        }
-      ]
-    },
-    {
-      "isLooped": false,
-      "isPrivate": true,
-      "name": "hrm-LG-s",
-      "macroActions": [
-        {
-          "macroActionType": "command",
-          "command": "ifShortcut timeoutIn $hrm_avoid_same orGate noConsume q w e r t a s d f g z x c v b goTo primary\nif ($hrm_active > 0) ifSecondary final holdKey leftGui\nprimary:\nsetVar hrm_tick 0\nholdKey s\n"
         }
       ]
     },
@@ -5003,6 +5008,28 @@
     {
       "isLooped": false,
       "isPrivate": true,
+      "name": "hrm-RA-l",
+      "macroActions": [
+        {
+          "macroActionType": "command",
+          "command": "ifShortcut timeoutIn $hrm_avoid_same orGate noConsume y u i o p h j k l semicolonAndColon n m commaAndLessThanSign dotAndGreaterThanSign goTo primary\nif ($hrm_active > 0) ifSecondary final holdKey rightAlt\nprimary:\nsetVar hrm_tick 0\nholdKey l\n"
+        }
+      ]
+    },
+    {
+      "isLooped": false,
+      "isPrivate": true,
+      "name": "hrm-RA-s",
+      "macroActions": [
+        {
+          "macroActionType": "command",
+          "command": "ifShortcut timeoutIn $hrm_avoid_same orGate noConsume q w e r t a s d f g z x c v b goTo primary\nif ($hrm_active > 0) ifSecondary final holdKey rightAlt\nprimary:\nsetVar hrm_tick 0\nholdKey s\n"
+        }
+      ]
+    },
+    {
+      "isLooped": false,
+      "isPrivate": true,
       "name": "hrm-RC-j",
       "macroActions": [
         {
@@ -5019,17 +5046,6 @@
         {
           "macroActionType": "command",
           "command": "ifShortcut timeoutIn $hrm_avoid_same orGate noConsume y u i o p h j k l semicolonAndColon n m commaAndLessThanSign dotAndGreaterThanSign goTo primary\nif ($hrm_active > 0) ifSecondary final holdKey rightGui\nprimary:\nsetVar hrm_tick 0\nholdKey h\n"
-        }
-      ]
-    },
-    {
-      "isLooped": false,
-      "isPrivate": true,
-      "name": "hrm-RG-l",
-      "macroActions": [
-        {
-          "macroActionType": "command",
-          "command": "ifShortcut timeoutIn $hrm_avoid_same orGate noConsume y u i o p h j k l semicolonAndColon n m commaAndLessThanSign dotAndGreaterThanSign goTo primary\nif ($hrm_active > 0) ifSecondary final holdKey rightGui\nprimary:\nsetVar hrm_tick 0\nholdKey l\n"
         }
       ]
     },
@@ -5532,6 +5548,17 @@
     {
       "isLooped": false,
       "isPrivate": true,
+      "name": "test-enter-return",
+      "macroActions": [
+        {
+          "macroActionType": "command",
+          "command": "tapKeySeq 1 a b c return return d e f space\ndelayUntil 999\ntapKey return\ndelayUntil 2000\ntapKeySeq 2 a b c enter enter d e f space\ndelayUntil 999\ntapKey enter\ndelayUntil 2000\ntapKeySeq 3 a b c keypadEnter keypadEnter d e f space\ndelayUntil 999\ntapKey keypadEnter\ndelayUntil 2000\ntapKeySeq d o n e dotAndGreaterThanSign"
+        }
+      ]
+    },
+    {
+      "isLooped": false,
+      "isPrivate": true,
       "name": "Type ¡",
       "macroActions": [
         {
@@ -5640,7 +5667,7 @@
       "macroActions": [
         {
           "macroActionType": "command",
-          "command": "ifSecondary final suppressMods holdKey oRC-\nifShift suppressMods write Wharf33\nelse ifCtrl suppressMods write Whorf34\nelse {\n    delayUntil 200\n    suppressMods tapKeySeq m h a n t s c h\n}\n"
+          "command": "ifSecondary final suppressMods holdKey oRC-\nifShift suppressMods write abc\nelse ifCtrl suppressMods write 123\nelse {\n    delayUntil 200\n    suppressMods tapKeySeq m h a n t s c h\n}\n"
         }
       ]
     },

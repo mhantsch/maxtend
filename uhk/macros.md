@@ -21,9 +21,9 @@ set module.keycluster.navigationMode.mouse caret
 // set secondaryRole.advanced.timeout 250
 // set secondaryRole.advanced.timeoutAction secondary
 // set secondaryRole.advanced.triggerByRelease 1
-// positive values for safetyMargin favour primary role, negative favour secondary role
+// positive values for savetyMargin favour primary role, negative favour secondary role
 set secondaryRole.advanced.safetyMargin +1
-//call hrm-init
+call hrm-init
 setLedTxt 300 ':::'
 ```
 
@@ -91,6 +91,7 @@ replaceLayer fn4 CMX fn4
 replaceLayer fn5 CMX fn5
 set keymapAction.fn.isoKey macro initCMX
 set keymapAction.fn.slashAndQuestionMark macro initCMX
+set keymapAction.fn3.isoKey macro initCMX
 
 ```
 
@@ -160,7 +161,7 @@ setVar hrm_active 1
 setVar hrm_timer_active 0
 setVar hrm_tick 0
 setVar hrm_tick_delay 10
-setVar hrm_tick_active 8
+setVar hrm_tick_active 10
 setVar hrm_avoid_same 100
 overlayLayer base HRM mod
 setLedTxt 666 'H+-'
@@ -240,16 +241,6 @@ if ($hrm_active > 0) ifSecondary final holdKey leftGui
 primary:
 setVar hrm_tick 0
 holdKey g
-
-```
-
-**hrm-LG-s:**
-```
-ifShortcut timeoutIn $hrm_avoid_same orGate noConsume q w e r t a s d f g z x c v b goTo primary
-if ($hrm_active > 0) ifSecondary final holdKey leftGui
-primary:
-setVar hrm_tick 0
-holdKey s
 
 ```
 
@@ -343,6 +334,26 @@ holdKey backslashAndPipeIso
 
 ```
 
+**hrm-RA-l:**
+```
+ifShortcut timeoutIn $hrm_avoid_same orGate noConsume y u i o p h j k l semicolonAndColon n m commaAndLessThanSign dotAndGreaterThanSign goTo primary
+if ($hrm_active > 0) ifSecondary final holdKey rightAlt
+primary:
+setVar hrm_tick 0
+holdKey l
+
+```
+
+**hrm-RA-s:**
+```
+ifShortcut timeoutIn $hrm_avoid_same orGate noConsume q w e r t a s d f g z x c v b goTo primary
+if ($hrm_active > 0) ifSecondary final holdKey rightAlt
+primary:
+setVar hrm_tick 0
+holdKey s
+
+```
+
 **hrm-RC-j:**
 ```
 ifShortcut timeoutIn $hrm_avoid_same orGate noConsume y u i o p h j k l semicolonAndColon n m commaAndLessThanSign dotAndGreaterThanSign goTo primary
@@ -360,16 +371,6 @@ if ($hrm_active > 0) ifSecondary final holdKey rightGui
 primary:
 setVar hrm_tick 0
 holdKey h
-
-```
-
-**hrm-RG-l:**
-```
-ifShortcut timeoutIn $hrm_avoid_same orGate noConsume y u i o p h j k l semicolonAndColon n m commaAndLessThanSign dotAndGreaterThanSign goTo primary
-if ($hrm_active > 0) ifSecondary final holdKey rightGui
-primary:
-setVar hrm_tick 0
-holdKey l
 
 ```
 
@@ -872,6 +873,23 @@ tapKey space
 setLedTxt 1000 'SPC'
 goTo loop
 
+```
+
+**test-enter-return:**
+```
+tapKeySeq 1 a b c return return d e f space
+delayUntil 999
+tapKey return
+delayUntil 2000
+tapKeySeq 2 a b c enter enter d e f space
+delayUntil 999
+tapKey enter
+delayUntil 2000
+tapKeySeq 3 a b c keypadEnter keypadEnter d e f space
+delayUntil 999
+tapKey keypadEnter
+delayUntil 2000
+tapKeySeq d o n e dotAndGreaterThanSign
 ```
 
 **xtend-xecute:**
