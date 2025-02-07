@@ -21,7 +21,7 @@ set module.keycluster.navigationMode.mouse caret
 // set secondaryRole.advanced.timeout 250
 // set secondaryRole.advanced.timeoutAction secondary
 // set secondaryRole.advanced.triggerByRelease 1
-// positive values for savetyMargin favour primary role, negative favour secondary role
+// positive values for safetyMargin favour primary role, negative favour secondary role
 set secondaryRole.advanced.safetyMargin +1
 call hrm-init
 setLedTxt 300 ':::'
@@ -143,7 +143,7 @@ stopAllMacros
 
 **fn:**
 ```
-ifShortcut timeoutIn 50 $keyId.rightSpace exec fn2-fkeys
+ifShortcut timeoutIn 50 orGate $keyId.leftMod $keyId.rightSpace exec fn2-fkeys
 holdLayer fn
 ```
 
@@ -711,6 +711,8 @@ break
 
 **numtab3:**
 ```
+ifShortcut timeoutIn 50 orGate $keyId.leftMod $keyId.rightSpace exec fn2-fkeys
+
 ifAlt final holdKey tab
 ifSecondary advancedStrategy goTo secondaryaction
 

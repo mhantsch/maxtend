@@ -1496,7 +1496,8 @@
                   "mouseAction": "rightClick"
                 },
                 {
-                  "keyActionType": "none"
+                  "keyActionType": "playMacro",
+                  "macroIndex": 11
                 },
                 {
                   "keyActionType": "keystroke",
@@ -1672,7 +1673,8 @@
                   "modifierMask": 4
                 },
                 {
-                  "keyActionType": "none"
+                  "keyActionType": "playMacro",
+                  "macroIndex": 11
                 },
                 {
                   "keyActionType": "none"
@@ -2167,26 +2169,22 @@
                 {
                   "keyActionType": "keystroke",
                   "type": "basic",
-                  "scancode": 64,
-                  "secondaryRoleAction": "rightCtrl"
+                  "modifierMask": 1
                 },
                 {
                   "keyActionType": "keystroke",
                   "type": "basic",
-                  "scancode": 65,
-                  "secondaryRoleAction": "rightShift"
+                  "modifierMask": 2
                 },
                 {
                   "keyActionType": "keystroke",
                   "type": "basic",
-                  "scancode": 66,
-                  "secondaryRoleAction": "rightSuper"
+                  "modifierMask": 64
                 },
                 {
                   "keyActionType": "keystroke",
                   "type": "basic",
-                  "scancode": 67,
-                  "secondaryRoleAction": "leftAlt"
+                  "modifierMask": 4
                 },
                 {
                   "keyActionType": "none"
@@ -2197,7 +2195,7 @@
                 {
                   "keyActionType": "keystroke",
                   "type": "basic",
-                  "scancode": 63
+                  "modifierMask": 8
                 },
                 {
                   "keyActionType": "none"
@@ -2212,10 +2210,7 @@
                   "keyActionType": "none"
                 },
                 {
-                  "keyActionType": "keystroke",
-                  "type": "basic",
-                  "scancode": 56,
-                  "secondaryRoleAction": "rightAlt"
+                  "keyActionType": "none"
                 },
                 {
                   "keyActionType": "keystroke",
@@ -2255,7 +2250,9 @@
               "id": 1,
               "keyActions": [
                 {
-                  "keyActionType": "none"
+                  "keyActionType": "keystroke",
+                  "type": "basic",
+                  "scancode": 41
                 },
                 {
                   "keyActionType": "none"
@@ -2283,51 +2280,22 @@
                 {
                   "keyActionType": "keystroke",
                   "type": "basic",
-                  "scancode": 20
+                  "scancode": 58
                 },
                 {
                   "keyActionType": "keystroke",
                   "type": "basic",
-                  "scancode": 26
-                },
-                {
-                  "keyActionType": "none"
-                },
-                {
-                  "keyActionType": "none"
-                },
-                {
-                  "keyActionType": "none"
-                },
-                {
-                  "keyActionType": "none"
-                },
-                {
-                  "keyActionType": "none"
+                  "scancode": 59
                 },
                 {
                   "keyActionType": "keystroke",
                   "type": "basic",
-                  "scancode": 58,
-                  "secondaryRoleAction": "leftAlt"
+                  "scancode": 60
                 },
                 {
                   "keyActionType": "keystroke",
                   "type": "basic",
-                  "scancode": 59,
-                  "secondaryRoleAction": "leftSuper"
-                },
-                {
-                  "keyActionType": "keystroke",
-                  "type": "basic",
-                  "scancode": 60,
-                  "secondaryRoleAction": "leftShift"
-                },
-                {
-                  "keyActionType": "keystroke",
-                  "type": "basic",
-                  "scancode": 61,
-                  "secondaryRoleAction": "leftCtrl"
+                  "scancode": 61
                 },
                 {
                   "keyActionType": "none"
@@ -2338,6 +2306,37 @@
                   "scancode": 62
                 },
                 {
+                  "keyActionType": "none"
+                },
+                {
+                  "keyActionType": "keystroke",
+                  "type": "basic",
+                  "scancode": 63
+                },
+                {
+                  "keyActionType": "keystroke",
+                  "type": "basic",
+                  "scancode": 64
+                },
+                {
+                  "keyActionType": "keystroke",
+                  "type": "basic",
+                  "scancode": 65
+                },
+                {
+                  "keyActionType": "keystroke",
+                  "type": "basic",
+                  "scancode": 66
+                },
+                {
+                  "keyActionType": "none"
+                },
+                {
+                  "keyActionType": "keystroke",
+                  "type": "basic",
+                  "scancode": 67
+                },
+                {
                   "keyActionType": "keystroke",
                   "type": "basic",
                   "modifierMask": 2
@@ -2345,17 +2344,7 @@
                 {
                   "keyActionType": "keystroke",
                   "type": "basic",
-                  "scancode": 45,
-                  "secondaryRoleAction": "rightAlt"
-                },
-                {
-                  "keyActionType": "none"
-                },
-                {
-                  "keyActionType": "none"
-                },
-                {
-                  "keyActionType": "none"
+                  "scancode": 41
                 },
                 {
                   "keyActionType": "keystroke",
@@ -2366,6 +2355,15 @@
                   "keyActionType": "keystroke",
                   "type": "basic",
                   "scancode": 69
+                },
+                {
+                  "keyActionType": "none"
+                },
+                {
+                  "keyActionType": "none"
+                },
+                {
+                  "keyActionType": "none"
                 },
                 {
                   "keyActionType": "keystroke",
@@ -2389,9 +2387,7 @@
                   "keyActionType": "none"
                 },
                 {
-                  "keyActionType": "keystroke",
-                  "type": "basic",
-                  "modifierMask": 2
+                  "keyActionType": "none"
                 },
                 {
                   "keyActionType": "none"
@@ -4649,7 +4645,7 @@
       "macroActions": [
         {
           "macroActionType": "command",
-          "command": "clearStatus\nsetVar count 0\nsetVar snap_running 0\n// set emergencyKey $keyId.0\n// set keystrokeDelay 10\nset backlight.strategy constantRgb\nset backlight.constantRgb.rgb 64 64 64\nset leds.fadeTimeout 300\nset module.trackpoint.baseSpeed 0\nset module.trackpoint.speed 0.5\nset module.trackpoint.xceleration 2.0\nset module.touchpad.invertScrollDirectionX 1\nset module.touchpad.navigationMode.mouse caret\nset module.touchpad.holdContinuationTimeout 500\nset module.keycluster.navigationMode.mouse caret\n// set secondaryRole.defaultStrategy advanced\n// set secondaryRole.advanced.timeout 250\n// set secondaryRole.advanced.timeoutAction secondary\n// set secondaryRole.advanced.triggerByRelease 1\n// positive values for savetyMargin favour primary role, negative favour secondary role\nset secondaryRole.advanced.safetyMargin +1\ncall hrm-init\nsetLedTxt 300 ':::'"
+          "command": "clearStatus\nsetVar count 0\nsetVar snap_running 0\n// set emergencyKey $keyId.0\n// set keystrokeDelay 10\nset backlight.strategy constantRgb\nset backlight.constantRgb.rgb 64 64 64\nset leds.fadeTimeout 300\nset module.trackpoint.baseSpeed 0\nset module.trackpoint.speed 0.5\nset module.trackpoint.xceleration 2.0\nset module.touchpad.invertScrollDirectionX 1\nset module.touchpad.navigationMode.mouse caret\nset module.touchpad.holdContinuationTimeout 500\nset module.keycluster.navigationMode.mouse caret\n// set secondaryRole.defaultStrategy advanced\n// set secondaryRole.advanced.timeout 250\n// set secondaryRole.advanced.timeoutAction secondary\n// set secondaryRole.advanced.triggerByRelease 1\n// positive values for safetyMargin favour primary role, negative favour secondary role\nset secondaryRole.advanced.safetyMargin +1\ncall hrm-init\nsetLedTxt 300 ':::'"
         }
       ]
     },
@@ -4759,7 +4755,7 @@
       "macroActions": [
         {
           "macroActionType": "command",
-          "command": "ifShortcut timeoutIn 50 $keyId.rightSpace exec fn2-fkeys\nholdLayer fn"
+          "command": "ifShortcut timeoutIn 50 orGate $keyId.leftMod $keyId.rightSpace exec fn2-fkeys\nholdLayer fn"
         }
       ]
     },
@@ -5343,7 +5339,7 @@
       "macroActions": [
         {
           "macroActionType": "command",
-          "command": "ifAlt final holdKey tab\nifSecondary advancedStrategy goTo secondaryaction\n\nprimaryaction:\nifShift goTo shiftTab\ntapKey tab\nsetLedTxt 500 \"->|\"\nifLayer fn3 final setLedTxt 0 \"123\"\nbreak\n\nsecondaryaction:\nifShift goTo shiftTabSecondary\nsetLedTxt 0 \"123\"\nholdLayer fn3\ndelayUntil 100\nifLayer fn3 final setLedTxt 0 \"123\"\nsetLedTxt 1 \"123\"\nbreak\n\nshiftTabSecondary:\nsetLedTxt 0 \"123\"\nifNotLayer fn3 final toggleLayer fn3\nunToggleLayer\nsetLedTxt 1 \"123\"\nbreak\n\nshiftTab:\nsetLedTxt 0 \"|<-\"\nholdKey tab\nsetLedTxt 500 \"|<-\"\nifLayer fn3 final setLedTxt 0 \"123\"\nbreak"
+          "command": "ifShortcut timeoutIn 50 orGate $keyId.leftMod $keyId.rightSpace exec fn2-fkeys\n\nifAlt final holdKey tab\nifSecondary advancedStrategy goTo secondaryaction\n\nprimaryaction:\nifShift goTo shiftTab\ntapKey tab\nsetLedTxt 500 \"->|\"\nifLayer fn3 final setLedTxt 0 \"123\"\nbreak\n\nsecondaryaction:\nifShift goTo shiftTabSecondary\nsetLedTxt 0 \"123\"\nholdLayer fn3\ndelayUntil 100\nifLayer fn3 final setLedTxt 0 \"123\"\nsetLedTxt 1 \"123\"\nbreak\n\nshiftTabSecondary:\nsetLedTxt 0 \"123\"\nifNotLayer fn3 final toggleLayer fn3\nunToggleLayer\nsetLedTxt 1 \"123\"\nbreak\n\nshiftTab:\nsetLedTxt 0 \"|<-\"\nholdKey tab\nsetLedTxt 500 \"|<-\"\nifLayer fn3 final setLedTxt 0 \"123\"\nbreak"
         }
       ]
     },
@@ -5667,7 +5663,7 @@
       "macroActions": [
         {
           "macroActionType": "command",
-          "command": "ifSecondary final suppressMods holdKey oRC-\nifShift suppressMods write abc\nelse ifCtrl suppressMods write 123\nelse {\n    delayUntil 200\n    suppressMods tapKeySeq m h a n t s c h\n}\n"
+          "command": "ifSecondary final suppressMods holdKey oRC-\nifShift suppressMods write abcd.\nelse ifCtrl suppressMods write 123456\nelse {\n    delayUntil 200\n    suppressMods tapKeySeq m h a n t s c h\n}\n"
         }
       ]
     },
