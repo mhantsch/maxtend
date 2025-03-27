@@ -44,7 +44,7 @@ Depending on your OS and preferred setup, find the configuration for each of the
 - For an external keyboard:
   - Ultimate Hacking Keyboard: Check out a matching [uhk configuration](uhk/) for the [Ultimate Hacking Keyboard](https://ultimatehackingkeyboard.com) (an external programmable keyboard).
   - QMK: Check out a configuration for a wired ErgoTravel keyboard using QMK on ProMicro controllers in the [qmk](qmk/) folder.
-  - ZMK: Configuration for a wireless ErgoTravel keyboard (BLE) using ZMK on nice!nano controllers in the [zmk](zmk/) folder. Check out the [README-ZMK](zmk/README-ZMK.md) for more information.
+  - ZMK: Configuration for a wireless ErgoTravel keyboard (BLE) as well as an Eyelash Peripherals Corne using ZMK on nice!nano controllers in the [zmk](zmk/) folder. Check out the [README-ZMK](zmk/README-ZMK.md) for more information, or go directly to the ZMK builds for [ErgoTravel](https://github.com/mhantsch/ergotravel-zmk-module) and [Eyelash Corne](https://github.com/mhantsch/zmk-new_corne).
 
 If you are unsure which option to install in step 2, try Kanata. Check out the [Quick install instructions](kanata/HOWTO-INSTALL.md). It works both in Windows and Linux, is super powerful, and it is what I am now using. It also supports home-row mods quite well (in case you are interested in that).
 
