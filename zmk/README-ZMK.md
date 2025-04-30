@@ -6,13 +6,13 @@ Example *maxtend* configurations are provided for the following keyboards.
 
 An ErgoTravel keyboard at https://github.com/mhantsch/ergotravel-zmk-module. The detailed keymap is configured in https://github.com/mhantsch/ergotravel-zmk-module/blob/main/boards/shields/ergotravel/ergotravel.keymap.
 
-![Photo of an ErgoTravel keyboard](https://private-user-images.githubusercontent.com/591785/409964121-8c9acf2d-8dba-45a8-9c75-3c9e0b6271ec.jpg?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NDMwODk2MjksIm5iZiI6MTc0MzA4OTMyOSwicGF0aCI6Ii81OTE3ODUvNDA5OTY0MTIxLThjOWFjZjJkLThkYmEtNDVhOC05Yzc1LTNjOWUwYjYyNzFlYy5qcGc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjUwMzI3JTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI1MDMyN1QxNTI4NDlaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT01YjYxYTlkZTFmZGI2NDQyZjg3MWMyMWYzNDhlMDY3YTMzYTUwZWI4ZGZjMWI1ZDg0ZDNmMzkyMmU0N2ZjYWFhJlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCJ9.CeA9CsNIQdtoyOlYpJLKDDFERh84PQOcraV93EPD1RI)
+![Photo of an ErgoTravel keyboard](https://github.com/user-attachments/assets/8c9acf2d-8dba-45a8-9c75-3c9e0b6271ec)
 
 ## Eyelash Corne
 
 An Eyelash Peripherals Corne keyboard at https://github.com/mhantsch/zmk-new_corne. The detailed keymap is configured in https://github.com/mhantsch/zmk-new_corne/blob/main/config/eyelash_corne.keymap.
 
-![Photo of an Eyelash Corne keyboard](https://private-user-images.githubusercontent.com/591785/424469902-321c7070-f86f-4f16-8ae9-17e4c3a68f12.jpg?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NDMwODk0NjUsIm5iZiI6MTc0MzA4OTE2NSwicGF0aCI6Ii81OTE3ODUvNDI0NDY5OTAyLTMyMWM3MDcwLWY4NmYtNGYxNi04YWU5LTE3ZTRjM2E2OGYxMi5qcGc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjUwMzI3JTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI1MDMyN1QxNTI2MDVaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT1jMTFlYWE3OTNkYTY3OWI0MGNiNjJhZjNjMzNkMDg4MmIxMzFlNzU5YjM5YzA1MjVhMDcyYjA3NDc4MmRlMjNlJlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCJ9.jQaJ7LoRy8LjzqZ-Q8w0FRYPB-UiWcQgJkk83cV8j80)
+![Photo of an Eyelash Corne keyboard](https://github.com/user-attachments/assets/321c7070-f86f-4f16-8ae9-17e4c3a68f12)
 
 The modules are ZMK Studio enabled, so the configuration can be further adapted using [ZMK Studio](https://zmk.studio/).
 

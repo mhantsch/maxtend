@@ -3,7 +3,7 @@
 Extended keyboard layers for easy navigation and functionality from a Colemak base layout.
 (Possibly can be applied to other base layouts, too).
 
-This repository contains various configurations and tooling to create an extended keyboard setup for both Windows and Linux, and a matching configuration for the [Ultimate Hacking Keyboard](https://ultimatehackingkeyboard.com). The configurations start from a Colemak base layout, but the concepts behind the navigation and numpad layers also work with other base layouts.
+This repository contains various configurations and tooling to create an extended keyboard setup for both Windows and Linux, and matching configurations for external keyboards like the [Ultimate Hacking Keyboard](https://ultimatehackingkeyboard.com) as well as [QMK](https://qmk.fm/) and [ZMK](https://zmk.dev/)-based keyboards. The configurations start from a Colemak base layout, but the concepts behind the navigation and numpad layers also work with other base layouts.
 
 Read more about the [Background](BACKGROUND.md) of this setup.
 
