@@ -12,7 +12,7 @@ An ErgoTravel keyboard at https://github.com/mhantsch/ergotravel-zmk-module. The
 
 An Eyelash Peripherals Corne keyboard at https://github.com/mhantsch/zmk-new_corne. The detailed keymap is configured in https://github.com/mhantsch/zmk-new_corne/blob/main/config/eyelash_corne.keymap.
 
-![Photo of an Eyelash Corne keyboard](![Eyelash-corne-photo](https://github.com/user-attachments/assets/321c7070-f86f-4f16-8ae9-17e4c3a68f12)
+![Photo of an Eyelash Corne keyboard](https://github.com/user-attachments/assets/321c7070-f86f-4f16-8ae9-17e4c3a68f12)
 
 The modules are ZMK Studio enabled, so the configuration can be further adapted using [ZMK Studio](https://zmk.studio/).
 
