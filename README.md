@@ -25,7 +25,7 @@ The configuration is setup in three stages:
 
 1. base OS setup - giving a standard Colemak layout without extended functionality
 2. maxtend layer - giving extended functionality such as navigation, mouse scrolling etc.;  
-   (achieved via AutoHotKey (Windows), Kanata (Windows & Linux, experimental), keyd (Linux), or xkb (Linux, deprecated))
+   (achieved via AutoHotKey (Windows, deprecated), Kanata (Windows & Linux, *recommended*), keyd (Linux), or xkb (Linux, deprecated))
 3. external keyboard - giving extended functionality even if your host computer does not have `maxtend` installed, and extends it further  
   (implemented for UHK, QMK, and ZMK)
 
