@@ -454,15 +454,15 @@ Numpad Enter is mapped onto the right `Control` key; it still acts as RCtrl as a
 - If you need only a tap on `Control`, you can use the left `Control`.
 - If you really need a tap on *right* `Control`, you can press it slightly longer until the secondary function activates, then let go.
 - If you really really need a *timed tap* on *right* `Control`, hold `Mouse` and tap right `Control`
-- And the main reason: The size of the right `Control` key on the UHK is identical to a standard US-keyboard `Return` key. I swapped the keycaps on my UHK, and to populate the right `Control` position, I usually install an `Enter` key there. Because it is labelled “Enter”, it makes only sense that it also functions as Enter when the user taps it.
+- And the main reason: The size of the right `Control` key on the UHK 60 is identical to a standard US-keyboard `Return` key. I swapped the keycaps on my UHK, and to populate the right `Control` position, I usually install an `Enter` key there. Because it is labelled “Enter”, it makes only sense that it also functions as Enter when the user taps it.
 
-![image](https://github.com/mhantsch/maxtend/assets/591785/c5bfe3c7-5109-4859-9af7-b06dd78cde6e)
+![Photo of the right side of a UHK60 keyboard prominently displaying the wide right-side control key with a keycap labelled "enter"](https://github.com/mhantsch/maxtend/assets/591785/c5bfe3c7-5109-4859-9af7-b06dd78cde6e)
 
-(This is only on the UHK. The AHK script does not modify right Control.)
+(This is only on the UHK. The AHK and Kanata configurations do not modify right Control.)
 
 ## Home-row Mods (HRM)
 
-On UHK and Kanata configurations, home-row mods are also (optionally) available.
+On UHK, ZMK and Kanata configurations, home-row mods are also (optionally) available.
 
 ### What are Home-row Mods?
 
@@ -470,7 +470,7 @@ Some keys in the home-row position can be held down and used as modifier keys (C
 
 Specifically these are:
 
-| key | modifier | finger assignment |
+| key[^colemak] | modifier | finger assignment |
 | --- | -------- | ----------------- |
 | `a` | left alt | (left) pinky finger |
 | `r` | right alt (altgr) | (left) ring finger |
@@ -483,7 +483,7 @@ Specifically these are:
 | `i` | right alt (altgr) | (right) ring finger |
 | `o` | left alt | (right) pinky finger |
 
-The AltGr modifier (right alt) can also be activated in the row below the home row:
+Optionally, on some configurations, the AltGr modifier (right alt) can also be activated in the row below the home row (*deprecated*):
 
 | key | modifier | finger assignment |
 | --- | -------- | ----------------- |
@@ -508,7 +508,7 @@ Home-row mods have a tendency to be finicky, and can sometimes inadvertantly and
 
 Usually, modifiers pressed on one hand are combined with keys from the other hand. So, a left shift activated by holding down `s` should be combined with characters from the right hand, such as `h`, `n`, `l`, `y`, `m` etc. and vice versa.
 
-Pressing one of the hrm keys together (within a short interval) with keys from the same hand will automatically activate the primary letter of the hrm key. This prevents the inadertant activation of mods during fast finger rolls on neighbouring keys.
+Pressing one of the hrm keys together (within a short interval) with keys from the same hand will automatically activate the primary letter of the hrm key. This prevents inadvertant activation of mods during fast finger rolls on neighbouring keys.
 
 It is still possible to type mods with keys from the same hand, but you will have to intentionally hold down the mod for a little while before tapping the next key.
 
@@ -545,7 +545,7 @@ The display may also flash two other informational messages briefly. These are m
 | **`+T+`** | background timer task started |
 | **`-T-`** | background timer task stopped |
 
-***Note:*** Due to a bug in the current UHK firmware (as of Oct 2024), always make sure you turn HRM off (= ensure you are not in *hrm-auto* mode) before reloading the UHK config from Agent. With the timer task actively running while the configuration is reloaded, some memory corruption in the UHK may cause it to throw error messages and become unresponsive. If that happens, you need to unplug/replug your UHK. The easiest way to avoid this is to hit `fn`+`3` (to turn off HRMs) before saving the configuration in Agent.
+***Note:*** Due to a bug in the current UHK firmware (as of Oct 2024), always make sure you turn HRM off (= ensure you are not in *hrm-auto* mode) before saving the UHK config in Agent. If the configuration gets reloaded into the UHK while the timer task (in *hrm-auto* mode) is actively running, some memory corruption in the firmware can cause the UHK to throw error messages and become unresponsive. If that happens, you need to unplug/replug your UHK 60, or reboot your UHK 80 (using the reboot buttons on the bottom, or executing the `reboot` macro command). The easiest way to avoid this is to hit `fn`+`3` (turn off HRMs) before saving the configuration in Agent.
 
 #### Kanata
 
@@ -562,7 +562,21 @@ Use the following key combinations to turn various modes on/off (hold `` ` `` fo
 | `` ` ``+`7` | load the next kanata configuration (if you have specified multiple configuration files) |
 | `` ` ``+`8` | load the previous kanata configuration (if you have specified multiple configuration files) |
 
+#### ZMK
+
+The *Adjust* layer offers key combinations to switch to different base layers with and without HRM functionality:
+
+| key combination[^colemak] | meaning | use for |
+| --- | --- | --- |
+| `Adjust`+`q` | switch to qwerty without hrms | if your OS base layout is already set to colemak, use this to type in colemak |
+| `Adjust`+`w` | switch to qwerty with hrms enabled | if your OS base layout is already set to colemak, use this to type in colemak with HRMs |
+| `Adjust`+`f` | switch to colemak without hrms | use this with a standard US-QWERTY OS layout to type in colemak |
+| `Adjust`+`p` | switch to colemak with hrms enabled | use this with a standard US-QWERTY OS layout to type in colemak with HRMs |
+| `Adjust`+`g` | switch to 'reverse colemak' without hrms | use this with a colemak OS layout to type in QWERTY |
+
 -----
 [^tkl]: Ten-Key-Less. A keyboard that does not have a "number pad" key cluster for number entry. There is still a navigation cluster with cursor keys, Ins/Del/Home/End/PgUp/PgDn, and PrScr/ScrLk/Break keys. Also often referred to as an "80%" keyboard.
 
 [^uhk]: [Ultimate Hacking Keyboard](https://www.ultimatehackingkeyboard.com), an external, split USB keyboard with optional extra modules. The UHK offers advanced key configuration, layers, programming capabilities via a macro programming language, and mouse control.
+
+[^colemak]: labelled according to Colemak layout
