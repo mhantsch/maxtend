@@ -198,14 +198,15 @@ The configuration is built on 3 keymaps: **CMX** ('Colemax'), **CM2** ('Colemax 
 
 UHK layers are used as such:
 
-- ***base:*** US keymap (mapped to Colemak by OS) with layer switches
-- ***mod:*** *Maxtend* layer
-- ***mouse:*** *Mouse* layer
-- ***fn:*** *Media* layer
-- ***fn2:*** *Mirror* layer
-- ***fn5:*** *Number* layer
+- ***base:*** US keymap (mapped to Colemak by OS) with layer switches (***`CMX`***)
+- ***mod:*** *Maxtend* layer (***`MAX`***)
+- ***mouse:*** *Mouse* layer (***`MSE`***)
+- ***fn:*** *Media* layer (***`FUN`***)
+- ***fn2:*** *Homerow-Function-Keys* layer (***`F12`***)
+- ***fn4:*** *Homerow-Numbers* layer (***`0-9`***)
+- ***fn5:*** *Number* layer (***`NUM`***) or (***`123`***)
 
-The layers are configured in the **CMX** keymap, and re-used in the other keymaps by overlaying them in their *$onKeymapChange* macros:
+The layers are configured in the **CMX** keymap, and re-used in other keymaps by overlaying them in their *$onKeymapChange* macros:
 
 ```uhk
 replaceLayer mod CMX mod
@@ -234,14 +235,6 @@ The base layer contains a normal US keymap (mapped to Colemak by the OS keymap).
 I deliberately kept the primary functions of `Maxtend` (Backspace), `Numtab` (Tab) and the left space bar (Space), and switch layers only as a secondary function (when these buttons are held down and combined with other keys). The usual primary function of these keys is unmodified.
 
 The right Space bar is kept without any secondary function because the secondary function can conflict with n-key rollover when typing fast, and I noticed that I mostly type space with my right thumb. If that is different for you, and you mainly type Space with your left thumb, you may want to move the secondary Mouse layer switch (*Mousetend* macro) from the left Space to the right Space.
-
-### Alternative Base Layer (CM2)
-
-![UHK CM2 base layer](../images/UHK-CM2-base.png)
-
-Use `NumTab`+`ISO` to switch between **CMX** and **CM2**. This alternative base layer is identical to CMX with one exception: it has home-row mods for Alt, Win, Shift, and Control. Alt/Shift/Control are placed on the same positions as *Maxtend* already has them, and Win sits on the key where *Maxtend* places mouse wheel down.
-
-I am still experimenting with home-row mods. I still get some spurious inadvertent activations, I am still playing with the timings (set in *$onKeymapChange CM2*) and I am not yet convinced I want to use it generally. That is the main reason why I keep it on the 'alternative' base layer for now.
 
 ### Maxtend layer (MAX)
 
@@ -365,39 +358,17 @@ These make typing more convenient especially for German texts, and for the more 
 
 You can still type the full range of AltGr symbols via the regular `AltGr` key.
 
-### Mirror layer
-
-(UHK ***fn2*** layer) *(Experimental)*
-
-*Note:* this layer was removed from the sample configuration. It's documentation remains here for now.
-
-![UHK CMX fn2 layer](../images/UHK-CMX-fn2.png)
-
-Holding the left thumb button of the UHK key cluster mirrors the right hand side to the left side. With this you can write text using only your left hand.
-
-### Home Row Mods (CM2/CM3)
-
-(UHK ***CM2*** and ***CM3*** keymaps) *(Experimental)*
-
-Two experimental keymaps implement home-row mods, where the `Alt`, `Win/GUI`,`Shift` and `Control` modifiers are mapped as secondary function on keys in the home row.S
-
-![UHK CM2 base layer](../images/UHK-CM2-base.png)
-
-![UHK CM3 base layer](../images/UHK-CM3-base.png)
-
-This is highly experimental; using home-row mods can cause spurious incorrect activation or non-activation of the modifiers during typing. A satisfactory use of home-row mods depends a lot on personal typing style, as the behaviour is very sensitive to timing (overlapping keystrokes during finger rolls etc.). Use with caution.
-
 ### Additional features
 
-### CapsLock on ISO
+#### CapsLock on ISO
 
 On the UHK, `Maxtend`+`ISO` (the ISO key sitting between the left `Shift` and `z` keys) can be used to send an actual CapsLock from the UHK. However, with AHK in place (Windows), or keyd (Linux), this will just trigger the corresponding layer on AHK/keyd. The net effect is that it functions the same as just using `Maxtend` (Mod,CapsLock). (It can be used to test the AHK/keyd configuration, though, without the UHK logic interfering.)
 
-### One-handed cursor navigation
+#### One-handed cursor navigation
 
 For cursor control using only the right hand, Mod (the Maxtend layer) is also available on the right case button, and it's a secondary function on the `'"` key. The layer can also be locked on the UHK by double-tapping the right case button.
 
-### Additional mouse button
+#### Additional mouse button
 
 The left case button (in front of left Space) functions as an additional left mouse button. This is useful if you do not have a key cluster module connected (which has mouse buttons), but use a mouse module (e.g. trackpad) on the right side. You can use the left case button to click items while steering the mouse pointer with the right module.
 
@@ -502,7 +473,7 @@ Examples:
 
 ### Special features
 
-Home-row mods have a tendency to be finicky, and can sometimes inadvertantly and spontaneously activate during fast typing, especially when you type using finger rolls. To help with this, two additional features help keep them under control.
+Home-row mods have a tendency to be finicky, and can sometimes inadvertantly and spontaneously activate during fast typing. Especially finger rolls can frequently result in the simultaneous depressing of more than one key, causing an unexpected and unwanted activation of Home-row mods. To help with this, two additional features help keep them under control.
 
 #### Cross-hand detection and same-hand avoidance
 
