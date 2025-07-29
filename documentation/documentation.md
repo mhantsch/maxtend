@@ -194,7 +194,7 @@ The features described here are only available with the external Ultimate Hackin
 
 ### General overview
 
-The configuration is built on 3 keymaps: **CMX** ('Colemax'), **CM2** ('Colemax 2), and **'---'** ('Pause'). I also previously experimented with a "Number pad" keymap, **NMX** ('Nummax'), but that has been migrated to the *Number* layer activated through `NumTab`.
+The configuration is built on 3 keymaps: **CMX** ('Colemax'), **HRM** ('HomeRowMods'), and **'---'** ('Pause'). I also previously experimented with a "Number pad" keymap, **NMX** ('Nummax'), but that has been migrated to the *Number* layer activated through `NumTab`.
 
 UHK layers are used as such:
 
@@ -516,7 +516,19 @@ The display may also flash two other informational messages briefly. These are m
 | **`+T+`** | background timer task started |
 | **`-T-`** | background timer task stopped |
 
-***Note:*** Due to a bug in the current UHK firmware (as of Oct 2024), always make sure you turn HRM off (= ensure you are not in *hrm-auto* mode) before saving the UHK config in Agent. If the configuration gets reloaded into the UHK while the timer task (in *hrm-auto* mode) is actively running, some memory corruption in the firmware can cause the UHK to throw error messages and become unresponsive. If that happens, you need to unplug/replug your UHK 60, or reboot your UHK 80 (using the reboot buttons on the bottom, or executing the `reboot` macro command). The easiest way to avoid this is to hit `fn`+`3` (turn off HRMs) before saving the configuration in Agent.
+***Note:*** 
+Due to a bug in the current UHK firmware (as of Oct 2024), always make sure you turn HRM off (= ensure you are not in *hrm-auto* mode) before saving the UHK config in Agent. If the configuration gets reloaded into the UHK while the timer task (in *hrm-auto* mode) is actively running, some memory corruption in the firmware can cause the UHK to throw error messages and become unresponsive. If that happens, you need to unplug/replug your UHK 60, or reboot your UHK 80 (using the reboot buttons on the bottom, or executing the `reboot` macro command). The easiest way to avoid this is to hit `fn`+`3` (turn off HRMs) before saving the configuration in Agent.
+
+#### Implementation note for UHK
+
+Homerow mods are implemented with a combination of an overlay keymap (**HRM**) and a set of macros. The **HRM** overlay keymap has a *base* layer with standard alpha keys without HRM functionality, and a *mod* layer with macros bound to all the alpha keys. When Homerow mods are activated, all alpha keys on the current keymap are overloaded with the *mod* layer of the **HRM** keymap (`overlayLayer base HRM mod`). When Homerow mods are deactivated again, the regular functionality of those keys is restored by overloading the *base* layer (`overlayLayer base HRM base`).
+
+The Homerow mods macros are structured in this way:
+- *hrm-on*, *hrm-off*, *hrm-auto*: turn hrm on, off, or put it in auto mode. These macros install the appropriate overlay, initialise some needed variables, and for auto mode, activate the *hrm-timer*.
+- *hrm-timer*: a background task that needs to run in auto mode. It will automatically stop when auto mode is ended.
+- macros named *hrm-LX-y* and *hrm-RX-y*: these are bound to keys with homerow mods. *LX* and *RX* stand for *L*eft side and *R*ight side modifier *X*, and *y* stands for the regular keypress that will get activated for this key. For example, *hrm-LA-a* is the macro that will activate a `Left Alt` when activated as a modifier, and will press the scancode for key `a` when activated as a key press.
+- macros named *hrm-x*: these are bound to alpha keys without homerow mods. *x* stands for the regular keypress for this key. For example, *hrm-b* is the macro that will press the scancode for key `b` when activated. (Macros are needed for all alpha keys to capture the timing of keystrokes for the detection of fast typing in auto mode.)
+
 
 #### Kanata
 
