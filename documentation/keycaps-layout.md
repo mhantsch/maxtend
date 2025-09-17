@@ -149,4 +149,4 @@ Holding down *NumTab* activates the number layer. The numbers for this layer are
 
 ![key EÉ](../images/key-E.png)
 
-When pressed together with `NumTab`+`EÉ`, it produces the number **1**.
+When pressed together with `NumTab`+`EÉ`, it produces the number **2**.
