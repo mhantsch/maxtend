@@ -36,7 +36,9 @@ These stages can work independently, but also combine on top of each other for b
 Depending on your OS and preferred setup, find the configuration for each of the different tools in the corresponding subdirectories.
 
 - For Windows:
-  1. Install the Colemak keyboard layout from [Windows - Colemak](https://colemak.com/Windows) first. I recommend the [version which maps CapsLock to Backspace](https://colemak.com/File:Colemak-caps.zip).
+  1. depending on your version of Windows:
+      - Windows 11: Switch your keyboard layout to Colemak. Go to `Settings` -> `Time & language` -> `Language & region`, click `...` next to your language -> `Language options`, and under `Keyboards` you can `Add a keyboard`. Choose `Colemak`. Yay, Microsoft has finally added Colemak to the standard layouts available!
+      - Windows 10 or earlier: Install the Colemak keyboard layout from [Windows - Colemak](https://colemak.com/Windows) first. I recommend the [version which maps CapsLock to Backspace](https://colemak.com/File:Colemak-caps.zip).
   2. Then, pick between the [ahk configuration](ahk/) (and load via [AutoHotKey](https://www.autohotkey.com/)), or try [Kanata](https://github.com/jtroo/kanata) with the corresponding [kanata configuration](kanata/) (*recommended*).
 - For Linux:
   1. Switch your keyboard layout to Colemak (via keyboard settings of your distribution).
