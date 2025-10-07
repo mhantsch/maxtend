@@ -17,3 +17,5 @@ An Eyelash Peripherals Corne keyboard at https://github.com/mhantsch/zmk-new_cor
 The modules are ZMK Studio enabled, so the configuration can be further adapted using [ZMK Studio](https://zmk.studio/).
 
 *Note:* ZMK Studio is still under construction - [Status and list of available features](https://zmk.dev/docs/features/studio).
+
+Another way of editing keymaps is [ZMK keymap editor](https://nickcoutsos.github.io/keymap-editor/), which edits keymaps directly in your Github repository. After editing, build and flash to install on the keyboard. It handles many more options than ZMK Studio, e.g. combos, macros, changes to behaviours...
