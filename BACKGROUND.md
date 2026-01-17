@@ -55,9 +55,11 @@ This is available out of the box in all distributions. Just select US Colemak as
 
 #### Windows
 
-This requires installation of an additional [Colemak keyboard layout](https://colemak.com/Windows). I recommend [a version that remaps Caps Lock to Backspace](https://forum.colemak.com/topic/1621-colemak-for-windows-with-capslock-to-backspace/).
+From Windows 11 onwards, the Colemak layout is available out of the box. Just select it as your keyboard layout in the language options for your language(s).
 
-On Windows 10 or later, install the ‘en’ version, not the ‘co’ version. It will remap the CapsLock to backspace, and install a generic Colemak layout (including AltGr layer for multilingual characters). After installation, make sure you configure the Colemak keyboard in the Language options for your language, and then select it in the language toolbar.
+For versions up to and including Windows 10, this requires installation of an additional [Colemak keyboard layout](https://colemak.com/Windows). I recommend [a version that remaps Caps Lock to Backspace](https://forum.colemak.com/topic/1621-colemak-for-windows-with-capslock-to-backspace/).
+
+On Windows 10, install the ‘en’ version, not the ‘co’ version. It will remap the CapsLock to backspace, and install a generic Colemak layout (including AltGr layer for multilingual characters). After installation, make sure you configure the Colemak keyboard in the Language options for your language, and then select it in the language toolbar.
 
 ![image](https://github.com/mhantsch/maxtend/assets/591785/0d160419-8be4-4351-b54d-f350c7eb4ae9)
 ![image](https://github.com/mhantsch/maxtend/assets/591785/ddbcd435-5e2e-489a-9d0b-fbe39b8a3378)
@@ -84,7 +86,13 @@ More information on multilingual support in the Colemak keymap see [colemak.com/
 
 ### Maxtend Layer
 
-#### AutoHotKey keymap (Windows)
+The recommended tool for this layer is *Kanata*, but I have also listed below other historic and now deprecated variants.
+
+#### Kanata (all platforms) - recommended
+
+This is the recommended variant for all platforms. Download and install [Kanata](https://github.com/jtroo/kanata) with the corresponding [kanata configuration](kanata/). The folder also contains [installation tipps](kanata/HOWTO-INSTALL.md) to autostart Kanata on system startup.
+
+#### AutoHotKey keymap (Windows) - deprecated
 
 Install AutoHotKey from <https://autohotkey.com/download/>. It’s free.
 
@@ -94,13 +102,13 @@ The script is designed to work on a colemak base layout (as configured in the pr
 
 After activation of the AutoHotKey script, you have the colemak layout from the base keyboard plus the FUNCTION layer and the NUMPAD. This will work independent of your physical (hardware) keyboard; so for example, it works on the built-in keyboard on my Windows laptop, or any external keyboard.
 
-#### xkb (Linux)
+#### xkb (Linux) - deprecated
 
 This is my first variant for Linux, similar to DreymaR's `extend` xkb configuration with some improvements. Unfortunately, xkb is really not good at user-level extensions, so you will have to modify system files. I do not recommend this variant; it has been superceded by keyd.
 
-#### keyd (Linux)
+#### keyd (Linux) - deprecated
 
-This is the recommended variant for Linux.
+This works well on Linux, but the latest recommendation is to use Kanata (it works cross-platform, and it also supports homerow-mods well).
 
 ### External Keyboard
 
@@ -129,6 +137,8 @@ The Fn-ISO and Fn-/ keys on the UHK keymaps rotate through CMX, NMX, and NM2 key
 Also, the NMX and NM2 layers on the UHK add a “cursor pad” using the / (up), R-Alt (left), R-Win (down) and R-Control (right) keys.
 
 *Note:* In later iterations of the UHK setup, this functionality was augmented by the `NumTab` key: A tap on Tab still functions as Tab, but holding down Tab activates the number pad (through an additional layer). Eventually, `NumTab` became my preference over NMX/NM2.
+
+*Note 2:* In even further iterations of the UHK setup, a variant of `NumTab` can now be activated with the left `Fn` key. A tap on left `Fn` now functions as Tab, and holding it down activates a slightly different number pad sitting a row lower than the original `NumTab`. This makes it position-compatible with the number pad layer on ErgoTravel and Corne keyboards (see the *lower* layer in the [ZMK configuration](zmk/README-ZMK.md)).
 
 ![image](https://github.com/mhantsch/maxtend/assets/591785/0445a8a2-d7b6-4227-ac7e-af582ac268ec)
 
