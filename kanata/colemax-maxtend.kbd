@@ -143,7 +143,7 @@ at the same time will cause kanata to exit:
 
   ;; concurrent-tap-hold yes is also needed for chordsv2-experimental, and here
   ;; we set the minimum time for it, too.
-  chords-v2-min-idle-experimental 50
+  chords-v2-min-idle 50
 
   ;; This configuration makes the release of one-shot-press and of the tap in a tap-hold
   ;; by the defined number of milliseconds (approximate).
@@ -296,7 +296,7 @@ at the same time will cause kanata to exit:
   winß AG-d
 )
 
-(defchordsv2-experimental
+(defchordsv2
   (q w) esc 100 all-released (maxtend)
   (, .) (macro bspc ,) 100 all-released (maxtend)
   (. /) (macro bspc .) 100 all-released (maxtend)
