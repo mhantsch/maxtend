@@ -4,7 +4,7 @@ Example *maxtend* configurations are provided for the following keyboards.
 
 ## ErgoTravel
 
-An ErgoTravel keyboard at https://github.com/mhantsch/ergotravel-zmk-module. The detailed keymap is configured in https://github.com/mhantsch/ergotravel-zmk-module/blob/main/boards/shields/ergotravel/ergotravel.keymap.
+An ErgoTravel keyboard at https://github.com/mhantsch/ergotravel-zmk-module. The detailed keymap is configured in https://github.com/mhantsch/ergotravel-zmk-module/blob/main/config/ergotravel.keymap.
 
 ![Photo of an ErgoTravel keyboard](https://github.com/user-attachments/assets/8c9acf2d-8dba-45a8-9c75-3c9e0b6271ec)
 
