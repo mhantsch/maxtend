@@ -11,7 +11,7 @@ Read more about the [Background](BACKGROUND.md) of this setup.
 
 - a navigation layer (called *maxtend*) for cursor movement, text selection and cut/copy/paste
 - a numpad layer (called *numtab*) for entering numbers in forms, sheets, calculators
-- mouse support (on systems that support it) for clicking and scrolling
+- mouse support (on systems that support it) for pointer movement, clicking and scrolling
 
 ![Overview of the layout of a maxtended keyboard.](images/Maxtend-black.png)
 
