@@ -18,7 +18,7 @@ An Eyelash Peripherals Corne keyboard at https://github.com/mhantsch/zmk-new_cor
 
 An Eyelash Peripherals Sofle keyboard at https://github.com/mhantsch/zmk-sofle. The detailed keymap is configured in https://github.com/mhantsch/zmk-sofle/blob/main/config/eyelash_sofle.keymap.
 
-![Photo of an Eyelash Corne keyboard](https://github.com/mhantsch/zmk-sofle/blob/main/images/sofle-image.png)
+![Photo of an Eyelash Sofle keyboard](https://github.com/mhantsch/zmk-sofle/blob/main/images/sofle-image.png)
 
 The modules are ZMK Studio enabled, so the configuration can be further adapted using [ZMK Studio](https://zmk.studio/).
 
