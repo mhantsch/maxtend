@@ -256,9 +256,9 @@ at the same time will cause kanata to exit:
 
 (deflayer maxtend
   esc  f1   f2   f3   f4   f5   f6   f7   f8   f9   f10  f11  f12  del
-  tab  esc  @mw↑ bck  fwd  XX   pgup home up   end  del  prnt slck brk
+  tab  esc  @mw↑ bck  fwd  nlk  pgup home up   end  del  prnt slck brk
   _    lalt @mw↓ lsft lctl lmet pgdn left down rght bspc ins       ret
-  lsft lsgt C-z  C-x  C-c  C-v  b    n    m    ,    .    menu      rsft
+  lsft lsgt C-z  C-x  C-c  C-v  b    n    m    ,    rctl menu      rsft
   lctl lmet lalt           ret            ralt rmet rctl
 )
 
@@ -459,7 +459,7 @@ at the same time will cause kanata to exit:
   hqf (tap-hold-release-keys $tt $ht (multi f @hr-tap-q) lctl $left-hand-keys)
   hqg (tap-hold-release-keys $tt $ht (multi g @hr-tap-q) lmet $left-hand-keys)
   hqh (tap-hold-release-keys $tt $ht (multi h @hr-tap-q) rmet $right-hand-keys)
-  hqj (tap-hold-release-keys $tt $ht (multi j @hr-tap-q) rctl $right-hand-keys)
+  hqj (tap-hold-release-keys $tt $ht (multi j @hr-tap-q) lctl $right-hand-keys)
   hqk (tap-hold-release-keys $tt $ht (multi k @hr-tap-q) rshft $right-hand-keys)
   hql (tap-hold-release-keys $tt $ht (multi l @hr-tap-q) ralt $right-hand-keys)
   hq; (tap-hold-release-keys $tt $htl (multi ; @hr-tap-q) lalt $right-hand-keys)
@@ -495,7 +495,7 @@ at the same time will cause kanata to exit:
   hct (tap-hold-release-keys $tt $ht (multi t @hr-tap-c) lctl $left-hand-keys)
   hcd (tap-hold-release-keys $tt $ht (multi d @hr-tap-c) lmet $left-hand-keys)
   hch (tap-hold-release-keys $tt $ht (multi h @hr-tap-c) rmet $right-hand-keys)
-  hcn (tap-hold-release-keys $tt $ht (multi n @hr-tap-c) rctl $right-hand-keys)
+  hcn (tap-hold-release-keys $tt $ht (multi n @hr-tap-c) lctl $right-hand-keys)
   hce (tap-hold-release-keys $tt $ht (multi e @hr-tap-c) rshft $right-hand-keys)
   hci (tap-hold-release-keys $tt $ht (multi i @hr-tap-c) ralt $right-hand-keys)
   hco (tap-hold-release-keys $tt $htl (multi o @hr-tap-c) lalt $right-hand-keys)
