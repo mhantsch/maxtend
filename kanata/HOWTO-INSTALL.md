@@ -1,12 +1,14 @@
-# HOWTO install as a service (Linux)
+# HOWTO install kanata to start automatically
 
-1. Install kanata.
+## HOWTO install as a service (Linux)
+
+1. Install kanata. (We put it into `/usr/local/bin/kanata`.)
 2. Copy the configuration file to a system wide place. (We use `/etc/kanata`.)
-2. Install the service description for kanata.
-3. (re)start the system service.
-4. Enable it to auto-start on boot.
+3. Install the service description for kanata.
+4. (re)start the system service.
+5. Enable it to auto-start on boot.
 
-```
+```bash
 mkdir /etc/kanata
 cp colemax-maxtend.kbd /etc/kanata
 sudo install -m 644 kanata.service /lib/systemd/system/kanata.service
@@ -16,7 +18,7 @@ sudo systemctl start kanata
 sudo systemctl enable kanata
 ```
 
-# HOWTO install to autostart (Windows)
+## HOWTO install to autostart (Windows)
 
 1. Create an installation directory. We use `C:\Utilities`.
 2. Download `kanata_winIOv2.exe` or `kanata_gui.exe` (for tray icon support) and move it to `C:\Utilities`.
